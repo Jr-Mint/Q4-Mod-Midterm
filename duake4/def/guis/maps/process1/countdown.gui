@@ -1,0 +1,316 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+
+	onNamedEvent pause {
+		resettime "anim" "0" ;
+	}
+
+	onNamedEvent changeFloor {
+		
+		set "txt_numbers::text"		"$gui::floorNumber";
+		set "txt_numbers_white::text" 	"$gui::floorNumber";
+		
+	}
+
+	windowDef bg
+	{
+		rect	-2,0,640,480
+		visible	1
+		backcolor	0,0,0,1
+	}
+	windowDef bg_L
+	{
+		rect	0,-66,320,481
+		visible	1
+		background	"gfx/guis/maps/process1/countdown_bg"
+		matcolor	0.368,0.615,0.466,1
+		matscaley	-1
+	}
+	windowDef bg_R
+	{
+		rect	320,-66,320,480
+		visible	1
+		background	"gfx/guis/maps/process1/countdown_bg"
+		matcolor	0.368,0.615,0.466,1
+		matscalex	-1
+		matscaley	-1
+	}
+	windowDef circle_l
+	{
+		rect	-261,21,440,440
+		visible	1
+		background	"gfx/guis/common/strogg/doorgui_outer_r"
+		matcolor	0.0352,0.235,0.188,1
+	}
+	windowDef circle_r
+	{
+		rect	466,22,440,439
+		visible	1
+		background	"gfx/guis/common/strogg/doorgui_outer_r"
+		matcolor	0.0352,0.235,0.188,1
+		matscalex	-1
+	}
+	windowDef top
+	{
+		rect	0,0,640,127
+		visible	1
+		background	"gfx/guis/maps/process1/countdown_topbottom"
+		matcolor	0.168,0.568,0.756,1
+	}
+	windowDef bottom
+	{
+		rect	0,354,641,126
+		visible	1
+		background	"gfx/guis/maps/process1/countdown_topbottom"
+		matcolor	0.168,0.568,0.756,1
+		matscalex	-1
+		matscaley	-1
+	}
+	windowDef txt_floor
+	{
+		rect	0,145,640,79
+		visible	1
+		forecolor	0.333,1,0.866,1
+		text	"#str_200479"
+		textscale	1
+		textalign	1
+		font	"fonts/r_strogg"
+	}
+	windowDef txt_numbers
+	{
+		rect	0,167,640,189
+		visible	1
+		forecolor	0.333,1,0.866,1
+		text	"gui::gui_parm_floor"
+		textscale	3
+		textalign	1
+		font	"fonts/r_strogg"
+	}
+	windowDef txt_numbers_white
+	{
+		rect	0,167,640,189
+		visible	1
+		forecolor	1,1,1,1
+		text	"gui::gui_parm_floor"
+		textscale	3
+		textalign	1
+		font	"fonts/r_strogg"
+	}
+	windowDef transparent
+	{
+		rect	1,121,639,238
+		visible	1
+		background	"gfx/guis/maps/process1/countdown_transparent"
+		matcolor	0.866,0,0,0
+	}
+	windowDef status
+	{
+		rect	55,283,529,23
+		visible	1
+		background	"gfx/guis/maps/process1/countdown_status"
+		matcolor	1,0.992,0.643,0
+	}
+	windowDef bar
+	{
+		rect	163,285,0,18
+		visible	1
+		backcolor	1,0,0,1
+	}
+	windowDef d_bar
+	{
+		rect	163,285,311,18
+		visible	0
+		backcolor	1,0,0,1
+	}
+	windowDef txt_halted
+	{
+		rect	49,176,538,112
+		visible	0
+		forecolor	1,1,1,1*guitable_10_5[time*0.002]
+		text	"#str_200480"
+		textscale	.9
+		font	"fonts/r_strogg"
+		textalign	1
+	}
+	windowDef left_bracket
+	{
+		rect	-8,1,82,476
+		visible	1
+		background	"gfx/guis/monitors/strogg/process1/countdown_bracket"
+		matcolor	0.823,0.596,0.176,1
+	}
+	windowDef right_bracket
+	{
+		rect	567,1,81,476
+		visible	1
+		background	"gfx/guis/monitors/strogg/process1/countdown_bracket"
+		matcolor	0.823,0.596,0.176,1
+		matscalex	-1
+	}
+	windowDef icon
+	{
+		rect	88,371,100,100
+		visible	1
+		background	"gfx/guis/common/strogg/term_symb"
+		matcolor	1,1,1,1
+	}
+	windowDef title1
+	{
+		rect	190,403,267,36
+		visible	1
+		forecolor	1,0.501,0,1
+		text	"#str_200481"
+		textscale	0.7
+		font	"fonts/r_strogg"
+	}
+	windowDef title2
+	{
+		rect	191,436,264,26
+		visible	1
+		forecolor	0.752,0.752,0.752,1
+		text	"#str_200482"
+		textscale	0.4
+		font	"fonts/r_strogg"
+	}
+	windowDef scrolltext
+	{
+		rect	193,-92,120,154
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext3"
+		matcolor	1,1,1,1
+	}
+	windowDef scrolltext2
+	{
+		rect	314,-92,139,154
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext2fast"
+		matcolor	0,0,0,1
+	}
+	windowDef ar1
+	{
+		rect	473,50,50,67
+		visible	1
+		background	"gfx/guis/common/arrow1"
+		matcolor	0,0,0,.3
+		rotate	45
+	}
+	windowDef ar2
+	{
+		rect	494,28,50,67
+		visible	1
+		background	"gfx/guis/common/arrow1"
+		matcolor	0,0,0,.3
+		rotate	45
+	}
+	windowDef ar3
+	{
+		rect	515,7,50,67
+		visible	1
+		background	"gfx/guis/common/arrow1"
+		matcolor	0,0,0,.3
+		rotate	45
+	}
+	windowDef ar4
+	{
+		rect	115,50,50,67
+		visible	1
+		background	"gfx/guis/common/arrow1"
+		matcolor	0,0,0,.3
+		rotate	135
+	}
+	windowDef ar5
+	{
+		rect	94,28,50,67
+		visible	1
+		background	"gfx/guis/common/arrow1"
+		matcolor	0,0,0,.3
+		rotate	135
+	}
+	windowDef ar6
+	{
+		rect	72,7,50,67
+		visible	1
+		background	"gfx/guis/common/arrow1"
+		matcolor	0,0,0,.3
+		rotate	135
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	0,-107,640,647
+			background	"gfx/guis/common/monitor_line3"
+			matcolor	0.874,0.988,1,0.0470
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,-12,640,592
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.262,0.611,0.870,1
+			matscaley	-1
+		}
+		windowDef scratches
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/screen_scratches5"
+			matcolor	0.725,0.850,0.819,0.6
+		}
+		windowDef broken_glass_b
+		{
+			visible	"gui::gui_parm_broken"
+			rect	-36,-58,678,598
+			background	"gfx/guis/common/broken_glass2"
+			matcolor	0,0,0,1
+		}
+		windowDef broken_glass
+		{
+			visible	"gui::gui_parm_broken"
+			rect	-33,-60,678,598
+			background	"gfx/guis/common/broken_glass2"
+			matcolor	0.8,0.917,0.847,1
+		}
+		windowDef blackedge
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef anim
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "txt_numbers_white::forecolor_w" "1" "0" "500" ;
+			transition "txt_numbers::forecolor_w" "1" ".75" "500" ;
+			transition "txt_floor::forecolor_w" "1" ".75" "500" ;
+			transition "transparent::matcolor_w" "0" ".45" "500" ;
+			transition "status::matcolor_w" "0" "1" "500" ;
+		}
+
+		onTime +500 {
+			set "txt_halted::visible" "1" ;
+			transition "bar::rect" "$bar::rect" "$d_bar::rect" "20000" ;
+		}
+
+		onTime +20000 {
+			set "txt_halted::visible" "0" ;
+			transition "txt_numbers_white::forecolor_w" "0" "1" "500" ;
+			transition "txt_numbers::forecolor_w" ".75" "1" "500" ;
+			transition "txt_floor::forecolor_w" ".75" "1" "500" ;
+			transition "transparent::matcolor_w" ".45" "0" "500" ;
+			transition "status::matcolor_w" "1" "0" "500" ;
+			transition "bar::rect" "$d_bar::rect" "$bar::rect" "0" ;
+		}
+
+	}
+}

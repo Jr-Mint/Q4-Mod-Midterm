@@ -1,0 +1,124 @@
+windowDef Desktop
+{
+	visible	1
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	definevec4	"white_4"	1,1,1,.6
+	definevec4	"white_0"	1,1,1,0
+	windowDef data
+	{
+		rect	239,-5,438,480
+		visible	1
+		background	"gfx/guis/common/strogg/data"
+		matcolor	1,1,0,0.239
+		shear	0,-.4
+	}
+	windowDef data_grad
+	{
+		rect	180,-7,395,480
+		visible	1
+		background	"gfx/guis/common/gradient2"
+		matcolor	0,0,0,1
+		shear	0,-.4
+		matscalex	-1
+	}
+	windowDef conveyor
+	{
+		rect	0,109,640,321
+		visible	1
+		background	"gfx/guis/common/conveyor1"
+		matcolor	0.878,0.458,0.145,0.64
+		shear	0,-.4
+	}
+	windowDef bg
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/common3_bg"
+		matcolor	0.941,0.615,0.0156,1
+	}
+	windowDef scrolltext1
+	{
+		rect	-113,-15,186,299
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext1"
+		matcolor	0,0,0,1
+		shear	0,-.4
+		matscalex	-1
+	}
+	windowDef t_title
+	{
+		rect	105,35,347,35
+		visible	1
+		forecolor	0,0,0,1
+		text	"#str_200802"
+		textscale	.52
+		font	"fonts/r_strogg"
+	}
+	windowDef arrow
+	{
+		rect	651,131,120,271
+		visible	1
+		background	"gfx/guis/common/arrow1"
+		matcolor	1,0.501,0,0.2
+		shear	0,-.4
+
+		onTime 0 {
+			transition "arrow::rect" "$arrow::rect" "$d_arrow::rect" "500" ;
+		}
+
+		onTime 500 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef d_arrow
+	{
+		rect	-123,131,120,271
+		visible	0
+		background	"gfx/guis/common/arrow1"
+		matcolor	1,0.501,0,0.4
+		shear	0,-.4
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	2,-203,640,906
+			background	"gfx/guis/common/monitor_line7"
+			matcolor	0.686,0.737,0.537,0.05
+		}
+		windowDef screendirt
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/screen_dirt4"
+			matcolor	0.443,0.521,0.160,0.8
+			matscalex	-1
+		}
+		windowDef screendirt2
+		{
+			visible	1
+			rect	-159,-130,1103,885
+			background	"gfx/guis/common/screen_dirt4"
+			matcolor	0,0,0,.8
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	-165,-77,1026,575
+			background	"gfx/guis/common/monitor_reflect"
+			matcolor	0.984,0.792,0.215,.12
+		}
+		windowDef monitor_darkedge
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+}

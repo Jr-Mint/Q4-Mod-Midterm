@@ -1,0 +1,242 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	windowDef bg
+	{
+		rect	0,0,639,481
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc12_all"
+		matcolor	1,1,1,1
+	}
+	windowDef mail
+	{
+		rect	102,9,85,42
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200645"
+		textscale	0.6
+		font	"fonts/marine"
+	}
+	windowDef ssp_manual
+	{
+		rect	16,72,311,40
+		visible	1
+		forecolor	0.682,0.682,0.584,1
+		text	"#str_200675"
+		textscale	0.5
+		font	"fonts/marine"
+	}
+	windowDef s
+	{
+		rect	16,-4,33,56
+		visible	1
+		forecolor	1,1,1,1
+		text	"s"
+		textscale	0.9
+		font	"fonts/marine"
+	}
+	windowDef m
+	{
+		rect	39,-4,36,56
+		visible	1
+		forecolor	1,1,1,1
+		text	"m"
+		textscale	0.9
+		font	"fonts/marine"
+	}
+	windowDef c
+	{
+		rect	67,-4,35,56
+		visible	1
+		forecolor	1,1,1,1
+		text	"c"
+		textscale	0.9
+		font	"fonts/marine"
+	}
+	windowDef inbox
+	{
+		rect	58,129,78,27
+		visible	1
+		forecolor	0,0,0,1
+		text	"#str_200647"
+		textscale	0.4
+		font	"fonts/marine"
+	}
+	windowDef compose
+	{
+		rect	174,129,101,26
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200648"
+		textscale	0.4
+		font	"fonts/marine"
+	}
+	windowDef sent
+	{
+		rect	324,129,62,26
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200649"
+		textscale	0.4
+		font	"fonts/marine"
+	}
+	windowDef junk
+	{
+		rect	454,129,64,26
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200650"
+		textscale	0.4
+		font	"fonts/marine"
+	}
+	windowDef login_as
+	{
+		rect	408,44,224,27
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200651"
+		textscale	0.4
+		font	"fonts/marine"
+	}
+	windowDef delete
+	{
+		rect	457,427,74,27
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200676"
+		textscale	0.38
+		font	"fonts/marine"
+
+		onTime 0 {
+			transition "forecolor_w" "1" "0.2" "1200" ;
+		}
+
+		onTime 1200 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef logged_in
+	{
+		rect	18,58,108,20
+		visible	1
+		forecolor	0.682,0.682,0.584,1
+		text	"#str_200655"
+		textscale	0.35
+		font	"fonts/marine"
+	}
+	windowDef recieved
+	{
+		rect	400,200,76,212
+		visible	1
+		forecolor	1,1,1,1
+		text	"4.22.45 4.21.45 4.21.45 4.21.45 4.21.45 4.21.45 4.21.45 4.20.45 4.20.45 4.19.45 4.17.45 4.17.45"
+		textscale	0.29
+		font	"fonts/marine"
+	}
+	windowDef number1
+	{
+		rect	38,427,18,27
+		visible	1
+		forecolor	0,0,0,1
+		text	"1"
+		textscale	0.4
+		font	"fonts/marine"
+	}
+	windowDef number2
+	{
+		rect	67,427,18,27
+		visible	1
+		forecolor	1,1,1,1
+		text	"2"
+		textscale	0.4
+		font	"fonts/marine"
+	}
+	windowDef number3
+	{
+		rect	98,427,18,27
+		visible	1
+		forecolor	1,1,1,1
+		text	"3"
+		textscale	0.4
+		font	"fonts/marine"
+	}
+	windowDef number4
+	{
+		rect	130,427,18,27
+		visible	1
+		forecolor	1,1,1,1
+		text	"4"
+		textscale	0.4
+		font	"fonts/marine"
+	}
+	windowDef number5
+	{
+		rect	161,427,18,27
+		visible	1
+		forecolor	1,1,1,1
+		text	"5"
+		textscale	0.4
+		font	"fonts/marine"
+	}
+	windowDef from_subject_recieved
+	{
+		rect	47,164,575,40
+		visible	1
+		forecolor	0.654,0.654,0.556,1
+		text	"#str_200677"
+		textscale	0.45
+		font	"fonts/marine"
+	}
+	windowDef from
+	{
+		rect	48,200,75,212
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200678"
+		textscale	0.29
+		font	"fonts/marine"
+	}
+	windowDef subject
+	{
+		rect	144,200,233,212
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200679"
+		textscale	0.29
+		font	"fonts/marine"
+	}
+	windowDef topstuff
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef monitor_darkedge
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+		windowDef sline
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_line3"
+			matcolor	0.498,0.498,0.498,1
+		}
+		windowDef scratches
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/screen_scratches2"
+			matcolor	0.937,0.988,0.772,0.137
+		}
+		windowDef topreflect
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_glow3"
+			matcolor	0.976,1,0.917,0.419
+		}
+	}
+}

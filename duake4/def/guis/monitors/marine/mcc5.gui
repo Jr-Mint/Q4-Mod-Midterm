@@ -1,0 +1,226 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	windowDef bg
+	{
+		rect	0,0,639,481
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc5_all"
+		matcolor	1,1,1,1
+	}
+	windowDef ssp_manual
+	{
+		rect	424,433,129,40
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200327"
+		textscale	0.6
+		font	"fonts/marine"
+	}
+	windowDef s
+	{
+		rect	19,-18,41,56
+		visible	1
+		forecolor	1,1,1,1
+		text	"s"
+		textscale	1.1
+		font	"fonts/marine"
+	}
+	windowDef m
+	{
+		rect	48,-18,41,56
+		visible	1
+		forecolor	1,1,1,1
+		text	"m"
+		textscale	1.1
+		font	"fonts/marine"
+	}
+	windowDef c
+	{
+		rect	83,-18,41,56
+		visible	1
+		forecolor	1,1,1,1
+		text	"c"
+		textscale	1.1
+		font	"fonts/marine"
+	}
+	windowDef techpanel
+	{
+		rect	23,32,97,24
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200621"
+		textscale	0.3
+		font	"fonts/marine"
+	}
+	windowDef stations
+	{
+		rect	127,150,468,37
+		visible	1
+		forecolor	0,0,0,1
+		text	"#str_200622"
+		textscale	0.57
+		font	"fonts/marine"
+	}
+	windowDef progress
+	{
+		rect	117,80,256,64
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200623"
+		textscale	0.95
+		font	"fonts/marine"
+	}
+	windowDef symbol
+	{
+		rect	70,107,48,48
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc5_symbol"
+		matcolor	1,1,1,1
+	}
+	windowDef search
+	{
+		rect	342,6,123,37
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200624"
+		textscale	0.55
+		font	"fonts/marine"
+	}
+	windowDef search1
+	{
+		rect	515,6,123,37
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200625"
+		textscale	0.55
+		font	"fonts/marine"
+	}
+	windowDef search2
+	{
+		rect	195,6,71,37
+		visible	1
+		forecolor	0,0,0,1
+		text	"#str_200626"
+		textscale	0.55
+		font	"fonts/marine"
+	}
+	windowDef circ1
+	{
+		rect	18,188,154,154
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc5_circ1"
+		matcolor	0.725,0.835,0.376,.6
+
+		onTime 0 {
+			transition "rotate" "0" "-360" "3000" "0" "0" ;	
+		}
+
+		onTime 3000 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef circ6
+	{
+		rect	18,189,154,154
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc5_circ2"
+		matcolor	0.721,0.831,0.372,0.6
+
+		onTime 0 {
+			transition "rotate" "0" "360" "3000" "0" "0" ;	
+		}
+
+		onTime 3000 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef circ3
+	{
+		rect	74,256,41,19
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc5_circ3"
+		matcolor	0.717,0.827,0.368,0.6
+	}
+	windowDef circ4
+	{
+		rect	302,187,154,154
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc5_circ1"
+		matcolor	0.725,0.835,0.376,.6
+
+		onTime 0 {
+			transition "rotate" "0" "-360" "6000" "0" "0" ;	
+		}
+
+		onTime 6000 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef circ2
+	{
+		rect	302,188,154,154
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc5_circ2"
+		matcolor	0.721,0.831,0.372,0.6
+
+		onTime 0 {
+			transition "rotate" "0" "360" "6000" "0" "0" ;	
+		}
+
+		onTime 6000 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef circ5
+	{
+		rect	358,255,41,18
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc5_circ3"
+		matcolor	0.717,0.827,0.368,0.6
+	}
+	windowDef topstuff
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef monitor_darkedge
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+		windowDef sline
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_line3"
+			matcolor	0.509,0.509,0.509,1
+		}
+		windowDef scratches
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/screen_scratches2"
+			matcolor	0.952,0.976,0.823,0.164
+		}
+		windowDef topreflect
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_glow2"
+			matcolor	0.949,0.988,0.729,0.529
+		}
+		windowDef sline1
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_line4"
+			matcolor	0.356,0.356,0.356,0.235
+		}
+	}
+}

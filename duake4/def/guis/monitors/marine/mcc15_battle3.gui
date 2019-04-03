@@ -1,0 +1,179 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	windowDef bg
+	{
+		rect	0,0,639,481
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc15_battle3_all"
+		matcolor	1,1,1,1
+	}
+	windowDef txt_logout
+	{
+		rect	393,432,179,40
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200638"
+		textscale	0.6
+		font	"fonts/marine"
+	}
+	windowDef vidcomm
+	{
+		rect	37,55,224,28
+		visible	1
+		forecolor	0.674,0.674,0.576,1
+		text	"#str_200691"
+		textscale	0.45
+		font	"fonts/marine"
+	}
+	windowDef s
+	{
+		rect	34,-16,41,56
+		visible	1
+		forecolor	1,1,1,1
+		text	"s"
+		textscale	0.9
+		font	"fonts/marine"
+	}
+	windowDef m
+	{
+		rect	57,-16,41,56
+		visible	1
+		forecolor	1,1,1,1
+		text	"m"
+		textscale	0.9
+		font	"fonts/marine"
+	}
+	windowDef c
+	{
+		rect	86,-16,41,56
+		visible	1
+		forecolor	1,1,1,1
+		text	"c"
+		textscale	0.9
+		font	"fonts/marine"
+	}
+	windowDef archive
+	{
+		rect	436,346,104,31
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200692"
+		textscale	0.37
+		font	"fonts/marine"
+	}
+	windowDef filters
+	{
+		rect	437,384,104,31
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200693"
+		textscale	0.37
+		font	"fonts/marine"
+	}
+	windowDef feeds
+	{
+		rect	438,308,104,31
+		visible	1
+		forecolor	0,0,0,1
+		text	"#str_200694"
+		textscale	0.37
+		font	"fonts/marine"
+	}
+	windowDef bravo
+	{
+		rect	267,58,149,21
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200695"
+		textscale	0.37
+		font	"fonts/marine"
+	}
+	windowDef archived
+	{
+		rect	280,373,100,23
+		visible	1
+		forecolor	0.666,0.666,0.568,1
+		text	"#str_200696"
+		textscale	0.35
+		font	"fonts/marine"
+	}
+	windowDef footage
+	{
+		rect	280,387,100,22
+		visible	1
+		forecolor	0.662,0.662,0.564,1
+		text	"#str_200697"
+		textscale	0.35
+		font	"fonts/marine"
+	}
+	windowDef live
+	{
+		rect	425,212,47,22
+		visible	1
+		forecolor	0.662,0.662,0.564,1
+		text	"#str_200698"
+		textscale	0.35
+		font	"fonts/marine"
+	}
+	windowDef feed
+	{
+		rect	425,226,48,22
+		visible	1
+		forecolor	0.658,0.658,0.560,1
+		text	"#str_200699"
+		textscale	0.35
+		font	"fonts/marine"
+	}
+	windowDef mute
+	{
+		rect	327,92,64,28
+		visible	1
+		forecolor	0.737,0.847,0.388,1
+		text	"#str_200700"
+		textscale	0.45
+		font	"fonts/marine"
+	}
+	windowDef topstuff
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef monitor_darkedge
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+		windowDef sline
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_line8"
+			matcolor	0.105,0.105,0.105,0.392
+		}
+		windowDef sline1
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_line4"
+			matcolor	0.603,0.603,0.603,0.0980
+		}
+		windowDef scratches
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/screen_scratches3"
+			matcolor	0.831,0.854,0.603,0.121
+			matscalex	-1
+			matscaley	-1
+		}
+		windowDef topreflect
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_glow3"
+			matcolor	0.721,0.709,0.505,0.290
+		}
+	}
+}

@@ -1,0 +1,251 @@
+windowDef Desktop
+{
+	visible	1
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	windowDef data
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/common/strogg/data_c"
+		matcolor	1,1,1,0.1
+		shear	0,-.42
+	}
+	windowDef gear0
+	{
+		rect	69,65,600,600
+		visible	1
+		background	"gfx/guis/common/strogg/gear1"
+		matcolor	0.882,0.517,0.149,.4
+	}
+	windowDef gear5
+	{
+		rect	-164,236,300,300
+		visible	1
+		background	"gfx/guis/common/strogg/gear1"
+		matcolor	0.882,0.517,0.149,.4
+	}
+	windowDef bg
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/common8_bg"
+		matcolor	0.972,0.682,0.152,1
+	}
+	windowDef gear1
+	{
+		rect	237,14,380,380
+		visible	1
+		background	"gfx/guis/common/strogg/gear1"
+		matcolor	0.882,0.517,0.149,1
+		rotate	time*0.01
+	}
+	windowDef gear2
+	{
+		rect	56,128,220,220
+		visible	1
+		background	"gfx/guis/common/strogg/gear1"
+		matcolor	0.882,0.517,0.149,1
+		rotate	time*-0.04
+	}
+	windowDef gear3
+	{
+		rect	180,307,140,140
+		visible	1
+		background	"gfx/guis/common/strogg/gear1"
+		matcolor	0.882,0.517,0.149,1
+		rotate	time*0.08
+	}
+	windowDef gear4
+	{
+		rect	537,11,100,100
+		visible	1
+		background	"gfx/guis/common/strogg/gear1"
+		matcolor	0.882,0.517,0.149,1
+		rotate	time*0.08
+	}
+	windowDef box
+	{
+		rect	32,36,247,194
+		visible	1
+		background	"gfx/guis/common/strogg/box5"
+		matcolor	0.960,0.415,0.152,0.6
+		shear	0,-.42
+	}
+	windowDef t_btmleft
+	{
+		rect	40,341,130,92
+		visible	1
+		background	"gfx/guis/common/strogg/nonscrolltext3"
+		matcolor	0.988,0.921,0.439,1
+		shear	0,-.42
+	}
+	windowDef t_topleft1
+	{
+		rect	140,76,107,90
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext1"
+		matcolor	1,1,1,1
+		shear	0,-.42
+	}
+	windowDef t_topleft2
+	{
+		rect	68,121,62,67
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext1"
+		matcolor	1,1,1,1
+		shear	0,-.42
+		matscalex	-1
+	}
+	windowDef decal
+	{
+		rect	104,80,40,35
+		visible	1
+		background	"gfx/guis/common/strogg/decal1"
+		matcolor	0,0,0,.6
+	}
+	windowDef title
+	{
+		rect	18,12,285,34
+		visible	1
+		forecolor	1,1,1,.8
+		text	"#str_200803"
+		textscale	0.45
+		font	"fonts/r_strogg"
+	}
+	windowDef d_mch
+	{
+		rect	315,311,231,124
+		visible	0
+		shear	0,-.42
+	}
+	windowDef waveform1
+	{
+		rect	398,382,125,46
+		visible	1
+		background	"gfx/guis/common/waveform1"
+		matcolor	0.917,0.552,0.0666,1*guitable_1_92[time*.0004]
+		shear	0,-.4
+	}
+	windowDef p_waveform2
+	{
+		rect	398,382,125,46
+		visible	1
+		shear	0,-.4
+		windowDef waveform2
+		{
+			rect	-101,0,328,46
+			visible	1
+			background	"gfx/guis/common/waveform1"
+			matcolor	0.917,0.552,0.0666,1*guitable_1_92[time*.0004]
+			shear	0,-.4
+		}
+	}
+	windowDef ekg_l1
+	{
+		rect	372,402,51,10
+		visible	1
+		background	"gfx/guis/common/line1"
+		matcolor	0.772,0.705,0.321,1
+		rotate	90
+		shear	0,-.4
+	}
+	windowDef ekg_l2
+	{
+		rect	498,402,51,9
+		visible	1
+		background	"gfx/guis/common/line1"
+		matcolor	0.772,0.705,0.321,1
+		rotate	90
+		shear	0,-.4
+	}
+	windowDef ekg_num
+	{
+		rect	352,380,44,30
+		visible	1
+		forecolor	0.835,0.603,0,.5
+		text	"76"
+		textscale	0.5
+		font	"fonts/r_strogg"
+
+		onTime 0 {
+			set "text" "76" ;
+		}
+
+		onTime 1200 {
+			set "text" "74" ;
+		}
+
+		onTime 4300 {
+			set "text" "72" ;
+		}
+
+		onTime 6700 {
+			set "text" "79" ;
+		}
+
+		onTime 8400 {
+			set "text" "80" ;
+		}
+
+		onTime 11200 {
+			set "text" "77" ;
+		}
+
+		onTime 15000 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef ekg_num2
+	{
+		rect	356,405,34,14
+		visible	1
+		forecolor	0.835,0.603,0,.36
+		text	"#str_200804"
+		textscale	0.2
+		font	"fonts/r_strogg"
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	2,-203,640,906
+			background	"gfx/guis/common/monitor_line3"
+			matcolor	0.580,0.650,0.705,0.1
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	-165,-75,1026,575
+			background	"gfx/guis/common/gradient"
+			matcolor	0.984,0.792,0.215,.2*guitable_random1[time*0.002]
+		}
+		windowDef screendirt
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/screen_dirt4"
+			matcolor	0.388,0.4,0.176,1
+		}
+		windowDef monitor_darkedge
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef title_top
+	{
+		rect	18,12,285,34
+		visible	1
+		forecolor	1,1,1,.2
+		text	"#str_200803"
+		textscale	0.45
+		font	"fonts/r_strogg"
+	}
+}

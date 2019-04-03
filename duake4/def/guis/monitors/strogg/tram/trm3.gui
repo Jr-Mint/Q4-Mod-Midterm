@@ -1,0 +1,234 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	visible	1
+	windowDef grad
+	{
+		rect	-97,-160,801,1098
+		visible	1
+		background	"gfx/guis/common/gradient"
+		matcolor	0.486,1,1,0.4
+		matscaley	-1
+	}
+	windowDef bg
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/trm3_bg"
+		matcolor	1,1,1,1*guitable_random1[time*0.0002]
+		shear	0,.14
+	}
+	windowDef title
+	{
+		rect	52,280,276,31
+		visible	1
+		forecolor	0.0509,1,0.478,1
+		text	"#str_200877"
+		textscale	.5
+		font	"fonts/r_strogg"
+	}
+	windowDef title2
+	{
+		rect	225,439,150,28
+		visible	1
+		forecolor	0.0509,1,0.478,.6
+		text	"#str_200878"
+		textscale	.42
+		font	"fonts/r_strogg"
+	}
+	windowDef scroll
+	{
+		rect	63,308,262,12
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/marquee_btmscroll"
+		matcolor	0.184,0.658,0.266,1
+		shear	0,.14
+	}
+	windowDef btm_tram
+	{
+		rect	144,358,202,72
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/trm2_img2"
+		matcolor	0.0156,1,0.509,1*guitable_random1[time*0.0002]
+	}
+	windowDef ar1
+	{
+		rect	334,287,24,34
+		visible	1
+		background	"gfx/guis/common/arrow1"
+		matcolor	0.0470,1,0.474,.6
+		matscalex	-1
+	}
+	windowDef ar2
+	{
+		rect	349,287,24,34
+		visible	1
+		background	"gfx/guis/common/arrow1"
+		matcolor	0.0470,1,0.474,.6
+		matscalex	-1
+	}
+	windowDef ar3
+	{
+		rect	365,287,24,34
+		visible	1
+		background	"gfx/guis/common/arrow1"
+		matcolor	0.0470,1,0.474,.6
+		matscalex	-1
+	}
+	windowDef circle
+	{
+		rect	121,353,82,82
+		visible	1
+		background	"gfx/guis/common/blur_circle2"
+		matcolor	0.690,1,0.937,0
+
+		onTime 0 {
+			transition "rect" "$circle::rect"	"$d_circle::rect" "500" ;
+			transition "matcolor_w" "0" ".3" "500" ;
+		}
+
+		onTime +500 {
+			transition "rect" "$d_circle::rect"	"$d_circle2::rect" "500" ;
+			transition "matcolor_w" ".3" "0" "500" ;
+		}
+
+		onTime +500 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef d_circle
+	{
+		rect	185,333,120,120
+		visible	0
+		background	"gfx/guis/common/blur_circle2"
+		matcolor	1,1,1,1
+	}
+	windowDef d_circle2
+	{
+		rect	304,374,40,40
+		visible	0
+		background	"gfx/guis/common/blur_circle2"
+		matcolor	1,1,1,1
+	}
+	windowDef circle2
+	{
+		rect	121,363,62,62
+		visible	1
+		background	"gfx/guis/common/blur_circle2"
+		matcolor	0.690,1,0.937,0
+
+		onTime 0 {
+			transition "rect" "$circle2::rect"	"$d2_circle::rect" "200" ;
+			transition "matcolor_w" "0" ".3" "200" ;
+		}
+
+		onTime +200 {
+			transition "rect" "$d2_circle::rect"	"$d2_circle2::rect" "200" ;
+			transition "matcolor_w" ".3" "0" "200" ;
+		}
+
+		onTime +200 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef d2_circle
+	{
+		rect	185,343,100,100
+		visible	0
+		background	"gfx/guis/common/blur_circle2"
+		matcolor	1,1,1,1
+	}
+	windowDef d2_circle2
+	{
+		rect	304,379,30,30
+		visible	0
+		background	"gfx/guis/common/blur_circle2"
+		matcolor	1,1,1,1
+	}
+	windowDef decal
+	{
+		rect	77,52,159,191
+		visible	1
+		background	"gfx/guis/common/strogg/decal3"
+		matcolor	0.0901,0.858,0.415,1*guitable_random1[time*0.0002]
+	}
+	windowDef p_scrolltext
+	{
+		rect	367,354,216,114
+		visible	1
+		windowDef scrolltext
+		{
+			rect	0,-143,216,260
+			visible	1
+			background	"gfx/guis/common/strogg/scrolltext2"
+			matcolor	0.756,1,0.996,1
+			shear	0,.14
+		}
+	}
+	windowDef scroll2
+	{
+		rect	174,86,333,65
+		visible	1
+		background	"gfx/guis/common/waveline2"
+		matcolor	0.541,1,0.619,0.6
+		rotate	355
+		shear	0,-1.8
+	}
+	windowDef scroll3
+	{
+		rect	184,48,333,132
+		visible	1
+		background	"gfx/guis/common/waveline2b"
+		matcolor	0.541,1,0.619,0.5
+		rotate	355
+		shear	0,-1.8
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	0,-172,640,782
+			background	"gfx/guis/common/monitor_line7"
+			matcolor	0.725,1,1,.06
+		}
+		windowDef dirt
+		{
+			visible	1
+			rect	-154,-106,812,595
+			background	"gfx/guis/common/screen_dirt4"
+			matcolor	0.803,0.658,0.513,1
+			matscalex	-1
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef scroll4
+	{
+		rect	177,154,331,58
+		visible	1
+		background	"gfx/guis/common/scroll_img3"
+		matcolor	0.541,1,0.619,0.4
+		rotate	355
+		shear	0,-1.8
+	}
+	windowDef scroll5
+	{
+		rect	177,154,331,58
+		visible	1
+		background	"gfx/guis/common/scroll_img2"
+		matcolor	0.541,1,0.619,0.3
+		rotate	355
+		shear	0,-1.8
+	}
+}

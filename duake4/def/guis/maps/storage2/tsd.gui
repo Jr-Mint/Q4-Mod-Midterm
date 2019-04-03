@@ -1,0 +1,458 @@
+windowDef Desktop
+{
+	comment	"gui_parm_script sets name of script to fire when button pressed"
+	rect	0,0,640,480
+	windowDef bg
+	{
+		rect	0,0,640,480
+		visible	1
+		backcolor	0,0,0,1
+	}
+	windowDef bg1
+	{
+		rect	-24,241,669,240
+		visible	1
+		background	"gfx/guis/maps/process2/nodecontroller_bg"
+		matcolor	0,1,1,1
+	}
+	windowDef left
+	{
+		rect	-50,94,327,262
+		visible	1
+		background	"gfx/guis/maps/storage2/tsd_left"
+		matcolor	0.239,0.529,0.705,1
+	}
+	windowDef tube1
+	{
+		rect	364,112,42,195
+		visible	1
+		background	"gfx/guis/maps/storage2/tsd_tube"
+		matcolor	0.623,0.721,0.756,1
+	}
+	windowDef tube2
+	{
+		rect	412,112,42,195
+		visible	1
+		background	"gfx/guis/maps/storage2/tsd_tube"
+		matcolor	0.623,0.721,0.756,1
+	}
+	windowDef tube3
+	{
+		rect	460,111,42,195
+		visible	1
+		background	"gfx/guis/maps/storage2/tsd_tube"
+		matcolor	0.623,0.721,0.756,1
+	}
+	windowDef tube4
+	{
+		rect	509,111,42,195
+		visible	1
+		background	"gfx/guis/maps/storage2/tsd_tube"
+		matcolor	0.623,0.721,0.756,1
+	}
+	windowDef tube5
+	{
+		rect	557,111,42,195
+		visible	1
+		background	"gfx/guis/maps/storage2/tsd_tube"
+		matcolor	0.623,0.721,0.756,1
+	}
+	windowDef torso1
+	{
+		rect	365,115,43,186
+		visible	1
+		background	"gfx/guis/maps/storage2/tsd_torso"
+		matcolor	0.384,0.525,0.6,1
+	}
+	windowDef torso2
+	{
+		rect	412,115,43,186
+		visible	1
+		background	"gfx/guis/maps/storage2/tsd_torso"
+		matcolor	0.384,0.525,0.6,1
+	}
+	windowDef torso3
+	{
+		rect	460,115,43,186
+		visible	1
+		background	"gfx/guis/maps/storage2/tsd_torso"
+		matcolor	0.384,0.525,0.6,1
+	}
+	windowDef torso4
+	{
+		rect	510,115,43,186
+		visible	1
+		background	"gfx/guis/maps/storage2/tsd_torso"
+		matcolor	0.384,0.525,0.6,1
+	}
+	windowDef torso5
+	{
+		rect	557,115,43,186
+		visible	1
+		background	"gfx/guis/maps/storage2/tsd_torso"
+		matcolor	0.384,0.525,0.6,1
+	}
+	windowDef tubetrim1
+	{
+		rect	364,91,45,235
+		visible	1
+		background	"gfx/guis/maps/storage2/tsd_tubetrim"
+		matcolor	0.243,0.360,0.407,1
+	}
+	windowDef tubetrim2
+	{
+		rect	412,91,45,235
+		visible	1
+		background	"gfx/guis/maps/storage2/tsd_tubetrim"
+		matcolor	0.243,0.360,0.407,1
+	}
+	windowDef tubetrim3
+	{
+		rect	460,91,45,235
+		visible	1
+		background	"gfx/guis/maps/storage2/tsd_tubetrim"
+		matcolor	0.243,0.360,0.407,1
+	}
+	windowDef tubetrim4
+	{
+		rect	509,91,45,235
+		visible	1
+		background	"gfx/guis/maps/storage2/tsd_tubetrim"
+		matcolor	0.243,0.360,0.407,1
+	}
+	windowDef tubetrim5
+	{
+		rect	557,91,45,235
+		visible	1
+		background	"gfx/guis/maps/storage2/tsd_tubetrim"
+		matcolor	0.243,0.360,0.407,1
+	}
+	windowDef gradient
+	{
+		rect	333,167,290,141
+		visible	1
+		background	"gfx/guis/common/gradient4"
+		matcolor	0,0,0,1
+	}
+	windowDef R_frame
+	{
+		rect	118,-28,643,480
+		visible	1
+		background	"gfx/guis/maps/storage2/tsd_Rframe"
+		matcolor	0.239,0.529,0.705,1
+	}
+	windowDef txt_tsdtransfer
+	{
+		rect	11,47,506,38
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200555"
+		textscale	0.55
+		font	"fonts/r_strogg"
+	}
+	windowDef txt_tsd
+	{
+		rect	11,101,212,20
+		visible	1
+		forecolor	0,0,0,1
+		text	"#str_200556"
+		textscale	0.25
+		font	"fonts/r_strogg"
+	}
+	windowDef txt_offline
+	{
+		rect	10,111,196,38
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200402"
+		textscale	0.55
+		font	"fonts/r_strogg"
+	}
+	windowDef txt_zoom
+	{
+		rect	4,253,80,19
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200557"
+		textscale	0.3
+		font	"fonts/r_strogg"
+		textalign	2
+	}
+	windowDef minimap
+	{
+		rect	78,143,97,189
+		visible	1
+		background	"gfx/guis/maps/storage2/tsd_minimap"
+		matcolor	0.619,0.792,0.827,1
+	}
+	windowDef R_frame2
+	{
+		rect	50,187,115,82
+		visible	1
+		background	"gfx/guis/maps/storage2/tsd_Rframe"
+		matcolor	1,1,1,1
+	}
+	windowDef txt_offline1
+	{
+		rect	455,241,125,55
+		visible	1
+		forecolor	1,1,1,1*guitable_10_5[time*0.0015]
+		text	"0"
+		textscale	1
+		font	"fonts/r_strogg"
+		textalign	2
+		notime	1
+
+		onTime 0 {
+			set "text" "6" ;
+		}
+
+		onTime +50 {
+			set "text" "14" ;
+		}
+
+		onTime +50 {
+			set "text" "19" ;
+		}
+
+		onTime +50 {
+			set "text" "24" ;
+		}
+
+		onTime +50 {
+			set "text" "28" ;
+		}
+
+		onTime +50 {
+			set "text" "32" ;
+		}
+
+		onTime +50 {
+			set "text" "36" ;
+		}
+
+		onTime +50 {
+			set "text" "41" ;
+		}
+
+		onTime +50 {
+			set "text" "45" ;
+		}
+
+		onTime +50 {
+			set "text" "47" ;
+		}
+
+		onTime +50 {
+			set "text" "50" ;
+		}
+
+		onTime +50 {
+			set "text" "52" ;
+		}
+
+		onTime +50 {
+			set "text" "56" ;
+		}
+
+		onTime +50 {
+			set "text" "59" ;
+		}
+
+		onTime +50 {
+			set "text" "63" ;
+		}
+
+		onTime +50 {
+			set "text" "67" ;
+		}
+
+		onTime +50 {
+			set "text" "71" ;
+		}
+
+		onTime +50 {
+			set "text" "74" ;
+		}
+
+		onTime +50 {
+			set "text" "78" ;
+		}
+
+		onTime +50 {
+			set "text" "82" ;
+		}
+
+		onTime +50 {
+			set "text" "86" ;
+		}
+
+		onTime +50 {
+			set "text" "89" ;
+		}
+
+		onTime +50 {
+			set "text" "92" ;
+		}
+
+		onTime +50 {
+			set "text" "96" ;
+		}
+
+		onTime +50 {
+			set "text" "100" ;
+		}
+
+	}
+	windowDef txt_offline2
+	{
+		rect	579,236,35,47
+		visible	1
+		forecolor	0.5,1,1,1*guitable_10_5[time*0.0015]
+		text	"%"
+		textscale	0.8
+		font	"fonts/marine"
+	}
+	windowDef top
+	{
+		rect	0,0,639,58
+		visible	1
+		background	"gfx/guis/maps/storage2/tsd_top"
+		matcolor	0.141,0.650,0.537,1
+	}
+	windowDef R_button
+	{
+		rect	204,361,321,121
+		visible	1
+		background	"gfx/guis/maps/storage2/tsd_button"
+		matcolor	0.819,0.6,0.0784,1
+	}
+	windowDef txt_reactivate
+	{
+		rect	241,399,280,38
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200553"
+		textscale	0.6
+		font	"fonts/r_strogg"
+		textalign	1
+	}
+	windowDef triangleR
+	{
+		rect	214,429,33,37
+		visible	1
+		background	"gfx/guis/maps/airdefense/gun_triangleLR"
+		matcolor	0.952,0.835,0.462,1
+		matscalex	-1
+	}
+	windowDef dotline1
+	{
+		rect	150,205,332,40
+		visible	1
+		background	"gfx/guis/monitors/strogg/streamhub/hub5_dots"
+		matcolor	0.968,0.980,0.984,.6
+		rotate	90
+	}
+	windowDef arrow2
+	{
+		rect	272,100,32,32
+		visible	1
+		background	"gfx/guis/common/arrow6"
+		matcolor	0.0862,0.937,0.513,1
+		rotate	90
+
+		onTime 0 {
+			transition "rect" "$arrow2::rect" "$d_arrow2::rect" "5000" ;
+		}
+
+		onTime 8000 {
+			transition "rect" "$d_arrow2::rect" "$arrow2::rect" "5000" ;
+		}
+
+		onTime 16000 {
+			resettime "0" 
+		}
+
+	}
+	windowDef d_arrow2
+	{
+		rect	272,315,32,32
+		visible	0
+		background	"gfx/guis/common/arrow6"
+		matcolor	0.0862,0.937,0.513,1
+		rotate	90
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef static
+		{
+			visible	1
+			rect	0,-212,640,806
+			background	"gfx/guis/common/monitor_line4"
+			matcolor	1,1,1,0.18
+			matscalex	-1
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,-85,640,568
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.494,0.494,0.494,1
+		}
+		windowDef scratches
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/screen_scratches3"
+			matcolor	0.749,0.984,1,.28
+		}
+		windowDef blackedge
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+		windowDef addlines
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/add_lines1"
+			matcolor	0.250,0.250,0.250,1
+		}
+	}
+	windowDef btn
+	{
+		rect	196,362,334,118
+		visible	1
+
+		onMouseEnter {
+			transition "r_button::matcolor" "0.819,0.6,0.0784,1" "1,1,1,1" "0" ;
+			transition "txt_reactivate::forecolor" "1,1,1,1" "0,0,0,1" "0" ;
+		}
+
+		onMouseExit {
+			transition "r_button::matcolor" "1,1,1,1" "0.819,0.6,0.0784,1" "500" ;
+			transition "txt_reactivate::forecolor" "0,0,0,1" "1,1,1,1" "500" ;
+		}
+
+		onAction {
+			set	"cmd" "play guisound_beep2 ; runscript" "$gui::gui_parm_script" ;
+			transition "r_button::matcolor" "1,1,1,1" "0.819,0.6,0.0784,1" "500" ;	
+			set "visible" "0" ;
+			set "noevents" "1" ;
+			
+			resettime "txt_offline1" "0" ;
+			set "txt_offline::text" "#str_200400" ;
+			
+			set "torso1::background" "gfx/guis/maps/storage2/tsd_torso1" ;
+			set "torso2::background" "gfx/guis/maps/storage2/tsd_torso2" ;
+			set "torso3::background" "gfx/guis/maps/storage2/tsd_torso1" ;
+			set "torso4::background" "gfx/guis/maps/storage2/tsd_torso2" ;
+			set "torso5::background" "gfx/guis/maps/storage2/tsd_torso1" ;
+		}
+
+	}
+}

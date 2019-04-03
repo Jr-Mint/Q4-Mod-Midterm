@@ -1,0 +1,414 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0.145,0.145,0.145,1
+	visible	1
+	windowDef content
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/marine/mon1_all"
+		matcolor	1,1,1,1
+		windowDef t_num1
+		{
+			rect	16,311,160,36
+			visible	1
+			forecolor	1,1,1,.6
+			text	"#str_200332"
+			textscale	0.5
+			font	"fonts/lowpixel"
+
+			onTime 0 {
+				set "text" "#str_200332" ;
+			}
+
+			onTime +100 {
+				set "text" "#str_200333" ;
+			}
+
+			onTime +100 {
+				set "text" "#str_200334" ;
+			}
+
+			onTime +100 {
+				set "text" "#str_200335" ;
+			}
+
+			onTime +100 {
+				set "text" "#str_200336" ;
+			}
+
+			onTime +100 {
+				set "text" "#str_200337" ;
+			}
+
+			onTime +100 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef t_num2
+		{
+			rect	16,338,160,36
+			visible	1
+			forecolor	1,1,1,.4
+			text	"#str_200338"
+			textscale	0.5
+			font	"fonts/lowpixel"
+
+			onTime 0 {
+				set "text" "#str_200338" ;
+			}
+
+			onTime +150 {
+				set "text" "#str_200339" ;
+			}
+
+			onTime +150 {
+				set "text" "#str_200340" ;
+			}
+
+			onTime +150 {
+				set "text" "#str_200341" ;
+			}
+
+			onTime +150 {
+				set "text" "#str_200342" ;
+			}
+
+			onTime +150 {
+				set "text" "#str_200343" ;
+			}
+
+			onTime +150 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef t_num3
+		{
+			rect	16,367,160,36
+			visible	1
+			forecolor	1,1,1,.2
+			text	"#str_200344"
+			textscale	0.5
+			font	"fonts/lowpixel"
+
+			onTime 0 {
+				set "text" "#str_200344" ;
+			}
+
+			onTime +200 {
+				set "text" "#str_200345" ;
+			}
+
+			onTime +200 {
+				set "text" "#str_200346" ;
+			}
+
+			onTime +200 {
+				set "text" "#str_200347" ;
+			}
+
+			onTime +200 {
+				set "text" "#str_200348" ;
+			}
+
+			onTime +200 {
+				set "text" "#str_200349" ;
+			}
+
+			onTime +200 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef ussmadison
+		{
+			rect	270,345,134,22
+			visible	1
+			forecolor	0.996,0.996,0.996,1
+			text	"#str_200736"
+			textscale	0.28
+			font	"fonts/marine"
+			textspacing	-1
+		}
+		windowDef ussmadison2
+		{
+			rect	272,357,123,18
+			visible	1
+			forecolor	0.713,0.807,0.584,1
+			text	"#str_200737"
+			textscale	0.2
+			font	"fonts/marine"
+			textspacing	-1
+		}
+		windowDef ussiowa
+		{
+			rect	204,160,97,22
+			visible	1
+			forecolor	1,1,1,1
+			text	"#str_200738"
+			textscale	0.28
+			font	"fonts/marine"
+			textspacing	-1
+		}
+		windowDef ussiowa2
+		{
+			rect	205,171,89,19
+			visible	1
+			forecolor	0.713,0.807,0.584,1
+			text	"#str_200739"
+			textscale	0.2
+			font	"fonts/marine"
+			textspacing	-1
+		}
+		windowDef scrolltext1
+		{
+			rect	32,113,146,163
+			visible	1
+			background	"gfx/guis/common/marine/scrolltext1"
+			matcolor	0.745,0.886,0.686,0.6
+			matscalex	-1
+		}
+		windowDef title
+		{
+			rect	20,79,176,27
+			visible	1
+			forecolor	0.941,0.941,0.866,1
+			text	"#str_200740"
+			textscale	0.4
+			font	"fonts/marine"
+			textspacing	-3
+		}
+		windowDef prompt
+		{
+			rect	161,87,9,14
+			visible	1
+			backcolor	0.874,0.870,0.709,1
+
+			onTime 0 {
+				set "visible" "0" ;
+			}
+
+			onTime 600 {
+				set "visible" "1" ;
+			}
+
+			onTime 1200 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef circle1
+		{
+			rect	528,159,60,60
+			visible	1
+			background	"gfx/guis/common/circle1"
+			matcolor	1,0.945,0.568,.4
+
+			onTime 0 {
+				transition "matcolor_w" ".4" "0" "2500" ;
+			}
+
+			onTime 2500 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef circle2
+		{
+			rect	572,293,20,20
+			visible	1
+			background	"gfx/guis/common/circle1"
+			matcolor	1,0.945,0.568,.6
+
+			onTime 0 {
+				transition "matcolor_w" ".6" "0" "2000" ;
+			}
+
+			onTime 2000 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef circle3
+		{
+			rect	523,48,30,30
+			visible	1
+			background	"gfx/guis/common/circle1"
+			matcolor	1,0.945,0.568,.6
+
+			onTime 0 {
+				transition "matcolor_w" ".6" "0" "3000" ;
+			}
+
+			onTime 3000 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef circle4
+		{
+			rect	472,218,80,80
+			visible	1
+			background	"gfx/guis/common/circle1"
+			matcolor	1,0.945,0.568,.4
+
+			onTime 0 {
+				transition "matcolor_w" ".4" "0" "5500" ;
+			}
+
+			onTime 5500 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef circle5
+		{
+			rect	414,115,36,36
+			visible	1
+			background	"gfx/guis/common/circle1"
+			matcolor	1,0.945,0.568,.6
+
+			onTime 0 {
+				transition "matcolor_w" ".6" "0" "4500" ;
+			}
+
+			onTime 4500 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef circle6
+		{
+			rect	410,241,20,20
+			visible	1
+			background	"gfx/guis/common/circle1"
+			matcolor	1,0.945,0.568,.6
+
+			onTime 0 {
+				transition "matcolor_w" ".6" "0" "3200" ;
+			}
+
+			onTime 3200 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef circle7
+		{
+			rect	587,90,28,28
+			visible	1
+			background	"gfx/guis/common/circle1"
+			matcolor	1,0.945,0.568,.6
+
+			onTime 0 {
+				transition "matcolor_w" ".6" "0" "2900" ;
+			}
+
+			onTime 2900 {
+				resettime "0" ;
+			}
+
+		}
+	}
+	windowDef template
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef t_smc
+		{
+			rect	497,392,138,64
+			visible	1
+			forecolor	0.874,0.870,0.709,.6
+			text	"#str_200329"
+			textscale	1.2
+			font	"fonts/marine"
+			textspacing	-10
+		}
+		windowDef t_techpanel
+		{
+			rect	503,441,142,34
+			visible	1
+			forecolor	0.874,0.870,0.709,.8
+			text	"#str_200621"
+			textscale	0.44
+			font	"fonts/marine"
+			textspacing	-3
+		}
+		windowDef t_access
+		{
+			rect	66,413,103,40
+			visible	1
+			forecolor	1,1,1,1
+			text	"#str_200327"
+			textscale	.6
+			font	"fonts/marine"
+			textspacing	-3
+		}
+		windowDef t_btn1
+		{
+			rect	8,21,153,39
+			visible	1
+			forecolor	1,1,1,1
+			text	"#str_200741"
+			textscale	0.4
+			font	"fonts/marine"
+			textspacing	-3
+		}
+		windowDef t_btn2
+		{
+			rect	161,21,153,39
+			visible	1
+			forecolor	1,1,1,1
+			text	"#str_200742"
+			textscale	.4
+			font	"fonts/marine"
+			textspacing	-3
+		}
+		windowDef t_btn3
+		{
+			rect	313,21,154,39
+			visible	1
+			forecolor	0,0,0,0.6
+			text	"#str_200743"
+			textscale	0.4
+			font	"fonts/marine"
+			textspacing	-3
+		}
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	0,-285,640,1129
+			background	"gfx/guis/common/monitor_line4"
+			matcolor	0.905,0.909,0.874,0.0588
+		}
+		windowDef scratches
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/screen_scratches2"
+			matcolor	0.654,0.847,0.807,.24
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_glow3"
+			matcolor	0.8,1,0.615,.4
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+}

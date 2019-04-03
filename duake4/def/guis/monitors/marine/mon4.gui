@@ -1,0 +1,244 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0.145,0.145,0.145,1
+	visible	1
+	windowDef content
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/marine/mon4_all"
+		matcolor	1,1,1,1
+		windowDef tb1
+		{
+			rect	108,385,27,23
+			visible	1
+			forecolor	1,1,1,.4
+			text	"1"
+			textscale	0.4
+			font	"fonts/lowpixel"
+		}
+		windowDef tb2
+		{
+			rect	141,385,27,23
+			visible	1
+			forecolor	1,1,1,.4
+			text	"2"
+			textscale	0.4
+			font	"fonts/lowpixel"
+		}
+		windowDef tb3
+		{
+			rect	179,385,27,23
+			visible	1
+			forecolor	1,1,1,.8
+			text	"3"
+			textscale	0.4
+			font	"fonts/lowpixel"
+		}
+		windowDef tb4
+		{
+			rect	217,385,27,23
+			visible	1
+			forecolor	1,1,1,.4
+			text	"4"
+			textscale	0.4
+			font	"fonts/lowpixel"
+		}
+		windowDef t_page
+		{
+			rect	4,380,84,18
+			visible	1
+			forecolor	1,1,1,0.6
+			text	"#str_200753"
+			textscale	0.25
+			font	"fonts/lowpixel"
+			textalign	2
+		}
+		windowDef t_select
+		{
+			rect	4,393,84,18
+			visible	1
+			forecolor	1,1,1,0.6
+			text	"#str_200747"
+			textscale	0.25
+			font	"fonts/lowpixel"
+			textalign	2
+		}
+		windowDef title
+		{
+			rect	271,78,276,32
+			visible	1
+			forecolor	0.941,0.941,0.866,1
+			text	"#str_200754"
+			textscale	0.56
+			font	"fonts/marine"
+			textspacing	-2
+		}
+		windowDef date
+		{
+			rect	272,103,135,27
+			visible	1
+			forecolor	0.941,0.941,0.866,.6
+			text	"04|22|2245"
+			textscale	0.4
+			font	"fonts/marine"
+			textspacing	-2
+		}
+		windowDef field
+		{
+			rect	272,147,322,269
+			visible	1
+			forecolor	0.882,0.882,0.807,1
+			text	"#str_200755"
+			textscale	0.3
+			font	"fonts/marine"
+			textspacing	-1
+		}
+		windowDef left_title
+		{
+			rect	13,119,205,25
+			visible	1
+			forecolor	0.941,0.941,0.866,1
+			text	"#str_200756"
+			textscale	0.4
+			font	"fonts/marine"
+			textspacing	-2
+		}
+		windowDef field2
+		{
+			rect	13,148,224,137
+			visible	1
+			forecolor	0.850,0.850,0.8,1
+			text	"#str_200757"
+			textscale	0.26
+			font	"fonts/marine"
+			textspacing	-1
+		}
+		windowDef field3
+		{
+			rect	13,325,224,37
+			visible	1
+			forecolor	0.847,0.847,0.8,1
+			text	"#str_200758"
+			textscale	0.26
+			font	"fonts/marine"
+			textspacing	-1
+		}
+		windowDef left_title2
+		{
+			rect	13,297,205,24
+			visible	1
+			forecolor	0.941,0.941,0.866,1
+			text	"#str_200759"
+			textscale	0.4
+			font	"fonts/marine"
+			textspacing	-2
+		}
+	}
+	windowDef template
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef t_smc
+		{
+			rect	5,-13,138,64
+			visible	1
+			forecolor	0.874,0.870,0.709,.6
+			text	"#str_200329"
+			textscale	1.2
+			font	"fonts/marine"
+			textspacing	-10
+		}
+		windowDef t_infopanel
+		{
+			rect	10,34,132,28
+			visible	1
+			forecolor	0.874,0.870,0.709,.8
+			text	"#str_200760"
+			textscale	0.465
+			font	"fonts/marine"
+			textspacing	-3
+		}
+		windowDef t_access
+		{
+			rect	440,433,103,40
+			visible	1
+			forecolor	1,1,1,1
+			text	"#str_200327"
+			textscale	.6
+			font	"fonts/marine"
+			textspacing	-3
+		}
+		windowDef t_btn1
+		{
+			rect	217,16,153,25
+			visible	1
+			forecolor	0,0,0,.6
+			text	"#str_200741"
+			textscale	0.4
+			font	"fonts/marine"
+			textspacing	-3
+		}
+		windowDef t_btn2
+		{
+			rect	372,16,153,25
+			visible	1
+			forecolor	1,1,1,1
+			text	"#str_200742"
+			textscale	.4
+			font	"fonts/marine"
+			textspacing	-3
+		}
+		windowDef t_btn3
+		{
+			rect	520,16,154,25
+			visible	1
+			forecolor	1,1,1,1
+			text	"#str_200743"
+			textscale	.4
+			font	"fonts/marine"
+			textspacing	-3
+		}
+		windowDef squares
+		{
+			rect	-2,444,200,24
+			visible	1
+			background	"gfx/guis/common/marine/squares1"
+			matcolor	0,0,0,.4
+		}
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	0,-288,640,1129
+			background	"gfx/guis/common/monitor_line4"
+			matcolor	0.905,0.909,0.874,0.0588
+		}
+		windowDef scratches
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/screen_scratches4"
+			matcolor	0.654,0.847,0.807,.24
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_glow1"
+			matcolor	0.623,0.768,0.466,1
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+}

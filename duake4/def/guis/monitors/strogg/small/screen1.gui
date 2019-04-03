@@ -1,0 +1,146 @@
+windowDef Desktop
+{
+	visible	1
+	rect	0,0,640,480
+	windowDef d_map
+	{
+		visible	1
+		rect	254,49,357,384
+		background	"gfx/guis/common/map1"
+		matcolor	0.588,0.627,0.462,1
+		windowDef map
+		{
+			visible	1
+			rect	0,0,640,640
+			background	"gfx/guis/common/map1"
+			matcolor	0.588,0.627,0.462,1
+
+			onTime 0 {
+				transition "map::rect" "$map::rect" "$d1_map::rect" "2000" "500" "500" ;
+			}
+
+			onTime 4000 {
+				transition "map::rect" "$d1_map::rect" "$d2_map::rect" "2000" "500" "500" ;
+			}
+
+			onTime 8000 {
+				transition "map::rect" "$d2_map::rect" "$d3_map::rect" "2000" "500" "500" ;
+			}
+
+			onTime 12000 {
+				transition "map::rect" "$d3_map::rect" "$map::rect" "2000" "500" "500" ;
+			}
+
+			onTime 16000 {
+				resettime "0" ;
+			}
+
+		}
+	}
+	windowDef d1_map
+	{
+		visible	0
+		rect	-33,-208,640,640
+		background	"gfx/guis/common/map1"
+		matcolor	0.627,0.623,0.505,1
+	}
+	windowDef d2_map
+	{
+		visible	0
+		rect	-25,51,640,640
+		background	"gfx/guis/common/map1"
+		matcolor	0.627,0.623,0.505,1
+	}
+	windowDef d3_map
+	{
+		visible	0
+		rect	251,-205,640,640
+		background	"gfx/guis/common/map1"
+		matcolor	0.627,0.623,0.505,1
+	}
+	windowDef screen1
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/small/screen1"
+		matcolor	0.780,0.439,0.129,1
+	}
+	windowDef scrolltext
+	{
+		visible	1
+		rect	14,78,203,322
+		background	"gfx/guis/common/strogg/scrolltext2"
+		matcolor	0.627,0.623,0.505,1
+	}
+	windowDef title
+	{
+		rect	425,395,183,34
+		visible	1
+		forecolor	0.627,0.623,0.505,1
+		text	"6321-37619"
+		textscale	.76
+		font	"fonts/strogg"
+	}
+	windowDef scroll
+	{
+		rect	268,59,335,87
+		visible	1
+		background	"gfx/guis/common/scroll_img3"
+		matcolor	0.741,0.843,0.850,0.6
+
+		onTime 0 {
+			transition "scroll::rect" "$scroll::rect" "$d_scroll::rect" "1000" ;
+		}
+
+		onTime 1000 {
+			transition "scroll::rect" "$d_scroll::rect" "$scroll::rect" "1000" ;
+		}
+
+		onTime 2000 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef d_scroll
+	{
+		rect	268,76,335,55
+		visible	0
+		background	"gfx/guis/common/scroll_img3"
+		matcolor	1,1,0.607,.6
+	}
+	windowDef numbers
+	{
+		rect	451,77,148,79
+		visible	1
+		forecolor	1,1,1,0.6
+		text	"619"
+		textscale	2
+		font	"fonts/strogg"
+	}
+	windowDef decal1
+	{
+		visible	1
+		rect	278,330,86,86
+		background	"gfx/guis/common/strogg/decal1"
+		matcolor	1,1,1,.6
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline1
+		{
+			visible	1
+			rect	0,-197,640,820
+			background	"gfx/guis/common/monitor_line6"
+			matcolor	0.749,0.596,0.235,.1
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/gradient"
+			matcolor	0.972,0.949,0.121,0.16*guitable_10_5[time*.0008]
+		}
+	}
+}

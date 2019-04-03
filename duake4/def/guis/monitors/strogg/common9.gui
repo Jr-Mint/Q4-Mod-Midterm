@@ -1,0 +1,286 @@
+windowDef Desktop
+{
+	comment	"gui_parm_broken = 1 adds broken glass cracks to the gui, gui_parm_stroyent = 1 adds stroyent junk on the screen"
+	visible	1
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	windowDef bg_r
+	{
+		rect	533,-27,132,373
+		visible	1
+		background	"gfx/guis/monitors/strogg/common9_bg"
+		matcolor	0.890,0.482,0.0352,1*guitable_8_10[time*0.000228]
+	}
+	windowDef bg_r2
+	{
+		rect	582,-97,259,378
+		visible	1
+		background	"gfx/guis/common/strogg/sq1"
+		matcolor	0.952,0.647,0.00392,.4
+		shear	0,.16
+	}
+	windowDef bg_l
+	{
+		rect	-26,133,132,373
+		visible	1
+		background	"gfx/guis/monitors/strogg/common9_bg"
+		matcolor	0.890,0.482,0.0352,1*guitable_8_10[time*0.000228]
+		rotate	180
+	}
+	windowDef bg_l2
+	{
+		rect	-214,159,259,378
+		visible	1
+		background	"gfx/guis/common/strogg/sq1"
+		matcolor	0.952,0.647,0.00392,.4
+		shear	0,.16
+	}
+	windowDef map
+	{
+		rect	-1,-5,640,480
+		visible	1
+		background	"gfx/guis/common/strogg/map3_bg"
+		matcolor	1,1,1,1*guitable_8_10[time*0.000228]
+	}
+	windowDef data
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/common/strogg/data_b"
+		matcolor	1,1,1,.1
+		shear	0,.2
+	}
+	windowDef circlemarker1
+	{
+		rect	439,196,50,50
+		visible	1
+		background	"gfx/guis/common/strogg/circlemarker"
+		matcolor	1,1,1,1
+		rotate	time*-0.04
+	}
+	windowDef circlemarker2
+	{
+		rect	414,171,100,100
+		visible	1
+		background	"gfx/guis/common/strogg/circlemarker"
+		matcolor	0.501,0.501,0.501,1
+		rotate	time*0.04
+	}
+	windowDef btns
+	{
+		rect	218,400,404,67
+		visible	1
+		background	"gfx/guis/monitors/strogg/common9_btn"
+		matcolor	0.890,0.482,0.0352,1*guitable_8_10[time*0.000228]
+	}
+	windowDef scrolltext1
+	{
+		rect	197,162,97,116
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext1"
+		matcolor	1,1,1,.8
+		shear	0,.18
+	}
+	windowDef scrolltext2
+	{
+		rect	84,84,98,152
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext2fast"
+		matcolor	1,1,1,1
+		shear	0,.18
+		matscalex	-1
+	}
+	windowDef numbers
+	{
+		rect	407,45,130,40
+		visible	1
+		shear	0,.18
+		forecolor	1,1,1,.6
+		text	435.76
+		textscale	1
+		font	"fonts/strogg"
+	}
+	windowDef scrolltext3
+	{
+		rect	101,446,122,99
+		visible	1
+		background	"gfx/guis/common/strogg/nonscrolltext2"
+		matcolor	1,1,1,1
+		shear	0,.2
+	}
+	windowDef p_btns
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef t_btn1
+		{
+			rect	273,425,66,21
+			visible	1
+			shear	0,.18
+			forecolor	1,1,1,.6
+			text	login
+			textscale	0.52
+			font	"fonts/strogg"
+		}
+		windowDef t_btn2
+		{
+			rect	386,425,93,21
+			visible	1
+			shear	0,.18
+			forecolor	1,1,1,.6
+			text	"grid xy"
+			textscale	0.52
+			font	"fonts/strogg"
+		}
+		windowDef t_btn3
+		{
+			rect	523,425,72,21
+			visible	1
+			shear	0,.18
+			forecolor	1,1,1,.6
+			text	setup
+			textscale	0.52
+			font	"fonts/strogg"
+		}
+		windowDef btn4
+		{
+			rect	86,14,103,33
+			visible	1
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	0.941,0.494,0,1
+			shear	0,.16
+		}
+		windowDef btn5
+		{
+			rect	187,14,103,33
+			visible	1
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	0.941,0.494,0,1
+			shear	0,.16
+		}
+		windowDef btn6
+		{
+			rect	287,14,103,33
+			visible	1
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	0.941,0.494,0,1
+			shear	0,.16
+		}
+		windowDef btn7
+		{
+			rect	88,422,62,22
+			visible	1
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	0.941,0.494,0,1
+			shear	0,.16
+		}
+		windowDef btn8
+		{
+			rect	149,422,62,22
+			visible	1
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	0.941,0.494,0,1
+			shear	0,.16
+		}
+		windowDef t_btn4
+		{
+			rect	99,22,75,18
+			visible	1
+			shear	0,.18
+			forecolor	1,1,1,.8
+			text	options
+			textscale	0.44
+			font	"fonts/strogg"
+		}
+		windowDef t_btn5
+		{
+			rect	210,22,64,18
+			visible	1
+			shear	0,.18
+			forecolor	1,1,1,.8
+			text	debug
+			textscale	0.44
+			font	"fonts/strogg"
+		}
+		windowDef t_btn6
+		{
+			rect	309,22,59,18
+			visible	1
+			shear	0,.18
+			forecolor	1,1,1,.8
+			text	"sys.jk"
+			textscale	0.44
+			font	"fonts/strogg"
+		}
+		windowDef t_btn7
+		{
+			rect	96,427,47,14
+			visible	1
+			shear	0,.18
+			forecolor	1,1,1,.7
+			text	"rk.fac"
+			textscale	0.3
+			font	"fonts/strogg"
+		}
+		windowDef t_btn8
+		{
+			rect	162,427,36,14
+			visible	1
+			shear	0,.18
+			forecolor	1,1,1,.7
+			text	edit
+			textscale	0.3
+			font	"fonts/strogg"
+		}
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	1,-204,640,906
+			background	"gfx/guis/common/monitor_line3"
+			matcolor	0.580,0.650,0.705,0.1
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	-134,-99,892,528
+			background	"gfx/guis/common/gradient"
+			matcolor	0.674,0.8,0.635,.2*guitable_8_10[time*0.008]
+		}
+		windowDef dirt_stroyent
+		{
+			visible	"gui::gui_parm_stroyent"
+			rect	0,0,640,480
+			background	"gfx/guis/common/screen_dirt6"
+			matcolor	0.411,0.447,0.164,.8
+			matscalex	-1
+		}
+		windowDef broken_glass_b
+		{
+			visible	"gui::gui_parm_broken"
+			rect	2,5,640,480
+			background	"gfx/guis/common/broken_glass3"
+			matcolor	0,0,0,1
+			matscalex	-1
+		}
+		windowDef broken_glass
+		{
+			visible	"gui::gui_parm_broken"
+			rect	0,0,640,480
+			background	"gfx/guis/common/broken_glass3"
+			matcolor	0.819,0.905,0.921,1
+			matscalex	-1
+		}
+		windowDef monitor_darkedge
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+}

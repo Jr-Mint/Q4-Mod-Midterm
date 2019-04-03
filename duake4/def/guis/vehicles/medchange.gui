@@ -1,0 +1,1031 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	visible	1
+	nocursor	1
+	backcolor	0,0,0,0
+	definevec4	"on"	1,0.815,0.435,1
+	definevec4	"black"	0,0,0,1
+
+	onNamedEvent activate {
+		resettime "anim" "0" ;
+	}
+
+	onNamedEvent hurt {
+		resettime "anim_hurt" "0" ;
+	}
+
+	onNamedEvent saveMessage {
+		set "quicksave_msg::forecolor_w" "1" ;
+		set "quicksave_msg::visible" "1" ;
+		resettime "quicksave_msg" "0" ;
+	}
+
+	windowDef all
+	{
+		rect	0,0,640,480
+		visible	0
+		windowDef tl_edge
+		{
+			rect	0,1,256,256
+			visible	1
+			background	"gfx/guis/hud/medchange_edge"
+			matcolor	1,0.815,0.435,1
+			matscaley	-1
+		}
+		windowDef bl_edge
+		{
+			rect	0,225,256,256
+			visible	1
+			background	"gfx/guis/hud/medchange_edge"
+			matcolor	1,0.815,0.435,1
+		}
+		windowDef tr_edge
+		{
+			rect	384,1,256,256
+			visible	1
+			background	"gfx/guis/hud/medchange_edge"
+			matcolor	1,0.815,0.435,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef br_edge
+		{
+			rect	384,225,256,256
+			visible	1
+			background	"gfx/guis/hud/medchange_edge"
+			matcolor	1,0.815,0.435,1
+			matscalex	-1
+		}
+		windowDef hex1
+		{
+			rect	67,118,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex2
+		{
+			rect	67,198,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex3
+		{
+			rect	67,278,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex4
+		{
+			rect	137,0,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex5
+		{
+			rect	137,78,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex6
+		{
+			rect	137,158,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex7
+		{
+			rect	137,238,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex8
+		{
+			rect	137,318,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex9
+		{
+			rect	137,398,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex10
+		{
+			rect	207,-39,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex11
+		{
+			rect	207,38,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex12
+		{
+			rect	207,118,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex13
+		{
+			rect	207,198,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex14
+		{
+			rect	207,278,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex15
+		{
+			rect	207,358,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex16
+		{
+			rect	207,438,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex17
+		{
+			rect	277,0,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex18
+		{
+			rect	277,78,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex19
+		{
+			rect	277,158,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex20
+		{
+			rect	277,238,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex21
+		{
+			rect	277,318,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex22
+		{
+			rect	277,398,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex23
+		{
+			rect	347,-39,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex24
+		{
+			rect	347,38,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex25
+		{
+			rect	347,118,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex26
+		{
+			rect	347,198,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex27
+		{
+			rect	347,278,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex28
+		{
+			rect	347,358,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex29
+		{
+			rect	347,438,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex30
+		{
+			rect	417,1,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex31
+		{
+			rect	417,78,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex32
+		{
+			rect	417,158,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex33
+		{
+			rect	417,238,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex34
+		{
+			rect	417,318,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex35
+		{
+			rect	417,398,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex36
+		{
+			rect	487,117,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex37
+		{
+			rect	487,198,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef hex38
+		{
+			rect	487,278,86,86
+			visible	1
+			background	"gfx/guis/hud/medchange_hex"
+			matcolor	0,0,0,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef t_proc1
+		{
+			rect	54,437,61,19
+			visible	1
+			forecolor	1,1,1,0.2
+			text	"84278.324"
+			textscale	0.24
+			font	"fonts/strogg"
+
+			onTime 0 {
+				set "text" "84278.324" ;
+			}
+
+			onTime +100 {
+				set "text" "43536.832" ;
+			}
+
+			onTime +100 {
+				set "text" "76245.003" ;
+			}
+
+			onTime +100 {
+				set "text" "57452.659" ;
+			}
+
+			onTime +100 {
+				set "text" "35945.202" ;
+			}
+
+			onTime +100 {
+				set "text" "94320.953" ;
+			}
+
+			onTime +100 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef t_proc2
+		{
+			rect	54,455,61,19
+			visible	1
+			forecolor	1,1,1,0.2
+			text	"84278324"
+			textscale	0.24
+			font	"fonts/strogg"
+
+			onTime 0 {
+				set "text" "84278.324" ;
+			}
+
+			onTime +200 {
+				set "text" "43536.832" ;
+			}
+
+			onTime +200 {
+				set "text" "76245.003" ;
+			}
+
+			onTime +200 {
+				set "text" "57452.659" ;
+			}
+
+			onTime +200 {
+				set "text" "35945.202" ;
+			}
+
+			onTime +200 {
+				set "text" "94320.953" ;
+			}
+
+			onTime +200 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef t_bar1
+		{
+			rect	3,437,49,12
+			visible	1
+			background	"gfx/guis/common/bar1"
+			matcolor	0.976,0.4,0.0156,.4
+		}
+		windowDef t_bar2
+		{
+			rect	3,455,49,12
+			visible	1
+			background	"gfx/guis/common/bar1"
+			matcolor	0.976,0.4,0.0156,.4
+		}
+		windowDef t_num1
+		{
+			rect	542,6,92,22
+			visible	1
+			forecolor	1,1,1,0.2
+			text	"X> 834.32"
+			textscale	0.4
+			font	"fonts/strogg"
+
+			onTime 0 {
+				set "text" "X> 834.32" ;
+			}
+
+			onTime +100 {
+				set "text" "X> 527.64" ;
+			}
+
+			onTime +100 {
+				set "text" "X> 698.30" ;
+			}
+
+			onTime +100 {
+				set "text" "X> 932.78" ;
+			}
+
+			onTime +100 {
+				set "text" "X> 404.26" ;
+			}
+
+			onTime +100 {
+				set "text" "X> 368.45" ;
+			}
+
+			onTime +100 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef t_num2
+		{
+			rect	542,27,92,22
+			visible	1
+			forecolor	1,1,1,0.2
+			text	"Y> 602.57"
+			textscale	0.4
+			font	"fonts/strogg"
+
+			onTime 0 {
+				set "text" "Y> 602.57" ;
+			}
+
+			onTime +150 {
+				set "text" "Y> 257.46" ;
+			}
+
+			onTime +150 {
+				set "text" "Y> 968.03" ;
+			}
+
+			onTime +150 {
+				set "text" "Y> 392.87" ;
+			}
+
+			onTime +150 {
+				set "text" "Y> 440.62" ;
+			}
+
+			onTime +150 {
+				set "text" "Y> 638.54" ;
+			}
+
+			onTime +150 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef t_num3
+		{
+			rect	542,50,92,22
+			visible	1
+			forecolor	1,1,1,0.2
+			text	"Z> 438.60"
+			textscale	0.4
+			font	"fonts/strogg"
+
+			onTime 0 {
+				set "text" "Z> 438.60" ;
+			}
+
+			onTime +200 {
+				set "text" "Z> 257.46" ;
+			}
+
+			onTime +200 {
+				set "text" "Z> 968.03" ;
+			}
+
+			onTime +200 {
+				set "text" "Z> 392.87" ;
+			}
+
+			onTime +200 {
+				set "text" "Z> 440.62" ;
+			}
+
+			onTime +200 {
+				set "text" "Z> 638.54" ;
+			}
+
+			onTime +200 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef scrolltext1
+		{
+			rect	574,70,58,72
+			visible	1
+			background	"gfx/guis/common/strogg/scrolltext1fast"
+			matcolor	1,1,1,.2
+			matscalex	-1
+		}
+		windowDef scrolltext2
+		{
+			rect	2,350,67,81
+			visible	1
+			background	"gfx/guis/common/strogg/scrolltext2"
+			matcolor	1,1,1,.2
+		}
+		windowDef data
+		{
+			rect	0,1,640,480
+			visible	1
+			background	"gfx/guis/common/strogg/data"
+			matcolor	1,1,1,0.1
+		}
+		windowDef static1
+		{
+			visible	1
+			rect	0,1,640,480
+			background	"gfx/guis/common/img_static3"
+			matcolor	1,0.741,0.741,0.5
+		}
+		windowDef static2
+		{
+			visible	1
+			rect	0,1,640,480
+			background	"gfx/guis/common/colorstatic"
+			matcolor	1,1,1,0.2
+		}
+		windowDef edgeglow
+		{
+			rect	0,1,640,480
+			visible	1
+			background	"gfx/guis/common/add_box2"
+			matcolor	1,0.5,0,1
+		}
+	}
+	windowDef anim
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			set "all::visible" "1" ;
+			transition "data::matcolor_w" "0.1" "0" "5000" ;
+			transition "static1::matcolor_w" "0.6" "0" "5000" ;
+			transition "static2::matcolor_w" "0.2" "0" "5000" ;
+			transition "edgeglow::matcolor" "1,0.5,0,1" "0,0,0,1" "6000" ;
+		}
+
+		onTime 500 {
+			transition "hex10::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex24::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex14::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex32::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex30::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex4::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex8::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex15::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex9::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex34::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex28::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex21::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex1::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex38::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex20::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex2::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex12::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex26::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex18::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex33::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex16::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex23::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex6::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex13::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex35::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex27::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex11::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex22::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex7::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex31::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex3::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex17::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex25::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex36::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex19::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex5::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex29::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex10::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex24::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex14::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex32::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex30::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex4::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex8::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex15::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex9::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex34::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex28::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex21::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex1::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex38::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex20::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex2::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex12::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex26::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex18::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex33::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex16::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex23::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex6::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex13::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex35::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex27::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex11::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex22::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex7::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex31::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex3::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex17::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex25::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex36::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex19::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex5::matcolor" "$desktop::on" "$desktop::black" "500" ;
+		}
+
+		onTime +50 {
+			transition "hex29::matcolor" "$desktop::on" "$desktop::black" "500" ;
+			transition "tl_edge::matcolor" "$desktop::on" "$desktop::black" "500" ;
+			transition "tr_edge::matcolor" "$desktop::on" "$desktop::black" "500" ;
+			transition "bl_edge::matcolor" "$desktop::on" "$desktop::black" "500" ;
+			transition "br_edge::matcolor" "$desktop::on" "$desktop::black" "500" ;
+			
+			transition "t_proc1::forecolor_w" "0.2" "0" "500" ;
+			transition "t_proc2::forecolor_w" "0.2" "0" "500" ;
+			transition "t_bar1::matcolor_w" "0.4" "0" "500" ;
+			transition "t_bar2::matcolor_w" "0.4" "0" "500" ;
+			
+			transition "t_num1::forecolor_w" "0.2" "0" "500" ;
+			transition "t_num2::forecolor_w" "0.2" "0" "500" ;
+			transition "t_num3::forecolor_w" "0.2" "0" "500" ;
+			
+			transition "scrolltext1::matcolor_w" "0.2" "0" "500" ;
+			transition "scrolltext2::matcolor_w" "0.2" "0" "500" ;
+		}
+
+		onTime +500 {
+			set "all::visible" "0" ;
+		}
+
+	}
+	windowDef damage
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/common/add_box2"
+		matcolor	0,0,0,1
+	}
+	windowDef anim_hurt
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			set "damage::visible" "1" ;
+			transition "damage::matcolor" "0.6,0,0,1" "0,0,0,1" "1000" ;
+		}
+
+		onTime +1000 {
+			set "damage::visible" "0" ;
+		}
+
+	}
+
+//-----------------------		
+// quicksave notice
+//-----------------------
+
+	windowDef quicksave_msg
+	{
+		rect	0,64,640,20
+		visible	0
+		forecolor	1,1,1,1
+		text	"#str_200908"
+		textscale	0.25
+		font	"fonts/lowpixel"
+		textspacing	0
+		textalign	1
+		textstyle	1
+
+		onTime 2000 {
+			transition "forecolor_w" "1" "0" "1000" ;
+		}
+		
+		onTime +1000 {
+			set "quicksave_msg::visible" "0" ;
+		}
+
+	}	
+	
+}

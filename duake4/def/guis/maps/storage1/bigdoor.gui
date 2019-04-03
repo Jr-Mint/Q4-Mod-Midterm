@@ -1,0 +1,518 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	windowDef unnamed
+	{
+		rect	0,0,640,480
+		visible	1
+		backcolor	0,0,0,1
+	}
+	windowDef hangar_bg
+	{
+		rect	168,20,304,304
+		visible	1
+		background	"gfx/guis/maps/storage1/bigdoor_hangar"
+		matcolor	1,1,1,1
+	}
+	windowDef p_lights
+	{
+		rect	196,60,247,238
+		visible	1
+		windowDef a1
+		{
+			rect	90,71,13,13
+			visible	0
+			background	"gfx/guis/maps/storage1/bigdoor_light"
+			matcolor	0.725,0.886,0.933,1
+		}
+		windowDef a2
+		{
+			rect	146,71,13,12
+			visible	0
+			background	"gfx/guis/maps/storage1/bigdoor_light"
+			matcolor	0.725,0.886,0.933,1
+		}
+		windowDef a3
+		{
+			rect	146,146,13,12
+			visible	0
+			background	"gfx/guis/maps/storage1/bigdoor_light"
+			matcolor	0.725,0.886,0.933,1
+		}
+		windowDef a4
+		{
+			rect	89,146,13,12
+			visible	0
+			background	"gfx/guis/maps/storage1/bigdoor_light"
+			matcolor	0.725,0.886,0.933,1
+		}
+		windowDef b1
+		{
+			rect	86,65,13,12
+			visible	0
+			background	"gfx/guis/maps/storage1/bigdoor_light"
+			matcolor	0.725,0.886,0.933,1
+		}
+		windowDef b2
+		{
+			rect	149,65,13,12
+			visible	0
+			background	"gfx/guis/maps/storage1/bigdoor_light"
+			matcolor	0.725,0.886,0.933,1
+		}
+		windowDef b3
+		{
+			rect	149,151,13,12
+			visible	0
+			background	"gfx/guis/maps/storage1/bigdoor_light"
+			matcolor	0.725,0.886,0.933,1
+		}
+		windowDef b4
+		{
+			rect	86,151,13,12
+			visible	0
+			background	"gfx/guis/maps/storage1/bigdoor_light"
+			matcolor	0.725,0.886,0.933,1
+		}
+		windowDef c1
+		{
+			rect	81,57,13,12
+			visible	0
+			background	"gfx/guis/maps/storage1/bigdoor_light"
+			matcolor	0.725,0.886,0.933,1
+		}
+		windowDef c2
+		{
+			rect	154,56,13,12
+			visible	0
+			background	"gfx/guis/maps/storage1/bigdoor_light"
+			matcolor	0.725,0.886,0.933,1
+		}
+		windowDef c3
+		{
+			rect	155,159,13,12
+			visible	0
+			background	"gfx/guis/maps/storage1/bigdoor_light"
+			matcolor	0.725,0.886,0.933,1
+		}
+		windowDef c4
+		{
+			rect	81,159,13,12
+			visible	0
+			background	"gfx/guis/maps/storage1/bigdoor_light"
+			matcolor	0.725,0.886,0.933,1
+		}
+		windowDef d1
+		{
+			rect	73,44,13,12
+			visible	0
+			background	"gfx/guis/maps/storage1/bigdoor_light"
+			matcolor	0.725,0.886,0.933,1
+		}
+		windowDef d2
+		{
+			rect	160,44,13,12
+			visible	0
+			background	"gfx/guis/maps/storage1/bigdoor_light"
+			matcolor	0.725,0.886,0.933,1
+		}
+		windowDef d3
+		{
+			rect	161,171,13,12
+			visible	0
+			background	"gfx/guis/maps/storage1/bigdoor_light"
+			matcolor	0.725,0.886,0.933,1
+		}
+		windowDef d4
+		{
+			rect	74,170,13,12
+			visible	0
+			background	"gfx/guis/maps/storage1/bigdoor_light"
+			matcolor	0.725,0.886,0.933,1
+		}
+		windowDef e1
+		{
+			rect	60,24,15,15
+			visible	0
+			background	"gfx/guis/maps/storage1/bigdoor_light"
+			matcolor	0.725,0.886,0.933,1
+		}
+		windowDef e2
+		{
+			rect	168,24,15,15
+			visible	0
+			background	"gfx/guis/maps/storage1/bigdoor_light"
+			matcolor	0.725,0.886,0.933,1
+		}
+		windowDef e3
+		{
+			rect	170,186,15,15
+			visible	0
+			background	"gfx/guis/maps/storage1/bigdoor_light"
+			matcolor	0.725,0.886,0.933,1
+		}
+		windowDef e4
+		{
+			rect	62,185,15,15
+			visible	0
+			background	"gfx/guis/maps/storage1/bigdoor_light"
+			matcolor	0.725,0.886,0.933,1
+		}
+	}
+	windowDef innerdoor_L
+	{
+		rect	230,-75,91,490
+		visible	1
+		background	"gfx/guis/maps/storage1/bigdoor_innerdoor"
+		matcolor	0.321,0.427,0.486,1
+	}
+	windowDef innerdoor_R
+	{
+		rect	320,-75,91,490
+		visible	1
+		background	"gfx/guis/maps/storage1/bigdoor_innerdoor"
+		matcolor	0.321,0.427,0.486,1
+	}
+	windowDef R_move_bolt1
+	{
+		rect	283,262,69,32
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc1_bar"
+		matcolor	0.556,0.713,0.823,1
+	}
+	windowDef R_move_bolt2
+	{
+		rect	283,124,69,32
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc1_bar"
+		matcolor	0.556,0.713,0.823,1
+	}
+	windowDef L_move_bolt1
+	{
+		rect	283,184,69,32
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc1_bar"
+		matcolor	0.556,0.713,0.823,1
+	}
+	windowDef L_move_bolt2
+	{
+		rect	283,46,69,32
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc1_bar"
+		matcolor	0.556,0.713,0.823,1
+	}
+	windowDef outerdoor_L
+	{
+		rect	153,-76,147,492
+		visible	1
+		background	"gfx/guis/maps/storage1/bigdoor_outerdoor"
+		matcolor	0.470,0.619,0.729,1
+		matscalex	1
+	}
+	windowDef outerdoor_R
+	{
+		rect	337,-76,147,492
+		visible	1
+		background	"gfx/guis/maps/storage1/bigdoor_outerdoor"
+		matcolor	0.470,0.619,0.729,1
+		matscalex	-1
+	}
+	windowDef gradient_L
+	{
+		rect	168,14,52,311
+		visible	1
+		background	"gfx/guis/common/gradient3"
+		matcolor	0,0,0,1
+	}
+	windowDef gradient_R
+	{
+		rect	416,15,54,310
+		visible	1
+		background	"gfx/guis/common/gradient3"
+		matcolor	0,0,0,1
+		matscaley	-1
+		matscalex	-1
+	}
+	windowDef bg_L
+	{
+		rect	-48,0,215,480
+		visible	1
+		background	"gfx/guis/maps/process1/countdown_bg"
+		matcolor	0.435,0.690,0.901,1
+		matscalex	-1
+	}
+	windowDef bg_R
+	{
+		rect	470,0,210,481
+		visible	1
+		background	"gfx/guis/maps/process1/countdown_bg"
+		matcolor	0.435,0.690,0.901,1
+	}
+	windowDef bracket_L
+	{
+		rect	31,-196,165,676
+		visible	1
+		background	"gfx/guis/maps/storage1/bigdoor_bracket"
+		matcolor	0.0823,0.866,0.866,1
+		matscalex	-1
+	}
+	windowDef bracket_R
+	{
+		rect	442,-196,165,676
+		visible	1
+		background	"gfx/guis/maps/storage1/bigdoor_bracket"
+		matcolor	0.0823,0.866,0.866,1
+	}
+	windowDef btnbg
+	{
+		rect	158,341,323,128
+		visible	1
+		background	"gfx/guis/maps/storage1/bigdoor_button"
+		matcolor	0.376,0.592,0.807,1
+		matscalex	-1
+	}
+	windowDef txt_open
+	{
+		rect	187,383,267,39
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200552"
+		textscale	0.6
+		font	"fonts/r_strogg"
+	}
+	windowDef icon
+	{
+		rect	232,296,175,167
+		visible	0
+		background	"gfx/guis/common/strogg/term_symb"
+		matcolor	0.882,0.501,0.0745,0.5*guitable_random2[time*.001]
+	}
+	windowDef p_d
+	{
+		rect	0,0,640,480
+		visible	0
+		windowDef d_btnbg
+		{
+			rect	157,484,323,128
+			visible	1
+			background	"gfx/guis/maps/storage1/bigdoor_button"
+			matcolor	0.372,0.588,0.803,1
+			matscalex	-1
+		}
+		windowDef d_R_move_bolt1
+		{
+			rect	359,262,69,32
+			visible	1
+			background	"gfx/guis/monitors/marine/mcc1_bar"
+			matcolor	0.556,0.713,0.823,1
+		}
+		windowDef d_R_move_bolt2
+		{
+			rect	359,124,69,32
+			visible	1
+			background	"gfx/guis/monitors/marine/mcc1_bar"
+			matcolor	0.556,0.713,0.823,1
+		}
+		windowDef d_L_move_bolt1
+		{
+			rect	208,184,69,32
+			visible	1
+			background	"gfx/guis/monitors/marine/mcc1_bar"
+			matcolor	0.556,0.713,0.823,1
+		}
+		windowDef d_L_move_bolt2
+		{
+			rect	208,46,69,32
+			visible	1
+			background	"gfx/guis/monitors/marine/mcc1_bar"
+			matcolor	0.556,0.713,0.823,1
+		}
+		windowDef d_txt_open
+		{
+			rect	187,531,267,39
+			visible	1
+			forecolor	1,1,1,1
+			text	"#str_200552"
+			textscale	0.6
+			font	"fonts/r_strogg"
+		}
+		windowDef d_innerdoor_L
+		{
+			rect	72,-74,91,490
+			visible	1
+			background	"gfx/guis/maps/storage1/bigdoor_innerdoor"
+			matcolor	0.321,0.427,0.486,1
+		}
+		windowDef d_outerdoor_L
+		{
+			rect	-4,-75,147,492
+			visible	1
+			background	"gfx/guis/maps/storage1/bigdoor_outerdoor"
+			matcolor	0.470,0.619,0.729,1
+			matscalex	1
+		}
+		windowDef d_innerdoor_R
+		{
+			rect	475,-74,91,490
+			visible	1
+			background	"gfx/guis/maps/storage1/bigdoor_innerdoor"
+			matcolor	0.321,0.427,0.486,1
+		}
+		windowDef d_outerdoor_R
+		{
+			rect	492,-75,147,492
+			visible	1
+			background	"gfx/guis/maps/storage1/bigdoor_outerdoor"
+			matcolor	0.470,0.619,0.729,1
+			matscalex	-1
+		}
+		windowDef d_bracket_L
+		{
+			rect	31,-50,165,676
+			visible	1
+			background	"gfx/guis/maps/storage1/bigdoor_bracket"
+			matcolor	0.878,0.498,0.0705,1
+			matscalex	-1
+		}
+		windowDef d_bracket_R
+		{
+			rect	442,-50,165,676
+			visible	1
+			background	"gfx/guis/maps/storage1/bigdoor_bracket"
+			matcolor	0.882,0.501,0.0745,1
+		}
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef static
+		{
+			visible	1
+			rect	0,-211,640,806
+			background	"gfx/guis/common/monitor_line4"
+			matcolor	1,1,1,0.18
+			matscalex	-1
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,-84,640,568
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.494,0.494,0.494,1
+		}
+		windowDef scratches
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/screen_scratches3"
+			matcolor	0.749,0.984,1,.28
+		}
+		windowDef blackedge
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+		windowDef addlines
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/add_lines1"
+			matcolor	0.250,0.250,0.250,1
+		}
+	}
+	windowDef btn
+	{
+		rect	157,341,323,128
+		visible	1
+
+		onMouseEnter {
+			transition "btnbg::matcolor" "0.376,0.592,0.807,1" "0.874,0.917,0.956,1" "0" ;
+			transition "txt_open::forecolor" "1,1,1,1" "0,0,0,1" "0" ;
+		}
+
+		onMouseExit {
+			transition "btnbg::matcolor" "0.874,0.917,0.956,1" "0.376,0.592,0.807,1" "300" ;
+			transition "txt_open::forecolor" "0,0,0,1" "1,1,1,1" "300" ;
+		}
+
+		onAction {
+			set "visible" "0" ;
+			set "noevents" "1" ;
+			transition "btnbg::matcolor" "0.874,0.917,0.956,1" "0.376,0.592,0.807,1" "300" ;
+			resettime "anim" "0" ;
+			set "cmd" "play guisound_beep2 ; runscript" "$gui::gui_Parm_script";
+		}
+
+	}
+	windowDef anim
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "R_move_bolt1::rect" "$R_move_bolt1::rect" "$d_R_move_bolt1::rect" "2000" ;
+			transition "R_move_bolt2::rect" "$R_move_bolt2::rect" "$d_R_move_bolt2::rect" "2000" ;
+			transition "L_move_bolt1::rect" "$L_move_bolt1::rect" "$d_L_move_bolt1::rect" "2000" ;
+			transition "L_move_bolt2::rect" "$L_move_bolt2::rect" "$d_L_move_bolt2::rect" "2000" ;
+			transition "btnbg::rect" "$btnbg::rect" "$d_btnbg::rect" "500" ;
+			transition "bracket_L::rect" "$bracket_L::rect" "$d_bracket_L::rect" "500" ;
+			transition "bracket_R::rect" "$bracket_R::rect" "$d_bracket_R::rect" "500" ;
+			transition "txt_open::rect" "$txt_open::rect" "$d_txt_open::rect" "500" ;
+		}
+
+		onTime +2000 {
+			set "R_move_bolt1::visible" "0" ;
+			set "R_move_bolt2::visible" "0" ;
+			set "L_move_bolt1::visible" "0" ;
+			set "L_move_bolt2::visible" "0" ;
+			transition "innerdoor_L::rect" "$innerdoor_L::rect" "$d_innerdoor_L::rect" "7000" ;
+			transition "innerdoor_R::rect" "$innerdoor_R::rect" "$d_innerdoor_R::rect" "7000" ;
+			transition "outerdoor_L::rect" "$outerdoor_L::rect" "$d_outerdoor_L::rect" "7000" ;
+			transition "outerdoor_R::rect" "$outerdoor_R::rect" "$d_outerdoor_R::rect" "7000" ;
+		}
+
+		onTime +6000 {
+			set "a1::visible" "1" ;
+			set "a2::visible" "1" ;
+			set "a3::visible" "1" ;
+			set "a4::visible" "1" ;
+		}
+
+		onTime +200 {
+			set "b1::visible" "1" ;
+			set "b2::visible" "1" ;
+			set "b3::visible" "1" ;
+			set "b4::visible" "1" ;
+		}
+
+		onTime +200 {
+			set "c1::visible" "1" ;
+			set "c2::visible" "1" ;
+			set "c3::visible" "1" ;
+			set "c4::visible" "1" ;
+		}
+
+		onTime +200 {
+			set "d1::visible" "1" ;
+			set "d2::visible" "1" ;
+			set "d3::visible" "1" ;
+			set "d4::visible" "1" ;
+		}
+
+		onTime +200 {
+			set "e1::visible" "1" ;
+			set "e2::visible" "1" ;
+			set "e3::visible" "1" ;
+			set "e4::visible" "1" ;
+		}
+
+		onTime +200 {
+			set "icon::visible" "1" ;
+		}
+
+	}
+}

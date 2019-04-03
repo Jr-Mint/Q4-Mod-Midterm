@@ -1,0 +1,458 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	visible	1
+	float	"clicked"	0
+	windowDef bg1
+	{
+		rect	0,-85,320,569
+		visible	1
+		background	"gfx/guis/maps/process1/countdown_bg"
+		matcolor	0.784,0.207,0.125,1
+		matscalex	-1
+	}
+	windowDef bg2
+	{
+		rect	321,-86,319,569
+		visible	1
+		background	"gfx/guis/maps/process1/countdown_bg"
+		matcolor	0.784,0.207,0.125,1
+	}
+	windowDef pipe1
+	{
+		rect	0,130,639,220
+		visible	1
+		backcolor	0.6,0.117,0,0.650
+	}
+	windowDef pipe2
+	{
+		rect	0,151,639,177
+		visible	1
+		backcolor	0.254,0.0313,0,0.772
+	}
+	windowDef mover
+	{
+		rect	-183,156,861,168
+		visible	1
+		background	"gfx/guis/maps/bldg_b/doorprime_mover"
+		matcolor	0.898,0.282,0.0784,0
+		matscaley	-1
+	}
+	windowDef back1
+	{
+		rect	2,0,640,157
+		visible	1
+		background	"gfx/guis/maps/bldg_b/doorprime_back"
+		matcolor	0.603,0.235,0.0117,1
+	}
+	windowDef back2
+	{
+		rect	2,324,640,157
+		visible	1
+		background	"gfx/guis/maps/bldg_b/doorprime_back"
+		matcolor	0.603,0.235,0.0117,1
+		matscaley	-1
+	}
+	windowDef clamp1
+	{
+		rect	84,43,162,238
+		visible	1
+		background	"gfx/guis/maps/bldg_b/doorprime_clamp"
+		matcolor	0.886,0.439,0.105,1
+	}
+	windowDef clamp2
+	{
+		rect	241,43,162,238
+		visible	1
+		background	"gfx/guis/maps/bldg_b/doorprime_clamp"
+		matcolor	0.886,0.439,0.105,1
+	}
+	windowDef clamp3
+	{
+		rect	398,43,162,238
+		visible	1
+		background	"gfx/guis/maps/bldg_b/doorprime_clamp"
+		matcolor	0.886,0.439,0.105,1
+	}
+	windowDef clamp4
+	{
+		rect	84,196,162,238
+		visible	1
+		background	"gfx/guis/maps/bldg_b/doorprime_clamp"
+		matcolor	0.886,0.439,0.105,1
+		matscaley	-1
+	}
+	windowDef clamp5
+	{
+		rect	241,196,162,238
+		visible	1
+		background	"gfx/guis/maps/bldg_b/doorprime_clamp"
+		matcolor	0.886,0.439,0.105,1
+		matscaley	-1
+	}
+	windowDef clamp6
+	{
+		rect	398,196,162,238
+		visible	1
+		background	"gfx/guis/maps/bldg_b/doorprime_clamp"
+		matcolor	0.886,0.439,0.105,1
+		matscaley	-1
+	}
+	windowDef arrow1
+	{
+		rect	127,99,74,75
+		visible	1
+		background	"gfx/guis/maps/bldg_b/doorprime_arrow"
+		matcolor	0.976,0.580,0.282,1
+
+		onTime 0 {
+			transition "matcolor" "0.976,0.580,0.282,1" "1,1,1,1" "900" ;
+		}
+
+		onTime 900 {
+			transition "matcolor" "1,1,1,1" "0.976,0.580,0.282,1" "900" ;
+		}
+
+		onTime 1800 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef arrow2
+	{
+		rect	285,99,74,75
+		visible	1
+		background	"gfx/guis/maps/bldg_b/doorprime_arrow"
+		matcolor	0.976,0.580,0.282,1
+
+		onTime 0 {
+			transition "matcolor" "0.976,0.580,0.282,1" "1,1,1,1" "900" ;
+		}
+
+		onTime 900 {
+			transition "matcolor" "1,1,1,1" "0.976,0.580,0.282,1" "900" ;
+		}
+
+		onTime 1800 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef arrow3
+	{
+		rect	442,99,74,75
+		visible	1
+		background	"gfx/guis/maps/bldg_b/doorprime_arrow"
+		matcolor	0.976,0.580,0.282,1
+
+		onTime 0 {
+			transition "matcolor" "0.976,0.580,0.282,1" "1,1,1,1" "900" ;
+		}
+
+		onTime 900 {
+			transition "matcolor" "1,1,1,1" "0.976,0.580,0.282,1" "900" ;
+		}
+
+		onTime 1800 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef arrow4
+	{
+		rect	127,307,74,75
+		visible	1
+		background	"gfx/guis/maps/bldg_b/doorprime_arrow"
+		matcolor	0.976,0.580,0.282,1
+		matscaley	-1
+
+		onTime 0 {
+			transition "matcolor" "0.976,0.580,0.282,1" "1,1,1,1" "900" ;
+		}
+
+		onTime 900 {
+			transition "matcolor" "1,1,1,1" "0.976,0.580,0.282,1" "900" ;
+		}
+
+		onTime 1800 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef arrow5
+	{
+		rect	285,307,74,75
+		visible	1
+		background	"gfx/guis/maps/bldg_b/doorprime_arrow"
+		matcolor	0.976,0.580,0.282,1
+		matscaley	-1
+
+		onTime 0 {
+			transition "matcolor" "0.976,0.580,0.282,1" "1,1,1,1" "900" ;
+		}
+
+		onTime 900 {
+			transition "matcolor" "1,1,1,1" "0.976,0.580,0.282,1" "900" ;
+		}
+
+		onTime 1800 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef arrow6
+	{
+		rect	441,307,74,75
+		visible	1
+		background	"gfx/guis/maps/bldg_b/doorprime_arrow"
+		matcolor	0.976,0.580,0.282,1
+		matscaley	-1
+
+		onTime 0 {
+			transition "matcolor" "0.976,0.580,0.282,1" "1,1,1,1" "900" ;
+		}
+
+		onTime 900 {
+			transition "matcolor" "1,1,1,1" "0.976,0.580,0.282,1" "900" ;
+		}
+
+		onTime 1800 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef transparent
+	{
+		rect	65,171,509,134
+		visible	1
+		background	"gfx/guis/maps/bldg_b/doorprime_transparent"
+		matcolor	0.317,0.419,0.450,0.694
+	}
+	windowDef t1
+	{
+		rect	152,213,388,90
+		visible	1
+		forecolor	0.729,0.792,0.811,1
+		text	"prime door"
+		textscale	1.3
+		font	"fonts/strogg"
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	0,-56,640,537
+			background	"gfx/guis/common/monitor_line3"
+			matcolor	0.878,0.725,0.572,0.749
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,4,640,470
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.341,0.270,0.243,1
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+		windowDef dirt
+		{
+			visible	1
+			rect	0,0,648,479
+			background	"gfx/guis/common/screen_dirt1"
+			matcolor	0,0,0,0.7
+		}
+		windowDef scratches
+		{
+			rect	-75,-88,942,574
+			visible	1
+			background	"gfx/guis/common/screen_scratches3"
+			matcolor	0.886,0.929,0.952,0.4
+		}
+	}
+	windowDef button
+	{
+		rect	62,156,516,164
+		visible	1
+
+		onMouseEnter {
+			transition "transparent::matcolor" "0.317,0.419,0.450,0.694" "0.474,0.741,0.8,0.690" "0" ;
+			set "t1::forecolor" "0,0,0,1" ;
+		}
+
+		onMouseExit {
+			if ("desktop::clicked" == 0) {
+				transition "transparent::matcolor" "0.474,0.741,0.8,0.690" "0.317,0.419,0.450,0.694" "300" ;
+				transition "t1::forecolor" "0,0,0,1" "0.729,0.792,0.811,1" "300" ;
+			}
+		}
+
+		onAction {
+			nonInteractive "1" ;
+			set "cmd" "play guisound_beep2 ; activate ; runscript" "$gui::gui_Parm_script";
+			set "desktop::clicked" "1" ;
+			set "visible" "0" ;
+			
+			resettime "anim" "0" ;
+		}
+
+	}
+	windowDef anim
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "t1::forecolor" "0,0,0,1" "0,0,0,0" "300" ;
+			transition "transparent::matcolor" "0.250,0.556,0.584,0.690" "0.250,0.556,0.584,0" "300" ;
+		}
+
+		onTime +400 {
+			transition "clamp1::rect" "$clamp1::rect" "$d_clamp1::rect" "100" ;
+			transition "clamp4::rect" "$clamp4::rect" "$d_clamp4::rect" "100" ;
+			transition "arrow1::rect" "$arrow1::rect" "$d_arrow1::rect" "100" ;
+			transition "arrow4::rect" "$arrow4::rect" "$d_arrow4::rect" "100" ;
+		}
+
+		onTime +900 {
+			transition "clamp2::rect" "$clamp2::rect" "$d_clamp2::rect" "100" ;
+			transition "clamp5::rect" "$clamp5::rect" "$d_clamp5::rect" "100" ;
+			transition "arrow2::rect" "$arrow2::rect" "$d_arrow2::rect" "100" ;
+			transition "arrow5::rect" "$arrow5::rect" "$d_arrow5::rect" "100" ;
+		}
+
+		onTime +900 {
+			transition "clamp3::rect" "$clamp3::rect" "$d_clamp3::rect" "100" ;
+			transition "clamp6::rect" "$clamp6::rect" "$d_clamp6::rect" "100" ;
+			transition "arrow3::rect" "$arrow3::rect" "$d_arrow3::rect" "100" ;
+			transition "arrow6::rect" "$arrow6::rect" "$d_arrow6::rect" "100" ;
+		}
+
+		onTime +200 {
+			transition "pipe2::backcolor" "0.254,0.0313,0,0.772"  "0.254,0.0313,0,0.472"  "300" ;
+			transition "mover::matcolor" "0.898,0.282,0.0784,0" "0.898,0.282,0.0784,0.3" "600" ;
+		}
+
+	}
+	windowDef mover_loop
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 0 {
+			transition "mover::rect" "$mover::rect" "$d_mover::rect" "600" ;
+		}
+
+		onTime 600 {
+			resettime 0;
+		}
+
+	}
+	windowDef d_clamp1
+	{
+		rect	84,15,162,238
+		visible	0
+		background	"gfx/guis/maps/bldg_b/doorprime_clamp"
+		matcolor	0.886,0.439,0.105,1
+	}
+	windowDef d_clamp2
+	{
+		rect	241,15,162,238
+		visible	0
+		background	"gfx/guis/maps/bldg_b/doorprime_clamp"
+		matcolor	0.886,0.439,0.105,1
+	}
+	windowDef d_clamp3
+	{
+		rect	398,15,162,238
+		visible	0
+		background	"gfx/guis/maps/bldg_b/doorprime_clamp"
+		matcolor	0.886,0.439,0.105,1
+	}
+	windowDef d_arrow1
+	{
+		rect	127,71,74,75
+		visible	0
+		background	"gfx/guis/maps/bldg_b/doorprime_arrow"
+		matcolor	0.976,0.580,0.282,1
+	}
+	windowDef d_arrow2
+	{
+		rect	285,71,74,75
+		visible	0
+		background	"gfx/guis/maps/bldg_b/doorprime_arrow"
+		matcolor	0.976,0.580,0.282,1
+	}
+	windowDef d_arrow3
+	{
+		rect	442,71,74,75
+		visible	0
+		background	"gfx/guis/maps/bldg_b/doorprime_arrow"
+		matcolor	0.976,0.580,0.282,1
+	}
+	windowDef d_clamp4
+	{
+		rect	84,224,162,238
+		visible	0
+		background	"gfx/guis/maps/bldg_b/doorprime_clamp"
+		matcolor	0.886,0.439,0.105,1
+		matscaley	-1
+	}
+	windowDef d_clamp5
+	{
+		rect	241,224,162,238
+		visible	0
+		background	"gfx/guis/maps/bldg_b/doorprime_clamp"
+		matcolor	0.886,0.439,0.105,1
+		matscaley	-1
+	}
+	windowDef d_clamp6
+	{
+		rect	398,224,162,238
+		visible	0
+		background	"gfx/guis/maps/bldg_b/doorprime_clamp"
+		matcolor	0.886,0.439,0.105,1
+		matscaley	-1
+	}
+	windowDef d_arrow4
+	{
+		rect	127,335,74,75
+		visible	0
+		background	"gfx/guis/maps/bldg_b/doorprime_arrow"
+		matcolor	0.976,0.580,0.282,1
+		matscaley	-1
+	}
+	windowDef d_arrow5
+	{
+		rect	285,335,74,75
+		visible	0
+		background	"gfx/guis/maps/bldg_b/doorprime_arrow"
+		matcolor	0.976,0.580,0.282,1
+		matscaley	-1
+	}
+	windowDef d_arrow6
+	{
+		rect	441,335,74,75
+		visible	0
+		background	"gfx/guis/maps/bldg_b/doorprime_arrow"
+		matcolor	0.976,0.580,0.282,1
+		matscaley	-1
+	}
+	windowDef d_mover
+	{
+		rect	-78,156,861,168
+		visible	0
+		background	"gfx/guis/maps/bldg_b/doorprime_mover"
+		matcolor	0.898,0.282,0.0784,0.4
+		matscaley	-1
+	}
+}

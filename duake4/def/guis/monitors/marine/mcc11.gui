@@ -1,0 +1,243 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	windowDef bg
+	{
+		rect	0,0,639,481
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc11_all"
+		matcolor	1,1,1,1
+	}
+	windowDef articles
+	{
+		rect	161,431,139,37
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200668"
+		textscale	0.55
+		font	"fonts/marine"
+	}
+	windowDef clips
+	{
+		rect	526,431,95,37
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200669"
+		textscale	0.55
+		font	"fonts/marine"
+	}
+	windowDef index
+	{
+		rect	354,431,123,37
+		visible	1
+		forecolor	0,0,0,1
+		text	"#str_200670"
+		textscale	0.55
+		font	"fonts/marine"
+	}
+	windowDef s1
+	{
+		rect	34,-16,41,56
+		visible	1
+		forecolor	1,1,1,1
+		text	"s"
+		textscale	0.9
+		font	"fonts/marine"
+	}
+	windowDef m1
+	{
+		rect	57,-16,41,56
+		visible	1
+		forecolor	1,1,1,1
+		text	"m"
+		textscale	0.9
+		font	"fonts/marine"
+	}
+	windowDef c1
+	{
+		rect	86,-16,41,56
+		visible	1
+		forecolor	1,1,1,1
+		text	"c"
+		textscale	0.9
+		font	"fonts/marine"
+	}
+	windowDef iconography
+	{
+		rect	417,69,224,27
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200671"
+		textscale	0.47
+		font	"fonts/marine"
+	}
+	windowDef strogg_glyphs
+	{
+		rect	380,31,224,27
+		visible	1
+		forecolor	0,0,0,1
+		text	"#str_200672"
+		textscale	0.47
+		font	"fonts/marine"
+	}
+	windowDef iconography1
+	{
+		rect	26,33,291,36
+		visible	1
+		forecolor	0.635,0.305,0.109,1
+		text	"#str_200673"
+		textscale	0.55
+		font	"fonts/marine"
+	}
+	windowDef iconography2
+	{
+		rect	25,56,291,48
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200672"
+		textscale	0.7
+		font	"fonts/marine"
+	}
+	windowDef analysis1
+	{
+		rect	47,213,78,21
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200674"
+		textscale	0.3
+		font	"fonts/marine"
+	}
+	windowDef analysis2
+	{
+		rect	140,213,78,20
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200674"
+		textscale	0.3
+		font	"fonts/marine"
+	}
+	windowDef analysis3
+	{
+		rect	328,213,78,20
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200674"
+		textscale	0.3
+		font	"fonts/marine"
+	}
+	windowDef analysis4
+	{
+		rect	235,213,78,20
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200674"
+		textscale	0.3
+		font	"fonts/marine"
+	}
+	windowDef analysis5
+	{
+		rect	516,213,78,20
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200674"
+		textscale	0.3
+		font	"fonts/marine"
+	}
+	windowDef analysis6
+	{
+		rect	423,213,78,20
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200674"
+		textscale	0.3
+		font	"fonts/marine"
+	}
+	windowDef analysis7
+	{
+		rect	515,335,78,20
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200674"
+		textscale	0.3
+		font	"fonts/marine"
+	}
+	windowDef analysis8
+	{
+		rect	422,335,78,20
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200674"
+		textscale	0.3
+		font	"fonts/marine"
+	}
+	windowDef analysis9
+	{
+		rect	327,335,78,20
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200674"
+		textscale	0.3
+		font	"fonts/marine"
+	}
+	windowDef analysis10
+	{
+		rect	234,335,78,20
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200674"
+		textscale	0.3
+		font	"fonts/marine"
+	}
+	windowDef analysis11
+	{
+		rect	139,335,78,20
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200674"
+		textscale	0.3
+		font	"fonts/marine"
+	}
+	windowDef analysis12
+	{
+		rect	46,335,78,20
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200674"
+		textscale	0.3
+		font	"fonts/marine"
+	}
+	windowDef topstuff
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef monitor_darkedge
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+		windowDef sline
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_line3"
+			matcolor	0.674,0.674,0.674,1
+		}
+		windowDef scratches
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/screen_scratches3"
+			matcolor	0.929,0.980,0.764,0.133
+			matscalex	-1
+		}
+		windowDef topreflect
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_glow3"
+			matcolor	0.976,1,0.917,0.423
+		}
+	}
+}

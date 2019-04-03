@@ -1,0 +1,47 @@
+windowDef Desktop
+{
+	rect	0 ,0 ,640 ,480
+	visible	1
+	windowDef CamView
+	{
+		rect	0, 0, 640, 480
+		background	"textures/cameraView1"
+		matcolor	1, 1, 1, 1
+		forecolor	1, 1, 1, 1
+		visible	1
+	}
+	windowDef static1
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/common/colorstatic"
+		matcolor	1,1,1,.1
+	}
+	windowDef static2
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/common/static2"
+		matcolor	1,1,1,.1
+	}
+	windowDef line
+	{
+		rect	0,-1041,640,2844
+		visible	1
+		background	"gfx/guis/common/monitor_line4"
+		matcolor	1,1,1,.06
+	}
+	windowDef color
+	{
+		rect	0,0,640,480
+		visible	1
+		backcolor	1, .5, 0, .1
+	}
+	windowDef blackedge
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/common/monitor_darkedge2"
+		matcolor	0,0,0,1
+	}
+}

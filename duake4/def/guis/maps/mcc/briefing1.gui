@@ -1,0 +1,1364 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	visible	1
+	menugui	0
+	nocursor	1
+	alwaysThink	1
+
+	onNamedEvent startbriefing {
+		resettime "anim" "0" ;
+	}
+
+	windowDef bg
+	{
+		rect	274,232,92,10
+		visible	1
+		background	"gfx/guis/maps/mcc/brf_bg"
+		matcolor	0,0,0,0
+	}
+	windowDef cam
+	{
+		rect	120,221,400,2
+		visible	1
+		background	"gfx/guis/maps/mcc/brf_cam"
+		matcolor	1,1,1,0
+	}
+	windowDef d_cam1
+	{
+		rect	32,29,577,419
+		visible	1
+		background	"gfx/guis/maps/mcc/brf_cam"
+		matcolor	1,1,1,0
+	}
+	windowDef d_cam
+	{
+		rect	-986,-729,2642,1903
+		visible	0
+		background	"gfx/guis/maps/mcc/brf_cam"
+		matcolor	1,1,1,1
+	}
+	windowDef diagram1
+	{
+		rect	209,37,276,413
+		visible	1
+		background	"gfx/guis/maps/mcc/brf_diagram1"
+		matcolor	0.847,0.941,0.701,0
+	}
+	windowDef diagram2
+	{
+		rect	209,37,276,413
+		visible	1
+		background	"gfx/guis/maps/mcc/brf_diagram2"
+		matcolor	0.847,0.941,0.701,0
+	}
+	windowDef diagram3
+	{
+		rect	224,0,169,488
+		visible	0
+		background	"gfx/guis/maps/mcc/brf_diagram3"
+		matcolor	0.847,0.941,0.701,1
+	}
+	windowDef diagram_blur
+	{
+		rect	209,37,276,413
+		visible	1
+		background	"gfx/guis/maps/mcc/brf_diagram_blur"
+		matcolor	0.847,0.941,0.701,0
+	}
+	windowDef dd_diagram2a
+	{
+		rect	-14,0,922,1244
+		visible	0
+		background	"gfx/guis/maps/mcc/brf_diagram2"
+		matcolor	0.847,0.941,0.701,1
+	}
+	windowDef d_diagram2a
+	{
+		rect	-13,0,922,1244
+		visible	1
+		background	"gfx/guis/maps/mcc/brf_diagram2"
+		matcolor	0.847,0.941,0.701,0
+		windowDef car1
+		{
+			rect	314,73,28,92
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_car_top"
+			matcolor	0,0,0,1
+		}
+		windowDef car2
+		{
+			rect	314,173,28,92
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_car_top"
+			matcolor	0,0,0,1
+		}
+		windowDef car3
+		{
+			rect	314,273,28,92
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_car_top"
+			matcolor	0,0,0,1
+		}
+		windowDef car4
+		{
+			rect	314,373,28,92
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_car_top"
+			matcolor	0,0,0,1
+		}
+		windowDef car5
+		{
+			rect	314,473,28,92
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_car_top"
+			matcolor	0,0,0,1
+		}
+		windowDef car6
+		{
+			rect	314,573,28,92
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_car_top"
+			matcolor	0,0,0,1
+		}
+		windowDef car7
+		{
+			rect	314,673,28,92
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_car_top"
+			matcolor	0,0,0,1
+		}
+		windowDef car8
+		{
+			rect	314,773,28,92
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_car_top"
+			matcolor	0,0,0,1
+		}
+		windowDef car9
+		{
+			rect	314,873,28,92
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_car_top"
+			matcolor	0,0,0,1
+		}
+		windowDef car10
+		{
+			rect	314,973,28,92
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_car_top"
+			matcolor	0,0,0,1
+			rotate	5
+		}
+		windowDef car11
+		{
+			rect	331,1071,38,76
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_car_top"
+			matcolor	0,0,0,1
+			rotate	45
+		}
+		windowDef car12
+		{
+			rect	409,1112,44,76
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_car_top"
+			matcolor	0,0,0,1
+			rotate	90
+		}
+		windowDef car13
+		{
+			rect	499,1069,38,76
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_car_top"
+			matcolor	0,0,0,1
+			rotate	135
+		}
+		windowDef car14
+		{
+			rect	517,954,28,92
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_car_top"
+			matcolor	0,0,0,1
+			matscaley	-1
+		}
+		windowDef car15
+		{
+			rect	522,842,28,92
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_car_top"
+			matcolor	0,0,0,1
+			matscaley	-1
+			rotate	350
+		}
+		windowDef car16
+		{
+			rect	563,780,43,76
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_car_top"
+			matcolor	0,0,0,1
+			rotate	90
+		}
+	}
+	windowDef p_apprvec
+	{
+		rect	82,-72,226,197
+		visible	1
+		windowDef t_vec
+		{
+			rect	24,92,105,20
+			visible	1
+			forecolor	1,0.945,0.462,0
+			text	"#str_200438"
+			textscale	0.32
+			font	"fonts/marine"
+			textalign	2
+		}
+		windowDef t_appr
+		{
+			rect	24,80,105,20
+			visible	1
+			forecolor	1,0.945,0.462,0
+			text	"#str_200439"
+			textscale	0.32
+			font	"fonts/marine"
+			textalign	2
+		}
+		windowDef vec_line
+		{
+			rect	134,69,86,143
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_line5"
+			matcolor	1,1,1,0
+		}
+	}
+	windowDef d_apprvec
+	{
+		rect	82,87,226,197
+		visible	1
+	}
+	windowDef d_diagram_car1
+	{
+		rect	-15,-805,922,1244
+		visible	0
+		background	"gfx/guis/maps/mcc/brf_diagram2"
+		matcolor	0.847,0.941,0.701,1
+	}
+	windowDef d_diagram_car2
+	{
+		rect	-50,-853,922,1244
+		visible	0
+		background	"gfx/guis/maps/mcc/brf_diagram2"
+		matcolor	0.847,0.941,0.701,1
+	}
+	windowDef d_diagram_car3
+	{
+		rect	-192,-853,922,1244
+		visible	0
+		background	"gfx/guis/maps/mcc/brf_diagram2"
+		matcolor	0.847,0.941,0.701,1
+	}
+	windowDef d_diagram_car4
+	{
+		rect	-220,-805,922,1244
+		visible	0
+		background	"gfx/guis/maps/mcc/brf_diagram2"
+		matcolor	0.847,0.941,0.701,1
+	}
+	windowDef d_diagram2b
+	{
+		rect	-268,-533,922,1244
+		visible	0
+		background	"gfx/guis/maps/mcc/brf_diagram2"
+		matcolor	0.847,0.941,0.701,1
+	}
+	windowDef d_diagram2c
+	{
+		rect	-2858,-3667,5000,6000
+		visible	0
+		background	"gfx/guis/maps/mcc/brf_diagram2"
+		matcolor	0.847,0.941,0.701,.2
+	}
+	windowDef d_diagram3a
+	{
+		rect	-668,-2809,1549,4144
+		visible	0
+		background	"gfx/guis/maps/mcc/brf_diagram3"
+		matcolor	0.847,0.941,0.701,.2
+	}
+	windowDef indicator1
+	{
+		rect	320,206,140,208
+		visible	1
+		background	"gfx/guis/common/marine/indicator"
+		matcolor	0,0,0,1
+	}
+	windowDef indicator2
+	{
+		rect	157,51,352,470
+		visible	1
+		background	"gfx/guis/common/marine/indicator"
+		matcolor	0,0,0,1
+	}
+	windowDef explode1
+	{
+		rect	315,334,40,56
+		visible	0
+		background	"gfx/guis/common/add_ghostring"
+		matcolor	0.372,0.615,0.913,1
+	}
+	windowDef d_explode1
+	{
+		rect	259,265,149,191
+		visible	0
+		background	"gfx/guis/common/add_ghostring"
+		matcolor	0.372,0.615,0.913,1
+	}
+	windowDef explode2
+	{
+		rect	290,78,90,110
+		visible	0
+		background	"gfx/guis/common/add_ghostring"
+		matcolor	0.372,0.615,0.913,1
+	}
+	windowDef d_explode2
+	{
+		rect	219,-16,232,295
+		visible	0
+		background	"gfx/guis/common/add_ghostring"
+		matcolor	0.372,0.615,0.913,1
+	}
+	windowDef d2_explode2
+	{
+		rect	181,-57,305,380
+		visible	0
+		background	"gfx/guis/common/add_ghostring"
+		matcolor	0.372,0.615,0.913,1
+	}
+	windowDef flash
+	{
+		rect	310,276,49,93
+		visible	0
+		background	"gfx/guis/maps/mcc/brf_flash"
+		matcolor	0.372,0.615,0.913,1
+	}
+	windowDef d_flash
+	{
+		rect	310,-27,49,434
+		visible	0
+		background	"gfx/guis/maps/mcc/brf_flash"
+		matcolor	0.372,0.615,0.913,1
+	}
+	windowDef grad
+	{
+		rect	28,384,352,89
+		visible	1
+		background	"gfx/guis/common/gradient2"
+		matcolor	0,0,0,0
+		matscalex	-1
+	}
+	windowDef car_top
+	{
+		rect	296,248,43,76
+		visible	1
+		background	"gfx/guis/maps/mcc/brf_car_top"
+		matcolor	0,0,0,1
+		rotate	90
+	}
+	windowDef car_side
+	{
+		rect	313,339,41,33
+		visible	0
+		background	"gfx/guis/maps/mcc/brf_car_side"
+		matcolor	0.847,0.941,0.701,1
+	}
+	windowDef emp_side
+	{
+		rect	322,339,12,14
+		visible	1
+		background	"gfx/guis/maps/mcc/brf_emp"
+		matcolor	0.847,0.941,0.701,0
+	}
+	windowDef d_car_side
+	{
+		rect	158,113,343,218
+		visible	1
+		background	"gfx/guis/maps/mcc/brf_car_side"
+		matcolor	1,0.501,0,0
+	}
+	windowDef d_car_top
+	{
+		rect	250,50,159,343
+		visible	0
+		background	"gfx/guis/maps/mcc/brf_car_top"
+		matcolor	0.847,0.941,0.701,1
+		rotate	90
+	}
+	windowDef emp_top
+	{
+		rect	248,179,82,84
+		visible	1
+		background	"gfx/guis/maps/mcc/brf_emp"
+		matcolor	0.847,0.941,0.701,0
+	}
+	windowDef t_endtrans
+	{
+		rect	98,207,449,41
+		visible	0
+		forecolor	1,0.949,0.466,1
+		text	"#str_200440"
+		textscale	0.6
+		font	"fonts/marine"
+		textspacing	-1
+	}
+	windowDef p_main
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef grid
+		{
+			rect	274,232,92,10
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_grid"
+			matcolor	0,0,0,1
+		}
+		windowDef d_grid
+		{
+			rect	0,0,640,480
+			visible	0
+			background	"gfx/guis/maps/mcc/brf_grid"
+			matcolor	0,0,0,1
+		}
+		windowDef grid1
+		{
+			rect	0,0,640,480
+			visible	0
+			background	"gfx/guis/maps/mcc/brf_grid"
+			matcolor	1*guitable_8_10[time*0.001],1*guitable_8_10[time*0.001],1*guitable_8_10[time*0.001],1
+		}
+		windowDef decal
+		{
+			rect	32,99,164,241
+			visible	1
+			background	"gfx/guis/common/marine/decal4"
+			matcolor	0.745,0.858,0.607,0
+		}
+		windowDef squares
+		{
+			rect	46,48,77,16
+			visible	1
+			background	"gfx/guis/common/marine/squares1"
+			matcolor	0.835,0.866,0.8,0
+		}
+		windowDef tl_corner
+		{
+			rect	53,75,16,21
+			visible	1
+			background	"gfx/guis/common/corner"
+			matcolor	0.745,0.858,0.607,0
+		}
+		windowDef bl_corner
+		{
+			rect	52,357,16,21
+			visible	1
+			background	"gfx/guis/common/corner"
+			matcolor	0.745,0.858,0.607,0
+			matscaley	-1
+		}
+		windowDef br_corner
+		{
+			rect	567,357,16,21
+			visible	1
+			background	"gfx/guis/common/corner"
+			matcolor	0.745,0.858,0.607,0
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef tr_corner
+		{
+			rect	567,75,16,21
+			visible	1
+			background	"gfx/guis/common/corner"
+			matcolor	0.745,0.858,0.607,0
+			matscalex	-1
+		}
+		windowDef tr_bar
+		{
+			rect	280,212,170,33
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_corner1"
+			matcolor	0.745,0.858,0.607,0
+		}
+		windowDef t_recon
+		{
+			rect	299,213,194,14
+			visible	1
+			forecolor	0.952,0.976,0.929,0
+			text	"#str_200441"
+			textscale	0.18
+			font	"fonts/marine"
+			textspacing	-2
+		}
+		windowDef bl_bar
+		{
+			rect	207,227,156,57
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_corner2"
+			matcolor	0.745,0.858,0.607,0
+		}
+		windowDef t_classified
+		{
+			rect	205,227,85,13
+			visible	0
+			forecolor	1,0.5,0,1*guitable_8_10[time*0.001]
+			text	"#str_200442"
+			textscale	.165
+			font	"fonts/marine"
+			textspacing	-1
+		}
+		windowDef t_descript1
+		{
+			rect	204,244,131,14
+			visible	1
+			forecolor	0.952,0.976,0.929,0
+			text	"#str_200443"
+			textscale	0.24
+			font	"fonts/marine"
+			textspacing	-2
+		}
+		windowDef t_descript2
+		{
+			rect	204,256,135,14
+			visible	1
+			forecolor	0.952,0.976,0.929,0
+			text	"#str_200444"
+			textscale	0.24
+			font	"fonts/marine"
+			textspacing	-2
+		}
+		windowDef scrolltext1
+		{
+			rect	55,82,213,284
+			visible	1
+			background	"gfx/guis/common/marine/scrolltext2"
+			matcolor	0.745,0.858,0.607,0
+			matscalex	-1
+		}
+		windowDef scrolltext2
+		{
+			rect	460,75,58,109
+			visible	1
+			background	"gfx/guis/common/marine/scrolltext2"
+			matcolor	0.745,0.858,0.607,0
+		}
+		windowDef scrolltext_bar
+		{
+			rect	516,71,7,119
+			visible	1
+			background	"gfx/guis/common/line1a"
+			matcolor	0.745,0.858,0.607,0
+		}
+		windowDef scrolltext3
+		{
+			rect	523,75,58,109
+			visible	1
+			background	"gfx/guis/common/marine/scrolltext3"
+			matcolor	0.745,0.858,0.607,0
+		}
+	}
+	windowDef details1
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef t_lat1
+		{
+			rect	487,196,100,21
+			visible	1
+			forecolor	0.949,0.972,0.925,0
+			text	"#str_200445"
+			textscale	.3
+			font	"fonts/marine"
+			textalign	2
+		}
+		windowDef t_lat2
+		{
+			rect	417,197,172,44
+			visible	1
+			forecolor	0.949,0.972,0.925,0
+			text	"34.87"
+			textscale	.8
+			font	"fonts/marine"
+			textalign	2
+			textspacing	-4
+		}
+		windowDef t_long1
+		{
+			rect	487,245,100,21
+			visible	1
+			forecolor	0.949,0.972,0.925,0
+			text	"#str_200446"
+			textscale	.3
+			font	"fonts/marine"
+			textalign	2
+		}
+		windowDef t_long2
+		{
+			rect	417,245,172,44
+			visible	1
+			forecolor	0.949,0.972,0.925,0
+			text	"46.92"
+			textscale	.8
+			font	"fonts/marine"
+			textalign	2
+			textspacing	-2
+		}
+	}
+	windowDef details2
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef t_ins
+		{
+			rect	126,73,102,20
+			visible	1
+			forecolor	1,0.949,0.466,0
+			text	"#str_200447"
+			textscale	0.32
+			font	"fonts/marine"
+			textspacing	-2
+		}
+		windowDef t_pb
+		{
+			rect	149,148,66,12
+			visible	1
+			forecolor	1,0.949,0.466,0
+			text	"#str_200448"
+			textscale	0.16
+			font	"fonts/marine"
+			textspacing	-1
+		}
+		windowDef t_pd
+		{
+			rect	128,226,66,10
+			visible	1
+			forecolor	1,0.949,0.466,0
+			text	"#str_200449"
+			textscale	0.16
+			font	"fonts/marine"
+			textspacing	-1
+		}
+		windowDef t_pg
+		{
+			rect	151,312,69,10
+			visible	1
+			forecolor	1,0.949,0.466,0
+			text	"#str_200450"
+			textscale	0.16
+			font	"fonts/marine"
+			textspacing	-1
+		}
+		windowDef t_pe
+		{
+			rect	427,389,75,10
+			visible	1
+			forecolor	1,0.949,0.466,0
+			text	"#str_200451"
+			textscale	0.16
+			font	"fonts/marine"
+			textspacing	-1
+		}
+		windowDef t_det
+		{
+			rect	457,222,128,21
+			visible	1
+			forecolor	1,0.949,0.466,0
+			text	"#str_200452"
+			textscale	0.32
+			font	"fonts/marine"
+			textspacing	-2
+		}
+		windowDef t_zone
+		{
+			rect	458,233,128,21
+			visible	1
+			forecolor	1,0.949,0.466,0
+			text	"#str_200453"
+			textscale	0.32
+			font	"fonts/marine"
+			textspacing	-2
+		}
+		windowDef p_pb_text
+		{
+			rect	151,160,66,28
+			visible	1
+			windowDef pb_text
+			{
+				rect	0,0,79,52
+				visible	1
+				background	"gfx/guis/common/marine/nonscrolltext3"
+				matcolor	0.745,0.858,0.607,0
+			}
+		}
+		windowDef pd_text
+		{
+			rect	130,237,65,52
+			visible	1
+			background	"gfx/guis/common/marine/nonscrolltext2"
+			matcolor	0.745,0.858,0.607,0
+			matscalex	-1
+		}
+		windowDef p_pg_text
+		{
+			rect	153,325,82,15
+			visible	1
+			windowDef pg_text
+			{
+				rect	0,0,82,52
+				visible	1
+				background	"gfx/guis/common/marine/nonscrolltext3"
+				matcolor	0.745,0.858,0.607,0
+			}
+		}
+		windowDef p_pe_text
+		{
+			rect	431,402,81,21
+			visible	1
+			windowDef pe_text
+			{
+				rect	0,0,81,52
+				visible	1
+				background	"gfx/guis/common/marine/nonscrolltext2"
+				matcolor	0.745,0.858,0.607,0
+				matscalex	-1
+			}
+		}
+		windowDef ins_line
+		{
+			rect	229,75,79,13
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_line1"
+			matcolor	1,1,1,0
+		}
+		windowDef pb_line
+		{
+			rect	214,153,94,38
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_line2"
+			matcolor	1,1,1,0
+		}
+		windowDef pd_line
+		{
+			rect	192,221,116,92
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_line3"
+			matcolor	1,1,1,0
+		}
+		windowDef pg_line
+		{
+			rect	219,310,88,71
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_line3"
+			matcolor	1,1,1,0
+		}
+		windowDef pe_line
+		{
+			rect	364,395,65,11
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_line1"
+			matcolor	1,1,1,0
+		}
+		windowDef de_line
+		{
+			rect	369,233,107,79
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_line4"
+			matcolor	1,1,1,0
+		}
+	}
+	windowDef details3
+	{
+		rect	0,0,640,480
+		visible	0
+		windowDef arrow1
+		{
+			rect	267,27,92,48
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_arrows"
+			matcolor	0.847,0.941,0.701,1
+			rotate	270
+		}
+		windowDef arrow2
+		{
+			rect	216,131,92,47
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_arrows"
+			matcolor	0.847,0.941,0.701,1
+			rotate	52
+		}
+		windowDef arrow3
+		{
+			rect	317,131,92,47
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_arrows"
+			matcolor	0.847,0.941,0.701,1
+			rotate	-52
+			matscalex	-1
+		}
+	}
+	windowDef topstuff
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef static
+		{
+			visible	1
+			rect	35,19,566,439
+			background	"gfx/guis/common/img_static4"
+			matcolor	0.878,1,0.866,0
+		}
+		windowDef static2
+		{
+			visible	1
+			rect	35,19,566,439
+			background	"gfx/guis/common/img_static3"
+			matcolor	0.878,1,0.866,0
+		}
+		windowDef sline
+		{
+			rect	43,19,551,441
+			visible	1
+			background	"gfx/guis/common/monitor_line8"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef anim
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "bg::rect" "$bg::rect" "$d_grid::rect" "150" ;
+			transition "grid::rect" "$grid::rect" "$d_grid::rect" "150" ;
+			transition "bg::matcolor" "0,0,0,0" "0,0,0,1" "150" ;
+			transition "grid::matcolor" "0,0,0,1" "1,1,1,1" "150" ;
+			transition "static::matcolor_w" "0" "0.06" "150" ;
+			transition "static2::matcolor_w" "0" "0.06" "150" ;
+			transition "sline::matcolor" "0,0,0,1" "0.192,0.192,0.192,1" "150" ;
+		}
+
+		onTime +150 {
+			transition "grid::matcolor" "1,1,1,1" "0,0,0,1" "50" ;
+			set "grid1::visible" "1" ;
+		}
+
+		onTime +50 {
+			transition "static::matcolor_w" "0.06" "0.4" "50" ;
+			transition "static2::matcolor_w" "0.06" "0.4" "50" ;
+			
+			transition "tl_corner::matcolor_w" "0" "1" "100" ;
+			transition "bl_corner::matcolor_w" "0" "1" "100" ;
+			transition "tr_corner::matcolor_w" "0" "1" "100" ;
+			transition "br_corner::matcolor_w" "0" "1" "100" ;
+			transition "decal::matcolor_w" "0" "0.1" "100" ;
+			transition "squares::matcolor_w" "0" "0.2" "100" ;
+			transition "scrolltext1::matcolor_w" "0" "0.14" "100" ;
+			transition "scrolltext2::matcolor_w" "0" "0.32" "100" ;
+			transition "scrolltext_bar::matcolor_w" "0" "0.2" "100" ;
+			transition "scrolltext3::matcolor_w" "0" "0.32" "100" ;
+		}
+
+		onTime +100 {
+			transition "tr_bar::matcolor_w" "0" "1" "150" ;
+			transition "tr_bar::rect" "280,212,170,33" "414,30,170,33" "150" ;
+			transition "t_recon::forecolor_w" "0" "1" "150" ;
+			transition "t_recon::rect" "299,213,194,14" "433,31,194,14" "150" ;
+			transition "bl_bar::matcolor_w" "0" "1" "150" ;
+			transition "bl_bar::rect" "207,227,156,57" "51,397,156,57" "150" ;
+			transition "t_descript1::forecolor_w" "0" "1" "150" ;
+			transition "t_descript1::rect" "204,244,131,14" "48,414,131,14" "150" ;
+			transition "t_descript2::forecolor_w" "0" "1" "150" ;
+			transition "t_descript2::rect" "204,256,135,14" "48,426,135,14" "150" ;
+			transition "t_classified::rect" "205,227,85,13" "49,397,85,13" "150" ;	
+			set "t_classified::visible" "1" ;
+		}
+
+		onTime +200 {
+			transition "grad::matcolor" "0,0,0,0" "0,0,0,1" "150" ;
+			transition "cam::matcolor_w" "0" "1" "200" ;
+			transition "cam::rect" "120,221,400,2" "0,0,640,480" "200" ;
+			transition "t_lat1::forecolor_w" "0" "0.2" "200" ;
+			transition "t_lat2::forecolor_w" "0" "0.2" "200" ;
+			transition "t_long1::forecolor_w" "0" "0.2" "200" ;
+			transition "t_long2::forecolor_w" "0" "0.2" "200" ;
+		}
+
+		onTime +50 {
+			transition "static::matcolor_w" "0.8" "0.06" "500" ;
+			transition "static2::matcolor_w" "0.8" "0.06" "500" ;
+		}
+
+		onTime +150 {
+			transition "cam::rect" "0,0,640,480" "$d_cam1::rect" "50" ;
+		}
+
+		onTime +50 {
+			transition "cam::rect" "$d_cam1::rect" "0,0,640,480" "50" ;
+		}
+
+		onTime +3300 {
+			transition "static::matcolor_w" "0.8" "0.06" "250" ;
+			transition "static2::matcolor_w" "0.8" "0.06" "250" ;
+			
+			transition "cam::rect" "$cam::rect" "$d_cam::rect" "350" ;
+			transition "cam::matcolor_w" "1" "0" "350" ;
+			transition "t_lat1::forecolor_w" "0.2" "0" "200" ;
+			transition "t_lat2::forecolor_w" "0.2" "0" "200" ;
+			transition "t_long1::forecolor_w" "0.2" "0" "200" ;
+			transition "t_long2::forecolor_w" "0.2" "0" "200" ;
+		}
+
+		onTime +200 {
+			transition "diagram1::matcolor_w" "0" "1" "250" ;
+		}
+
+		onTime +250 {
+			transition "indicator1::matcolor" "0,0,0,1" "1,0.274,0,1" "100" ;
+		}
+
+		onTime +550 {
+			// begin text label transition in = at 4500ms
+			
+			transition "t_ins::forecolor_w" "1,0.949,0.466,0" "1,1,1,1" "100" ;
+			transition "ins_line::matcolor_w" "0" "1" "100" ;
+		}
+
+		onTime +100 {
+			transition "t_ins::forecolor" "1,1,1,1" "1,0.949,0.466,1" "100" ;
+			transition "ins_line::matcolor_w" "1" "0.6" "100" ;
+			transition "t_pb::forecolor" "1,0.949,0.466,0" "1,1,1,1" "100" ;
+			transition "pb_line::matcolor_w" "0" "1" "100" ;
+			transition "pb_text::matcolor" "0.745,0.858,0.607,0" "1,1,1,1" "100" ;
+		}
+
+		onTime +100 {
+			transition "t_pb::forecolor" "1,1,1,1" "1,0.949,0.466,1" "100" ;
+			transition "pb_line::matcolor_w" "1" "0.6" "100" ;
+			transition "pb_text::matcolor" "1,1,1,1" "0.745,0.858,0.607,1" "100" ;
+			transition "t_pd::forecolor" "1,0.949,0.466,0" "1,1,1,1" "100" ;
+			transition "pd_line::matcolor_w" "0" "1" "100" ;
+			transition "pd_text::matcolor" "0.745,0.858,0.607,0" "1,1,1,1" "100" ;
+		}
+
+		onTime +100 {
+			transition "t_pd::forecolor" "1,1,1,1" "1,0.949,0.466,1" "100" ;
+			transition "pd_line::matcolor_w" "1" "0.6" "100" ;
+			transition "pd_text::matcolor" "1,1,1,1" "0.745,0.858,0.607,1" "100" ;
+			transition "t_pg::forecolor" "1,0.949,0.466,0" "1,1,1,1" "100" ;
+			transition "pg_line::matcolor_w" "0" "1" "100" ;
+			transition "pg_text::matcolor" "0.745,0.858,0.607,0" "1,1,1,1" "100" ;
+		}
+
+		onTime +100 {
+			transition "t_pg::forecolor" "1,1,1,1" "1,0.949,0.466,1" "100" ;
+			transition "pg_line::matcolor_w" "1" "0.6" "100" ;
+			transition "pg_text::matcolor" "1,1,1,1" "0.745,0.858,0.607,1" "100" ;
+			transition "t_pe::forecolor" "1,0.949,0.466,0" "1,1,1,1" "100" ;
+			transition "pe_line::matcolor_w" "0" "1" "100" ;
+			transition "pe_text::matcolor" "0.745,0.858,0.607,0" "1,1,1,1" "100" ;
+		}
+
+		onTime +100 {
+			transition "t_pe::forecolor" "1,1,1,1" "1,0.949,0.466,1" "100" ;
+			transition "pe_line::matcolor_w" "1" "0.6" "100" ;
+			transition "pe_text::matcolor" "1,1,1,1" "0.745,0.858,0.607,1" "100" ;
+			transition "t_det::forecolor" "1,0.949,0.466,0" "1,1,1,1" "100" ;
+			transition "t_zone::forecolor" "1,0.949,0.466,0" "1,1,1,1" "100" ;
+			transition "de_line::matcolor_w" "0" "1" "100" ;
+		}
+
+		onTime +100 {
+			transition "t_det::forecolor" "1,1,1,1" "1,0.949,0.466,1" "100" ;
+			transition "t_zone::forecolor" "1,1,1,1" "1,0.949,0.466,1" "100" ;
+			transition "de_line::matcolor_w" "1" "0.6" "100" ;
+		}
+
+		onTime +400 {
+			// begin zooming into insertion point = at 5500ms
+			
+			transition "static::matcolor_w" "0.4" "0.06" "500" ;
+			transition "static2::matcolor_w" "0.4" "0.06" "500" ;
+			
+			transition "diagram1::matcolor_w" "1" "0" "100" ;
+			transition "diagram2::matcolor_w" "0" "1" "100" ;
+		}
+
+		onTime +100 {
+			transition "indicator1::matcolor" "1,0.274,0,1" "0,0,0,1" "100" ;
+			transition "diagram2::matcolor_w" "1" "0" "100" ;
+			transition "diagram_blur::matcolor_w" "0" "1" "100" ;
+		}
+
+		onTime +100 {
+			set "details2::visible" "0" ;
+			transition "diagram_blur::rect" "$diagram_blur::rect" "$d_diagram2a::rect" "300" ;
+		}
+
+		onTime +300 {
+			transition "diagram_blur::matcolor_w" "1" "0" "100" ;
+			transition "d_diagram2a::matcolor_w" "0" "1" "100" ;
+			set "details3::visible" "1" ;
+			//	transition "car_top::matcolor" "0,0,0,1" "1,1,1,1" "100" ;
+		}
+
+		onTime +100 {
+			transition "car1::matcolor" "0,0,0,1" "1,0.5,0,1" "150" ;
+		}
+
+		onTime +150 {
+			transition "car2::matcolor" "0,0,0,1" "1,0.5,0,1" "150" ;
+		}
+
+		onTime +250 {
+			// transition diagram to EMP point = at 6500ms
+			
+			set "details3::visible" "0" ;
+			transition "d_diagram2a::rect" "$d_diagram2a::rect" "$d_diagram_car1::rect" "1500" ;
+			transition "p_apprvec::rect" "$p_apprvec::rect" "$d_apprvec::rect" "1500" ;
+			transition "vec_line::matcolor_w" "0" "0.6" "150" ;
+			transition "t_vec::forecolor_w" "0" "1" "150" ;
+			transition "t_appr::forecolor_w" "0" "1" "150" ;
+			transition "car3::matcolor" "0,0,0,1" "1,0.5,0,1" "150" ;
+		}
+
+		onTime +150 {
+			transition "car4::matcolor" "0,0,0,1" "1,0.5,0,1" "150" ;
+			transition "car1::matcolor" "1,0.5,0,1" "0,0,0,1" "150" ;
+		}
+
+		onTime +150 {
+			transition "car5::matcolor" "0,0,0,1" "1,0.5,0,1" "150" ;
+			transition "car2::matcolor" "1,0.5,0,1" "0,0,0,1" "150" ;
+		}
+
+		onTime +150 {
+			transition "car6::matcolor" "0,0,0,1" "1,0.5,0,1" "150" ;
+			transition "car3::matcolor" "1,0.5,0,1" "0,0,0,1" "150" ;
+		}
+
+		onTime +150 {
+			transition "car7::matcolor" "0,0,0,1" "1,0.5,0,1" "150" ;
+			transition "car4::matcolor" "1,0.5,0,1" "0,0,0,1" "150" ;
+		}
+
+		onTime +150 {
+			transition "car8::matcolor" "0,0,0,1" "1,0.5,0,1" "150" ;
+			transition "car5::matcolor" "1,0.5,0,1" "0,0,0,1" "150" ;
+		}
+
+		onTime +150 {
+			transition "car9::matcolor" "0,0,0,1" "1,0.5,0,1" "150" ;
+			transition "car6::matcolor" "1,0.5,0,1" "0,0,0,1" "150" ;
+		}
+
+		onTime +150 {
+			transition "car10::matcolor" "0,0,0,1" "1,0.5,0,1" "150" ;
+			transition "car7::matcolor" "1,0.5,0,1" "0,0,0,1" "150" ;
+		}
+
+		onTime +150 {
+			transition "car11::matcolor" "0,0,0,1" "1,0.5,0,1" "150" ;
+			transition "car8::matcolor" "1,0.5,0,1" "0,0,0,1" "150" ;
+		}
+
+		onTime +300 {
+			//	transition "car_top::rotate" "0" "25" "50" ;
+			
+			transition "car12::matcolor" "0,0,0,1" "1,0.5,0,1" "200" ;
+			transition "car9::matcolor" "1,0.5,0,1" "0,0,0,1" "200" ;
+			
+			transition "d_diagram2a::rect" "$d_diagram_car1::rect" "$d_diagram_car2::rect" "200" ;
+		}
+
+		onTime +200 {
+			//	transition "car_top::rotate" "25" "90" "50" ;
+			
+			transition "car13::matcolor" "0,0,0,1" "1,0.5,0,1" "400" ;
+			transition "car10::matcolor" "1,0.5,0,1" "0,0,0,1" "400" ;
+			transition "d_diagram2a::rect" "$d_diagram_car2::rect" "$d_diagram_car3::rect" "400" ;
+		}
+
+		onTime +200 {
+			transition "car14::matcolor" "0,0,0,1" "1,0.5,0,1" "200" ;
+			transition "car11::matcolor" "1,0.5,0,1" "0,0,0,1" "200" ;
+		}
+
+		onTime +200 {
+			//	transition "car_top::rotate" "90" "145" "50" ;
+			
+			transition "car15::matcolor" "0,0,0,1" "1,0.5,0,1" "200" ;
+			transition "car12::matcolor" "1,0.5,0,1" "0,0,0,1" "200" ;
+			
+			transition "d_diagram2a::rect" "$d_diagram_car3::rect" "$d_diagram_car4::rect" "200" ;
+		}
+
+		onTime +200 {
+			//	transition "car_top::rotate" "145" "180" "200" ;
+			
+			transition "car16::matcolor" "0,0,0,1" "1,0.5,0,1" "200" ;
+			transition "car13::matcolor" "1,0.5,0,1" "0,0,0,1" "200" ;
+			
+			transition "d_diagram2a::rect" "$d_diagram_car4::rect" "$d_diagram2b::rect" "500" ;
+		}
+
+		onTime +650 {
+			// car pulls in = at 9300ms
+			
+			//	transition "car_top::rotate" "180" "90" "100" ;
+			//set "d_diagram2a::visible" "0" ;
+			//set "d_diagram2b::visible" "1" ;
+			//transition "d_diagram2b::rect" "$d_diagram2b::rect" "-268,-533,922,1244" "300" ;
+			//transition "d_diagram2c::rect" "$d_diagram2c::rect" "-268,-533,922,1244" "300" ;
+		}
+
+		onTime +300 {
+			transition "indicator2::matcolor" "0,0,0,1" "1,0.274,0,1" "100" ;
+			
+			transition "car14::matcolor" "1,0.5,0,1" "0,0,0,1" "500" ;
+			transition "car15::matcolor" "1,0.5,0,1" "0,0,0,1" "500" ;
+		}
+
+		onTime +900 {
+			// expand car top = at 10500ms 
+			
+			transition "static::matcolor_w" "0.4" "0.06" "500" ;
+			transition "static2::matcolor_w" "0.4" "0.06" "500" ;
+			
+			transition "vec_line::matcolor_w" "0.6" "0" "150" ;
+			transition "t_vec::forecolor_w" "1" "0" "150" ;
+			transition "t_appr::forecolor_w" "1" "0" "150" ;
+			
+			transition "indicator2::matcolor" "1,0.274,0,1" "0,0,0,1" "100" ;
+			set "car_top::matcolor" "1,0.5,0,1" ;
+			set "car16::matcolor" "0,0,0,1" ;
+			
+			transition "d_diagram2a::rect" "$d_diagram2b::rect" "$d_diagram2c::rect" "300" ;
+			transition "d_diagram2a::matcolor_w" "1" "0" "300" ;
+			transition "car_top::rect" "$car_top::rect" "$d_car_top::rect" "300" ;
+		}
+
+		onTime +300 {
+			transition "emp_top::matcolor_w" "0" "1" "200" ;
+		}
+
+		onTime +1000 {
+			// transition to side car = at 11000ms
+			transition "car_top::matcolor" "1,0.5,0,1" "0,0,0,1" "300" ;
+			transition "d_car_side::matcolor_w" "0,0,0,1" "1,0.5,0,1" "300" ;
+			transition "emp_top::matcolor_w" "1" "0" "300" ;
+		}
+
+		onTime +1000 {
+			// zoom out to small side car view = at 13000ms
+			
+			transition "static::matcolor_w" "0.4" "0.06" "500" ;
+			transition "static2::matcolor_w" "0.4" "0.06" "500" ;
+			
+			transition "d_car_side::rect" "$d_car_side::rect" "$car_side::rect" "500" ;
+			set "d_diagram3a::matcolor" "0.847,0.941,0.701,.2" ;
+			set "d_diagram3a::visible" "1" ;
+			transition "d_diagram3a::rect" "$d_diagram3a::rect" "$diagram3::rect" "500" ;
+		}
+
+		onTime +500 {
+			set "emp_side::matcolor_w" "1" ;
+			set "diagram3::matcolor" "0.847,0.941,0.701,1" ;
+			set "diagram3::visible" "1" ;
+		}
+
+		onTime +1000 {
+			// begin explosions = at 14500ms
+			
+			set "explode1::matcolor_w" "0" ;
+			set "explode1::visible" "1" ;
+			transition "explode1::rect" "$explode1::rect" "$d_explode1::rect" "300" ;
+			transition "explode1::matcolor" "0,0,0,1" "1,1,1,1" "100" ;
+		}
+
+		onTime +100 {
+			transition "explode1::matcolor" "1,1,1,1" "0.372,0.615,0.913,1" "200" ;
+		}
+
+		onTime +200 {
+			set "flash::matcolor_w" "0" ;
+			set "flash::visible" "1" ;
+			transition "flash::rect" "$flash::rect" "$d_flash::rect" "300" ;
+			transition "flash::matcolor" "0,0,0,1" "1,1,1,1" "100" ;
+		}
+
+		onTime +100 {
+			transition "flash::matcolor" "1,1,1,1" "0.372,0.615,0.913,1" "200" ;
+		}
+
+		onTime +200 {
+			set "explode2::matcolor_w" "0" ;
+			set "explode2::visible" "1" ;
+			transition "explode2::rect" "$explode2::rect" "$d_explode2::rect" "300" ;
+			transition "explode2::matcolor" "0,0,0,1" "1,1,1,1" "100" ;
+		}
+
+		onTime +100 {
+			transition "explode2::matcolor" "1,1,1,1" "0.372,0.615,0.913,1" "200" ;
+		}
+
+		onTime +200 {
+			transition "explode2::rect" "$d_explode2::rect" "$d2_explode2::rect" "500" ;
+		}
+
+		onTime +300 {
+			transition "explode1::matcolor" "0.372,0.615,0.913,1" "0,0,0,1" "500" ;
+		}
+
+		onTime +300 {
+			transition "flash::matcolor" "0.372,0.615,0.913,1" "0,0,0,1" "500" ;
+		}
+
+		onTime +300 {
+			transition "explode2::matcolor" "0.372,0.615,0.913,1" "0,0,0,1" "200" ;
+		}
+
+		onTime +200 {
+			// fade car and side view back out = at 18500ms
+			
+			transition "diagram3::matcolor_w" "1" "0" "250" ;
+			transition "d_diagram3a::matcolor_w" "1" "0" "250" ;
+			transition "d_car_side::matcolor" "1,0.5,0,1" "0,0,0,1" "250" ;
+			transition "emp_side::matcolor_w" "1" "0" "250" ;
+		}
+
+		onTime +250 {
+			set "t_endtrans::forecolor_w" "0" ;
+			set "t_endtrans::visible" "1" ;
+			transition "t_endtrans::forecolor" "1,0.949,0.466,0" "1,1,1,1" "100" ;
+		}
+
+		onTime +100 {
+			transition "t_endtrans::forecolor" "1,1,1,1" "1,0.949,0.466,1" "200" ;
+		}
+
+		onTime +500 {
+			transition "t_endtrans::forecolor_w" "1" "0" "300" ;
+		}
+
+		onTime +300 {
+			transition "tr_bar::matcolor_w" "1" "0" "150" ;
+			transition "tr_bar::rect" "414,30,170,33" "280,212,170,33" "150" ;
+			transition "t_recon::forecolor_w" "1" "0" "150" ;
+			transition "t_recon::rect" "433,31,194,14" "299,213,194,14" "150" ;
+			transition "bl_bar::matcolor_w" "1" "0" "150" ;
+			transition "bl_bar::rect" "51,397,156,57" "207,227,156,57" "150" ;
+			transition "t_descript1::forecolor_w" "1" "0" "150" ;
+			transition "t_descript1::rect" "48,414,131,14" "204,244,131,14" "150" ;
+			transition "t_descript2::forecolor_w" "1" "0" "150" ;
+			transition "t_descript2::rect" "48,426,135,14" "204,256,135,14" "150" ;
+			transition "t_classified::rect" "49,397,85,13" "205,227,85,13" "150" ;	
+			set "t_classified::visible" "0" ;
+		}
+
+		onTime +150 {
+			transition "grad::matcolor" "0,0,0,1" "0,0,0,0" "150" ;
+			transition "tl_corner::matcolor_w" "1" "0" "100" ;
+			transition "bl_corner::matcolor_w" "1" "0" "100" ;
+			transition "tr_corner::matcolor_w" "1" "0" "100" ;
+			transition "br_corner::matcolor_w" "1" "0" "100" ;
+			transition "decal::matcolor_w" "0.1" "0" "100" ;
+			transition "squares::matcolor_w" "0.2" "0" "100" ;
+			transition "scrolltext1::matcolor_w" "0.14" "0" "100" ;
+			transition "scrolltext2::matcolor_w" "0.32" "0" "100" ;
+			transition "scrolltext_bar::matcolor_w" "0.2" "0" "100" ;
+			transition "scrolltext3::matcolor_w" "0.32" "0" "100" ;
+		}
+
+		onTime +100 {
+			transition "bg::rect" "$d_grid::rect" "$bg::rect" "150" ;
+			transition "grid::rect" "$d_grid::rect" "$grid::rect" "150" ;
+			transition "bg::matcolor" "0,0,0,1" "0,0,0,0" "150" ;
+			transition "grid1::matcolor" "1,1,1,1" "0,0,0,1" "150" ;
+			transition "static::matcolor_w" "0.8" "0" "150" ;
+			transition "static2::matcolor_w" "0.8" "0" "150" ;
+			transition "sline::matcolor" "0.192,0.192,0.192,1" "0,0,0,1" "150" ;
+		}
+
+	}
+	windowDef anim_num
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 0 {
+			set "t_lat2::text" "34.89" ;
+			set "t_long2::text" "46.92" ;
+		}
+
+		onTime +50 {
+			set "t_lat2::text" "34.88" ;
+		}
+
+		onTime +25 {
+			set "t_long2::text" "46.88" ;
+		}
+
+		onTime +50 {
+			set "t_lat2::text" "34.86" ;
+		}
+
+		onTime +25 {
+			set "t_long2::text" "46.89" ;
+		}
+
+		onTime +50 {
+			set "t_lat2::text" "34.88" ;
+		}
+
+		onTime +25 {
+			set "t_long2::text" "46.88" ;
+		}
+
+		onTime +50 {
+			set "t_lat2::text" "34.83" ;
+		}
+
+		onTime +25 {
+			set "t_long2::text" "46.89" ;
+		}
+
+		onTime +50 {
+			set "t_lat2::text" "34.88" ;
+		}
+
+		onTime +25 {
+			set "t_long2::text" "46.86" ;
+		}
+
+		onTime +50 {
+			set "t_lat2::text" "34.86" ;
+		}
+
+		onTime +25 {
+			set "t_long2::text" "46.89" ;
+		}
+
+		onTime +50 {
+			set "t_lat2::text" "34.87" ;
+		}
+
+		onTime +25 {
+			set "t_long2::text" "46.96" ;
+		}
+
+		onTime +50 {
+			resettime "0" ;
+		}
+
+	}
+}

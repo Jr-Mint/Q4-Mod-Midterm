@@ -1,0 +1,970 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	visible	1
+	menugui	0
+	nocursor	1
+	alwaysThink	1
+
+	onNamedEvent startbriefing {
+		resettime "anim" "0" ;
+	}
+
+	windowDef bg
+	{
+		rect	274,232,92,10
+		visible	1
+		background	"gfx/guis/maps/mcc/brf_bg"
+		matcolor	0,0,0,0
+	}
+	windowDef diagram1
+	{
+		rect	136,13,375,464
+		visible	1
+		background	"gfx/guis/maps/mcc/brf2_diagram1"
+		matcolor	0.847,0.941,0.701,0
+	}
+	windowDef diagram2
+	{
+		rect	120,5,400,472
+		visible	1
+		background	"gfx/guis/maps/mcc/brf2_diagram2"
+		matcolor	0.541,0.658,0.482,0
+	}
+	windowDef storage
+	{
+		rect	393,256,104,138
+		visible	1
+		background	"gfx/guis/maps/mcc/brf2_storage"
+		matcolor	1,0.596,0.0509,0
+	}
+	windowDef process
+	{
+		rect	159,256,104,138
+		visible	1
+		background	"gfx/guis/maps/mcc/brf2_process"
+		matcolor	0.603,0.686,0.478,0
+	}
+	windowDef network
+	{
+		rect	274,16,104,138
+		visible	1
+		background	"gfx/guis/maps/mcc/brf2_network"
+		matcolor	0.603,0.686,0.478,0
+	}
+	windowDef core
+	{
+		rect	274,161,104,138
+		visible	1
+		background	"gfx/guis/maps/mcc/brf2_core"
+		matcolor	0.603,0.686,0.478,0
+	}
+	windowDef d_core
+	{
+		rect	253,140,145,179
+		visible	0
+		background	"gfx/guis/maps/mcc/brf2_core"
+		matcolor	1,0.596,0.0509,1
+	}
+	windowDef p_main
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef grid
+		{
+			rect	274,232,92,10
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_grid"
+			matcolor	0,0,0,1
+		}
+		windowDef d_grid
+		{
+			rect	0,0,640,480
+			visible	0
+			background	"gfx/guis/maps/mcc/brf_grid"
+			matcolor	0,0,0,1
+		}
+		windowDef grid1
+		{
+			rect	0,0,640,480
+			visible	0
+			background	"gfx/guis/maps/mcc/brf_grid"
+			matcolor	1*guitable_8_10[time*0.001],1*guitable_8_10[time*0.001],1*guitable_8_10[time*0.001],1
+		}
+		windowDef decal
+		{
+			rect	32,99,164,241
+			visible	1
+			background	"gfx/guis/common/marine/decal4"
+			matcolor	0.745,0.858,0.607,0
+		}
+		windowDef squares
+		{
+			rect	46,48,77,16
+			visible	1
+			background	"gfx/guis/common/marine/squares1"
+			matcolor	0.835,0.866,0.8,0
+		}
+		windowDef tl_corner
+		{
+			rect	53,75,16,21
+			visible	1
+			background	"gfx/guis/common/corner"
+			matcolor	0.745,0.858,0.607,0
+		}
+		windowDef bl_corner
+		{
+			rect	52,357,16,21
+			visible	1
+			background	"gfx/guis/common/corner"
+			matcolor	0.745,0.858,0.607,0
+			matscaley	-1
+		}
+		windowDef br_corner
+		{
+			rect	567,357,16,21
+			visible	1
+			background	"gfx/guis/common/corner"
+			matcolor	0.745,0.858,0.607,0
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef tr_corner
+		{
+			rect	567,75,16,21
+			visible	1
+			background	"gfx/guis/common/corner"
+			matcolor	0.745,0.858,0.607,0
+			matscalex	-1
+		}
+		windowDef tr_bar
+		{
+			rect	280,212,170,33
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_corner1"
+			matcolor	0.745,0.858,0.607,0
+		}
+		windowDef t_recon
+		{
+			rect	299,213,194,14
+			visible	1
+			forecolor	0.952,0.976,0.929,0
+			text	"#str_200441"
+			textscale	0.18
+			font	"fonts/marine"
+			textspacing	-2
+		}
+		windowDef bl_bar
+		{
+			rect	207,227,156,57
+			visible	1
+			background	"gfx/guis/maps/mcc/brf_corner2"
+			matcolor	0.745,0.858,0.607,0
+		}
+		windowDef t_classified
+		{
+			rect	205,227,85,13
+			visible	0
+			forecolor	1,0.5,0,1*guitable_8_10[time*0.001]
+			text	"#str_200442"
+			textscale	.165
+			font	"fonts/marine"
+			textspacing	-1
+		}
+		windowDef t_descript1
+		{
+			rect	204,244,131,14
+			visible	1
+			forecolor	0.952,0.976,0.929,0
+			text	"#str_200443"
+			textscale	0.24
+			font	"fonts/marine"
+			textspacing	-2
+		}
+		windowDef t_descript2
+		{
+			rect	204,256,135,14
+			visible	1
+			forecolor	0.952,0.976,0.929,0
+			text	"#str_200444"
+			textscale	0.24
+			font	"fonts/marine"
+			textspacing	-2
+		}
+		windowDef scrolltext1
+		{
+			rect	55,82,213,284
+			visible	1
+			background	"gfx/guis/common/marine/scrolltext2"
+			matcolor	0.745,0.858,0.607,0
+			matscalex	-1
+		}
+		windowDef scrolltext2
+		{
+			rect	460,75,58,109
+			visible	1
+			background	"gfx/guis/common/marine/scrolltext2"
+			matcolor	0.745,0.858,0.607,0
+		}
+		windowDef scrolltext_bar
+		{
+			rect	516,71,7,119
+			visible	1
+			background	"gfx/guis/common/line1a"
+			matcolor	0.745,0.858,0.607,0
+		}
+		windowDef scrolltext3
+		{
+			rect	523,75,58,109
+			visible	1
+			background	"gfx/guis/common/marine/scrolltext3"
+			matcolor	0.745,0.858,0.607,0
+		}
+	}
+	windowDef details1
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef t_lat1
+		{
+			rect	145,217,30,14
+			visible	1
+			forecolor	1,0.949,0.466,0
+			text	"#str_200445"
+			textscale	0.2
+			font	"fonts/marine"
+		}
+		windowDef t_lat2
+		{
+			rect	144,221,63,22
+			visible	1
+			forecolor	1,0.949,0.466,0
+			text	"34.87"
+			textscale	0.4
+			font	"fonts/marine"
+			textspacing	-3
+		}
+		windowDef t_long1
+		{
+			rect	145,241,30,14
+			visible	1
+			forecolor	1,0.949,0.466,0
+			text	"#str_200446"
+			textscale	0.2
+			font	"fonts/marine"
+		}
+		windowDef t_long2
+		{
+			rect	144,245,63,22
+			visible	1
+			forecolor	1,0.949,0.466,0
+			text	"46.92"
+			textscale	0.4
+			font	"fonts/marine"
+			textspacing	-3
+		}
+		windowDef t_nexus
+		{
+			rect	443,217,103,36
+			visible	1
+			forecolor	1,0.949,0.466,0
+			text	"#str_200454"
+			textscale	0.5
+			font	"fonts/marine"
+			textspacing	-1
+		}
+		windowDef t_proc
+		{
+			rect	443,234,151,36
+			visible	1
+			forecolor	1,0.949,0.466,0
+			text	"#str_200455"
+			textscale	0.5
+			font	"fonts/marine"
+			textspacing	-1
+		}
+		windowDef arrow1
+		{
+			rect	254,314,13,20
+			visible	1
+			background	"gfx/guis/common/arrow8"
+			matcolor	1,0.435,0.0156,0
+		}
+		windowDef t_small1
+		{
+			rect	154,310,95,14
+			visible	1
+			forecolor	1,1,1,0
+			text	"#str_200456"
+			textscale	0.2
+			font	"fonts/marine"
+			textalign	2
+			textspacing	-2
+		}
+		windowDef t_small1a
+		{
+			rect	170,318,81,14
+			visible	1
+			forecolor	1,1,1,0
+			text	"89028-234-43242"
+			textscale	0.2
+			font	"fonts/marine"
+			textspacing	-2
+		}
+		windowDef arrow2
+		{
+			rect	371,289,13,20
+			visible	1
+			background	"gfx/guis/common/arrow8"
+			matcolor	1,0.435,0.0156,0
+			matscalex	-1
+		}
+		windowDef t_small2
+		{
+			rect	384,286,124,14
+			visible	1
+			forecolor	1,1,1,0
+			text	"#str_200457"
+			textscale	0.2
+			font	"fonts/marine"
+			textspacing	-2
+		}
+		windowDef t_small2a
+		{
+			rect	384,295,81,14
+			visible	1
+			forecolor	1,1,1,0
+			text	"69875-025-4734"
+			textscale	0.2
+			font	"fonts/marine"
+			textspacing	-2
+		}
+		windowDef arrow3
+		{
+			rect	295,120,13,20
+			visible	1
+			background	"gfx/guis/common/arrow8"
+			matcolor	1,0.435,0.0156,0
+		}
+		windowDef t_small3
+		{
+			rect	214,117,76,14
+			visible	1
+			forecolor	1,1,1,0
+			text	"junction:"
+			textscale	0.2
+			font	"fonts/marine"
+			textspacing	-2
+			textalign	2
+		}
+		windowDef t_small3a
+		{
+			rect	249,125,45,14
+			visible	1
+			forecolor	1,1,1,0
+			text	"8404-32"
+			textscale	0.2
+			font	"fonts/marine"
+			textspacing	-2
+		}
+	}
+	windowDef details2
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef line_storage
+		{
+			rect	340,229,106,106
+			visible	1
+			background	"gfx/guis/maps/mcc/brf2_line2"
+			matcolor	1,0.596,0.0509,0
+			matscalex	-1
+		}
+		windowDef line_process
+		{
+			rect	208,229,106,106
+			visible	1
+			background	"gfx/guis/maps/mcc/brf2_line2"
+			matcolor	0.603,0.686,0.478,0
+		}
+		windowDef line_network
+		{
+			rect	314,90,26,116
+			visible	1
+			background	"gfx/guis/maps/mcc/brf2_line1"
+			matcolor	0.603,0.686,0.478,0
+		}
+		windowDef arrow4
+		{
+			rect	286,168,13,20
+			visible	1
+			background	"gfx/guis/common/arrow8"
+			matcolor	1,0.435,0.0156,0
+		}
+		windowDef t_small4
+		{
+			rect	191,165,94,14
+			visible	1
+			forecolor	1,1,1,0
+			text	"#str_200459"
+			textscale	0.2
+			font	"fonts/marine"
+			textspacing	-2
+			textalign	2
+		}
+		windowDef t_small4a
+		{
+			rect	228,173,58,14
+			visible	1
+			forecolor	1,1,1,0
+			text	"#str_200460"
+			textscale	0.2
+			font	"fonts/marine"
+			textspacing	-2
+		}
+		windowDef arrow5
+		{
+			rect	157,218,13,20
+			visible	1
+			background	"gfx/guis/common/arrow8"
+			matcolor	1,0.435,0.0156,0
+		}
+		windowDef t_small5
+		{
+			rect	49,215,107,14
+			visible	1
+			forecolor	1,1,1,0
+			text	"#str_200461"
+			textscale	0.2
+			font	"fonts/marine"
+			textspacing	-2
+			textalign	2
+		}
+		windowDef t_small5a
+		{
+			rect	81,223,76,14
+			visible	1
+			forecolor	1,1,1,0
+			text	"765-87615-963"
+			textscale	0.2
+			font	"fonts/marine"
+			textspacing	-2
+		}
+		windowDef arrow6
+		{
+			rect	400,387,13,20
+			visible	1
+			background	"gfx/guis/common/arrow8"
+			matcolor	1,0.435,0.0156,0
+			matscalex	-1
+		}
+		windowDef t_small6
+		{
+			rect	412,384,119,14
+			visible	1
+			forecolor	1,1,1,0
+			text	"#str_200461"
+			textscale	0.2
+			font	"fonts/marine"
+			textspacing	-2
+		}
+		windowDef t_small6a
+		{
+			rect	412,392,76,14
+			visible	1
+			forecolor	1,1,1,0
+			text	"359-54351-324"
+			textscale	0.2
+			font	"fonts/marine"
+			textspacing	-2
+		}
+		windowDef arrow7
+		{
+			rect	399,95,13,20
+			visible	1
+			background	"gfx/guis/common/arrow8"
+			matcolor	1,0.435,0.0156,0
+			matscalex	-1
+		}
+		windowDef t_small7
+		{
+			rect	412,92,126,14
+			visible	1
+			forecolor	1,1,1,0
+			text	"#str_200461"
+			textscale	0.2
+			font	"fonts/marine"
+			textspacing	-2
+		}
+		windowDef t_small7a
+		{
+			rect	412,100,76,14
+			visible	1
+			forecolor	1,1,1,0
+			text	"627-31678-592"
+			textscale	0.2
+			font	"fonts/marine"
+			textspacing	-2
+		}
+		windowDef t_nexuscore
+		{
+			rect	364,191,124,24
+			visible	1
+			forecolor	1,0.949,0.466,0
+			text	"#str_200462"
+			textscale	0.4
+			font	"fonts/marine"
+			textspacing	-1
+		}
+		windowDef t_facilities
+		{
+			rect	364,206,124,24
+			visible	1
+			forecolor	1,0.949,0.466,0
+			text	"#str_200463"
+			textscale	0.4
+			font	"fonts/marine"
+			textspacing	-1
+		}
+		windowDef t_data
+		{
+			rect	468,313,90,24
+			visible	1
+			forecolor	1,0.949,0.466,0
+			text	"#str_200464"
+			textscale	0.4
+			font	"fonts/marine"
+			textspacing	-1
+		}
+		windowDef t_storage
+		{
+			rect	468,328,90,24
+			visible	1
+			forecolor	1,0.949,0.466,0
+			text	"#str_200465"
+			textscale	0.4
+			font	"fonts/marine"
+			textspacing	-1
+		}
+		windowDef t_processing
+		{
+			rect	53,289,126,24
+			visible	1
+			forecolor	1,0.945,0.462,0
+			text	"#str_200466"
+			textscale	0.4
+			font	"fonts/marine"
+			textspacing	-1
+			textalign	2
+		}
+		windowDef t_centers
+		{
+			rect	53,304,126,24
+			visible	1
+			forecolor	1,0.945,0.462,0
+			text	"#str_200467"
+			textscale	0.4
+			font	"fonts/marine"
+			textspacing	-1
+			textalign	2
+		}
+		windowDef t_networking
+		{
+			rect	169,68,125,24
+			visible	1
+			forecolor	1,0.945,0.462,0
+			text	"#str_200468"
+			textscale	0.4
+			font	"fonts/marine"
+			textspacing	-1
+			textalign	2
+		}
+		windowDef t_sectors
+		{
+			rect	169,83,125,24
+			visible	1
+			forecolor	1,0.945,0.462,0
+			text	"#str_200469"
+			textscale	0.4
+			font	"fonts/marine"
+			textspacing	-1
+			textalign	2
+		}
+	}
+	windowDef topstuff
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef static
+		{
+			visible	1
+			rect	35,19,566,439
+			background	"gfx/guis/common/img_static4"
+			matcolor	0.878,1,0.866,0
+		}
+		windowDef static2
+		{
+			visible	1
+			rect	35,19,566,439
+			background	"gfx/guis/common/img_static3"
+			matcolor	0.878,1,0.866,0
+		}
+		windowDef sline
+		{
+			rect	43,19,551,441
+			visible	1
+			background	"gfx/guis/common/monitor_line8"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef anim
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			set "desktop::visible" "1" ;
+			transition "bg::rect" "$bg::rect" "$d_grid::rect" "150" ;
+			transition "grid::rect" "$grid::rect" "$d_grid::rect" "150" ;
+			transition "bg::matcolor" "0,0,0,0" "0,0,0,1" "150" ;
+			transition "grid::matcolor" "0,0,0,1" "1,1,1,1" "150" ;
+			transition "static::matcolor_w" "0" "0.06" "150" ;
+			transition "static2::matcolor_w" "0" "0.06" "150" ;
+			transition "sline::matcolor" "0,0,0,1" "0.192,0.192,0.192,1" "150" ;
+		}
+
+		onTime +150 {
+			transition "grid::matcolor" "1,1,1,1" "0,0,0,1" "50" ;
+			set "grid1::visible" "1" ;
+			
+			transition "static::matcolor_w" "0.06" "0.1" "50" ;
+			transition "static2::matcolor_w" "0.06" "0.1" "50" ;
+		}
+
+		onTime +50 {	
+			transition "tl_corner::matcolor_w" "0" "1" "100" ;
+			transition "bl_corner::matcolor_w" "0" "1" "100" ;
+			transition "tr_corner::matcolor_w" "0" "1" "100" ;
+			transition "br_corner::matcolor_w" "0" "1" "100" ;
+			transition "decal::matcolor_w" "0" "0.1" "100" ;
+			transition "squares::matcolor_w" "0" "0.2" "100" ;
+			transition "scrolltext1::matcolor_w" "0" "0.14" "100" ;
+			transition "scrolltext2::matcolor_w" "0" "0.32" "100" ;
+			transition "scrolltext_bar::matcolor_w" "0" "0.2" "100" ;
+			transition "scrolltext3::matcolor_w" "0" "0.32" "100" ;
+		}
+
+		onTime +100 {
+			transition "tr_bar::matcolor_w" "0" "1" "150" ;
+			transition "tr_bar::rect" "280,212,170,33" "414,30,170,33" "150" ;
+			transition "t_recon::forecolor_w" "0" "1" "150" ;
+			transition "t_recon::rect" "299,213,194,14" "433,31,194,14" "150" ;
+			transition "bl_bar::matcolor_w" "0" "1" "150" ;
+			transition "bl_bar::rect" "207,227,156,57" "51,397,156,57" "150" ;
+			transition "t_descript1::forecolor_w" "0" "1" "150" ;
+			transition "t_descript1::rect" "204,244,131,14" "48,414,131,14" "150" ;
+			transition "t_descript2::forecolor_w" "0" "1" "150" ;
+			transition "t_descript2::rect" "204,256,135,14" "48,426,135,14" "150" ;
+			transition "t_classified::rect" "205,227,85,13" "49,397,85,13" "150" ;	
+			set "t_classified::visible" "1" ;
+		}
+
+		onTime +300 {
+			// transition in the first diagram
+			
+			transition "diagram1::matcolor_w" "0" "1" "300" ;
+		}
+
+		onTime +500 {
+			// transition in details1 one element at a time - 1100 ms
+			
+			transition "t_nexus::forecolor" "1,0.949,0.466,0" "1,1,1,1" "100" ;
+			transition "t_proc::forecolor" "1,0.949,0.466,0" "1,1,1,1" "100" ;
+			transition "t_lat1::forecolor" "1,0.949,0.466,0" "1,1,1,1" "100" ;
+			transition "t_lat2::forecolor" "1,0.949,0.466,0" "1,1,1,1" "100" ;
+			transition "t_long1::forecolor" "1,0.949,0.466,0" "1,1,1,1" "100" ;
+			transition "t_long2::forecolor" "1,0.949,0.466,0" "1,1,1,1" "100" ;
+		}
+
+		onTime +100 {
+			// transition in details1 one element at a time
+			
+			transition "t_nexus::forecolor" "1,1,1,1" "1,0.949,0.466,1" "100" ;
+			transition "t_proc::forecolor" "1,1,1,1" "1,0.949,0.466,1" "100" ;
+			transition "t_lat1::forecolor" "1,1,1,1" "1,0.949,0.466,.5" "100" ;
+			transition "t_lat2::forecolor" "1,1,1,1" "1,0.949,0.466,.5" "100" ;
+			transition "t_long1::forecolor" "1,1,1,1" "1,0.949,0.466,.5" "100" ;
+			transition "t_long2::forecolor" "1,1,1,1" "1,0.949,0.466,.5" "100" ;
+		}
+
+		onTime +100 {
+			transition "arrow3::matcolor" "1,0.435,0.0156,0" "1,1,1,1" "100" ;
+			transition "t_small3::forecolor" "1,1,1,0" "1,1,1,1" "100" ;
+			transition "t_small3a::forecolor" "1,1,1,0" "1,1,1,1" "100" ;
+		}
+
+		onTime +100 {
+			transition "arrow3::matcolor" "1,1,1,1" "1,0.435,0.0156,0.48" "100" ;
+			transition "t_small3::forecolor" "1,1,1,1" "1,1,1,0.48" "100" ;
+			transition "t_small3a::forecolor" "1,1,1,1" "1,1,1,0.48" "100" ;
+		}
+
+		onTime +100 {
+			transition "arrow2::matcolor" "1,0.435,0.0156,0" "1,1,1,1" "100" ;
+			transition "t_small2::forecolor" "1,1,1,0" "1,1,1,1" "100" ;
+			transition "t_small2a::forecolor" "1,1,1,0" "1,1,1,1" "100" ;
+		}
+
+		onTime +100 {
+			transition "arrow2::matcolor" "1,1,1,1" "1,0.435,0.0156,0.48" "100" ;
+			transition "t_small2::forecolor" "1,1,1,1" "1,1,1,0.48" "100" ;
+			transition "t_small2a::forecolor" "1,1,1,1" "1,1,1,0.48" "100" ;
+		}
+
+		onTime +100 {
+			transition "arrow1::matcolor" "1,0.435,0.0156,0" "1,1,1,1" "100" ;
+			transition "t_small1::forecolor" "1,1,1,0" "1,1,1,1" "100" ;
+			transition "t_small1a::forecolor" "1,1,1,0" "1,1,1,1" "100" ;
+		}
+
+		onTime +100 {
+			transition "arrow1::matcolor" "1,1,1,1" "1,0.435,0.0156,0.48" "100" ;
+			transition "t_small1::forecolor" "1,1,1,1" "1,1,1,0.48" "100" ;
+			transition "t_small1a::forecolor" "1,1,1,1" "1,1,1,0.48" "100" ;
+		}
+
+		onTime +11200 {
+			// transition to diagram2 - 13000 ms
+			
+			transition "diagram1::matcolor_w" "1" "0" "300" ;
+			transition "arrow1::matcolor_w" "0.48" "0" "300" ;
+			transition "t_small1::forecolor_w" "0.48" "0" "300" ;
+			transition "t_small1a::forecolor_w" "0.48" "0" "300" ;
+			transition "arrow2::matcolor_w" "0.48" "0" "300" ;
+			transition "t_small2::forecolor_w" "0.48" "0" "300" ;
+			transition "t_small2a::forecolor_w" "0.48" "0" "300" ;
+			transition "arrow3::matcolor_w" "0.48" "0" "300" ;
+			transition "t_small3::forecolor_w" "0.48" "0" "300" ;
+			transition "t_small3a::forecolor_w" "0.48" "0" "300" ;
+			transition "t_nexus::forecolor_w" "1" "0" "100" ;
+			transition "t_proc::forecolor_w" "1" "0" "100" ;
+			transition "t_lat1::forecolor_w" "0.5" "0" "100" ;
+			transition "t_lat2::forecolor_w" "0.5" "0" "100" ;
+			transition "t_long1::forecolor_w" "0.5" "0" "100" ;
+			transition "t_long2::forecolor_w" "0.5" "0" "100" ;
+		}
+
+		onTime +300 {
+			transition "diagram2::matcolor_w" "0" "1" "300" ;
+		}
+
+		onTime +300 {
+			// bring in details2
+			
+			transition "storage::matcolor" "1,0.596,0.0509,0" "1,1,1,1" "100" ;
+			transition "process::matcolor" "1,0.596,0.0509,0" "1,1,1,1" "100" ;
+			transition "network::matcolor" "1,0.596,0.0509,0" "1,1,1,1" "100" ;
+			transition "core::matcolor" "1,0.596,0.0509,0" "1,1,1,1" "100" ;
+			transition "line_storage::matcolor" "0.603,0.686,0.478,0" "1,1,1,1" "100" ;
+			transition "line_process::matcolor" "0.603,0.686,0.478,0" "1,1,1,1" "100" ;
+			transition "line_network::matcolor" "0.603,0.686,0.478,0" "1,1,1,1" "100" ;
+		}
+
+		onTime +100 {
+			transition "storage::matcolor" "1,1,1,1" "0.603,0.686,0.478,1" "100" ;
+			transition "process::matcolor" "1,1,1,1" "0.603,0.686,0.478,1" "100" ;
+			transition "network::matcolor" "1,1,1,1" "0.603,0.686,0.478,1" "100" ;
+			transition "core::matcolor" "1,1,1,1" "0.603,0.686,0.478,1" "100" ;
+			transition "line_storage::matcolor" "1,1,1,1" "0.603,0.686,0.478,1" "100" ;
+			transition "line_process::matcolor" "1,1,1,1" "0.603,0.686,0.478,1" "100" ;
+			transition "line_network::matcolor" "1,1,1,1" "0.603,0.686,0.478,1" "100" ;
+		}
+
+		onTime +100 {
+			transition "t_nexuscore::forecolor" "1,0.949,0.466,0" "1,1,1,1" "100" ;
+			transition "t_facilities::forecolor" "1,0.949,0.466,0" "1,1,1,1" "100" ;
+		}
+
+		onTime +100 {
+			transition "t_nexuscore::forecolor" "1,1,1,1" "1,0.949,0.466,1" "100" ;
+			transition "t_facilities::forecolor" "1,1,1,1" "1,0.949,0.466,1" "100" ;
+			transition "t_networking::forecolor" "1,0.949,0.466,0" "1,1,1,1" "100" ;
+			transition "t_sectors::forecolor" "1,0.949,0.466,0" "1,1,1,1" "100" ;
+		}
+
+		onTime +100 {
+			transition "t_networking::forecolor" "1,1,1,1" "1,0.949,0.466,1" "100" ;
+			transition "t_sectors::forecolor" "1,1,1,1" "1,0.949,0.466,1" "100" ;
+			transition "t_processing::forecolor" "1,0.949,0.466,0" "1,1,1,1" "100" ;
+			transition "t_centers::forecolor" "1,0.949,0.466,0" "1,1,1,1" "100" ;
+		}
+
+		onTime +100 {
+			transition "t_processing::forecolor" "1,1,1,1" "1,0.949,0.466,1" "100" ;
+			transition "t_centers::forecolor" "1,1,1,1" "1,0.949,0.466,1" "100" ;
+			transition "t_data::forecolor" "1,0.949,0.466,0" "1,1,1,1" "100" ;
+			transition "t_storage::forecolor" "1,0.949,0.466,0" "1,1,1,1" "100" ;
+		}
+
+		onTime +100 {
+			transition "t_data::forecolor" "1,1,1,1" "1,0.949,0.466,1" "100" ;
+			transition "t_storage::forecolor" "1,1,1,1" "1,0.949,0.466,1" "100" ;
+		}
+
+		onTime +100 {
+			transition "arrow7::matcolor" "1,0.435,0.0156,0" "1,1,1,1" "100" ;
+			transition "t_small7::forecolor" "1,1,1,0" "1,1,1,1" "100" ;
+			transition "t_small7a::forecolor" "1,1,1,0" "1,1,1,1" "100" ;
+			transition "arrow4::matcolor" "1,0.435,0.0156,0" "1,1,1,1" "100" ;
+			transition "t_small4::forecolor" "1,1,1,0" "1,1,1,1" "100" ;
+			transition "t_small4a::forecolor" "1,1,1,0" "1,1,1,1" "100" ;
+			transition "arrow5::matcolor" "1,0.435,0.0156,0" "1,1,1,1" "100" ;
+			transition "t_small5::forecolor" "1,1,1,0" "1,1,1,1" "100" ;
+			transition "t_small5a::forecolor" "1,1,1,0" "1,1,1,1" "100" ;
+			transition "arrow6::matcolor" "1,0.435,0.0156,0" "1,1,1,1" "100" ;
+			transition "t_small6::forecolor" "1,1,1,0" "1,1,1,1" "100" ;
+			transition "t_small6a::forecolor" "1,1,1,0" "1,1,1,1" "100" ;
+		}
+
+		onTime +100 {
+			transition "arrow7::matcolor" "1,1,1,1" "1,0.435,0.0156,0.48" "100" ;
+			transition "t_small7::forecolor" "1,1,1,1" "1,1,1,0.48" "100" ;
+			transition "t_small7a::forecolor" "1,1,1,1" "1,1,1,0.48" "100" ;
+			transition "arrow4::matcolor" "1,1,1,1" "1,0.435,0.0156,0.48" "100" ;
+			transition "t_small4::forecolor" "1,1,1,1" "1,1,1,0.48" "100" ;
+			transition "t_small4a::forecolor" "1,1,1,1" "1,1,1,0.48" "100" ;
+			transition "arrow5::matcolor" "1,1,1,1" "1,0.435,0.0156,0.48" "100" ;
+			transition "t_small5::forecolor" "1,1,1,1" "1,1,1,0.48" "100" ;
+			transition "t_small5a::forecolor" "1,1,1,1" "1,1,1,0.48" "100" ;
+			transition "arrow6::matcolor" "1,1,1,1" "1,0.435,0.0156,0.48" "100" ;
+			transition "t_small6::forecolor" "1,1,1,1" "1,1,1,0.48" "100" ;
+			transition "t_small6a::forecolor" "1,1,1,1" "1,1,1,0.48" "100" ;
+		}
+
+		onTime +1100 {
+			// highlight storage - 15500 ms
+			
+			transition "line_storage::matcolor" "0.603,0.686,0.478,1" "1,0.949,0.466,1" "100" ;
+			transition "storage::matcolor" "0.603,0.686,0.478,1" "1,0.949,0.466,1" "100" ;
+		}
+
+		onTime +100 {
+			transition "line_storage::matcolor" "1,0.949,0.466,1" "1,0.596,0.0509,1" "100" ;
+			transition "storage::matcolor" "1,0.949,0.466,1" "1,0.596,0.0509,1" "100" ;
+		}
+
+		onTime +800 {
+			// highlight network - 16400 ms
+			
+			transition "line_network::matcolor" "0.603,0.686,0.478,1" "1,0.949,0.466,1" "100" ;
+			transition "network::matcolor" "0.603,0.686,0.478,1" "1,0.949,0.466,1" "100" ;
+		}
+
+		onTime +100 {
+			transition "line_network::matcolor" "1,0.949,0.466,1" "1,0.596,0.0509,1" "100" ;
+			transition "network::matcolor" "1,0.949,0.466,1" "1,0.596,0.0509,1" "100" ;
+		}
+
+		onTime +1400 {
+			// highlight data processing - 17900 ms
+			
+			transition "line_process::matcolor" "0.603,0.686,0.478,1" "1,0.949,0.466,1" "100" ;
+			transition "process::matcolor" "0.603,0.686,0.478,1" "1,0.949,0.466,1" "100" ;
+		}
+
+		onTime +100 {
+			transition "line_process::matcolor" "1,0.949,0.466,1" "1,0.596,0.0509,1" "100" ;
+			transition "process::matcolor" "1,0.949,0.466,1" "1,0.596,0.0509,1" "100" ;
+		}
+
+		onTime +500 {
+			// highlight core, transition - 18500 ms
+			
+			transition "core::matcolor" "0.603,0.686,0.478,1" "1,0.949,0.466,1" "100" ;
+		}
+
+		onTime +100 {
+			transition "core::matcolor" "1,0.949,0.466,1" "1,0.596,0.0509,1" "100" ;
+			transition "core::rect" "$core::rect" "$d_core::rect" "100" ;
+		}
+
+		onTime +2400 {
+			// shut off the gui
+			
+			set "desktop::visible" "0" ;
+		}
+
+	}
+	windowDef anim_num
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 0 {
+			set "t_lat2::text" "34.89" ;
+			set "t_long2::text" "46.92" ;
+		}
+
+		onTime +50 {
+			set "t_lat2::text" "34.88" ;
+		}
+
+		onTime +25 {
+			set "t_long2::text" "46.88" ;
+		}
+
+		onTime +50 {
+			set "t_lat2::text" "34.86" ;
+		}
+
+		onTime +25 {
+			set "t_long2::text" "46.89" ;
+		}
+
+		onTime +50 {
+			set "t_lat2::text" "34.88" ;
+		}
+
+		onTime +25 {
+			set "t_long2::text" "46.88" ;
+		}
+
+		onTime +50 {
+			set "t_lat2::text" "34.83" ;
+		}
+
+		onTime +25 {
+			set "t_long2::text" "46.89" ;
+		}
+
+		onTime +50 {
+			set "t_lat2::text" "34.88" ;
+		}
+
+		onTime +25 {
+			set "t_long2::text" "46.86" ;
+		}
+
+		onTime +50 {
+			set "t_lat2::text" "34.86" ;
+		}
+
+		onTime +25 {
+			set "t_long2::text" "46.89" ;
+		}
+
+		onTime +50 {
+			set "t_lat2::text" "34.87" ;
+		}
+
+		onTime +25 {
+			set "t_long2::text" "46.96" ;
+		}
+
+		onTime +50 {
+			resettime "0" ;
+		}
+
+	}
+}

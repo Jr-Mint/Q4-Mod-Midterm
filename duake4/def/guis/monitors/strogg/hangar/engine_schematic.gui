@@ -1,0 +1,193 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+
+	onNamedEvent WarningOn {
+		set "red_danger::visible" "1" ;
+	}
+
+	onNamedEvent WarningOff {
+		set "red_danger::visible" "0" ;
+	}
+
+	windowDef bg
+	{
+		rect	-2,0,640,235
+		visible	1
+		backcolor	0,0,0,1
+	}
+	windowDef stripes
+	{
+		rect	0,200,650,281
+		visible	1
+		background	"gfx/guis/maps/process2/nodecontroller_bg"
+		matcolor	1,0,0,1
+	}
+	windowDef bottom
+	{
+		rect	0,414,640,66
+		visible	1
+		background	"gfx/guis/monitors/strogg/hangar/scheme_topbottom"
+		matcolor	0.933,0.505,0.117,1
+	}
+	windowDef top
+	{
+		rect	0,0,640,65
+		visible	1
+		background	"gfx/guis/monitors/strogg/hangar/scheme_topbottom"
+		matcolor	0.933,0.505,0.117,1
+		matscaley	-1
+	}
+	windowDef left
+	{
+		rect	0,3,161,479
+		visible	1
+		background	"gfx/guis/monitors/strogg/hangar/scheme_left"
+		matcolor	0.862,0.305,0.0392,0.698
+		matscaley	-1
+	}
+	windowDef tab
+	{
+		rect	164,41,45,240
+		visible	1
+		background	"gfx/guis/monitors/strogg/hangar/scheme_tab"
+		matcolor	0.713,0.247,0.0470,1
+	}
+	windowDef tab2
+	{
+		rect	163,200,45,240
+		visible	1
+		background	"gfx/guis/monitors/strogg/hangar/scheme_tab"
+		matcolor	0.713,0.247,0.0470,1
+	}
+	windowDef red_danger
+	{
+		rect	0,0,640,480
+		visible	0
+		backcolor	1,0,0,1*guitable_25_0[time*.0015]
+	}
+	windowDef transparent1
+	{
+		rect	212,86,429,150
+		visible	1
+		background	"gfx/guis/monitors/strogg/hangar/scheme_transparent"
+		matcolor	0.945,0.203,0.0705,0.45
+	}
+	windowDef transparent2
+	{
+		rect	211,245,429,150
+		visible	1
+		background	"gfx/guis/monitors/strogg/hangar/scheme_transparent"
+		matcolor	0.941,0.2,0.0666,0.45
+	}
+	windowDef engine_whole
+	{
+		rect	221,68,347,171
+		visible	1
+		background	"gfx/guis/monitors/strogg/hangar/scheme_whole"
+		matcolor	0.992,0.647,0,0.447
+	}
+	windowDef engine_cutaway
+	{
+		rect	221,228,347,171
+		visible	1
+		background	"gfx/guis/monitors/strogg/hangar/scheme_cutaway"
+		matcolor	0.992,0.647,0,0.447
+	}
+	windowDef txt_title
+	{
+		rect	167,35,184,44
+		visible	1
+		forecolor	1,1,1,1
+		text	"qwsoecz"
+		textscale	1
+		font	"fonts/strogg"
+	}
+	windowDef txt_titleother
+	{
+		rect	352,34,175,44
+		visible	1
+		forecolor	0.980,0.741,0.254,1
+		text	"qwsoecz what the heck goon squad is the you know youre like the a bomb whttzins atkins"
+		textscale	0.3
+		font	"fonts/strogg"
+	}
+	windowDef txt_caption1
+	{
+		rect	558,211,76,28
+		visible	1
+		forecolor	0.705,0.239,0.0392,1
+		text	"gnolty"
+		textscale	0.4
+		font	"fonts/strogg"
+	}
+	windowDef txt_caption2
+	{
+		rect	563,371,76,28
+		visible	1
+		forecolor	0.701,0.235,0.0352,1
+		text	"djaolp"
+		textscale	0.4
+		font	"fonts/strogg"
+	}
+	windowDef txt_side
+	{
+		rect	19,95,96,24
+		visible	1
+		forecolor	0.984,0.745,0.258,1
+		text	"qwsoecz"
+		textscale	0.45
+		font	"fonts/strogg"
+	}
+	windowDef scrolltext2
+	{
+		rect	17,122,83,148
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext3"
+		matcolor	0.988,0.749,0.262,1
+	}
+	windowDef engine_zoom
+	{
+		rect	17,290,85,71
+		visible	1
+		background	"gfx/guis/monitors/strogg/hangar/scheme_zoom"
+		matcolor	0.988,0.643,0,0.443
+	}
+	windowDef txt_sidebottom
+	{
+		rect	18,356,83,37
+		visible	1
+		forecolor	0.980,0.741,0.254,1
+		text	"xioa lmosa jsoopa"
+		textscale	0.3
+		font	"fonts/strogg"
+	}
+	windowDef b_border
+	{
+		rect	0,0,641,480
+		visible	1
+		background	"gfx/guis/common/monitor_darkedge2"
+		matcolor	0,0,0,1
+	}
+	windowDef reflect
+	{
+		rect	0,0,642,480
+		visible	1
+		background	"gfx/guis/common/monitor_reflect2"
+		matcolor	0.270,0.270,0.270,1
+	}
+	windowDef dirt
+	{
+		rect	0,0,642,480
+		visible	1
+		background	"gfx/guis/common/screen_dirt3"
+		matcolor	0,0,0,0.643
+	}
+	windowDef scratches
+	{
+		rect	0,0,641,480
+		visible	1
+		background	"gfx/guis/common/screen_scratches5"
+		matcolor	1,1,1,0.541
+	}
+}

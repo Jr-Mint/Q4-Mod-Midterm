@@ -1,0 +1,11 @@
+reverb
+{
+	{ 0 Room }
+	{ 1 Stonecorridor }
+	{ 2 Stoneroom }
+	{ 3 Room }
+	{ 4 Stoneroom }
+	{ 5 Room }
+	{ 6 Bathroom }
+	{ 7 Room }
+}

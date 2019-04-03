@@ -1,0 +1,354 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0.184,0.0784,0.0509,1
+	visible	1
+	windowDef blackgrad
+	{
+		rect	150,77,344,115
+		visible	1
+		background	"gfx/guis/common/gradient4"
+		matcolor	0,0,0,1
+	}
+	windowDef add
+	{
+		rect	152,154,335,51
+		visible	1
+		background	"gfx/guis/maps/hangar1/lower_add"
+		matcolor	0.494,0.192,0.0470,1
+	}
+	windowDef bracket
+	{
+		rect	148,0,344,304
+		visible	1
+		background	"gfx/guis/maps/hangar1/lower_bracket"
+		matcolor	0.541,0.207,0.0509,1
+	}
+	windowDef bracket1
+	{
+		rect	148,0,344,304
+		visible	1
+		background	"gfx/guis/maps/hangar1/lower_bracket"
+		matcolor	0.541,0.207,0.0509,1
+	}
+	windowDef arrows
+	{
+		rect	145,-173,350,1084
+		visible	1
+		background	"gfx/guis/common/strogg/dn_arrow_scroll"
+		matcolor	0.780,0.439,0.129,0
+	}
+	windowDef blackgrad2
+	{
+		rect	150,-10,344,80
+		visible	1
+		background	"gfx/guis/common/gradient4"
+		matcolor	0,0,0,1
+		matscaley	-1
+	}
+	windowDef blackgrad1
+	{
+		rect	116,221,415,249
+		visible	1
+		background	"gfx/guis/common/gradient4"
+		matcolor	0,0,0,1
+	}
+	windowDef button
+	{
+		rect	139,267,362,159
+		visible	1
+		background	"gfx/guis/maps/hangar1/lower_button"
+		matcolor	0.968,0.192,0,1
+	}
+	windowDef scrolltext
+	{
+		rect	198,43,118,107
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext3"
+		matcolor	1,1,1,0.5
+	}
+	windowDef scrolltext2
+	{
+		rect	316,43,137,107
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext2fast"
+		matcolor	1,1,0.5,0.5
+	}
+	windowDef title1
+	{
+		rect	191,213,265,35
+		visible	1
+		forecolor	0.890,0.615,0.101,0.28
+		text	"system status"
+		textscale	0.86
+		font	"fonts/strogg"
+	}
+	windowDef title2
+	{
+		rect	192,13,251,21
+		visible	1
+		forecolor	0.752,0.752,0.752,0.28
+		text	"640bg-3r-ty-b5cfd-shjsh23"
+		textscale	0.4
+		font	"fonts/strogg"
+	}
+	windowDef P_engine
+	{
+		rect	143,-1,355,482
+		visible	1
+		windowDef engine
+		{
+			rect	61,34,232,121
+			visible	1
+			background	"gfx/guis/monitors/strogg/hangar/scheme_whole"
+			matcolor	0.737,0.325,0.0196,0
+		}
+	}
+	windowDef t1
+	{
+		rect	155,324,341,49
+		visible	1
+		forecolor	1,1,1,1
+		text	"lower engine"
+		textscale	1.1
+		font	"fonts/strogg"
+	}
+	windowDef stripebar_L
+	{
+		rect	21,0,140,480
+		visible	1
+		background	"gfx/guis/maps/hangar1/lower_stripebar"
+		matcolor	0.658,0.133,0,1
+
+		onTime 0 {
+			transition "stripebar_L::matcolor" "0.658,0.133,0,1" "0.968,0.4,0.0235,1" "500" ;
+		}
+
+		onTime +500 {
+			transition "stripebar_L::matcolor" "0.968,0.4,0.0235,1" "0.658,0.133,0,1" "500" ;
+		}
+
+		onTime +500 {
+			resettime 0
+		}
+
+	}
+	windowDef stripebar_R
+	{
+		rect	479,0,140,480
+		visible	1
+		background	"gfx/guis/maps/hangar1/lower_stripebar"
+		matcolor	0.968,0.4,0.0235,1
+		matscalex	-1
+
+		onTime 0 {
+			transition "stripebar_R::matcolor" "0.658,0.133,0,1" "0.968,0.4,0.0235,1" "500" ;
+		}
+
+		onTime +500 {
+			transition "stripebar_R::matcolor" "0.968,0.4,0.0235,1" "0.658,0.133,0,1" "500" ;
+		}
+
+		onTime +500 {
+			resettime 0
+		}
+
+	}
+	windowDef stripebar_L1
+	{
+		rect	21,0,140,480
+		visible	1
+		background	"gfx/guis/maps/hangar1/lower_stripebar"
+		matcolor	0.968,0.4,0.0235,1
+	}
+	windowDef stripebar_R1
+	{
+		rect	479,0,140,480
+		visible	1
+		background	"gfx/guis/maps/hangar1/lower_stripebar"
+		matcolor	0.968,0.4,0.0235,1
+		matscalex	-1
+	}
+	windowDef lowerbar
+	{
+		rect	139,437,362,43
+		visible	1
+		background	"gfx/guis/maps/hangar1/lower_lowerbar"
+		matcolor	0.541,0.207,0.0509,1
+	}
+	windowDef t_bar1
+	{
+		rect	149,444,38,16
+		visible	1
+		background	"gfx/guis/common/bar1"
+		matcolor	0.992,0.549,0.258,1
+	}
+	windowDef t_proc1
+	{
+		rect	193,444,78,19
+		visible	1
+		forecolor	0.937,0.792,0.631,0.682
+		text	"84278.324"
+		textscale	0.36
+		font	"fonts/strogg"
+		textalign	2
+
+		onTime 0 {
+			set "text" "84278.324" ;
+		}
+
+		onTime +1200 {
+			set "text" "43536.832" ;
+		}
+
+		onTime +1200 {
+			set "text" "76245.003" ;
+		}
+
+		onTime +2000 {
+			set "text" "57452.659" ;
+		}
+
+		onTime +1200 {
+			set "text" "35945.202" ;
+		}
+
+		onTime +2400 {
+			set "text" "94320.953" ;
+		}
+
+		onTime +800 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef icon
+	{
+		rect	513,357,82,85
+		visible	1
+		background	"gfx/guis/common/strogg/decal3"
+		matcolor	0,0,0,0.6
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	0,-304,640,1135
+			background	"gfx/guis/common/monitor_line8"
+			matcolor	0.215,0.0666,0,0.149
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,-46,640,557
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.309,0.125,0,0.407
+		}
+		windowDef scratches
+		{
+			rect	-7,0,647,481
+			visible	1
+			background	"gfx/guis/common/screen_scratches3"
+			matcolor	0.964,0.729,0.588,0.403
+			matscaley	-1
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+		windowDef addlines
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/add_lines1"
+			matcolor	0.250,0.250,0.250,1
+		}
+		windowDef dirt
+		{
+			rect	-2,-66,647,551
+			visible	1
+			background	"gfx/guis/common/screen_dirt4"
+			matcolor	0,0,0,0.6
+		}
+	}
+	windowDef d_engine2
+	{
+		rect	176,23,287,143
+		visible	0
+		background	"gfx/guis/monitors/strogg/hangar/scheme_whole"
+		matcolor	0.976,0.537,0.215,0.5
+	}
+	windowDef d_engine3
+	{
+		rect	176,279,287,143
+		visible	0
+		background	"gfx/guis/monitors/strogg/hangar/scheme_whole"
+		matcolor	0.976,0.537,0.215,1
+	}
+	windowDef anim
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "engine::matcolor_w" "0" "1" "1000" ;
+			transition "engine::rect" "$engine::rect" "$d_engine2::rect" "1000" ;
+			transition "stripebar_L1::matcolor" "0.968,0.4,0.0235,1" "0.968,0.4,0.0235,0" "1000" ;
+			transition "stripebar_R1::matcolor" "0.968,0.4,0.0235,1" "0.968,0.4,0.0235,0" "1000" ;
+		}
+
+		onTime +1000 {
+			set "bracket1::visible" "0" ;
+		}
+
+		onTime +500 {
+			transition "arrows::matcolor_w" "0" "0.25" "1600" ;
+			transition "button::matcolor" "0.968,0.192,0,1" "0.968,0.192,0,0.4" "800" ;
+			transition "t1::forecolor" "1,1,1,1" "1,1,1,0" "800" ;
+			
+			transition "engine::rect" "$d_engine2::rect" "$d_engine3::rect" "3500" ;
+		}
+
+		onTime +1600 {
+			transition "arrows::matcolor_w" "0.25" "0" "1600" ;
+		}
+
+		onTime +800 {
+			transition "stripebar_L1::matcolor" "0.968,0.4,0.0235,0" "0.968,0.4,0.0235,1" "1000" ;
+			transition "stripebar_R1::matcolor" "0.968,0.4,0.0235,0" "0.968,0.4,0.0235,1" "1000" ;
+		}
+
+	}
+	windowDef b_button
+	{
+		rect	136,264,369,165
+		visible	1
+
+		onMouseEnter {
+			transition "button::matcolor" "0.968,0.192,0,1" "1,0.588,0.0352,1" "0" ;
+			set "t1::forecolor" "0,0,0,1" ;
+		}
+
+		onMouseExit {
+			
+			transition "button::matcolor" "1,0.588,0.0352,1" "0.968,0.192,0,1" "300" ;
+			transition "t1::forecolor" "0,0,0,1" "1,1,1,1" "300" ;
+		}
+
+		onAction {
+			nonInteractive "1" ;
+			set "cmd" "play guisound_beep2 ; activate ; runscript" "$gui::gui_Parm_script";
+			set "visible" "0" ;
+			
+			resettime "anim" "0" ;
+		}
+
+	}
+}

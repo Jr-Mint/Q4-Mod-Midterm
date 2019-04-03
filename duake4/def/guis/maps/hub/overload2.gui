@@ -1,0 +1,429 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0.109,0.160,0.207,1
+	visible	1
+
+	onNamedEvent activate {
+		nonInteractive "1" ;
+		set "cmd" "play guisound_beep2 ; activate ; runscript" "$gui::gui_Parm_script";
+		
+		resettime "anim" "0" ;
+	}
+
+	windowDef blackgrad2
+	{
+		rect	401,0,237,479
+		visible	1
+		background	"gfx/guis/common/gradient3"
+		matcolor	0,0,0,1
+		matscalex	-1
+	}
+	windowDef wholearm1
+	{
+		rect	438,-6,287,186
+		visible	1
+		windowDef arm1
+		{
+			rect	9,8,267,170
+			visible	1
+			background	"gfx/guis/maps/hub/overload_arm1"
+			matcolor	0.615,0.811,0.917,1
+			matscalex	-1
+		}
+		windowDef glow1
+		{
+			rect	19,54,113,113
+			visible	1
+			background	"gfx/guis/maps/hub/overload_glow"
+			matcolor	1,0.501,0,0
+		}
+		windowDef q1_1
+		{
+			rect	28,65,46,46
+			visible	1
+			background	"gfx/guis/maps/hub/overload_quarter"
+			matcolor	0.321,0.768,0.937,1
+		}
+		windowDef q1_2
+		{
+			rect	77,65,46,46
+			visible	1
+			background	"gfx/guis/maps/hub/overload_quarter"
+			matcolor	0.321,0.768,0.937,1
+			matscalex	-1
+		}
+		windowDef q1_3
+		{
+			rect	77,114,46,46
+			visible	1
+			background	"gfx/guis/maps/hub/overload_quarter"
+			matcolor	0.321,0.768,0.937,1
+			matscalex	-1
+			matscaley	-1
+		}
+		windowDef q1_4
+		{
+			rect	28,114,46,46
+			visible	1
+			background	"gfx/guis/maps/hub/overload_quarter"
+			matcolor	0.321,0.768,0.937,1
+			matscaley	-1
+		}
+	}
+	windowDef wholearm2
+	{
+		rect	438,175,287,138
+		visible	1
+		windowDef glow2
+		{
+			rect	16,11,114,114
+			visible	1
+			background	"gfx/guis/maps/hub/overload_glow"
+			matcolor	0,0.560,0.901,0
+		}
+		windowDef q2_1
+		{
+			rect	27,22,45,45
+			visible	1
+			background	"gfx/guis/maps/hub/overload_quarter"
+			matcolor	0.321,0.768,0.937,1
+		}
+		windowDef q2_2
+		{
+			rect	76,22,46,45
+			visible	1
+			background	"gfx/guis/maps/hub/overload_quarter"
+			matcolor	0.321,0.768,0.937,1
+			matscalex	-1
+		}
+		windowDef q2_3
+		{
+			rect	75,71,45,45
+			visible	1
+			background	"gfx/guis/maps/hub/overload_quarter"
+			matcolor	0.321,0.768,0.937,1
+			matscalex	-1
+			matscaley	-1
+		}
+		windowDef q2_4
+		{
+			rect	26,70,45,46
+			visible	1
+			background	"gfx/guis/maps/hub/overload_quarter"
+			matcolor	0.321,0.768,0.937,1
+			matscaley	-1
+		}
+		windowDef arm2
+		{
+			rect	8,5,266,129
+			visible	1
+			background	"gfx/guis/maps/hub/overload_arm2"
+			matcolor	0.615,0.811,0.917,1
+			matscalex	-1
+		}
+	}
+	windowDef wholearm3
+	{
+		rect	440,314,287,171
+		visible	1
+		windowDef glow3
+		{
+			rect	17,9,114,114
+			visible	1
+			background	"gfx/guis/maps/hub/overload_glow"
+			matcolor	0,0.560,0.901,0
+		}
+		windowDef q3_1
+		{
+			rect	28,21,45,45
+			visible	1
+			background	"gfx/guis/maps/hub/overload_quarter"
+			matcolor	0.321,0.768,0.937,1
+		}
+		windowDef q3_2
+		{
+			rect	77,21,46,45
+			visible	1
+			background	"gfx/guis/maps/hub/overload_quarter"
+			matcolor	0.321,0.768,0.937,1
+			matscalex	-1
+		}
+		windowDef q3_3
+		{
+			rect	76,70,45,45
+			visible	1
+			background	"gfx/guis/maps/hub/overload_quarter"
+			matcolor	0.321,0.768,0.937,1
+			matscalex	-1
+			matscaley	-1
+		}
+		windowDef q3_4
+		{
+			rect	27,69,45,46
+			visible	1
+			background	"gfx/guis/maps/hub/overload_quarter"
+			matcolor	0.321,0.768,0.937,1
+			matscaley	-1
+		}
+		windowDef arm3
+		{
+			rect	7,3,267,170
+			visible	1
+			background	"gfx/guis/maps/hub/overload_arm1"
+			matcolor	0.615,0.811,0.917,1
+			matscaley	-1
+			matscalex	-1
+		}
+	}
+	windowDef bracket
+	{
+		rect	0,40,355,450
+		visible	1
+		background	"gfx/guis/maps/hub/overload_bracket"
+		matcolor	0.345,0.564,0.737,1
+		matscalex	-1
+	}
+	windowDef button
+	{
+		rect	0,321,275,157
+		visible	1
+		background	"gfx/guis/maps/hub/overload_button"
+		matcolor	0.274,0.329,0.592,0.8
+		matscalex	-1
+	}
+	windowDef lilbutton1
+	{
+		rect	0,107,108,35
+		visible	1
+		background	"gfx/guis/maps/hub/overload_lilbutton"
+		matcolor	0.274,0.329,0.592,0.8
+		matscalex	-1
+
+		onTime 0 {
+			transition "lilbutton1::matcolor" "0.278,0.333,0.596,0.8" "0.443,0.466,0.792,1" "500" ;
+		}
+
+		onTime 500 {
+			transition "lilbutton1::matcolor" "0.443,0.466,0.792,1" "0.278,0.333,0.596,0.8" "500" ;
+		}
+
+		onTime 1000 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef lilbutton2
+	{
+		rect	0,148,108,35
+		visible	1
+		background	"gfx/guis/maps/hub/overload_lilbutton"
+		matcolor	0.274,0.329,0.592,0.8
+		matscalex	-1
+	}
+	windowDef icon
+	{
+		rect	262,98,75,72
+		visible	1
+		background	"gfx/guis/common/strogg/term_symb"
+		matcolor	0.603,0.729,0.870,0.8
+	}
+	windowDef t1
+	{
+		rect	40,362,202,53
+		visible	1
+		forecolor	0.462,0.6,0.847,0.654
+		text	"dfatqb"
+		textscale	1.2
+		font	"fonts/strogg"
+		textspacing	2
+	}
+	windowDef t3
+	{
+		rect	23,116,103,19
+		visible	1
+		forecolor	0.560,0.588,0.913,1
+		text	"sys.fart"
+		textscale	0.4
+		font	"fonts/strogg"
+
+		onTime 0 {
+			transition "t3::forecolor" "0.560,0.588,0.913,1" "1,1,1,1" "500" ;
+		}
+
+		onTime 500 {
+			transition "t3::forecolor" "1,1,1,1" "0.560,0.588,0.913,1" "500" ;
+		}
+
+		onTime 1000 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef t4
+	{
+		rect	23,157,103,19
+		visible	1
+		forecolor	0.560,0.588,0.913,1
+		text	"gbb.zuk"
+		textscale	0.4
+		font	"fonts/strogg"
+	}
+	windowDef t2
+	{
+		rect	144,60,103,19
+		visible	1
+		forecolor	1,0.666,0.168,1
+		text	"sys.aspect"
+		textscale	0.4
+		font	"fonts/strogg"
+	}
+	windowDef t5
+	{
+		rect	270,61,103,19
+		visible	1
+		forecolor	1,0.662,0.164,1
+		text	"sys.ratio"
+		textscale	0.4
+		font	"fonts/strogg"
+	}
+	windowDef scrolltext1
+	{
+		rect	155,103,71,85
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext2"
+		matcolor	1,1,1,0.8
+	}
+	windowDef t6
+	{
+		rect	108,297,103,14
+		visible	1
+		forecolor	1,0.654,0.156,1
+		text	"sys.ugkow"
+		textscale	0.3
+		font	"fonts/strogg"
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	1,-128,640,742
+			background	"gfx/guis/common/monitor_line8"
+			matcolor	0.239,0.317,0.372,1
+		}
+		windowDef scratches
+		{
+			rect	0,-54,640,559
+			visible	1
+			background	"gfx/guis/common/screen_scratches3"
+			matcolor	0.643,0.835,0.8,0.529
+			matscalex	-1
+			matscaley	-1
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,-76,640,560
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.454,0.513,0.545,1
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef anim
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "q1_1::matcolor" "0.321,0.768,0.937,1" "1,0.666,0.168,1" "200" ;
+		}
+
+		onTime +300 {
+			transition "q1_2::matcolor" "0.321,0.768,0.937,1" "1,0.666,0.168,1" "200" ;
+		}
+
+		onTime +300 {
+			transition "q1_3::matcolor" "0.321,0.768,0.937,1" "1,0.666,0.168,1" "200" ;
+		}
+
+		onTime +300 {
+			transition "q1_4::matcolor" "0.321,0.768,0.937,1" "1,0.666,0.168,1" "200" ;
+		}
+
+		onTime +300 {
+			transition "wholearm1::rect" "$wholearm1::rect" "$d_wholearm1::rect" "200" ;
+			transition "glow1::matcolor" "1,0.501,0,0" "1,0.501,0,0.7" "1200" ;
+			transition "arm1::matcolor" "0.619,0.815,0.921,1"  "0.478,0.905,0.996,1" "300" ;
+		}
+
+		onTime +800 {
+			transition "q2_1::matcolor" "0.321,0.768,0.937,1" "1,0.666,0.168,1" "200" ;
+		}
+
+		onTime +300 {
+			transition "q2_2::matcolor" "0.321,0.768,0.937,1" "1,0.666,0.168,1" "200" ;
+		}
+
+		onTime +300 {
+			transition "q2_3::matcolor" "0.321,0.768,0.937,1" "1,0.666,0.168,1" "200" ;
+		}
+
+		onTime +300 {
+			transition "q2_4::matcolor" "0.321,0.768,0.937,1" "1,0.666,0.168,1" "200" ;
+		}
+
+		onTime +300 {
+			transition "wholearm2::rect" "$wholearm2::rect" "$d_wholearm2::rect" "200" ;
+			transition "glow2::matcolor" "1,0.501,0,0" "1,0.501,0,0.7" "1200" ;
+			transition "arm2::matcolor" "0.619,0.815,0.921,1"  "0.478,0.905,0.996,1" "300" ;
+		}
+
+		onTime +800 {
+			transition "q3_1::matcolor" "0.321,0.768,0.937,1" "1,0.666,0.168,1" "200" ;
+		}
+
+		onTime +300 {
+			transition "q3_2::matcolor" "0.321,0.768,0.937,1" "1,0.666,0.168,1" "200" ;
+		}
+
+		onTime +300 {
+			transition "q3_3::matcolor" "0.321,0.768,0.937,1" "1,0.666,0.168,1" "200" ;
+		}
+
+		onTime +300 {
+			transition "q3_4::matcolor" "0.321,0.768,0.937,1" "1,0.666,0.168,1" "200" ;
+		}
+
+		onTime +300 {
+			transition "wholearm3::rect" "$wholearm3::rect" "$d_wholearm3::rect" "200" ;
+			transition "glow3::matcolor" "1,0.501,0,0" "1,0.501,0,0.7" "1200" ;
+			transition "arm3::matcolor" "0.619,0.815,0.921,1"  "0.478,0.905,0.996,1" "300" ;
+		}
+
+	}
+	windowDef d_wholearm1
+	{
+		rect	365,-6,287,186
+		visible	1
+	}
+	windowDef d_wholearm2
+	{
+		rect	365,175,287,138
+		visible	1
+	}
+	windowDef d_wholearm3
+	{
+		rect	367,314,287,171
+		visible	1
+	}
+}

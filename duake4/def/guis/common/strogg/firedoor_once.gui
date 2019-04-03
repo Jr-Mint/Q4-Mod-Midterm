@@ -1,0 +1,340 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0.109,0,0,1
+	visible	1
+	definevec4	"green"	0.133,0.925,0.588,0.490
+	definevec4	"red"	0.666,0.282,0,1
+	definevec4	"orange"	0.984,0.490,0,1
+	definevec4	"green2"	0.133,0.925,0.588,0.8
+	windowDef doorleft
+	{
+		rect	117,170,241,481
+		visible	1
+		background	"gfx/guis/common/strogg/firedoor_door"
+		matcolor	0.984,0.490,0,1
+	}
+	windowDef doorright
+	{
+		rect	284,170,241,481
+		visible	1
+		background	"gfx/guis/common/strogg/firedoor_door"
+		matcolor	0.984,0.490,0,1
+		matscalex	-1
+	}
+	windowDef rt_arrows
+	{
+		rect	320,172,592,258
+		visible	1
+		background	"gfx/guis/common/strogg/rt_arrow_scroll"
+		matcolor	1,1,1,0.1
+	}
+	windowDef lf_arrows
+	{
+		rect	-271,172,592,258
+		visible	1
+		background	"gfx/guis/common/strogg/lf_arrow_scroll"
+		matcolor	1,1,1,0.1
+	}
+	windowDef d_doorleft
+	{
+		rect	-94,170,241,481
+		visible	0
+		background	"gfx/guis/common/strogg/firedoor_door"
+		matcolor	0.980,0.486,0,1
+	}
+	windowDef d_doorright
+	{
+		rect	493,170,241,481
+		visible	0
+		background	"gfx/guis/common/strogg/firedoor_door"
+		matcolor	0.984,0.490,0,1
+		matscalex	-1
+	}
+	windowDef topleft
+	{
+		rect	8,5,250,486
+		visible	1
+		background	"gfx/guis/common/strogg/firedoor_upper"
+		matcolor	0.666,0.282,0,1
+	}
+	windowDef leftedgetop
+	{
+		rect	13,5,117,234
+		visible	1
+		background	"gfx/guis/common/strogg/firedoor_edgetop"
+		matcolor	0.666,0.282,0,1
+	}
+	windowDef rightedgetop
+	{
+		rect	510,5,117,233
+		visible	1
+		background	"gfx/guis/common/strogg/firedoor_edgetop"
+		matcolor	0.666,0.282,0,1
+		matscalex	-1
+	}
+	windowDef d_leftedgetop
+	{
+		rect	-18,5,117,234
+		visible	0
+		background	"gfx/guis/common/strogg/firedoor_edgetop"
+		matcolor	0.662,0.278,0,1
+	}
+	windowDef d_rightedgetop
+	{
+		rect	543,5,117,233
+		visible	0
+		background	"gfx/guis/common/strogg/firedoor_edgetop"
+		matcolor	0.666,0.282,0,1
+		matscalex	-1
+	}
+	windowDef leftedgebtm
+	{
+		rect	137,432,246,63
+		visible	1
+		background	"gfx/guis/common/strogg/firedoor_btmedge"
+		matcolor	0.666,0.282,0,1
+	}
+	windowDef topright
+	{
+		rect	382,5,250,485
+		visible	1
+		background	"gfx/guis/common/strogg/firedoor_upper"
+		matcolor	0.666,0.282,0,1
+		matscalex	-1
+	}
+	windowDef btmleft
+	{
+		rect	8,336,231,246
+		visible	1
+		background	"gfx/guis/common/strogg/firedoor_btm"
+		matcolor	0.666,0.282,0,1
+	}
+	windowDef btmright
+	{
+		rect	401,336,231,245
+		visible	1
+		background	"gfx/guis/common/strogg/firedoor_btm"
+		matcolor	0.666,0.282,0,1
+		matscalex	-1
+	}
+	windowDef d_btmright
+	{
+		rect	489,336,231,245
+		visible	0
+		background	"gfx/guis/common/strogg/firedoor_btm"
+		matcolor	0.666,0.282,0,1
+		matscalex	-1
+	}
+	windowDef d_btmleft
+	{
+		rect	-80,336,231,246
+		visible	0
+		background	"gfx/guis/common/strogg/firedoor_btm"
+		matcolor	0.666,0.282,0,1
+	}
+	windowDef rightedgebtm
+	{
+		rect	260,432,245,62
+		visible	1
+		background	"gfx/guis/common/strogg/firedoor_btmedge"
+		matcolor	0.666,0.282,0,1
+		matscalex	-1
+	}
+	windowDef gear1
+	{
+		rect	135,-169,368,357
+		visible	1
+		background	"gfx/guis/common/strogg/gear1"
+		matcolor	0.862,0.6,0,0.462
+	}
+	windowDef gear
+	{
+		rect	150,-176,337,345
+		visible	1
+		background	"gfx/guis/common/gear1"
+		matcolor	1,0.435,0.0588,0.639
+	}
+	windowDef decal
+	{
+		rect	160,196,323,281
+		visible	1
+		background	"gfx/guis/common/strogg/decal"
+		matcolor	0.133,0.925,0.588,0
+	}
+	windowDef p_details
+	{
+		rect	0,0,640,479
+		visible	1
+		windowDef arrow1
+		{
+			rect	571,329,44,44
+			visible	1
+			background	"gfx/guis/common/arrow6"
+			matcolor	1,0.325,0,0.980
+		}
+		windowDef arrow2
+		{
+			rect	26,329,44,44
+			visible	1
+			background	"gfx/guis/common/arrow6"
+			matcolor	1,0.325,0,0.980
+		}
+		windowDef t1
+		{
+			rect	490,47,34,25
+			visible	1
+			forecolor	1,1,1,0.4
+			text	"34"
+			textscale	0.6
+			font	"fonts/strogg"
+		}
+		windowDef t2
+		{
+			rect	117,48,34,25
+			visible	1
+			forecolor	1,1,1,0.4
+			text	86
+			textscale	0.6
+			font	"fonts/strogg"
+		}
+		windowDef dotline1
+		{
+			rect	36,221,262,21
+			visible	1
+			background	"gfx/guis/monitors/strogg/streamhub/hub5_dots"
+			matcolor	0.968,0.980,0.984,.66
+			rotate	45
+		}
+		windowDef dotline2
+		{
+			rect	341,221,262,21
+			visible	1
+			background	"gfx/guis/monitors/strogg/streamhub/hub5_dots"
+			matcolor	0.968,0.980,0.984,.66
+			rotate	315
+		}
+		windowDef t_bar1
+		{
+			rect	497,33,64,16
+			visible	1
+			background	"gfx/guis/common/bar1"
+			matcolor	1,1,1,0.6
+			rotate	270
+		}
+		windowDef t_bar2
+		{
+			rect	77,33,64,16
+			visible	1
+			background	"gfx/guis/common/bar1"
+			matcolor	1,1,1,0.6
+			rotate	270
+		}
+	}
+	windowDef p_topstuff
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef scratches
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/screen_scratches3"
+			matcolor	1,0.949,0.878,0.305
+		}
+		windowDef glow
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_glow2"
+			matcolor	0.992,1,0.850,0.439
+		}
+		windowDef sline
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_line3"
+			matcolor	0.270,0.270,0.270,1
+		}
+		windowDef reflect
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.145,0.145,0.145,1
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,-23,640,506
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.396,0.4,0.215,1
+		}
+		windowDef static
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/img_static4"
+			matcolor	0.752,0.850,0.913,.1
+		}
+		windowDef darkedge
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef btn
+	{
+		rect	0,0,640,480
+		visible	1
+
+		onAction {
+			nonInteractive "1" ;
+			set "btn::noevents" "1" ;
+			transition "doorright::matcolor" "0.639,0.196,0.00392,1"  "0.984,0.490,0,1" "0" ;
+			resettime "anim_doors" "0" ;
+			
+			set "cmd" "activate ; play guisound_beep2" ;
+		}
+
+	}
+	windowDef anim_doors
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "doorleft::rect" "$doorleft::rect" "$d_doorleft::rect" "1000" ;
+			transition "doorright::rect" "$doorright::rect" "$d_doorright::rect" "1000" ;
+			transition "doorleft::matcolor_w" "1" "0" "1000" ;
+			transition "doorright::matcolor_w" "1" "0" "1000" ;
+			transition "arrow1::matcolor_w" "1" "0" "1000" ;
+			transition "arrow2::matcolor_w" "1" "0" "1000" ;
+		}
+
+		onTime +1000 {
+			transition "btmleft::rect" "$btmleft::rect" "$d_btmleft::rect" "1000" ;
+			transition "btmright::rect" "$btmright::rect" "$d_btmright::rect" "1000" ;
+			transition "leftedgetop::rect" "$leftedgetop::rect" "$d_leftedgetop::rect" "1000" ;
+			transition "rightedgetop::rect" "$rightedgetop::rect" "$d_rightedgetop::rect" "1000" ;
+		}
+
+		onTime +1250 {
+			transition "topleft::matcolor" "$desktop::red" "$desktop::green" "1000" ;
+			transition "topright::matcolor" "$desktop::red" "$desktop::green" "1000" ;
+			transition "leftedgetop::matcolor" "$desktop::orange" "$desktop::green2" "1000" ;
+			transition "rightedgetop::matcolor" "$desktop::orange" "$desktop::green2" "1000" ;
+			transition "leftedgebtm::matcolor" "$desktop::orange" "$desktop::green2" "1000" ;
+			transition "rightedgebtm::matcolor" "$desktop::orange" "$desktop::green2" "1000" ;
+			transition "btmleft::matcolor" "$desktop::red" "$desktop::green" "1000" ;
+			transition "btmright::matcolor" "$desktop::red" "$desktop::green" "1000" ;
+			transition "gear::matcolor" "$desktop::red" "$desktop::green" "1000" ;
+			transition "gear1::matcolor" "$desktop::red" "$desktop::green" "1000" ;
+			transition "decal::matcolor_w" "0" "0.3" "400" ;
+		}
+
+	}
+}

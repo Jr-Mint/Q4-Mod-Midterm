@@ -1,0 +1,94 @@
+windowDef Desktop
+{
+	visible	1
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	windowDef data
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/common/strogg/data"
+		matcolor	0.356,0.419,0.423,0.4
+		shear	0,-.3
+	}
+	windowDef box
+	{
+		rect	64,23,505,440
+		visible	1
+		background	"gfx/guis/common/simplebox"
+		matcolor	0.819,0.533,0.105,0.4
+		shear	0,-.3
+	}
+	windowDef l_bg
+	{
+		rect	0,0,168,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/common1_bg"
+		matcolor	0.690,0.321,0.101,1
+	}
+	windowDef r_bg
+	{
+		rect	472,0,168,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/common1_bg"
+		matcolor	0.686,0.317,0.0980,1
+		rotate	180
+	}
+	windowDef decal
+	{
+		rect	8,2,290,473
+		visible	1
+		background	"gfx/guis/common/strogg/decal"
+		matcolor	0.709,0.490,0.0901,1
+	}
+	windowDef scrolltext1
+	{
+		rect	295,16,169,284
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext1"
+		matcolor	0.870,0.741,0.00392,1
+		shear	0,-.3
+		matscalex	-1
+	}
+	windowDef scrolltext2
+	{
+		rect	419,165,196,284
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext1fast"
+		matcolor	0.870,0.741,0.00392,1
+		shear	0,-.3
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef topreflect
+		{
+			visible	1
+			rect	-166,-76,1026,575
+			background	"gfx/guis/common/gradient"
+			matcolor	0.984,0.792,0.215,.2*guitable_random1[time*0.002]
+		}
+		windowDef sline
+		{
+			visible	1
+			rect	2,-203,640,906
+			background	"gfx/guis/common/monitor_line3"
+			matcolor	0.580,0.650,0.705,1
+		}
+		windowDef dirt_stroyent
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/screen_dirt2"
+			matcolor	0.509,0.470,0.258,1
+		}
+		windowDef monitor_darkedge
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+}

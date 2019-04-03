@@ -1,0 +1,719 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	visible	1
+	comment	"uses gui_parm_script1, gui_parm_script2, gui_parm_script3 and gui_parm_script4 to specify script names to raise cells"
+	float	"cell"	2
+	float	"cell1"	1
+	float	"cell2"	1
+	float	"cell3"	0
+	float	"cell4"	1
+	float	"motion"	0
+	windowDef p_laser
+	{
+		rect	200,69,241,241
+		visible	1
+		windowDef laser
+		{
+			rect	-550,-76,793,382
+			visible	1
+			background	"gfx/guis/maps/recomp/cell_laser"
+			matcolor	1,1,1,1
+
+			onTime 0 {
+				transition "laser::rect" "$laser::rect" "$d_laser::rect" "1600" ;
+			}
+
+			onTime 1600 {
+				resettime 0 ;
+			}
+
+		}
+	}
+	windowDef d_laser
+	{
+		rect	200,-7,793,382
+		visible	0
+		background	"gfx/guis/maps/recomp/cell_laser"
+		matcolor	1,1,1,1
+	}
+	windowDef sub_bracket1
+	{
+		rect	0,-17,225,222
+		visible	1
+		background	"gfx/guis/maps/recomp/cell_four"
+		matcolor	0.839,0.00392,0.00392,1
+		windowDef t1
+		{
+			rect	3,98,83,24
+			visible	1
+			forecolor	1,0.725,0.568,0.7
+			text	"#str_200538"
+			textscale	0.35
+			font	"fonts/r_strogg"
+			rotate	45
+		}
+		windowDef tri1
+		{
+			rect	34,62,25,24
+			visible	1
+			background	"gfx/guis/maps/recomp/cell_tri"
+			matcolor	1,0.501,0,1
+		}
+		windowDef num1
+		{
+			rect	64,109,71,88
+			visible	1
+			forecolor	1,0.870,0.568,0.4
+			text	1
+			textscale	1.5
+			font	"fonts/r_strogg"
+		}
+	}
+	windowDef sub_bracket3
+	{
+		rect	-50,91,225,222
+		visible	1
+		background	"gfx/guis/maps/recomp/cell_four"
+		matcolor	.5,0.5,0.5,1
+		windowDef t3
+		{
+			rect	0,97,83,24
+			visible	1
+			forecolor	1,0.725,0.568,0.7
+			text	"#str_200539"
+			textscale	0.35
+			font	"fonts/r_strogg"
+			rotate	45
+		}
+		windowDef tri3
+		{
+			rect	34,63,24,23
+			visible	1
+			background	"gfx/guis/maps/recomp/cell_tri"
+			matcolor	1,0.501,0,1
+		}
+		windowDef num3
+		{
+			rect	52,106,71,88
+			visible	1
+			forecolor	1,0.870,0.568,0.4
+			text	3
+			textscale	1.5
+			font	"fonts/r_strogg"
+		}
+	}
+	windowDef sub_bracket2
+	{
+		rect	416,-18,225,222
+		visible	1
+		background	"gfx/guis/maps/recomp/cell_four"
+		matcolor	1,0.6,0,1
+		matscalex	-1
+		windowDef t2
+		{
+			rect	144,103,83,24
+			visible	1
+			forecolor	1,0.725,0.568,0.7
+			text	"#str_200540"
+			textscale	0.35
+			font	"fonts/r_strogg"
+			rotate	-45
+		}
+		windowDef num2
+		{
+			rect	112,110,71,87
+			visible	1
+			forecolor	1,0.870,0.568,1
+			text	2
+			textscale	1.5
+			font	"fonts/r_strogg"
+		}
+		windowDef tri2
+		{
+			rect	168,67,24,23
+			visible	1
+			background	"gfx/guis/maps/recomp/cell_tri"
+			matcolor	1,0.501,0,1
+			matscalex	-1
+		}
+	}
+	windowDef sub_bracket4
+	{
+		rect	417,142,225,222
+		visible	1
+		background	"gfx/guis/maps/recomp/cell_four"
+		matcolor	0.839,0.00392,0.00392,1
+		matscalex	-1
+		windowDef t4
+		{
+			rect	145,101,83,24
+			visible	1
+			forecolor	1,0.725,0.568,1
+			text	"#str_200541"
+			textscale	0.35
+			font	"fonts/r_strogg"
+			rotate	-45
+		}
+		windowDef tri4
+		{
+			rect	167,62,24,23
+			visible	1
+			background	"gfx/guis/maps/recomp/cell_tri"
+			matcolor	1,0.501,0,1
+			matscalex	-1
+		}
+		windowDef num4
+		{
+			rect	111,107,71,88
+			visible	1
+			forecolor	1,0.870,0.568,0.4
+			text	"4"
+			textscale	1.5
+			font	"fonts/r_strogg"
+		}
+	}
+	windowDef d_sub_bracket1
+	{
+		rect	-51,-68,225,222
+		visible	0
+		background	"gfx/guis/maps/recomp/cell_four"
+		matcolor	0.839,0.00392,0.00392,1
+	}
+	windowDef d_sub_bracket3
+	{
+		rect	-50,91,225,222
+		visible	0
+		background	"gfx/guis/maps/recomp/cell_four"
+		matcolor	0.839,0.00392,0.00392,1
+	}
+	windowDef d_sub_bracket2
+	{
+		rect	469,-68,225,222
+		visible	0
+		background	"gfx/guis/maps/recomp/cell_four"
+		matcolor	0.839,0.00392,0.00392,1
+		matscalex	-1
+	}
+	windowDef d_sub_bracket4
+	{
+		rect	469,91,225,222
+		visible	0
+		background	"gfx/guis/maps/recomp/cell_four"
+		matcolor	0.839,0.00392,0.00392,1
+		matscalex	-1
+	}
+	windowDef highlight
+	{
+		rect	167,44,297,292
+		visible	1
+		background	"gfx/guis/maps/recomp/cell_highlight"
+		matcolor	0.501,0,0,1
+	}
+	windowDef two
+	{
+		rect	442,146,32,95
+		visible	1
+		backcolor	0.427,0.133,0.00392,1
+	}
+	windowDef three
+	{
+		rect	276,52,97,16
+		visible	1
+		backcolor	0.427,0.133,0.00392,1
+	}
+	windowDef four
+	{
+		rect	274,313,97,15
+		visible	1
+		backcolor	0.427,0.133,0.00392,1
+	}
+	windowDef one
+	{
+		rect	169,146,32,95
+		visible	1
+		backcolor	0.427,0.133,0.00392,1
+	}
+	windowDef bracket
+	{
+		rect	77,0,485,480
+		visible	1
+		background	"gfx/guis/maps/recomp/cell_bracket"
+		matcolor	0.972,0.392,0.0470,1
+	}
+	windowDef icon
+	{
+		rect	281,331,80,79
+		visible	1
+		background	"gfx/guis/maps/recomp/cell_icon"
+		matcolor	0,0,0,0.4
+		matscalex	-1
+	}
+	windowDef bottom
+	{
+		rect	70,417,488,74
+		visible	1
+		background	"gfx/guis/maps/recomp/cell_bottom"
+		matcolor	0.478,0.141,0,1
+	}
+	windowDef title
+	{
+		rect	117,431,218,33
+		visible	1
+		forecolor	0.952,0.603,0.286,1
+		text	"#str_200537"
+		textscale	0.4
+		font	"fonts/r_strogg"
+	}
+	windowDef light1
+	{
+		rect	177,407,53,12
+		visible	1
+		backcolor	1,0,0,1
+	}
+	windowDef light2
+	{
+		rect	415,407,53,12
+		visible	1
+		backcolor	1,0,0,1
+	}
+	windowDef decal
+	{
+		rect	205,91,228,211
+		visible	1
+		background	"gfx/guis/common/strogg/decal"
+		matcolor	1,0.5,0,0
+	}
+	windowDef t_offline
+	{
+		rect	195,168,247,57
+		visible	1
+		forecolor	1,0.2,0,0
+		text	"#str_200402"
+		textscale	.7
+		font	"fonts/r_strogg"
+		textalign	1
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	0,-85,640,604
+			background	"gfx/guis/common/monitor_line3"
+			matcolor	0.682,0.454,0.317,1
+		}
+		windowDef scratches
+		{
+			rect	0,0,640,504
+			visible	1
+			background	"gfx/guis/common/screen_scratches2"
+			matcolor	0.862,0.756,0.619,0.6
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,-95,640,616
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.819,0.286,0.152,1
+		}
+		windowDef dirt
+		{
+			rect	0,-2,642,482
+			visible	1
+			background	"gfx/guis/common/screen_dirt1"
+			matcolor	0,0,0,0.9
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef anim_1
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "laser::matcolor_w" "1" "0" "1000" ;
+			transition "light1::backcolor" "1,0,0,1" "0.125,0.701,0.8,1" "1000" ;
+			transition "light2::backcolor" "1,0,0,1" "0.125,0.701,0.8,1" "1000" ;
+			
+			transition "sub_bracket1::matcolor" "1,0.6,0,1" ".5,0.5,0.5,1" "1000" ;
+			transition "sub_bracket1::rect" "$sub_bracket1::rect" "$d_sub_bracket1::rect" "1000" ;
+			transition "num1::forecolor_w" "1" "0.4" "1000" ;
+			transition "decal::matcolor_w" "0" "0.2" "1000" ;
+			transition "t_offline::forecolor_w" "0" "1" "1000" ;
+		}
+
+		onTime 1000 {	
+			if ("desktop::cell1" == 1) {
+				set "button_cell1::visible" "1" ;
+			} 
+			if ("desktop::cell2" == 1) {
+				set "button_cell2::visible" "1" ;
+			}
+			if ("desktop::cell3" == 1) {
+				set "button_cell3::visible" "1" ;
+			} 
+			if ("desktop::cell4" == 1) {
+				set "button_cell4::visible" "1" ;
+			}
+		}
+
+	}
+	windowDef anim_3
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "laser::matcolor_w" "1" "0" "1000" ;
+			transition "light1::backcolor" "1,0,0,1" "0.125,0.701,0.8,1" "1000" ;
+			transition "light2::backcolor" "1,0,0,1" "0.125,0.701,0.8,1" "1000" ;
+			
+			transition "sub_bracket3::matcolor" "1,0.6,0,1" ".5,0.5,0.5,1" "1000" ;
+			transition "sub_bracket3::rect" "$sub_bracket3::rect" "$d_sub_bracket3::rect" "1000" ;
+			transition "num3::forecolor_w" "1" "0.4" "1000" ;
+			set "t_offline::visible" "1" ;
+			transition "decal::matcolor_w" "0" "0.2" "1000" ;
+			transition "t_offline::forecolor_w" "0" "1" "1000" ;
+		}
+
+		onTime 1000 {	
+			if ("desktop::cell1" == 1) {
+				set "button_cell1::visible" "1" ;
+			} 
+			if ("desktop::cell2" == 1) {
+				set "button_cell2::visible" "1" ;
+			}
+			if ("desktop::cell3" == 1) {
+				set "button_cell3::visible" "1" ;
+			} 
+			if ("desktop::cell4" == 1) {
+				set "button_cell4::visible" "1" ;
+			}
+		}
+
+	}
+	windowDef anim_2
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "laser::matcolor_w" "1" "0" "1000" ;
+			transition "light1::backcolor" "1,0,0,1" "0.125,0.701,0.8,1" "1000" ;
+			transition "light2::backcolor" "1,0,0,1" "0.125,0.701,0.8,1" "1000" ;
+			
+			transition "sub_bracket2::matcolor" "1,0.6,0,1" ".5,0.5,0.5,1" "1000" ;
+			transition "sub_bracket2::rect" "$sub_bracket2::rect" "$d_sub_bracket2::rect" "1000" ;
+			transition "num2::forecolor_w" "1" "0.4" "1000" ;
+			transition "decal::matcolor_w" "0" "0.2" "1000" ;
+			transition "t_offline::forecolor_w" "0" "1" "1000" ;
+		}
+
+		onTime 1000 {	
+			if ("desktop::cell1" == 1) {
+				set "button_cell1::visible" "1" ;
+			} 
+			if ("desktop::cell2" == 1) {
+				set "button_cell2::visible" "1" ;
+			}
+			if ("desktop::cell3" == 1) {
+				set "button_cell3::visible" "1" ;
+			} 
+			if ("desktop::cell4" == 1) {
+				set "button_cell4::visible" "1" ;
+			}
+		}
+
+	}
+	windowDef anim_4
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "laser::matcolor_w" "1" "0" "1000" ;
+			transition "light1::backcolor" "1,0,0,1" "0.125,0.701,0.8,1" "1000" ;
+			transition "light2::backcolor" "1,0,0,1" "0.125,0.701,0.8,1" "1000" ;
+			
+			transition "sub_bracket4::matcolor" "1,0.6,0,1" ".5,0.5,0.5,1" "1000" ;
+			transition "sub_bracket4::rect" "$sub_bracket4::rect" "$d_sub_bracket4::rect" "1000" ;
+			transition "num4::forecolor_w" "1" "0.4" "1000" ;
+			transition "decal::matcolor_w" "0" "0.2" "1000" ;
+			transition "t_offline::forecolor_w" "0" "1" "1000" ;
+		}
+
+		onTime 1000 {	
+			if ("desktop::cell1" == 1) {
+				set "button_cell1::visible" "1" ;
+			} 
+			if ("desktop::cell2" == 1) {
+				set "button_cell2::visible" "1" ;
+			}
+			if ("desktop::cell3" == 1) {
+				set "button_cell3::visible" "1" ;
+			} 
+			if ("desktop::cell4" == 1) {
+				set "button_cell4::visible" "1" ;
+			}
+		}
+
+	}
+	windowDef button
+	{
+		rect	189,60,260,260
+		visible	1
+
+		onMouseEnter {
+			transition "highlight::matcolor" "0.501,0,0,1" "1,0,0,1" "0" ;
+			transition "bracket::matcolor" "0.972,0.392,0.0470,1" "1,0.8,0.2,1" "0" ;
+		}
+
+		onMouseExit {
+			transition "highlight::matcolor" "1,0,0,1" "0.501,0,0,1" "300" ;
+			transition "bracket::matcolor" "1,0.8,0.2,1" "0.972,0.392,0.0470,1" "300" ;
+		}
+
+		onAction {
+			set "button_cell1::visible" "0" ;
+			set "button_cell2::visible" "0" ;
+			set "button_cell3::visible" "0" ;
+			set "button_cell4::visible" "0" ;
+			
+			set "visible" "0" ;
+			
+			if ("desktop::cell" == 1) {
+				set "cmd" "play guisound_beep2 ; activate ; runscript" "$gui::gui_Parm_script1";
+				resettime "anim_1" "0" ;
+				set "desktop::cell1" "0" ;
+			} else if ("desktop::cell" == 2) {
+				set "cmd" "play guisound_beep2 ; activate ; runscript" "$gui::gui_Parm_script2";
+				resettime "anim_2" "0" ;
+				set "desktop::cell2" "0" ;
+			} else if ("desktop::cell" == 3) {
+				set "cmd" "play guisound_beep2 ; activate ; runscript" "$gui::gui_Parm_script3";
+				resettime "anim_3" "0" ;
+				set "desktop::cell3" "0" ;
+			} else if ("desktop::cell" == 4) {
+				set "cmd" "play guisound_beep2 ; activate ; runscript" "$gui::gui_Parm_script4";
+				resettime "anim_4" "0" ;
+				set "desktop::cell4" "0" ;
+			}
+		}
+
+	}
+	windowDef button_cell1
+	{
+		rect	13,55,139,154
+		visible	1
+
+		onMouseEnter {
+			if ("desktop::cell" != 1) {
+				transition "sub_bracket1::matcolor" "0.839,0.00392,0.00392,1" "1,0.6,0,1" "0" ;
+				transition "num1::forecolor_w" "0.4" "1" "0" ;
+			}
+		}
+
+		onMouseExit {
+			if ("desktop::cell" != 1) {
+				transition "sub_bracket1::matcolor" "1,0.6,0,1" "0.839,0.00392,0.00392,1" "200" ;
+				transition "num1::forecolor_w" "1" "0.4" "0" ;
+			}
+		}
+
+		onAction {
+			set "desktop::cell" "1" ;
+			transition "sub_bracket1::matcolor" "1,1,1,1" "1,0.6,0,1" "400" ;
+			set "num1::forecolor_w" "1" ;
+			set "button::visible" "1" ;
+			set "decal::matcolor_w" "0" ;
+			set "t_offline::forecolor_w" "0"  ;
+			
+			if ("desktop::cell1" == 1) {
+				set "laser::matcolor_w" "1" ;
+				set "light1::backcolor" "1,0,0,1" ;
+				set "light2::backcolor" "1,0,0,1" ;
+			}
+			
+			if ("desktop::cell2" == 1) {
+				set "num2::forecolor_w" "0.4" ;
+				set "sub_bracket2::matcolor" "0.839,0.00392,0.00392,1" ;
+			}
+			
+			if ("desktop::cell3" == 1) {
+				set "num3::forecolor_w" "0.4" ;
+				set "sub_bracket3::matcolor" "0.839,0.00392,0.00392,1" ;
+			}
+			
+			if ("desktop::cell4" == 1) {
+				set "num4::forecolor_w" "0.4" ;
+				set "sub_bracket4::matcolor" "0.839,0.00392,0.00392,1" ;
+			}
+		}
+
+	}
+	windowDef button_cell3
+	{
+		rect	13,215,139,154
+		visible	0
+
+		onMouseEnter {
+			if ("desktop::cell" != 3) {
+				transition "sub_bracket3::matcolor" "0.839,0.00392,0.00392,1" "1,0.6,0,1" "0" ;
+				transition "num3::forecolor_w" "0.4" "1" "0" ;
+			}
+		}
+
+		onMouseExit {
+			if ("desktop::cell" != 3) {
+				transition "sub_bracket3::matcolor" "1,0.6,0,1" "0.839,0.00392,0.00392,1" "200" ;
+				transition "num3::forecolor_w" "1" "0.4" "0" ;
+			}
+		}
+
+		onAction {
+			set "desktop::cell" "3" ;
+			transition "sub_bracket3::matcolor" "1,1,1,1" "1,0.6,0,1" "400" ;
+			set "num3::forecolor_w" "1" ;
+			set "button::visible" "1" ;
+			set "decal::matcolor_w" "0" ;
+			set "t_offline::forecolor_w" "0"  ;
+			
+			if ("desktop::cell3" == 1) {
+				set "laser::matcolor_w" "1" ;
+				set "light1::backcolor" "1,0,0,1" ;
+				set "light2::backcolor" "1,0,0,1" ;
+			}
+			
+			if ("desktop::cell1" == 1) {
+				set "num1::forecolor_w" "0.4" ;
+				set "sub_bracket1::matcolor" "0.839,0.00392,0.00392,1" ;
+			}
+			
+			if ("desktop::cell2" == 1) {
+				set "num2::forecolor_w" "0.4" ;
+				set "sub_bracket2::matcolor" "0.839,0.00392,0.00392,1" ;
+			}
+			
+			if ("desktop::cell4" == 1) {
+				set "num4::forecolor_w" "0.4" ;
+				set "sub_bracket4::matcolor" "0.839,0.00392,0.00392,1" ;
+			}
+			
+		}
+
+	}
+	windowDef button_cell2
+	{
+		rect	487,55,139,154
+		visible	1
+
+		onMouseEnter {
+			if ("desktop::cell" != 2) {
+				transition "sub_bracket2::matcolor" "0.839,0.00392,0.00392,1" "1,0.6,0,1" "0" ;
+				transition "num2::forecolor_w" "0.4" "1" "0" ;
+			}
+		}
+
+		onMouseExit {
+			if ("desktop::cell" != 2) {
+				transition "sub_bracket2::matcolor" "1,0.6,0,1" "0.839,0.00392,0.00392,1" "200" ;
+				transition "num2::forecolor_w" "1" "0.4" "0" ;
+			}
+		}
+
+		onAction {
+			set "desktop::cell" "2" ;
+			transition "sub_bracket2::matcolor" "1,1,1,1" "1,0.6,0,1" "400" ;
+			set "num2::forecolor_w" "1" ;
+			set "button::visible" "1" ;
+			set "decal::matcolor_w" "0" ;
+			set "t_offline::forecolor_w" "0"  ;
+			
+			if ("desktop::cell2" == 1) {
+				set "laser::matcolor_w" "1" ;
+				set "light1::backcolor" "1,0,0,1" ;
+				set "light2::backcolor" "1,0,0,1" ;
+			}
+			
+			if ("desktop::cell1" == 1) {
+				set "num1::forecolor_w" "0.4" ;
+				set "sub_bracket1::matcolor" "0.839,0.00392,0.00392,1" ;
+			}
+			
+			if ("desktop::cell3" == 1) {
+				set "num3::forecolor_w" "0.4" ;
+				set "sub_bracket3::matcolor" "0.839,0.00392,0.00392,1" ;
+			}
+			
+			if ("desktop::cell4" == 1) {
+				set "num4::forecolor_w" "0.4" ;
+				set "sub_bracket4::matcolor" "0.839,0.00392,0.00392,1" ;
+			}
+		}
+
+	}
+	windowDef button_cell4
+	{
+		rect	487,215,139,154
+		visible	1
+
+		onMouseEnter {
+			if ("desktop::cell" != 4) {
+				transition "sub_bracket4::matcolor" "0.839,0.00392,0.00392,1" "1,0.6,0,1" "0" ;
+				transition "num4::forecolor_w" "0.4" "1" "0" ;
+			}
+		}
+
+		onMouseExit {
+			if ("desktop::cell" != 4) {
+				transition "sub_bracket4::matcolor" "1,0.6,0,1" "0.839,0.00392,0.00392,1" "200" ;
+				transition "num4::forecolor_w" "1" "0.4" "0" ;
+			}
+		}
+
+		onAction {
+			set "desktop::cell" "4" ;
+			transition "sub_bracket4::matcolor" "1,1,1,1" "1,0.6,0,1" "400" ;
+			set "num4::forecolor_w" "1" ;
+			set "button::visible" "1" ;
+			set "decal::matcolor_w" "0" ;
+			set "t_offline::forecolor_w" "0"  ;
+			
+			if ("desktop::cell4" == 1) {
+				set "laser::matcolor_w" "1" ;
+				set "light1::backcolor" "1,0,0,1" ;
+				set "light2::backcolor" "1,0,0,1" ;
+			}
+			
+			if ("desktop::cell3" == 1) {
+				set "num3::forecolor_w" "0.4" ;
+				set "sub_bracket3::matcolor" "0.839,0.00392,0.00392,1" ;
+			}
+			
+			if ("desktop::cell1" == 1) {
+				set "num1::forecolor_w" "0.4" ;
+				set "sub_bracket1::matcolor" "0.839,0.00392,0.00392,1" ;
+			}
+			
+			if ("desktop::cell2" == 1) {
+				set "num2::forecolor_w" "0.4" ;
+				set "sub_bracket2::matcolor" "0.839,0.00392,0.00392,1" ;
+			}
+		}
+
+	}
+}

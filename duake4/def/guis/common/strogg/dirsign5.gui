@@ -1,0 +1,117 @@
+windowDef Desktop
+{
+	comment	"gui_parm_text value sets the text label on the gui. also uses 'gui_parm_strogg' to use the unreadable version."
+	rect	0,0,640,480
+	backcolor	0.258,0.0509,0.0509,1
+	visible	1
+	definevec4	"arrow_off"	0.968,0.615,0.141,1
+	definevec4	"arrow_on"	1,0.9,0.4,1
+	definevec4	"text_off"	0.866,0.858,0.768,0
+	definevec4	"text_on"	0.866,0.858,0.768,1
+
+	onInit {
+		if ( "gui::gui_parm_strogg" == 1 ) {
+			set "t_label::visible" "1";
+			set "t_label_r::visible" "0";
+		} else {
+			set "t_label::visible" "0";
+			set "t_label_r::visible" "1";
+		}
+	}
+
+	windowDef bg_l
+	{
+		rect	0,0,320,480
+		visible	1
+		background	"gfx/guis/common/strogg/dirsign4_bg"
+		matcolor	0.976,0,0,0.8
+	}
+	windowDef bg_r
+	{
+		rect	320,0,320,480
+		visible	1
+		background	"gfx/guis/common/strogg/dirsign4_bg"
+		matcolor	0.976,0,0,0.8
+		matscalex	-1
+	}
+	windowDef bg_l2
+	{
+		rect	0,0,320,480
+		visible	1
+		background	"gfx/guis/common/strogg/dirsign4_bg2"
+		matcolor	0.952,0.254,0.129,1
+	}
+	windowDef bg_r2
+	{
+		rect	320,0,320,480
+		visible	1
+		background	"gfx/guis/common/strogg/dirsign4_bg2"
+		matcolor	0.952,0.254,0.129,1
+		matscalex	-1
+	}
+	windowDef decal
+	{
+		rect	196,-132,245,751
+		visible	1
+		background	"gfx/guis/common/strogg/decal"
+		matcolor	0.960,0.384,0.137,0.2
+		matscalex	-1
+	}
+	windowDef t_label_r
+	{
+		rect	0,0,640,480
+		visible	0
+		forecolor	1,1,1,0.8
+		text	"gui::gui_parm_text"
+		textscale	0.66
+		font	"fonts/r_strogg"
+		forceaspectheight	120
+		textaligny	38
+		textalign	1
+	}
+	windowDef t_label
+	{
+		rect	0,0,640,480
+		visible	0
+		forecolor	1,1,1,0.8
+		text	"gui::gui_parm_text"
+		textscale	0.8
+		font	"fonts/strogg"
+		forceaspectheight	120
+		textaligny	44
+		textalign	1
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,-86,640,568
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.862,0.360,0.337,1
+		}
+		windowDef sline
+		{
+			visible	1
+			rect	0,-191,640,674
+			background	"gfx/guis/common/monitor_line8"
+			matcolor	0.568,0.125,0.0156,1
+		}
+		windowDef static
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/static2"
+			matcolor	1,0.309,0.309,0.356
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+}

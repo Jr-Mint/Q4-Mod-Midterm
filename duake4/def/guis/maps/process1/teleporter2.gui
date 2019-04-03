@@ -1,0 +1,228 @@
+windowDef Desktop
+{
+	visible	1
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	comment	"used namedevent 'destroyed' to disable the gui."
+	definevec4	"bg_red"	0.760,0.474,0.211,1
+	definevec4	"red"	0.862,0.321,0.160,0.4
+	definevec4	"red_2"	0.862,0.321,0.160,0.2
+
+	onNamedEvent destroyed {
+		set "tl_bg::matcolor" "$desktop::bg_red" ;
+		set "tr_bg::matcolor" "$desktop::bg_red" ;
+		set "bl_bg::matcolor" "$desktop::bg_red" ;
+		set "br_bg::matcolor" "$desktop::bg_red" ;
+		set "tl_ar3::matcolor" "$desktop::red" ;
+		set "tr_ar3::matcolor" "$desktop::red" ;
+		set "bl_ar3::matcolor" "$desktop::red" ;
+		set "br_ar3::matcolor" "$desktop::red" ;
+		set "tl_ar2::matcolor" "$desktop::red_2" ;
+		set "tr_ar2::matcolor" "$desktop::red_2" ;
+		set "bl_ar2::matcolor" "$desktop::red_2" ;
+		set "br_ar2::matcolor" "$desktop::red_2" ;
+		
+		set "label2::text" "#str_200485" ;
+		set "red::visible" "1" ;
+		set "cmd" "play guisound_beep2 ; activate" ;
+	}
+
+	windowDef p_main
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef tl_bg
+		{
+			rect	0,0,320,240
+			visible	1
+			background	"gfx/guis/common/strogg/genericseal_bg"
+			matcolor	0.329,0.627,0.662,1
+		}
+		windowDef bl_bg
+		{
+			rect	0,240,320,240
+			visible	1
+			background	"gfx/guis/common/strogg/genericseal_bg"
+			matcolor	0.329,0.627,0.662,1
+			matscaley	-1
+		}
+		windowDef tr_bg
+		{
+			rect	320,0,320,240
+			visible	1
+			background	"gfx/guis/common/strogg/genericseal_bg"
+			matcolor	0.329,0.627,0.662,1
+			matscalex	-1
+		}
+		windowDef br_bg
+		{
+			rect	320,240,320,240
+			visible	1
+			background	"gfx/guis/common/strogg/genericseal_bg"
+			matcolor	0.329,0.627,0.662,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef tl_ar2
+		{
+			rect	0,105,320,60
+			visible	1
+			background	"gfx/guis/common/strogg/genericseal_ar2"
+			matcolor	0.352,0.678,0.525,.2
+		}
+		windowDef tr_ar2
+		{
+			rect	320,105,320,60
+			visible	1
+			background	"gfx/guis/common/strogg/genericseal_ar2"
+			matcolor	0.352,0.678,0.525,.2
+			matscalex	-1
+		}
+		windowDef tl_ar3
+		{
+			rect	0,1,320,120
+			visible	1
+			background	"gfx/guis/common/strogg/genericseal_ar3"
+			matcolor	0.352,0.678,0.525,.4
+		}
+		windowDef tr_ar3
+		{
+			rect	320,1,320,120
+			visible	1
+			background	"gfx/guis/common/strogg/genericseal_ar3"
+			matcolor	0.352,0.678,0.525,.4
+			matscalex	-1
+		}
+		windowDef bl_ar2
+		{
+			rect	0,315,320,60
+			visible	1
+			background	"gfx/guis/common/strogg/genericseal_ar2"
+			matcolor	0.352,0.678,0.525,.2
+			matscaley	-1
+		}
+		windowDef br_ar2
+		{
+			rect	320,315,320,60
+			visible	1
+			background	"gfx/guis/common/strogg/genericseal_ar2"
+			matcolor	0.352,0.678,0.525,.2
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef bl_ar3
+		{
+			rect	0,359,320,120
+			visible	1
+			background	"gfx/guis/common/strogg/genericseal_ar3"
+			matcolor	0.352,0.678,0.525,.4
+			matscaley	-1
+		}
+		windowDef br_ar3
+		{
+			rect	320,359,320,120
+			visible	1
+			background	"gfx/guis/common/strogg/genericseal_ar3"
+			matcolor	0.352,0.678,0.525,.4
+			matscalex	-1
+			matscaley	-1
+		}
+	}
+	windowDef label
+	{
+		rect	36,149,560,84
+		visible	1
+		forecolor	1,1,1,.86
+		text	"#str_200486"
+		textscale	1.5
+		font	"fonts/r_strogg"
+		textalign	1
+		textspacing	-3
+	}
+	windowDef label2
+	{
+		rect	36,214,560,132
+		visible	1
+		forecolor	1,1,1,.86
+		text	"#str_200487"
+		textscale	2.1
+		font	"fonts/r_strogg"
+		textalign	1
+		textspacing	-3
+	}
+	windowDef inner
+	{
+		rect	133,75,371,333
+		visible	1
+		background	"gfx/guis/common/strogg/doorgui_inner_r"
+		matcolor	0.109,0.109,0.109,1
+	}
+	windowDef outer
+	{
+		rect	101,48,434,385
+		visible	1
+		background	"gfx/guis/common/strogg/doorgui_outer_r"
+		matcolor	0.109,0.109,0.109,1
+	}
+	windowDef l_dot
+	{
+		rect	24,-74,80,623
+		visible	1
+		background	"gfx/guis/common/strogg/genericseal_dot"
+		matcolor	1,1,1,.2*guitable_10_0[time*0.0015]
+	}
+	windowDef r_dot
+	{
+		rect	536,-74,80,623
+		visible	1
+		background	"gfx/guis/common/strogg/genericseal_dot"
+		matcolor	1,1,1,.2*guitable_10_0[time*0.0015]
+	}
+	windowDef red
+	{
+		visible	0
+		rect	0,0,640,480
+		backcolor	1,0,0,0.2*guitable_10_0[time*0.0015]
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef static
+		{
+			visible	1
+			rect	0,-213,640,806
+			background	"gfx/guis/common/monitor_line4"
+			matcolor	1,1,1,0.18
+			matscalex	-1
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,-86,640,568
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.494,0.494,0.494,1
+		}
+		windowDef scratches
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/screen_scratches5"
+			matcolor	0.749,0.984,1,.28
+		}
+		windowDef blackedge
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+		windowDef addlines
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/add_lines1"
+			matcolor	0.250,0.250,0.250,1
+		}
+	}
+}

@@ -1,0 +1,274 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	visible	1
+	windowDef mon
+	{
+		rect	155,56,354,27
+		visible	1
+		forecolor	1,0.878,0.458,1*guitable_10_0[time*0.002]
+		text	"#str_200858"
+		textscale	0.38
+		font	"fonts/r_strogg"
+	}
+	windowDef mon_line
+	{
+		rect	152,80,343,10
+		visible	1
+		background	"gfx/guis/common/line1"
+		matcolor	1,0.878,0.458,.6
+	}
+	windowDef p_mon
+	{
+		rect	122,94,363,81
+		visible	1
+		windowDef mon_top
+		{
+			rect	33,-31,286,27
+			visible	0
+		}
+		windowDef mon2
+		{
+			rect	33,-3,286,27
+			visible	1
+			forecolor	1,1,1,0.6
+			text	"#str_200859"
+			textscale	0.4
+			font	"fonts/r_strogg"
+		}
+		windowDef mon3
+		{
+			rect	33,22,286,27
+			visible	1
+			forecolor	1,1,1,0.6
+			text	"#str_200860"
+			textscale	0.4
+			font	"fonts/r_strogg"
+		}
+		windowDef mon4
+		{
+			rect	33,48,286,27
+			visible	1
+			forecolor	1,1,1,0.6
+			text	"#str_200861"
+			textscale	0.4
+			font	"fonts/r_strogg"
+		}
+		windowDef mon_btm
+		{
+			rect	33,74,286,27
+			visible	0
+		}
+	}
+	windowDef top
+	{
+		rect	0,0,640,240
+		visible	1
+		background	"gfx/guis/monitors/strogg/terminal/term2_top"
+		matcolor	0.321,0.427,0.486,1
+	}
+	windowDef area1_bg
+	{
+		rect	0,189,640,138
+		visible	1
+		background	"gfx/guis/common/128_sqsolid"
+		matcolor	0.478,0.262,0.105,.6
+	}
+	windowDef area2_bg
+	{
+		rect	0,321,640,160
+		visible	1
+		background	"gfx/guis/common/128_sqsolid"
+		matcolor	0.478,0.262,0.105,.9
+	}
+	windowDef scroll1
+	{
+		rect	161,190,483,113
+		visible	1
+		background	"gfx/guis/common/waveform3"
+		matcolor	1,0.933,0.623,0.8
+	}
+	windowDef scroll2
+	{
+		rect	167,346,483,79
+		visible	1
+		background	"gfx/guis/common/waveform2"
+		matcolor	1,1,0.5,.4
+	}
+	windowDef scroll2b
+	{
+		rect	167,346,483,79
+		visible	1
+		background	"gfx/guis/common/waveform2b"
+		matcolor	0.996,1,0.909,0.2
+	}
+	windowDef scroll2b2
+	{
+		rect	0,361,759,59
+		visible	1
+		background	"gfx/guis/common/waveform2b"
+		matcolor	0.874,0.996,0.505,0.2
+	}
+	windowDef area1
+	{
+		rect	0,149,640,239
+		visible	1
+		background	"gfx/guis/monitors/strogg/terminal/term2_bg"
+		matcolor	0.741,0.380,0.0509,1
+	}
+	windowDef area2
+	{
+		rect	0,284,640,240
+		visible	1
+		background	"gfx/guis/monitors/strogg/terminal/term2_bg"
+		matcolor	0.847,0.435,0.0627,1
+	}
+	windowDef btm
+	{
+		rect	0,416,640,64
+		visible	1
+		background	"gfx/guis/monitors/strogg/terminal/term2_btm"
+		matcolor	0,0,0,1
+	}
+	windowDef btm2
+	{
+		rect	9,425,640,64
+		visible	1
+		background	"gfx/guis/monitors/strogg/terminal/term2_btm"
+		matcolor	0.223,0.309,0.368,1
+	}
+	windowDef icon
+	{
+		rect	11,254,52,52
+		visible	1
+		background	"gfx/guis/common/strogg/term_symb"
+		matcolor	0.956,0.823,0.301,1
+	}
+	windowDef title1
+	{
+		rect	64,249,150,57
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200862"
+		textscale	0.46
+		font	"fonts/r_strogg"
+	}
+	windowDef title2
+	{
+		rect	12,234,196,17
+		visible	1
+		forecolor	1,0.701,0,1
+		text	"#str_200863"
+		textscale	0.25
+		font	"fonts/r_strogg"
+	}
+	windowDef scrolltext
+	{
+		rect	517,68,114,108
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext3"
+		matcolor	1,1,1,1
+	}
+	windowDef scrolltext2
+	{
+		rect	11,335,125,127
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext2fast"
+		matcolor	1,1,0.501,1
+	}
+	windowDef num1
+	{
+		rect	141,359,54,36
+		visible	1
+		forecolor	1,1,0.5,0.4
+		text	"39"
+		textscale	0.6
+		font	"fonts/r_strogg"
+	}
+	windowDef num2
+	{
+		rect	141,380,86,57
+		visible	1
+		forecolor	1,1,0.5,0.4
+		text	"84"
+		textscale	1
+		font	"fonts/r_strogg"
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	-1,0,640,480
+			background	"gfx/guis/common/monitor_line8"
+			matcolor	0.603,0.560,0.427,1
+		}
+		windowDef scratches
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/screen_scratches5"
+			matcolor	0.878,0.945,0.933,0.8
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,-130,640,998
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.501,0.501,0.501,1
+			matscaley	-1
+		}
+		windowDef topreflect2
+		{
+			visible	1
+			rect	0,-223,640,1009
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.501,0.501,0.501,1
+			matscaley	-1
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef anim_text
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 0 {
+			transition "mon2::rect" "$mon2::rect" "$mon_top::rect" "500" "150" "150" ;
+			transition "mon3::rect" "$mon3::rect" "$mon2::rect" "500" "150" "150" ;
+			transition "mon4::rect" "$mon4::rect" "$mon3::rect" "500" "150" "150" ;
+		}
+
+		onTime +1500 {
+			transition "mon2::rect" "$mon_btm::rect" "$mon4::rect" "500" "150" "150" ;
+			transition "mon3::rect" "$mon2::rect" "$mon_top::rect" "500" "150" "150" ;
+			transition "mon4::rect" "$mon3::rect" "$mon2::rect" "500" "150" "150" ;
+		}
+
+		onTime +1500 {
+			transition "mon2::rect" "$mon4::rect" "$mon3::rect" "500" "150" "150" ;
+			transition "mon3::rect" "$mon_btm::rect" "$mon4::rect" "500" "150" "150" ;
+			transition "mon4::rect" "$mon2::rect" "$mon_top::rect" "500" "150" "150" ;
+		}
+
+		onTime +1500 {
+			transition "mon2::rect" "$mon3::rect" "$mon2::rect" "500" "150" "150" ;
+			transition "mon3::rect" "$mon4::rect" "$mon3::rect" "500" "150" "150" ;
+			transition "mon4::rect" "$mon_btm::rect" "$mon4::rect" "500" "150" "150" ;
+		}
+
+		onTime +1500 {
+			resettime "0" ;
+		}
+
+	}
+}

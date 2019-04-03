@@ -1,0 +1,381 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	visible	1
+	windowDef grad
+	{
+		rect	-77,43,801,918
+		visible	1
+		background	"gfx/guis/common/gradient"
+		matcolor	0.486,1,1,0.4
+		matscaley	-1
+	}
+	windowDef bg
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/trm2_bg"
+		matcolor	1,1,1,1
+		shear	0,-.2
+	}
+	windowDef ar1
+	{
+		rect	123,297,24,34
+		visible	1
+		background	"gfx/guis/common/arrow1"
+		matcolor	0.0470,1,0.474,.6
+	}
+	windowDef ar2
+	{
+		rect	138,297,24,34
+		visible	1
+		background	"gfx/guis/common/arrow1"
+		matcolor	0.0470,1,0.474,.6
+	}
+	windowDef ar3
+	{
+		rect	154,297,24,34
+		visible	1
+		background	"gfx/guis/common/arrow1"
+		matcolor	0.0470,1,0.474,.6
+	}
+	windowDef scroll
+	{
+		rect	186,314,245,17
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/marquee_btmscroll"
+		matcolor	0.184,0.658,0.266,1
+		shear	0,.2
+	}
+	windowDef title
+	{
+		rect	179,291,266,31
+		visible	1
+		forecolor	0.0509,1,0.478,1
+		text	"#str_200879"
+		textscale	.44
+		font	"fonts/r_strogg"
+	}
+	windowDef scroll1
+	{
+		rect	131,68,183,39
+		visible	1
+		background	"gfx/guis/common/scroll_img3"
+		matcolor	0.717,1,0.988,1
+		shear	0,-.2
+	}
+	windowDef scroll1b
+	{
+		rect	131,68,183,39
+		visible	1
+		background	"gfx/guis/common/scroll_img2"
+		matcolor	0.717,1,0.988,.8
+		shear	0,-.2
+	}
+	windowDef scroll2
+	{
+		rect	113,160,182,39
+		visible	1
+		background	"gfx/guis/common/waveline2"
+		matcolor	0.717,1,0.988,1
+		shear	0,-.2
+	}
+	windowDef scroll2b
+	{
+		rect	113,160,182,39
+		visible	1
+		background	"gfx/guis/common/waveline2b"
+		matcolor	0.717,1,0.988,.8
+		shear	0,-.2
+	}
+	windowDef scroll3
+	{
+		rect	94,253,183,39
+		visible	1
+		background	"gfx/guis/common/scroll_img1"
+		matcolor	0.713,1,0.984,1
+		shear	0,-.2
+	}
+	windowDef t_num1
+	{
+		rect	156,32,56,29
+		visible	1
+		forecolor	0.0470,1,0.474,1
+		text	"#str_200880"
+		textscale	0.2
+		font	"fonts/r_strogg"
+		textalign	2
+	}
+	windowDef num1
+	{
+		rect	213,27,109,34
+		visible	1
+		forecolor	0.0470,1,0.474,1
+		text	"43.82"
+		textscale	0.6
+		font	"fonts/r_strogg"
+		textalign	2
+
+		onTime 0 {
+			set "text" "43.82" ;
+		}
+
+		onTime +1000 {
+			set "text" "43.45" ;
+		}
+
+		onTime +1000 {
+			set "text" "40.28" ;
+		}
+
+		onTime +1000 {
+			set "text" "42.92" ;
+		}
+
+		onTime +1000 {
+			set "text" "44.57" ;
+		}
+
+		onTime +1000 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef t_num2
+	{
+		rect	124,124,71,29
+		visible	1
+		forecolor	0.0470,1,0.474,1
+		text	"#str_200862"
+		textscale	0.2
+		font	"fonts/r_strogg"
+		textalign	2
+	}
+	windowDef num2
+	{
+		rect	195,119,109,33
+		visible	1
+		forecolor	0.0470,1,0.474,1
+		text	"26.05"
+		textscale	0.6
+		font	"fonts/r_strogg"
+		textalign	2
+
+		onTime 0 {
+			set "text" "25.05" ;
+		}
+
+		onTime +600 {
+			set "text" "25.72" ;
+		}
+
+		onTime +600 {
+			set "text" "26.04" ;
+		}
+
+		onTime +600 {
+			set "text" "25.53" ;
+		}
+
+		onTime +600 {
+			set "text" "24.76" ;
+		}
+
+		onTime +600 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef t_num3
+	{
+		rect	99,220,76,29
+		visible	1
+		forecolor	0.0470,1,0.474,1
+		text	"#str_200881"
+		textscale	0.2
+		font	"fonts/r_strogg"
+		textalign	2
+	}
+	windowDef num3
+	{
+		rect	176,215,109,33
+		visible	1
+		forecolor	0.0470,1,0.474,1
+		text	"39.78"
+		textscale	0.6
+		font	"fonts/r_strogg"
+		textalign	2
+
+		onTime 0 {
+			set "text" "39.78" ;
+		}
+
+		onTime +1400 {
+			set "text" "39.35" ;
+		}
+
+		onTime +1400 {
+			set "text" "38.62" ;
+		}
+
+		onTime +1400 {
+			set "text" "37.98" ;
+		}
+
+		onTime +1400 {
+			set "text" "38.54" ;
+		}
+
+		onTime +1400 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef decal
+	{
+		rect	66,319,186,160
+		visible	1
+		background	"gfx/guis/common/strogg/decal"
+		matcolor	0.0470,1,0.474,1
+	}
+	windowDef top_tram
+	{
+		rect	339,36,225,119
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/trm2_img5"
+		matcolor	0.317,1,0.658,1
+	}
+	windowDef btm_tram
+	{
+		rect	308,174,225,113
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/trm2_img1"
+		matcolor	0.317,1,0.658,1
+
+		onTime 0 {
+			set "background" "gfx/guis/monitors/strogg/tram/trm2_img1" ;
+		}
+
+		onTime +200 {
+			set "background" "gfx/guis/monitors/strogg/tram/trm2_img2" ;
+		}
+
+		onTime +200 {
+			set "background" "gfx/guis/monitors/strogg/tram/trm2_img3" ;
+		}
+
+		onTime +200 {
+			set "background" "gfx/guis/monitors/strogg/tram/trm2_img4" ;
+		}
+
+		onTime +200 {
+			set "btm_tram::visible" "0" ;
+			set "btm_tram2::visible" "1" ;
+		}
+
+		onTime +200 {
+			set "background" "gfx/guis/monitors/strogg/tram/trm2_img1" ;
+			set "btm_tram2::visible" "0" ;
+			set "btm_tram3::visible" "1" ;
+		}
+
+		onTime +200 {
+			set "btm_tram::visible" "1" ;
+			set "btm_tram3::visible" "0" ;
+		}
+
+		onTime +4300 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef btm_tram2
+	{
+		rect	308,174,225,113
+		visible	0
+		background	"gfx/guis/monitors/strogg/tram/trm2_img3"
+		matcolor	0.317,1,0.658,1
+		matscalex	-1
+	}
+	windowDef btm_tram3
+	{
+		rect	308,174,225,113
+		visible	0
+		background	"gfx/guis/monitors/strogg/tram/trm2_img2"
+		matcolor	0.317,1,0.658,1
+		matscalex	-1
+	}
+	windowDef st_1
+	{
+		rect	444,272,72,44
+		visible	1
+		background	"gfx/guis/common/smalltext1"
+		matcolor	0.756,1,0.996,1
+		shear	0,-.2
+	}
+	windowDef st_2
+	{
+		rect	334,145,71,44
+		visible	1
+		background	"gfx/guis/common/smalltext3"
+		matcolor	0.756,1,0.996,1
+		shear	0,-.2
+		matscalex	-1
+	}
+	windowDef st_3
+	{
+		rect	466,25,59,38
+		visible	1
+		background	"gfx/guis/common/smalltext5"
+		matcolor	0.756,1,0.996,1
+		shear	0,-.2
+	}
+	windowDef p_scrolltext
+	{
+		rect	268,347,255,97
+		visible	1
+		shear	0,-.2
+		windowDef scrolltext
+		{
+			rect	0,-123,255,221
+			visible	1
+			background	"gfx/guis/common/strogg/scrolltext2"
+			matcolor	0.756,1,0.996,1
+			shear	0,-.2
+		}
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef static
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/static1"
+			matcolor	0.305,0.305,0.305,1
+		}
+		windowDef dirt
+		{
+			visible	1
+			rect	-98,-27,747,619
+			background	"gfx/guis/common/screen_dirt5"
+			matcolor	0.596,0.521,0.419,1
+			matscalex	-1
+		}
+		windowDef flash
+		{
+			rect	0,0,640,480
+			visible	1
+			backcolor	0.658,1,1,0
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+}

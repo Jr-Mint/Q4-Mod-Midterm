@@ -1,0 +1,515 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	windowDef bg
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med1_bg"
+		matcolor	1,1,1,1*guitable_8_10[time*0.0002]
+	}
+	windowDef gradient1
+	{
+		visible	1
+		rect	289,-77,512,619
+		background	"gfx/guis/common/gradient2"
+		matcolor	0,0,0,1
+	}
+	windowDef scrolltext1
+	{
+		rect	48,311,290,118
+		visible	1
+		windowDef scrolltext2
+		{
+			rect	0,0,291,271
+			visible	1
+			background	"gfx/guis/common/strogg/scrolltext1"
+			matcolor	0.749,1,0.925,1
+			shear	0,-.3
+		}
+	}
+	windowDef title
+	{
+		rect	173,16,294,46
+		visible	1
+		forecolor	0.988,0.917,0.521,1
+		text	"cell process"
+		textscale	1
+		font	"fonts/strogg"
+	}
+	windowDef symbol
+	{
+		rect	93,72,195,211
+		visible	1
+		forecolor	0.717,1,0.937,0.6
+		text	k
+		textscale	6
+		font	"fonts/strogg"
+	}
+	windowDef p_cells1
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef c1
+		{
+			rect	101,249,30,30
+			visible	1
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.4
+		}
+		windowDef d_c1
+		{
+			rect	218,226,40,40
+			visible	0
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.48
+		}
+		windowDef d2_c1
+		{
+			rect	313,232,60,60
+			visible	0
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.48
+		}
+		windowDef d3_c1
+		{
+			rect	400,304,100,100
+			visible	0
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.48
+		}
+		windowDef d4_c1
+		{
+			rect	424,488,200,200
+			visible	0
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.48
+		}
+		windowDef c2
+		{
+			rect	56,246,20,20
+			visible	1
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.4
+		}
+		windowDef d_c2
+		{
+			rect	204,221,30,30
+			visible	0
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.48
+		}
+		windowDef d2_c2
+		{
+			rect	327,230,50,50
+			visible	0
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.48
+		}
+		windowDef d3_c2
+		{
+			rect	431,299,80,80
+			visible	0
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.48
+		}
+		windowDef d4_c2
+		{
+			rect	458,487,160,160
+			visible	0
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.48
+		}
+		windowDef c3
+		{
+			rect	63,283,25,25
+			visible	1
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.4
+		}
+		windowDef d_c3
+		{
+			rect	199,235,35,35
+			visible	0
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.48
+		}
+		windowDef d2_c3
+		{
+			rect	316,246,55,55
+			visible	0
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.48
+		}
+		windowDef d3_c3
+		{
+			rect	384,323,90,90
+			visible	0
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.48
+		}
+		windowDef d4_c3
+		{
+			rect	375,489,180,180
+			visible	0
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.48
+		}
+	}
+	windowDef p_cells2
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef c4
+		{
+			rect	46,204,30,30
+			visible	1
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.5
+		}
+		windowDef d_c4
+		{
+			rect	203,144,40,40
+			visible	0
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.48
+		}
+		windowDef d2_c4
+		{
+			rect	387,96,60,60
+			visible	0
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.48
+		}
+		windowDef d3_c4
+		{
+			rect	521,96,100,100
+			visible	0
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.48
+		}
+		windowDef d4_c4
+		{
+			rect	654,141,200,200
+			visible	0
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.48
+		}
+		windowDef c5
+		{
+			rect	52,219,20,19
+			visible	1
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.5
+		}
+		windowDef d_c5
+		{
+			rect	213,165,30,29
+			visible	0
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.48
+		}
+		windowDef d2_c5
+		{
+			rect	400,127,50,49
+			visible	0
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.48
+		}
+		windowDef d3_c5
+		{
+			rect	510,147,80,79
+			visible	0
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.48
+		}
+		windowDef d4_c5
+		{
+			rect	652,219,160,159
+			visible	0
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.48
+		}
+		windowDef c6
+		{
+			rect	90,168,25,24
+			visible	1
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.5
+		}
+		windowDef d_c6
+		{
+			rect	257,115,35,34
+			visible	0
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.48
+		}
+		windowDef d2_c6
+		{
+			rect	422,71,55,54
+			visible	0
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.48
+		}
+		windowDef d3_c6
+		{
+			rect	566,75,90,89
+			visible	0
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.48
+		}
+		windowDef d4_c6
+		{
+			rect	707,109,180,179
+			visible	0
+			background	"gfx/guis/common/cell"
+			matcolor	0.886,0.996,0.968,0.48
+		}
+	}
+	windowDef l_edge
+	{
+		rect	0,0,320,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med1_edge"
+		matcolor	0.682,0.729,0.545,.8*guitable_random1[time*0.0002]
+	}
+	windowDef r_edge
+	{
+		rect	320,0,320,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med1_edge"
+		matcolor	0.682,0.729,0.545,.8*guitable_random1[time*0.0002]
+		matscalex	-1
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline1
+		{
+			visible	1
+			rect	0,-249,640,888
+			background	"gfx/guis/common/monitor_line3"
+			matcolor	0.752,0.850,0.913,0.08
+		}
+		windowDef sline2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/static1"
+			matcolor	0.752,0.850,0.913,.2
+		}
+		windowDef gradient
+		{
+			visible	1
+			rect	-132,-66,887,313
+			background	"gfx/guis/common/gradient"
+			matcolor	1,1,1,0.298*guitable_random1[time*0.00024]
+		}
+		windowDef blood
+		{
+			rect	0,0,640,480
+			visible	"gui::gui_parm_blood"
+			background	"gfx/guis/common/bloodsplat1"
+			matcolor	.6,.6,.6,1
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef anim_letter
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 0 {
+			set "symbol::text" "k" ;
+			transition "symbol::forecolor" "1,1,1,.8" "0.717,1,0.937,0.6" "150" ;
+		}
+
+		onTime 1900 {
+			set "symbol::text" "h" ;
+			transition "symbol::forecolor" "1,1,1,.8" "0.717,1,0.937,0.6" "150" ;
+		}
+
+		onTime 4050 {
+			set "symbol::text" "a" ;
+			transition "symbol::forecolor" "1,1,1,.8" "0.717,1,0.937,0.6" "150" ;
+		}
+
+		onTime 6700 {
+			set "symbol::text" "r" ;
+			transition "symbol::forecolor" "1,1,1,.8" "0.717,1,0.937,0.6" "150" ;
+		}
+
+		onTime 8900 {
+			set "symbol::text" "f" ;
+			transition "symbol::forecolor" "1,1,1,.8" "0.717,1,0.937,0.6" "150" ;
+		}
+
+		onTime 10500 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef anim_c1
+	{
+		rect	0,0,1,0
+		visible	1
+
+		onTime 0 {
+			transition "c1::rect" "$c1::rect" "$d_c1::rect" "200" ;
+		}
+
+		onTime +200 {
+			transition "c1::rect" "$d_c1::rect" "$d2_c1::rect" "200" ;
+		}
+
+		onTime +200 {
+			transition "c1::rect" "$d2_c1::rect" "$d3_c1::rect" "200" ;
+		}
+
+		onTime +200 {
+			transition "c1::rect" "$d3_c1::rect" "$d4_c1::rect" "200" ;
+		}
+
+		onTime +200 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef anim_c2
+	{
+		rect	0,0,1,0
+		visible	1
+
+		onTime 0 {
+			transition "c2::rect" "$c2::rect" "$d_c2::rect" "350" ;
+		}
+
+		onTime +350 {
+			transition "c2::rect" "$d_c2::rect" "$d2_c2::rect" "350" ;
+		}
+
+		onTime +350 {
+			transition "c2::rect" "$d2_c2::rect" "$d3_c2::rect" "350" ;
+		}
+
+		onTime +350 {
+			transition "c2::rect" "$d3_c2::rect" "$d4_c2::rect" "350" ;
+		}
+
+		onTime +350 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef anim_c3
+	{
+		rect	0,0,1,0
+		visible	1
+
+		onTime 0 {
+			transition "c3::rect" "$c3::rect" "$d_c3::rect" "150" ;
+		}
+
+		onTime +150 {
+			transition "c3::rect" "$d_c3::rect" "$d2_c3::rect" "150" ;
+		}
+
+		onTime +150 {
+			transition "c3::rect" "$d2_c3::rect" "$d3_c3::rect" "150" ;
+		}
+
+		onTime +150 {
+			transition "c3::rect" "$d3_c3::rect" "$d4_c3::rect" "150" ;
+		}
+
+		onTime +150 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef anim_c4
+	{
+		rect	0,0,1,0
+		visible	1
+
+		onTime 0 {
+			transition "c4::rect" "$c4::rect" "$d_c4::rect" "200" ;
+		}
+
+		onTime +200 {
+			transition "c4::rect" "$d_c4::rect" "$d2_c4::rect" "200" ;
+		}
+
+		onTime +200 {
+			transition "c4::rect" "$d2_c4::rect" "$d3_c4::rect" "200" ;
+		}
+
+		onTime +200 {
+			transition "c4::rect" "$d3_c4::rect" "$d4_c4::rect" "200" ;
+		}
+
+		onTime +200 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef anim_c5
+	{
+		rect	0,0,1,0
+		visible	1
+
+		onTime 0 {
+			transition "c5::rect" "$c5::rect" "$d_c5::rect" "300" ;
+		}
+
+		onTime +300 {
+			transition "c5::rect" "$d_c5::rect" "$d2_c5::rect" "300" ;
+		}
+
+		onTime +300 {
+			transition "c5::rect" "$d2_c5::rect" "$d3_c5::rect" "300" ;
+		}
+
+		onTime +300 {
+			transition "c5::rect" "$d3_c5::rect" "$d4_c5::rect" "300" ;
+		}
+
+		onTime +300 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef anim_c6
+	{
+		rect	0,0,1,0
+		visible	1
+
+		onTime 0 {
+			transition "c6::rect" "$c6::rect" "$d_c6::rect" "400" ;
+		}
+
+		onTime +400 {
+			transition "c6::rect" "$d_c6::rect" "$d2_c6::rect" "400" ;
+		}
+
+		onTime +400 {
+			transition "c6::rect" "$d2_c6::rect" "$d3_c6::rect" "400" ;
+		}
+
+		onTime +400 {
+			transition "c6::rect" "$d3_c6::rect" "$d4_c6::rect" "400" ;
+		}
+
+		onTime +400 {
+			resettime "0" ;
+		}
+
+	}
+}

@@ -1,0 +1,317 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	visible	1
+	comment	"uses 'gui_parm_script' to fire a script"
+	windowDef bgcol
+	{
+		rect	0,65,640,308
+		visible	1
+		background	"gfx/guis/common/128_sqsolid"
+		matcolor	0,0,0,0.6
+	}
+	windowDef bg1
+	{
+		rect	0,0,640,62
+		visible	1
+		background	"gfx/guis/common/strogg/edge4"
+		matcolor	0.188,0.862,0.894,1
+	}
+	windowDef bg2
+	{
+		rect	0,364,640,116
+		visible	1
+		background	"gfx/guis/common/strogg/edge3"
+		matcolor	0.188,0.862,0.894,1
+	}
+	windowDef logo1
+	{
+		rect	-4,375,96,100
+		visible	1
+		background	"gfx/guis/common/strogg/logo2_rotate1"
+		matcolor	1,1,1,1
+	}
+	windowDef t_title
+	{
+		rect	98,24,442,40
+		visible	1
+		forecolor	1,0.501,0,1
+		text	"#str_200519"
+		textscale	0.52
+		font	"fonts/r_strogg"
+	}
+	windowDef conveyor1
+	{
+		rect	0,69,640,321
+		visible	1
+		background	"gfx/guis/common/conveyor1"
+		matcolor	0.113,0.996,0.643,0.3
+	}
+	windowDef conveyor2
+	{
+		rect	-235,57,1136,344
+		visible	1
+		background	"gfx/guis/common/conveyor1"
+		matcolor	0.113,0.996,0.643,0.1
+	}
+	windowDef ar1
+	{
+		rect	555,8,32,41
+		visible	1
+		background	"gfx/guis/common/arrow1"
+		matcolor	0.0470,1,0.474,.6
+	}
+	windowDef ar2
+	{
+		rect	575,8,32,41
+		visible	1
+		background	"gfx/guis/common/arrow1"
+		matcolor	0.0470,1,0.474,.6
+	}
+	windowDef ar3
+	{
+		rect	596,8,32,41
+		visible	1
+		background	"gfx/guis/common/arrow1"
+		matcolor	0.0470,1,0.474,.6
+	}
+	windowDef grad1
+	{
+		rect	0,120,640,100
+		visible	1
+		background	"gfx/guis/common/gradient4"
+		matcolor	0.188,0.862,0.894,.4
+	}
+	windowDef grad2
+	{
+		rect	0,220,640,100
+		visible	1
+		background	"gfx/guis/common/gradient4"
+		matcolor	0.188,0.862,0.894,.4
+		matscaley	-1
+	}
+	windowDef l_dot
+	{
+		rect	22,147,89,160
+		visible	1
+		background	"gfx/guis/common/strogg/genericseal_dot"
+		matcolor	1,1,1,.4*guitable_10_5[time*0.0015]
+		shear	0,.2
+	}
+	windowDef engage
+	{
+		rect	77,179,459,84
+		visible	1
+		forecolor	1,1,1,1*guitable_10_5[time*0.0015]
+		text	"#str_200407"
+		textscale	1.4
+		textalign	1
+		font	"fonts/r_strogg"
+	}
+	windowDef r_dot
+	{
+		rect	512,147,89,160
+		visible	1
+		background	"gfx/guis/common/strogg/genericseal_dot"
+		matcolor	1,1,1,.4*guitable_10_5[time*0.0015]
+		shear	0,.2
+	}
+	windowDef p_scrolltext
+	{
+		rect	66,397,125,85
+		visible	1
+		shear	0,-.2
+		windowDef scrolltext
+		{
+			rect	8,-61,123,145
+			visible	1
+			background	"gfx/guis/common/strogg/scrolltext2"
+			matcolor	0.756,1,0.996,1
+			shear	0,-.2
+		}
+	}
+	windowDef t_proc1
+	{
+		rect	389,440,72,18
+		visible	1
+		forecolor	1,1,1,1
+		text	"84278.324"
+		textscale	0.36
+		font	"fonts/strogg"
+		textalign	2
+
+		onTime 0 {
+			set "text" "84278.324" ;
+		}
+
+		onTime +700 {
+			set "text" "43536.832" ;
+		}
+
+		onTime +700 {
+			set "text" "76245.003" ;
+		}
+
+		onTime +700 {
+			set "text" "57452.659" ;
+		}
+
+		onTime +700 {
+			set "text" "35945.202" ;
+		}
+
+		onTime +700 {
+			set "text" "94320.953" ;
+		}
+
+		onTime +700 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef t_proc2
+	{
+		rect	542,440,72,18
+		visible	1
+		forecolor	1,1,1,1
+		text	"84278324"
+		textscale	0.36
+		font	"fonts/strogg"
+		textalign	2
+
+		onTime 0 {
+			set "text" "84278.324" ;
+		}
+
+		onTime +200 {
+			set "text" "43536.832" ;
+		}
+
+		onTime +200 {
+			set "text" "76245.003" ;
+		}
+
+		onTime +200 {
+			set "text" "57452.659" ;
+		}
+
+		onTime +200 {
+			set "text" "35945.202" ;
+		}
+
+		onTime +200 {
+			set "text" "94320.953" ;
+		}
+
+		onTime +200 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef t_bar1
+	{
+		rect	351,442,35,15
+		visible	1
+		background	"gfx/guis/common/bar1"
+		matcolor	1,0.501,0,1
+	}
+	windowDef t_bar2
+	{
+		rect	504,442,33,15
+		visible	1
+		background	"gfx/guis/common/bar1"
+		matcolor	1,0.501,0,1
+	}
+	windowDef plate
+	{
+		rect	640,120,220,220
+		visible	1
+		background	"gfx/guis/common/add_box1"
+		matcolor	0,0.835,0.835,1
+		notime	1
+
+		onTime 0 {
+			transition "plate::rect" "$plate::rect" "$d_plate::rect" "2500" ;
+		}
+
+		onTime 2500 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef d_plate
+	{
+		rect	-220,120,220,220
+		visible	0
+		background	"gfx/guis/common/add_box1"
+		matcolor	0,0.517,0.517,1
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	0,-165,640,646
+			background	"gfx/guis/common/monitor_line8"
+			matcolor	0.403,0.603,0.619,1
+		}
+		windowDef dirt
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/screen_dirt10"
+			matcolor	0.325,0.674,0.525,0.32
+			matscalex	-1
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	-13,-30,666,523
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.133,0.133,0.133,1
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge3"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef anim
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			resettime "plate" "0" ;
+			
+			set "l_dot::visible" "0" ;
+			set "engage::visible" "0" ;
+			set "r_dot::visible" "0" ;
+			set "grad1::visible" "0" ;
+			set "grad2::visible" "0" ;
+			transition "conveyor1::matcolor_w" "0.3" "0.6" "500" ;
+			transition "conveyor2::matcolor_w" "0.1" "0.2" "500" ;
+		}
+
+	}
+	windowDef btn1
+	{
+		rect	0,0,640,480
+		visible	1
+		notime	1
+
+		onAction {
+			nonInteractive "1" ;
+			resettime "anim" "0" ;
+			set "cmd" "play guisound_beep2 ; runscript" "$gui::gui_Parm_script" ;
+			set "visible" "0" ;
+		}
+
+	}
+}

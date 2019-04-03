@@ -1,0 +1,274 @@
+windowDef Desktop
+{
+	comment "'gui_Parm_script' is the name of the script to fire, named event 'acidshower' will start the animation to empty the de lousing shower reservoir"
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	visible	1
+
+	onNamedEvent acidshower {
+		resettime "anim" "0" ;
+	}
+
+	windowDef bg
+	{
+		rect	0,0,639,483
+		visible	1
+		background	"gfx/guis/common/gradient4"
+		matcolor	0.266,0.235,0.0431,1
+		matscaley	-1
+	}
+	windowDef liquid
+	{
+		rect	438,198,67,67
+		visible	1
+		background	"gfx/guis/maps/putra/dl_liquid1"
+		matcolor	0.796,0.847,0.196,0.25
+	}
+	windowDef liquid1
+	{
+		rect	426,187,131,134
+		visible	1
+		background	"gfx/guis/maps/putra/dl_liquid2"
+		matcolor	0.796,0.847,0.196,0.25
+	}
+	windowDef liquid2
+	{
+		rect	383,143,266,269
+		visible	1
+		background	"gfx/guis/maps/putra/dl_liquid3"
+		matcolor	0.796,0.847,0.196,0.25
+	}
+	windowDef liquid3
+	{
+		rect	511,149,131,263
+		visible	1
+		background	"gfx/guis/maps/putra/dl_liquid4"
+		matcolor	0.796,0.847,0.196,0.25
+	}
+	windowDef spray
+	{
+		rect	316,-9,323,477
+		visible	1
+		background	"gfx/guis/maps/putra/dl_spray"
+		matcolor	0.552,0.701,0.333,1
+	}
+	windowDef arrow
+	{
+		rect	209,45,61,54
+		visible	1
+		background	"gfx/guis/maps/putra/dl_arrow"
+		matcolor	0.866,1,0.592,1
+	}
+	windowDef d_arrow
+	{
+		rect	209,359,61,54
+		visible	0
+		background	"gfx/guis/maps/putra/dl_arrow"
+		matcolor	0.866,1,0.592,1
+	}
+	windowDef bracket
+	{
+		rect	235,-11,169,481
+		visible	1
+		background	"gfx/guis/maps/putra/dl_bracket"
+		matcolor	0.552,0.701,0.333,1
+	}
+	windowDef stripe
+	{
+		rect	410,381,113,39
+		visible	1
+		background	"gfx/guis/maps/putra/dl_stripe"
+		matcolor	0.552,0.701,0.333,1
+	}
+	windowDef stripe1
+	{
+		rect	532,382,113,39
+		visible	1
+		background	"gfx/guis/maps/putra/dl_stripe"
+		matcolor	0.552,0.701,0.333,1
+	}
+	windowDef stripe2
+	{
+		rect	421,37,113,40
+		visible	1
+		background	"gfx/guis/maps/putra/dl_stripe"
+		matcolor	0.549,0.698,0.329,1
+		matscaley	-1
+	}
+	windowDef stripe3
+	{
+		rect	534,37,113,40
+		visible	1
+		background	"gfx/guis/maps/putra/dl_stripe"
+		matcolor	0.549,0.698,0.329,1
+		matscaley	-1
+	}
+	windowDef bar_bg
+	{
+		rect	43,46,161,368
+		visible	1
+		background	"gfx/guis/common/128_sqsolid"
+		matcolor	0.749,0.886,0.462,1
+	}
+	windowDef bar
+	{
+		rect	55,58,136,340
+		visible	1
+		background	"gfx/guis/maps/putra/dl_bar"
+		matcolor	0.549,0.588,0.113,1
+	}
+	windowDef bubbles
+	{
+		rect	55,58,136,340
+		visible	1
+		background	"gfx/guis/common/bubbles"
+		matcolor	0.670,0.956,0,1
+	}
+	windowDef level
+	{
+		rect	55,58,136,15
+		visible	1
+		background	"gfx/guis/common/128_sqsolid"
+		matcolor	0,0,0,1
+	}
+	windowDef d_level
+	{
+		rect	55,58,136,328
+		visible	0
+		background	"gfx/guis/common/128_sqsolid"
+		matcolor	0,0,0,1
+	}
+	windowDef volume
+	{
+		rect	145,2,32,455
+		visible	1
+		background	"gfx/guis/maps/putra/dl_volume"
+		matcolor	0.866,1,0.592,1
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	0,-264,640,1241
+			background	"gfx/guis/common/monitor_line8"
+			matcolor	0.294,0.415,0.274,1
+		}
+		windowDef dirt
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/screen_dirt10"
+			matcolor	0.478,0.454,0.172,.6
+			matscalex	-1
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	-17,-29,670,536
+			background	"gfx/guis/common/monitor_reflect"
+			matcolor	0.803,0.992,0.450,.2
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge3"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef button
+	{
+		rect	0,0,640,480
+		visible	1
+
+		onAction {
+			nonInteractive "1" ;
+			set "cmd" "play guisound_beep2 ; activate ; runscript" "$gui::gui_Parm_script";
+			set "visible" "0" ;
+			
+			resettime "anim" "0" ;
+		}
+
+	}
+	windowDef anim
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "level::rect" "$level::rect" "$d_level::rect" "5000" ;
+			transition "arrow::rect" "$arrow::rect" "$d_arrow::rect" "5000" ;
+			
+			resettime "anim_spray" "0" ;
+			
+		}
+
+		onTime +5000 {
+			resettime "anim_flash" "0" ;
+			
+			set "anim_spray::notime" "1" ;
+			stoptransitions "anim_spray" ;
+			
+			set "liquid::matcolor_w" "0.25" ;
+			set "liquid1::matcolor_w" "0.25" ;
+			set "liquid2::matcolor_w" "0.25" ;
+			set "liquid3::matcolor_w" "0.25" ;
+		}
+
+	}
+	windowDef anim_flash
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "level::matcolor" "0,0,0,1" "1,.25,0,1" "300" ;
+		}
+
+		onTime +300 {
+			transition "level::matcolor" "1,.25,0,1" "0,0,0,1" "300" ;
+		}
+
+		onTime +600 {
+			resettime "0"
+		}
+
+	}
+	windowDef anim_spray
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "liquid::matcolor_w" "0.5" "1" "200" ;
+			transition "liquid3::matcolor_w" "1" "0.5" "200" ;
+			
+		}
+
+		onTime +200 {
+			transition "liquid1::matcolor_w" "0.5" "1" "200" ;
+			transition "liquid::matcolor_w" "1" "0.5" "200" ;
+		}
+
+		onTime +200 {
+			transition "liquid2::matcolor_w" "0.5" "1" "200" ;
+			transition "liquid1::matcolor_w" "1" "0.5" "200" ;
+		}
+
+		onTime +200 {
+			transition "liquid3::matcolor_w" "0.5" "1" "200" ;
+			transition "liquid2::matcolor_w" "1" "0.5" "200" ;
+		}
+
+		onTime +400 {
+			resettime "0" ;
+		}
+
+	}
+}

@@ -1,0 +1,274 @@
+windowDef Desktop
+{
+	comment	"gui_parm_broken = 1 adds broken glass cracks to the gui."
+	visible	1
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	definevec4	"black"	0,0,0,1
+	definevec4	"black_0"	0,0,0,0
+	definevec4	"degauss"	1,1,1,0.4
+	definevec4	"degauss_0"	1,1,1,0
+	windowDef static1
+	{
+		visible	1
+		rect	0,-157,640,834
+		background	"gfx/guis/common/colorstatic"
+		matcolor	1,1,1,.3
+	}
+	windowDef static2
+	{
+		visible	1
+		rect	0,0,640,480
+		background	"gfx/guis/common/static1"
+		matcolor	1,1,1,0.4
+		matscalex	-1
+	}
+	windowDef monitor_darkedge
+	{
+		visible	1
+		rect	-19,-8,672,500
+		background	"gfx/guis/common/monitor_darkedge"
+		matcolor	0,0,0,1
+	}
+	windowDef static1_b
+	{
+		visible	0
+		rect	-7,112,644,267
+		background	"gfx/guis/common/colorstatic"
+		matcolor	1,1,1,.4
+	}
+	windowDef static2_b
+	{
+		visible	0
+		rect	-7,112,644,267
+		background	"gfx/guis/common/static1"
+		matcolor	1,1,1,0.3
+	}
+	windowDef monitor_darkedge_b
+	{
+		visible	0
+		rect	-27,107,676,278
+		background	"gfx/guis/common/monitor_darkedge"
+		matcolor	0,0,0,1
+	}
+	windowDef static1_c
+	{
+		visible	0
+		rect	127,49,399,370
+		background	"gfx/guis/common/colorstatic"
+		matcolor	1,1,1,.4
+	}
+	windowDef static2_c
+	{
+		visible	0
+		rect	127,49,399,370
+		background	"gfx/guis/common/static1"
+		matcolor	1,1,1,0.3
+	}
+	windowDef monitor_darkedge_c
+	{
+		visible	0
+		rect	114,42,418,386
+		background	"gfx/guis/common/monitor_darkedge"
+		matcolor	0,0,0,1
+	}
+	windowDef static1_d
+	{
+		visible	0
+		rect	16,211,610,59
+		background	"gfx/guis/common/colorstatic"
+		matcolor	1,1,1,.4
+	}
+	windowDef static2_d
+	{
+		visible	0
+		rect	16,211,610,59
+		background	"gfx/guis/common/static1"
+		matcolor	1,1,1,0.3
+	}
+	windowDef monitor_darkedge_d
+	{
+		visible	0
+		rect	-3,210,639,62
+		background	"gfx/guis/common/monitor_darkedge2"
+		matcolor	0,0,0,1
+	}
+	windowDef black_t
+	{
+		rect	-143,-501,900,900
+		visible	1
+		background	"gfx/guis/common/blur_circle1"
+		matcolor	0,0,0,0
+	}
+	windowDef black_b
+	{
+		rect	-129,168,900,900
+		visible	1
+		background	"gfx/guis/common/blur_circle1"
+		matcolor	0,0,0,0
+	}
+	windowDef degauss
+	{
+		visible	1
+		rect	0,0,640,480
+		background	"gfx/guis/common/degauss"
+		matcolor	1,1,1,0
+	}
+	windowDef d_degauss
+	{
+		visible	0
+		rect	-420,-37,1602,665
+		background	"gfx/guis/common/degauss"
+		matcolor	1,1,1,0.3
+	}
+	windowDef d2_degauss
+	{
+		visible	0
+		rect	-290,-59,897,400
+		background	"gfx/guis/common/degauss"
+		matcolor	1,1,1,0.3
+	}
+	windowDef d3_degauss
+	{
+		visible	0
+		rect	-19,247,625,227
+		background	"gfx/guis/common/degauss"
+		matcolor	1,1,1,0.3
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline1
+		{
+			visible	1
+			rect	0,-493,640,1584
+			background	"gfx/guis/common/monitor_line4"
+			matcolor	0.752,0.850,0.913,0.2
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.274,0.376,0.415,1
+		}
+		windowDef gradient
+		{
+			visible	1
+			rect	0,0,640,745
+			background	"gfx/guis/common/gradient"
+			matcolor	0.450,0.686,0.776,0.2
+		}
+		windowDef broken_glass_b
+		{
+			visible	"gui::gui_parm_broken"
+			rect	0,3,640,480
+			background	"gfx/guis/common/broken_glass3"
+			matcolor	0,0,0,1
+		}
+		windowDef broken_glass
+		{
+			visible	"gui::gui_parm_broken"
+			rect	0,0,640,480
+			background	"gfx/guis/common/broken_glass3"
+			matcolor	0.819,0.905,0.921,1
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+			rotate	180
+		}
+	}
+	windowDef anims
+	{
+		rect	0,0,640,480
+		visible	1
+
+		onTime 0 {
+			transition "black_t::matcolor" "$desktop::black_0" "$desktop::black" "150" ;
+			transition "black_b::matcolor" "$desktop::black_0" "$desktop::black" "150" ;
+			transition "static1::matcolor" "1,1,1,.3" "1,1,1,.2" "150" ;
+			transition "static2::matcolor" "1,1,1,.4" "1,1,1,.3" "150" ;
+			
+			transition "degauss::matcolor" "$desktop::degauss_0" "$desktop::degauss" "150" ;
+		}
+
+		onTime 150 {
+			transition "degauss::matcolor" "$desktop::degauss_0" "$desktop::degauss" "50" ;
+		}
+
+		onTime 200 {
+			transition "static1::rect" "$static1::rect" "$static1_b::rect" "50" ;
+			transition "static2::rect" "$static2::rect" "$static2_b::rect" "50" ;
+			transition "monitor_darkedge::rect" "$monitor_darkedge::rect" "$monitor_darkedge_b::rect" "50" ;
+			
+			transition "degauss::rect" "$degauss::rect" "$d_degauss::rect" "50" ;
+		}
+
+		onTime 250 {
+			transition "static1::rect" "$static1_b::rect" "$static1_c::rect" "50" ;
+			transition "static2::rect" "$static2_b::rect" "$static2_c::rect" "50" ;
+			transition "monitor_darkedge::rect" "$monitor_darkedge_b::rect" "$monitor_darkedge_c::rect" "50" ;
+			
+			transition "degauss::rect" "$d_degauss::rect" "$d2_degauss::rect" "50" ;
+		}
+
+		onTime 300 {
+			transition "static1::rect" "$static1_c::rect" "$static1::rect" "50" ;
+			transition "static2::rect" "$static2_c::rect" "$static2::rect" "50" ;
+			transition "monitor_darkedge::rect" "$monitor_darkedge_c::rect" "$monitor_darkedge::rect" "50" ;
+			
+			transition "degauss::rect" "$d2_degauss::rect" "$d3_degauss::rect" "50" ;
+		}
+
+		onTime 350 {
+			transition "static1::rect" "$static1::rect" "$static1_c::rect" "50" ;
+			transition "static2::rect" "$static2::rect" "$static2_c::rect" "50" ;
+			transition "monitor_darkedge::rect" "$monitor_darkedge::rect" "$monitor_darkedge_c::rect" "50" ;
+			
+			transition "degauss::rect" "$d3_degauss::rect" "$degauss::rect" "50" ;
+		}
+
+		onTime 400 {
+			transition "static1::rect" "$static1_c::rect" "$static1_d::rect" "50" ;
+			transition "static2::rect" "$static2_c::rect" "$static2_d::rect" "50" ;
+			transition "monitor_darkedge::rect" "$monitor_darkedge_c::rect" "$monitor_darkedge_d::rect" "50" ;
+			
+			transition "degauss::rect" "$degauss::rect" "$d2_degauss::rect" "50" ;
+		}
+
+		onTime 450 {
+			transition "static1::rect" "$static1_d::rect" "$static1_b::rect" "50" ;
+			transition "static2::rect" "$static2_d::rect" "$static2_b::rect" "50" ;
+			transition "monitor_darkedge::rect" "$monitor_darkedge_d::rect" "$monitor_darkedge_b::rect" "50" ;
+			
+			transition "degauss::rect" "$d2_degauss::rect" "-640,-480,640,480" "50" ;
+		}
+
+		onTime 500 {
+			transition "static1::rect" "$static1_b::rect" "$static1::rect" "50" ;
+			transition "static2::rect" "$static2_b::rect" "$static2::rect" "50" ;
+			transition "monitor_darkedge::rect" "$monitor_darkedge_b::rect" "$monitor_darkedge::rect" "50" ;
+			
+			transition "degauss::rect" "-640,-480,640,480" "$degauss::rect" "50" ;
+		}
+
+		onTime 550 {
+			transition "black_t::matcolor" "$desktop::black" "$desktop::black_0" "150" ;
+			transition "black_b::matcolor" "$desktop::black" "$desktop::black_0" "150" ;
+			transition "static1::matcolor" "1,1,1,.2" "1,1,1,.3" "150" ;
+			transition "static2::matcolor" "1,1,1,.3" "1,1,1,.4" "150" ;
+			
+			transition "degauss::matcolor" "$desktop::degauss" "$desktop::degauss_0" "50" ;
+		}
+
+		onTime 10000 {
+			resettime "0" ;
+		}
+
+	}
+}

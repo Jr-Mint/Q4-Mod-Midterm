@@ -1,0 +1,535 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0,0,0,0
+	visible	1
+	windowDef grid
+	{
+		rect	0,0,637,480
+		visible	1
+		background	"gfx/guis/common/marine/grid1"
+		matcolor	0.513,0.988,0.858,0.4
+	}
+	windowDef indicator1
+	{
+		rect	-22,2,400,400
+		visible	1
+		background	"gfx/guis/common/marine/indicator"
+		matcolor	0.317,0.46,0.42,1
+	}
+	windowDef tr_bar
+	{
+		rect	404,13,221,50
+		visible	1
+		background	"gfx/guis/maps/mcc/brf_corner1"
+		matcolor	0.745,0.858,0.607,.5
+	}
+	windowDef bl_bar
+	{
+		rect	13,412,221,49
+		visible	1
+		background	"gfx/guis/maps/mcc/brf_corner1"
+		matcolor	0.745,0.858,0.607,.5
+		rotate	180
+	}
+	windowDef belt1
+	{
+		rect	189,151,27,28
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc2_warning_bg"
+		matcolor	0.64,0.35,0.12,.9
+
+		onTime 0 {
+			transition "matcolor_w" "1" "0.2" "800" ;
+		}
+
+		onTime 800 {
+			transition "matcolor_w" "0.2" "1" "800" ;
+		}
+
+		onTime 1600 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef belt2
+	{
+		rect	183,144,40,40
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc2_warning"
+		matcolor	1,1,1,1
+	}
+	windowDef belt3
+	{
+		rect	81,183,27,28
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc2_warning_bg"
+		matcolor	0.64,0.35,0.12,.9
+
+		onTime 0 {
+			transition "matcolor_w" "1" "0.2" "800" ;
+		}
+
+		onTime 800 {
+			transition "matcolor_w" "0.2" "1" "800" ;
+		}
+
+		onTime 1600 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef belt4
+	{
+		rect	75,176,40,40
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc2_warning"
+		matcolor	1,1,1,1
+	}
+	windowDef belt5
+	{
+		rect	163,227,27,28
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc2_warning_bg"
+		matcolor	0.64,0.35,0.12,.9
+
+		onTime 0 {
+			transition "matcolor_w" "1" "0.2" "800" ;
+		}
+
+		onTime 800 {
+			transition "matcolor_w" "0.2" "1" "800" ;
+		}
+
+		onTime 1600 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef belt6
+	{
+		rect	157,220,40,40
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc2_warning"
+		matcolor	1,1,1,1
+	}
+	windowDef belt7
+	{
+		rect	231,133,27,28
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc2_warning_bg"
+		matcolor	0.64,0.35,0.12,.9
+
+		onTime 0 {
+			transition "matcolor_w" "1" "0.2" "800" ;
+		}
+
+		onTime 800 {
+			transition "matcolor_w" "0.2" "1" "800" ;
+		}
+
+		onTime 1600 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef belt8
+	{
+		rect	224,126,40,40
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc2_warning"
+		matcolor	1,1,1,1
+	}
+	windowDef key
+	{
+		rect	461,427,163,25
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc13_key"
+		matcolor	0.745,0.858,0.607,.5
+	}
+	windowDef lil_squares1
+	{
+		rect	1,14,186,24
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc1_lilsquares"
+		matcolor	0.56,.6,.6,.4
+	}
+	windowDef t_num1
+	{
+		rect	13,368,160,36
+		visible	1
+		forecolor	1,1,1,.32
+		text	"#str_200332"
+		textscale	0.4
+		font	"fonts/lowpixel"
+
+		onTime 0 {
+			set "text" "#str_200332" ;
+		}
+
+		onTime +100 {
+			set "text" "#str_200333" ;
+		}
+
+		onTime +100 {
+			set "text" "#str_200334" ;
+		}
+
+		onTime +100 {
+			set "text" "#str_200335" ;
+		}
+
+		onTime +100 {
+			set "text" "#str_200336" ;
+		}
+
+		onTime +100 {
+			set "text" "#str_200337" ;
+		}
+
+		onTime +100 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef t_num2
+	{
+		rect	13,386,160,36
+		visible	1
+		forecolor	1,1,1,.32
+		text	"#str_200338"
+		textscale	0.4
+		font	"fonts/lowpixel"
+
+		onTime 0 {
+			set "text" "#str_200338" ;
+		}
+
+		onTime +150 {
+			set "text" "#str_200339" ;
+		}
+
+		onTime +150 {
+			set "text" "#str_200340" ;
+		}
+
+		onTime +150 {
+			set "text" "#str_200341" ;
+		}
+
+		onTime +150 {
+			set "text" "#str_200342" ;
+		}
+
+		onTime +150 {
+			set "text" "#str_200343" ;
+		}
+
+		onTime +150 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef t_num3
+	{
+		rect	13,403,160,36
+		visible	1
+		forecolor	1,1,1,.32
+		text	"#str_200344"
+		textscale	0.4
+		font	"fonts/lowpixel"
+
+		onTime 0 {
+			set "text" "#str_200344" ;
+		}
+
+		onTime +200 {
+			set "text" "#str_200345" ;
+		}
+
+		onTime +200 {
+			set "text" "#str_200346" ;
+		}
+
+		onTime +200 {
+			set "text" "#str_200347" ;
+		}
+
+		onTime +200 {
+			set "text" "#str_200348" ;
+		}
+
+		onTime +200 {
+			set "text" "#str_200349" ;
+		}
+
+		onTime +200 {
+			resettime "0" ;
+		}
+
+	}
+	editDef text1
+	{
+		rect	425,17,199,36
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200701"
+		textscale	0.34
+		font	"fonts/marine"
+	}
+	editDef text2
+	{
+		rect	11,429,199,36
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200702"
+		textscale	0.46
+		font	"fonts/marine"
+	}
+	windowDef p_squad1
+	{
+		rect	380,343,153,46
+		visible	1
+
+		onTime 0 {
+			transition "rect" "$p_squad1::rect" "$d_squad1::rect" "5000" ;
+		}
+
+		onTime +5000 {
+			transition "rect" "$d_squad1::rect" "$d2_squad1::rect" "5000" ;
+		}
+
+		onTime +5000 {
+			transition "rect" "$d2_squad1::rect" "$d3_squad1::rect" "5000" ;
+		}
+
+		onTime +5000 {
+			transition "rect" "$d3_squad1::rect" "$p_squad1::rect" "5000" ;
+		}
+
+		onTime +5000 {
+			resettime "0" ;
+		}
+
+		windowDef blurb2
+		{
+			rect	5,5,144,37
+			visible	1
+			background	"gfx/guis/monitors/marine/mcc13_blurb"
+			matcolor	0.513,0.988,0.858,.28
+		}
+		windowDef symbol2
+		{
+			rect	10,12,23,23
+			visible	1
+			background	"gfx/guis/monitors/marine/mcc5_symbol"
+			matcolor	1,1,1,1
+		}
+		windowDef txt_blurb1_3
+		{
+			rect	37,4,109,16
+			visible	1
+			forecolor	1,1,1,1
+			text	"#str_200703"
+			textscale	0.22
+			font	"fonts/marine"
+		}
+		windowDef txt_blurb1_4
+		{
+			rect	37,14,108,16
+			visible	1
+			forecolor	1,1,1,1
+			text	"087732.0023.03"
+			textscale	0.22
+			font	"fonts/marine"
+		}
+	}
+	windowDef p_squad2
+	{
+		rect	344,267,153,46
+		visible	1
+
+		onTime 0 {
+			transition "rect" "$p_squad2::rect" "$d_squad2::rect" "4000" ;
+		}
+
+		onTime +4000 {
+			transition "rect" "$d_squad2::rect" "$d2_squad2::rect" "4000" ;
+		}
+
+		onTime +4000 {
+			transition "rect" "$d2_squad2::rect" "$d3_squad2::rect" "4000" ;
+		}
+
+		onTime +4000 {
+			transition "rect" "$d3_squad2::rect" "$p_squad2::rect" "4000" ;
+		}
+
+		onTime +4000 {
+			resettime "0" ;
+		}
+
+		windowDef blurb1
+		{
+			rect	5,5,144,37
+			visible	1
+			background	"gfx/guis/monitors/marine/mcc13_blurb"
+			matcolor	0.513,0.988,0.858,.28
+		}
+		windowDef symbol1
+		{
+			rect	10,12,23,23
+			visible	1
+			background	"gfx/guis/monitors/marine/mcc5_symbol"
+			matcolor	1,1,1,1
+		}
+		windowDef txt_blurb1_1
+		{
+			rect	37,4,109,16
+			visible	1
+			forecolor	1,1,1,1
+			text	"#str_200682"
+			textscale	0.22
+			font	"fonts/marine"
+		}
+		windowDef txt_blurb1_2
+		{
+			rect	37,14,108,16
+			visible	1
+			forecolor	1,1,1,1
+			text	"06432.0037.24"
+			textscale	0.22
+			font	"fonts/marine"
+		}
+	}
+	windowDef p_squad3
+	{
+		rect	444,173,153,46
+		visible	1
+
+		onTime 0 {
+			transition "rect" "$p_squad3::rect" "$d_squad3::rect" "4500" ;
+		}
+
+		onTime +4500 {
+			transition "rect" "$d_squad3::rect" "$d2_squad3::rect" "4500" ;
+		}
+
+		onTime +4500 {
+			transition "rect" "$d2_squad3::rect" "$d3_squad3::rect" "4500" ;
+		}
+
+		onTime +4500 {
+			transition "rect" "$d3_squad3::rect" "$p_squad3::rect" "4500" ;
+		}
+
+		onTime +4500 {
+			resettime "0" ;
+		}
+
+		windowDef blurb3
+		{
+			rect	5,5,144,37
+			visible	1
+			background	"gfx/guis/monitors/marine/mcc13_blurb"
+			matcolor	0.513,0.988,0.858,.28
+		}
+		windowDef symbol3
+		{
+			rect	10,12,23,23
+			visible	1
+			background	"gfx/guis/monitors/marine/mcc5_symbol"
+			matcolor	1,1,1,1
+		}
+		windowDef txt_blurb1_5
+		{
+			rect	37,4,109,16
+			visible	1
+			forecolor	1,1,1,1
+			text	"#str_200704"
+			textscale	0.22
+			font	"fonts/marine"
+		}
+		windowDef txt_blurb1_6
+		{
+			rect	37,14,108,16
+			visible	1
+			forecolor	1,1,1,1
+			text	"04556.0013.89"
+			textscale	0.22
+			font	"fonts/marine"
+		}
+	}
+	windowDef d_squad3
+	{
+		rect	427,137,153,46
+		visible	0
+	}
+	windowDef d2_squad3
+	{
+		rect	421,183,153,46
+		visible	0
+	}
+	windowDef d3_squad3
+	{
+		rect	466,174,153,46
+		visible	0
+	}
+	windowDef d_squad2
+	{
+		rect	390,253,153,46
+		visible	0
+	}
+	windowDef d2_squad2
+	{
+		rect	341,274,153,46
+		visible	0
+	}
+	windowDef d3_squad2
+	{
+		rect	354,250,153,46
+		visible	0
+	}
+	windowDef d_squad1
+	{
+		rect	372,359,153,46
+		visible	0
+	}
+	windowDef d2_squad1
+	{
+		rect	368,322,153,46
+		visible	0
+	}
+	windowDef d3_squad1
+	{
+		rect	419,338,153,46
+		visible	0
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef static2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/img_static3"
+			matcolor	0.894,0.917,0.815,0.1
+		}
+		windowDef static3
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/img_static4"
+			matcolor	0.894,0.917,0.815,0.1
+			matscalex	-1
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_glow1"
+			matcolor	0.576,0.776,0.776,1
+		}
+	}
+}

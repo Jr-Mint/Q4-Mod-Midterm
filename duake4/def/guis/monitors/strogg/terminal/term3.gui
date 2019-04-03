@@ -1,0 +1,203 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0.125,0.141,0.149,1
+	visible	1
+	windowDef bg
+	{
+		rect	-1,240,640,240
+		visible	1
+		background	"gfx/guis/monitors/strogg/terminal/term3_bg"
+		matcolor	0.749,0.384,0.0509,1
+	}
+	windowDef btns
+	{
+		rect	-4,236,638,240
+		visible	1
+		background	"gfx/guis/monitors/strogg/terminal/term3_btns"
+		matcolor	0.972,0.596,0.0862,1
+	}
+	windowDef icon
+	{
+		rect	342,13,301,211
+		visible	1
+		background	"gfx/guis/common/strogg/term_symb"
+		matcolor	0.376,0.501,0.568,1
+	}
+	windowDef title1
+	{
+		rect	359,220,269,41
+		visible	1
+		forecolor	0.890,0.615,0.101,1
+		text	"#str_200850"
+		textscale	0.72
+		font	"fonts/r_strogg"
+	}
+	windowDef title2
+	{
+		rect	364,258,263,26
+		visible	1
+		forecolor	0.752,0.752,0.752,1
+		text	"#str_200845"
+		textscale	0.4
+		font	"fonts/r_strogg"
+	}
+	windowDef t1
+	{
+		rect	216,386,96,63
+		visible	1
+		forecolor	1,1,0.501,0.6
+		text	"#str_200851"
+		textscale	0.5
+		font	"fonts/r_strogg"
+	}
+	windowDef t2
+	{
+		rect	371,311,118,25
+		visible	1
+		forecolor	1,1,0.501,0.6
+		text	"#str_200465"
+		textscale	0.4
+		font	"fonts/r_strogg"
+	}
+	windowDef t3
+	{
+		rect	530,311,58,25
+		visible	1
+		forecolor	1,1,0.501,0.6
+		text	"#str_200852"
+		textscale	0.4
+		font	"fonts/r_strogg"
+	}
+	windowDef t4
+	{
+		rect	463,386,138,63
+		visible	1
+		forecolor	1,1,0.501,0.6
+		text	"#str_200853"
+		textscale	0.5
+		font	"fonts/r_strogg"
+	}
+	windowDef t5
+	{
+		rect	205,279,122,47
+		visible	1
+		forecolor	1,1,0.501,0.6
+		text	"#str_200854"
+		textscale	0.38
+		font	"fonts/r_strogg"
+	}
+	windowDef t6
+	{
+		rect	31,286,80,37
+		visible	1
+		forecolor	1,1,0.501,0.6
+		text	"#str_200855"
+		textscale	0.66
+		font	"fonts/r_strogg"
+	}
+	windowDef t7
+	{
+		rect	24,382,100,30
+		visible	1
+		forecolor	1,1,0.501,0.6
+		text	"#str_200856"
+		textscale	0.48
+		font	"fonts/r_strogg"
+	}
+	windowDef slashes
+	{
+		rect	20,9,30,37
+		visible	1
+		forecolor	0.376,0.501,0.568,1
+		text	"//"
+		textscale	0.7
+	}
+	windowDef entercmd
+	{
+		rect	46,16,245,25
+		visible	1
+		forecolor	0.376,0.501,0.568,1
+		text	"#str_200857"
+		textscale	0.45
+		font	"fonts/r_strogg"
+		fontsize	38
+	}
+	windowDef prompt
+	{
+		rect	297,16,14,23
+		visible	1
+		backcolor	0.376,0.501,0.568,1
+
+		onTime 0 {
+			set "visible" "0" ;
+		}
+
+		onTime 600 {
+			set "visible" "1" ;
+		}
+
+		onTime 1200 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef scrolltext1
+	{
+		rect	15,48,129,186
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext2fast"
+		matcolor	0.752,0.752,0.752,0.26
+	}
+	windowDef scrolltext2
+	{
+		rect	188,48,129,186
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext1"
+		matcolor	0.752,0.752,0.752,0.26
+		matscalex	-1
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_line7"
+			matcolor	1,0.988,0.725,0.04
+		}
+		windowDef scratches
+		{
+			rect	-103,-56,813,559
+			visible	1
+			background	"gfx/guis/common/screen_scratches2"
+			matcolor	0.878,0.945,0.933,0.52
+			matscalex	-1
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,-70,640,824
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.501,0.501,0.501,1
+			matscaley	-1
+		}
+		windowDef topreflect2
+		{
+			visible	1
+			rect	0,-358,640,1376
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.501,0.501,0.501,1
+			matscaley	-1
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+}

@@ -1,0 +1,354 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	visible	1
+	definevec4	"circle_on"	0.992,0.670,0.00784,.5
+	definevec4	"circle_off"	0.992,0.670,0.00784,0
+	windowDef bg1
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med5_1"
+		matcolor	1,1,1,0
+	}
+	windowDef bg2
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med5_2"
+		matcolor	1,1,1,0
+	}
+	windowDef bg3
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med5_3"
+		matcolor	1,1,1,0
+	}
+	windowDef bg4
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med5_4"
+		matcolor	1,1,1,1
+	}
+	windowDef bar
+	{
+		rect	37,79,45,385
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med5_bar"
+		matcolor	1,1,1,.6
+	}
+	windowDef gradient
+	{
+		rect	-240,-72,232,647
+		visible	1
+		background	"gfx/guis/common/gradient2"
+		matcolor	1,1,1,.6
+	}
+	windowDef gradient2
+	{
+		rect	-239,-71,232,647
+		visible	1
+		background	"gfx/guis/common/gradient2"
+		matcolor	1,1,1,.6
+	}
+	windowDef d_gradient
+	{
+		rect	646,-72,232,646
+		visible	0
+		background	"gfx/guis/common/gradient2"
+		matcolor	1,1,1,1
+	}
+	windowDef gradient1
+	{
+		rect	252,182,430,303
+		visible	1
+		background	"gfx/guis/common/gradient2"
+		matcolor	0,0,0,1
+	}
+	windowDef edge
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med5_edge"
+		matcolor	0.682,0.729,0.545,1*guitable_8_10[time*0.0014]
+	}
+	windowDef cm
+	{
+		rect	210,-12,150,150
+		visible	1
+		background	"gfx/guis/common/strogg/circlemarker2"
+		matcolor	1,0.5,0,0
+		rotate	.1 * time
+	}
+	windowDef d_cm
+	{
+		rect	236,275,200,200
+		visible	0
+		background	"gfx/guis/common/strogg/circlemarker2"
+		matcolor	0.992,0.670,0.00784,1
+	}
+	windowDef d_cm1
+	{
+		rect	169,19,150,150
+		visible	0
+		background	"gfx/guis/common/strogg/circlemarker2"
+		matcolor	1,0.501,0,1
+	}
+	windowDef d_cm2
+	{
+		rect	173,209,200,200
+		visible	0
+		background	"gfx/guis/common/strogg/circlemarker2"
+		matcolor	1,0.501,0,1
+	}
+	windowDef d_cm3
+	{
+		rect	326,141,250,250
+		visible	0
+		background	"gfx/guis/common/strogg/circlemarker2"
+		matcolor	1,0.501,0,1
+	}
+	windowDef d_cm4
+	{
+		rect	175,90,150,150
+		visible	0
+		background	"gfx/guis/common/strogg/circlemarker2"
+		matcolor	1,0.501,0,1
+	}
+	windowDef d_cm5
+	{
+		rect	124,203,250,250
+		visible	0
+		background	"gfx/guis/common/strogg/circlemarker2"
+		matcolor	1,0.501,0,1
+	}
+	windowDef d_cm6
+	{
+		rect	308,281,200,200
+		visible	0
+		background	"gfx/guis/common/strogg/circlemarker2"
+		matcolor	1,0.501,0,1
+	}
+	windowDef title
+	{
+		rect	88,9,321,34
+		visible	1
+		forecolor	0.980,0.772,0.278,1
+		text	"chest depth info"
+		textscale	.8
+		font	"fonts/strogg"
+	}
+	windowDef decal
+	{
+		rect	510,-10,132,236
+		visible	1
+		background	"gfx/guis/common/strogg/medic_symbol"
+		matcolor	0,0,0,.4
+	}
+	windowDef scrolltext
+	{
+		rect	387,236,156,224
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext3"
+		matcolor	0.980,0.772,0.278,1
+	}
+	windowDef arrow1
+	{
+		rect	85,213,27,35
+		visible	1
+		background	"gfx/guis/common/arrow1"
+		matcolor	0.980,0.772,0.278,1
+	}
+	windowDef arrow2
+	{
+		rect	85,298,27,35
+		visible	0
+		background	"gfx/guis/common/arrow1"
+		matcolor	0.980,0.772,0.278,1
+	}
+	windowDef arrow3
+	{
+		rect	85,264,27,35
+		visible	0
+		background	"gfx/guis/common/arrow1"
+		matcolor	0.980,0.772,0.278,1
+	}
+	windowDef arrow4
+	{
+		rect	85,346,27,35
+		visible	0
+		background	"gfx/guis/common/arrow1"
+		matcolor	0.980,0.772,0.278,1
+	}
+	windowDef arrow5
+	{
+		rect	85,178,27,35
+		visible	0
+		background	"gfx/guis/common/arrow1"
+		matcolor	0.980,0.772,0.278,1
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline1
+		{
+			visible	1
+			rect	0,-249,640,888
+			background	"gfx/guis/common/monitor_line4"
+			matcolor	0.752,0.850,0.913,0.1
+		}
+		windowDef static
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/static3"
+			matcolor	0.752,0.850,0.913,.14
+		}
+		windowDef monitor_reflect
+		{
+			visible	1
+			rect	0,-26,640,507
+			background	"gfx/guis/common/monitor_reflect"
+			matcolor	1,1,1,0.2
+		}
+		windowDef blood
+		{
+			rect	67,-12,570,473
+			visible	"gui::gui_parm_blood"
+			background	"gfx/guis/common/bloodsplat1"
+			matcolor	.6,.6,.6,1
+			matscaley	-1
+			rotate	300
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef anim_swap
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 0 {
+			transition "bg4::matcolor" "1,1,1,1" "1,1,1,0" "500" ;
+			transition "bg1::matcolor" "1,1,1,0" "1,1,1,1" "500" ;
+			
+			transition "cm::matcolor" "$desktop::circle_off" "$desktop::circle_on" "500" ;
+		}
+
+		onTime 1500 {
+			transition "cm::rect" "$cm::rect" "$d_cm::rect" "500" ;
+		}
+
+		onTime 2500 {
+			transition "bg1::matcolor" "1,1,1,1" "1,1,1,0" "500" ;
+			transition "bg2::matcolor" "1,1,1,0" "1,1,1,1" "500" ;
+			
+			transition "cm::rect" "$d_cm::rect" "$d_cm1::rect" "500" ;
+		}
+
+		onTime 4000 {
+			transition "cm::rect" "$d_cm1::rect" "$d_cm2::rect" "500" ;
+		}
+
+		onTime 5000 {
+			transition "bg2::matcolor" "1,1,1,1" "1,1,1,0" "500" ;
+			transition "bg1::matcolor" "1,1,1,0" "1,1,1,1" "500" ;
+			
+			transition "cm::rect" "$d_cm2::rect" "$d_cm::rect" "500" ;
+		}
+
+		onTime 6500 {
+			transition "cm::matcolor" "$desktop::circle_on" "$desktop::circle_off" "500" ;
+		}
+
+		onTime 7500 {
+			transition "bg1::matcolor" "1,1,1,1" "1,1,1,0" "500" ;
+			transition "bg3::matcolor" "1,1,1,0" "1,1,1,1" "500" ;
+			
+			transition "gradient::rect" "$gradient::rect" "$d_gradient::rect" "2500" ;
+			
+			set "cm::rect" "$d_cm3::rect" ;
+		}
+
+		onTime 8000 {
+			transition "gradient2::rect" "$gradient2::rect" "$d_gradient::rect" "1000" ;
+		}
+
+		onTime 10000 {
+			transition "bg3::matcolor" "1,1,1,1" "1,1,1,0" "500" ;
+			transition "bg4::matcolor" "1,1,1,0" "1,1,1,1" "500" ;
+		}
+
+		onTime 10500 {
+			transition "cm::matcolor" "$desktop::circle_off" "$desktop::circle_on" "500" ;
+		}
+
+		onTime 12000 {
+			transition "cm::rect" "$d_cm3::rect" "$d_cm4::rect" "500" ;
+		}
+
+		onTime 13500 {
+			transition "cm::rect" "$d_cm4::rect" "$d_cm5::rect" "500" ;
+		}
+
+		onTime 15000 {
+			transition "cm::rect" "$d_cm5::rect" "$d_cm6::rect" "500" ;
+		}
+
+		onTime 17500 {
+			transition "cm::matcolor" "$desktop::circle_on" "$desktop::circle_off" "500" ;
+		}
+
+		onTime 18000 {
+			set "cm::rect" "210,-12,150,150" ;
+		}
+
+		onTime 18500 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef anim_arrow
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 0 {
+			transition "arrow1::rect" "$arrow1::rect" "$arrow2::rect" "1000" ;
+		}
+
+		onTime 1000 {
+			transition "arrow1::rect" "$arrow2::rect" "$arrow3::rect" "1000" ;
+		}
+
+		onTime 2000 {
+			transition "arrow1::rect" "$arrow3::rect" "$arrow4::rect" "1000" ;
+		}
+
+		onTime 3000 {
+			transition "arrow1::rect" "$arrow4::rect" "$arrow5::rect" "1000" ;
+		}
+
+		onTime 4000 {
+			transition "arrow1::rect" "$arrow5::rect" "$arrow3::rect" "1000" ;
+		}
+
+		onTime 5000 {
+			transition "arrow1::rect" "$arrow3::rect" "$arrow1::rect" "1000" ;
+		}
+
+		onTime 6000 {
+			resettime "0" ;
+		}
+
+	}
+}

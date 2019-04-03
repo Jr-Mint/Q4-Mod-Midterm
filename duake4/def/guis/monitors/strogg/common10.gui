@@ -1,0 +1,492 @@
+windowDef Desktop
+{
+	comment	"gui_parm_broken = 1 adds broken glass cracks to the gui, gui_parm_stroyent = 1 adds stroyent junk on the screen"
+	visible	1
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	definevec4	"arrow_off"	1,1,1,.2
+	definevec4	"arrow_on"	1,1,1,.6
+	definevec4	"m_off"	0.286,0.372,0.427,.8
+	definevec4	"m_on"	0.286,0.372,0.427,1
+	windowDef data
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/common/strogg/data_c"
+		matcolor	0.576,0.658,0.717,0.1
+		shear	0,-.44
+	}
+	windowDef m1
+	{
+		rect	206,217,152,233
+		visible	1
+		background	"gfx/guis/common/strogg/machine1"
+		matcolor	0.286,0.372,0.427,.8
+	}
+	windowDef m2
+	{
+		rect	315,217,152,233
+		visible	1
+		background	"gfx/guis/common/strogg/machine1"
+		matcolor	0.286,0.372,0.427,.8
+	}
+	windowDef m3
+	{
+		rect	427,217,152,233
+		visible	1
+		background	"gfx/guis/common/strogg/machine1"
+		matcolor	0.286,0.372,0.427,.8
+	}
+	windowDef bg
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/common10_bg"
+		matcolor	1,0.603,0.00784,.8*guitable_8_10[time*0.001]
+	}
+	windowDef gradient
+	{
+		visible	1
+		rect	-116,-20,894,580
+		background	"gfx/guis/common/gradient"
+		matcolor	1,0.501,0,0.0980
+		matscaley	-1
+	}
+	windowDef p_arrows
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef arrow1a
+		{
+			rect	256,195,68,56
+			visible	1
+			background	"gfx/guis/monitors/strogg/common10_arrow1"
+			matcolor	1,1,1,.2
+
+			onTime 0 {
+				transition "arrow1c::matcolor" "$Desktop::arrow_off" "$Desktop::arrow_on" "300" ;
+			}
+
+			onTime 300 {
+				transition "arrow1c::matcolor" "$Desktop::arrow_on" "$Desktop::arrow_off" "300" ;
+				transition "arrow1b::matcolor" "$Desktop::arrow_off" "$Desktop::arrow_on" "300" ;
+			}
+
+			onTime 600 {
+				transition "arrow1b::matcolor" "$Desktop::arrow_on" "$Desktop::arrow_off" "300" ;
+				transition "arrow1a::matcolor" "$Desktop::arrow_off" "$Desktop::arrow_on" "300" ;
+			}
+
+			onTime 900 {
+				transition "arrow1a::matcolor" "$Desktop::arrow_on" "$Desktop::arrow_off" "300" ;
+				transition "m1::matcolor" "$Desktop::m_on" "$Desktop::m_off" "300" ;
+			}
+
+			onTime 4000 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef arrow1b
+		{
+			rect	266,163,68,56
+			visible	1
+			background	"gfx/guis/monitors/strogg/common10_arrow2"
+			matcolor	1,1,1,.2
+		}
+		windowDef arrow1c
+		{
+			rect	281,131,68,56
+			visible	1
+			background	"gfx/guis/monitors/strogg/common10_arrow3"
+			matcolor	1,1,1,.2
+		}
+		windowDef arrow2a
+		{
+			rect	367,195,68,56
+			visible	1
+			background	"gfx/guis/monitors/strogg/common10_arrow1"
+			matcolor	1,1,1,.2
+
+			onTime 500 {
+				transition "arrow2c::matcolor" "$Desktop::arrow_off" "$Desktop::arrow_on" "300" ;
+			}
+
+			onTime 800 {
+				transition "arrow2c::matcolor" "$Desktop::arrow_on" "$Desktop::arrow_off" "300" ;
+				transition "arrow2b::matcolor" "$Desktop::arrow_off" "$Desktop::arrow_on" "300" ;
+			}
+
+			onTime 1100 {
+				transition "arrow2b::matcolor" "$Desktop::arrow_on" "$Desktop::arrow_off" "300" ;
+				transition "arrow2a::matcolor" "$Desktop::arrow_off" "$Desktop::arrow_on" "300" ;
+			}
+
+			onTime 1400 {
+				transition "arrow2a::matcolor" "$Desktop::arrow_on" "$Desktop::arrow_off" "300" ;
+				transition "m2::matcolor" "$Desktop::m_on" "$Desktop::m_off" "300" ;
+			}
+
+			onTime 3500 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef arrow2b
+		{
+			rect	377,163,68,56
+			visible	1
+			background	"gfx/guis/monitors/strogg/common10_arrow2"
+			matcolor	1,1,1,.2
+		}
+		windowDef arrow2c
+		{
+			rect	392,131,68,56
+			visible	1
+			background	"gfx/guis/monitors/strogg/common10_arrow3"
+			matcolor	1,1,1,.2
+		}
+		windowDef arrow3a
+		{
+			rect	479,195,68,56
+			visible	1
+			background	"gfx/guis/monitors/strogg/common10_arrow1"
+			matcolor	1,1,1,.2
+
+			onTime 800 {
+				transition "arrow3c::matcolor" "$Desktop::arrow_off" "$Desktop::arrow_on" "300" ;
+			}
+
+			onTime 1100 {
+				transition "arrow3c::matcolor" "$Desktop::arrow_on" "$Desktop::arrow_off" "300" ;
+				transition "arrow3b::matcolor" "$Desktop::arrow_off" "$Desktop::arrow_on" "300" ;
+			}
+
+			onTime 1400 {
+				transition "arrow3b::matcolor" "$Desktop::arrow_on" "$Desktop::arrow_off" "300" ;
+				transition "arrow3a::matcolor" "$Desktop::arrow_off" "$Desktop::arrow_on" "300" ;
+			}
+
+			onTime 1700 {
+				transition "arrow3a::matcolor" "$Desktop::arrow_on" "$Desktop::arrow_off" "300" ;
+				transition "m3::matcolor" "$Desktop::m_on" "$Desktop::m_off" "300" ;
+			}
+
+			onTime 5400 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef arrow3b
+		{
+			rect	489,163,68,56
+			visible	1
+			background	"gfx/guis/monitors/strogg/common10_arrow2"
+			matcolor	1,1,1,.2
+		}
+		windowDef arrow3c
+		{
+			rect	504,131,68,56
+			visible	1
+			background	"gfx/guis/monitors/strogg/common10_arrow3"
+			matcolor	1,1,1,.2
+		}
+	}
+	windowDef scrolltext1
+	{
+		rect	45,50,199,182
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext2"
+		matcolor	1,1,1,1
+		shear	0,-.44
+	}
+	windowDef boxbg
+	{
+		rect	283,44,270,72
+		visible	1
+		shear	0,-.44
+		backcolor	0,0,0,0.2
+	}
+	windowDef box
+	{
+		rect	271,41,293,79
+		visible	1
+		background	"gfx/guis/common/simplebox"
+		matcolor	1,0.862,0.576,.4
+		shear	0,-.44
+	}
+	windowDef p_movetext
+	{
+		rect	0,0,640,480
+		visible	1
+
+		onTime 0 {
+			transition "p_move1::rect" "$p_move1::rect" "$t_move1::rect" "400" ;
+			transition "p_move4::rect" "$p_move4::rect" "$t_move4::rect" "400" ;
+		}
+
+		onTime 500 {
+			transition "p_move2::rect" "$p_move2::rect" "$t_move2::rect" "400" ;
+			transition "p_move5::rect" "$p_move5::rect" "$t_move5::rect" "400" ;
+		}
+
+		onTime 1000 {
+			transition "p_move3::rect" "$p_move3::rect" "$t_move3::rect" "400" ;
+			transition "p_move6::rect" "$p_move6::rect" "$t_move6::rect" "400" ;
+		}
+
+		onTime 5000 {
+			transition "p_move1::rect" "$t_move1::rect" "$p_move1::rect" "400" ;
+			transition "p_move2::rect" "$t_move2::rect" "$p_move2::rect" "400" ;
+			transition "p_move3::rect" "$t_move3::rect" "$p_move3::rect" "400" ;
+			transition "p_move4::rect" "$t_move4::rect" "$p_move4::rect" "400" ;
+			transition "p_move5::rect" "$t_move5::rect" "$p_move5::rect" "400" ;
+			transition "p_move6::rect" "$t_move6::rect" "$p_move6::rect" "400" ;
+		}
+
+		onTime 8000 {
+			resettime "0" ;
+		}
+
+		windowDef p_move1
+		{
+			rect	301,50,1,16
+			visible	1
+			shear	0,-.44
+			windowDef t_move1
+			{
+				rect	0,0,113,16
+				visible	1
+				forecolor	1,0.862,0.576,1
+				text	"scanning..."
+				textscale	0.4
+				font	"fonts/strogg"
+				shear	0,-.44
+			}
+		}
+		windowDef p_move2
+		{
+			rect	294,73,1,16
+			visible	1
+			shear	0,-.44
+			windowDef t_move2
+			{
+				rect	0,0,113,16
+				visible	1
+				forecolor	1,0.862,0.576,1
+				text	"ht controls"
+				textscale	0.4
+				font	"fonts/strogg"
+				shear	0,-.44
+			}
+		}
+		windowDef p_move3
+		{
+			rect	284,96,1,16
+			visible	1
+			shear	0,-.44
+			windowDef t_move3
+			{
+				rect	0,0,113,16
+				visible	1
+				forecolor	1,0.862,0.576,1
+				text	activated
+				textscale	0.4
+				font	"fonts/strogg"
+				shear	0,-.44
+			}
+		}
+		windowDef p_move4
+		{
+			rect	430,50,1,16
+			visible	1
+			shear	0,-.44
+			windowDef t_move4
+			{
+				rect	0,0,113,16
+				visible	1
+				forecolor	1,0.862,0.576,1
+				text	"scanning..."
+				textscale	0.4
+				font	"fonts/strogg"
+				shear	0,-.44
+			}
+		}
+		windowDef p_move5
+		{
+			rect	423,73,1,16
+			visible	1
+			shear	0,-.44
+			windowDef t_move5
+			{
+				rect	0,0,113,16
+				visible	1
+				forecolor	1,0.862,0.576,1
+				text	"ht controls"
+				textscale	0.4
+				font	"fonts/strogg"
+				shear	0,-.44
+			}
+		}
+		windowDef p_move6
+		{
+			rect	413,96,1,16
+			visible	1
+			shear	0,-.44
+			windowDef t_move6
+			{
+				rect	0,0,113,16
+				visible	1
+				forecolor	1,0.862,0.576,1
+				text	activated
+				textscale	0.4
+				font	"fonts/strogg"
+				shear	0,-.44
+			}
+		}
+	}
+	windowDef t_btm
+	{
+		rect	20,421,143,29
+		visible	1
+		forecolor	1,0.862,0.576,1
+		text	"SYSTEM 47"
+		textscale	.64
+		font	"fonts/strogg"
+	}
+	windowDef decal
+	{
+		rect	15,218,150,150
+		visible	1
+		background	"gfx/guis/common/strogg/decal"
+		matcolor	0,0,0,0.4
+	}
+	windowDef decal_2
+	{
+		rect	535,377,105,29
+		visible	1
+		background	"gfx/guis/common/strogg/decal2"
+		matcolor	0,0,0,0.4
+		rotate	67
+	}
+	windowDef p_btns
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef btn1
+		{
+			rect	186,427,92,39
+			visible	1
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	1,0.862,0.576,.7
+			shear	0,-.44
+		}
+		windowDef btn2
+		{
+			rect	276,427,92,39
+			visible	1
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	1,0.862,0.576,1
+			shear	0,-.44
+		}
+		windowDef btn3
+		{
+			rect	365,427,92,39
+			visible	1
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	1,0.862,0.576,.7
+			shear	0,-.44
+		}
+		windowDef btn4
+		{
+			rect	454,427,92,39
+			visible	1
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	1,0.862,0.576,.7
+			shear	0,-.44
+		}
+		windowDef t_btn1
+		{
+			rect	200,439,62,19
+			visible	1
+			forecolor	0,0,0,0.698
+			text	"access"
+			textscale	0.4
+			font	"fonts/strogg"
+		}
+		windowDef t_btn2
+		{
+			rect	289,439,65,19
+			visible	1
+			forecolor	0,0,0,1
+			text	"sys.chk"
+			textscale	0.4
+			font	"fonts/strogg"
+		}
+		windowDef t_btn3
+		{
+			rect	380,439,62,19
+			visible	1
+			forecolor	0,0,0,0.698
+			text	"jdam 6"
+			textscale	0.4
+			font	"fonts/strogg"
+		}
+		windowDef t_btn4
+		{
+			rect	472,439,53,19
+			visible	1
+			forecolor	0,0,0,0.698
+			text	"login"
+			textscale	0.4
+			font	"fonts/strogg"
+		}
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	1,-204,640,906
+			background	"gfx/guis/common/monitor_line7"
+			matcolor	0.580,0.650,0.705,0.04
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	-132,-97,892,528
+			background	"gfx/guis/common/monitor_reflect"
+			matcolor	0.674,0.8,0.635,.15
+		}
+		windowDef dirt_stroyent
+		{
+			rect	0,0,640,480
+			visible	"gui::gui_parm_stroyent"
+			background	"gfx/guis/common/screen_dirt7"
+			matcolor	0.411,0.447,0.164,1
+		}
+		windowDef broken_glass_b
+		{
+			visible	"gui::gui_parm_broken"
+			rect	2,5,640,480
+			background	"gfx/guis/common/broken_glass5"
+			matcolor	0,0,0,1
+		}
+		windowDef broken_glass
+		{
+			visible	"gui::gui_parm_broken"
+			rect	0,0,640,480
+			background	"gfx/guis/common/broken_glass5"
+			matcolor	0.815,0.901,0.917,1
+		}
+		windowDef monitor_darkedge
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+}

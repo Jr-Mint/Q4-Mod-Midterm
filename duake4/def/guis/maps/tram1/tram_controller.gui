@@ -1,0 +1,203 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	visible	1
+	windowDef bg1
+	{
+		rect	0,-115,249,569
+		visible	1
+		background	"gfx/guis/maps/process1/countdown_bg"
+		matcolor	1,0.501,0,0.8
+		matscalex	-1
+	}
+	windowDef bg2
+	{
+		rect	391,-116,249,569
+		visible	1
+		background	"gfx/guis/maps/process1/countdown_bg"
+		matcolor	1,0.501,0,0.8
+	}
+	windowDef d_bg2
+	{
+		rect	390,19,250,570
+		visible	0
+		background	"gfx/guis/maps/process1/countdown_bg"
+		matcolor	0,1,0.486,0.8
+	}
+	windowDef d_bg1
+	{
+		rect	0,19,250,570
+		visible	0
+		background	"gfx/guis/maps/process1/countdown_bg"
+		matcolor	0,1,0.490,0.8
+		matscalex	-1
+	}
+	windowDef top
+	{
+		rect	0,0,640,75
+		visible	1
+		background	"gfx/guis/maps/tram1/control_top"
+		matcolor	0.509,0.392,0.0352,1
+	}
+	windowDef L_side
+	{
+		rect	0,59,111,293
+		visible	1
+		background	"gfx/guis/maps/tram1/control_side"
+		matcolor	0.627,0.392,0.0705,0.8
+	}
+	windowDef R_side
+	{
+		rect	529,59,111,293
+		visible	1
+		background	"gfx/guis/maps/tram1/control_side"
+		matcolor	0.627,0.392,0.0705,0.8
+		matscalex	-1
+	}
+	windowDef bottom
+	{
+		rect	0,359,640,123
+		visible	1
+		background	"gfx/guis/maps/tram1/control_bottom"
+		matcolor	0.509,0.392,0.0352,1
+	}
+	windowDef button1
+	{
+		rect	159,40,321,140
+		visible	1
+		background	"gfx/guis/maps/tram1/control_button1"
+		matcolor	0.905,0.788,0.137,0.847
+	}
+	windowDef button2
+	{
+		rect	-1,187,641,243
+		visible	1
+		background	"gfx/guis/maps/tram1/control_button2"
+		matcolor	0.905,0.788,0.137,0.847
+	}
+	windowDef triangle1
+	{
+		rect	241,86,162,51
+		visible	1
+		background	"gfx/guis/maps/tram1/control_triangle"
+		matcolor	0.980,0.921,0.521,0.898
+	}
+	windowDef triangle2
+	{
+		rect	223,244,201,92
+		visible	1
+		background	"gfx/guis/maps/tram1/control_triangle"
+		matcolor	0.980,0.921,0.521,0.898
+		matscaley	-1
+	}
+	windowDef t_proc1
+	{
+		rect	251,403,102,29
+		visible	1
+		forecolor	1,0.501,0,0.847
+		text	"84278.324"
+		textscale	0.35
+		font	"fonts/strogg"
+		textalign	2
+
+		onTime 0 {
+			set "text" "84278.324" ;
+		}
+
+		onTime +700 {
+			set "text" "43536.832" ;
+		}
+
+		onTime +700 {
+			set "text" "76245.003" ;
+		}
+
+		onTime +700 {
+			set "text" "57452.659" ;
+		}
+
+		onTime +700 {
+			set "text" "35945.202" ;
+		}
+
+		onTime +700 {
+			set "text" "94320.953" ;
+		}
+
+		onTime +700 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef scrolltext1
+	{
+		rect	483,92,74,117
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext1fast"
+		matcolor	1,1,1,0.75
+		shear	0,0.3
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	0,-251,640,953
+			background	"gfx/guis/common/monitor_line8"
+			matcolor	0.101,0.0901,0.0745,0.0980
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,-151,640,801
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.752,0.752,0.752,1
+		}
+		windowDef addlines
+		{
+			visible	1
+			rect	0,-64,640,654
+			background	"gfx/guis/common/add_lines1"
+			matcolor	0.341,0.341,0.341,1
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+		windowDef dirt
+		{
+			visible	1
+			rect	0,-86,662,561
+			background	"gfx/guis/common/screen_dirt6"
+			matcolor	0,0,0,0.8
+		}
+		windowDef scratches
+		{
+			rect	0,0,640,574
+			visible	1
+			background	"gfx/guis/common/screen_scratches3"
+			matcolor	0.886,0.929,0.952,0.6
+		}
+	}
+	windowDef anim
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 0 {
+			transition "bg1::rect" "$bg1::rect" "$d_bg1::rect" "1100" ;
+			transition "bg2::rect" "$bg2::rect" "$d_bg2::rect" "1100" ;
+		}
+
+		onTime 1100 {	
+			resettime 0 ;
+		}
+
+	}
+}

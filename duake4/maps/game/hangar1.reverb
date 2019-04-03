@@ -1,0 +1,32 @@
+reverb
+{
+	{ 0 Hangar }
+	{ 1 Hangar }
+	{ 2 Hangar }
+	{ 3 Hangar }
+	{ 4 Generic }
+	{ 5 Hallway }
+	{ 6 Hallway }
+	{ 7 Hangar }
+	{ 8 Hangar }
+	{ 9 Hangar }
+	{ 10 Hallway }
+	{ 11 Hangar }
+	{ 12 Hallway }
+	{ 13 Hallway }
+	{ 14 Stoneroom }
+	{ 15 Bathroom }
+	{ 16 Hangar }
+	{ 17 Stoneroom }
+	{ 18 Mountains }
+	{ 19 Hallway }
+	{ 20 Bathroom }
+	{ 21 Hallway }
+	{ 22 Hallway }
+	{ 23 Hallway }
+	{ 24 Hallway }
+	{ 25 Hallway }
+	{ 26 Hallway }
+	{ 27 Stonecorridor }
+	{ 28 Bathroom }
+}

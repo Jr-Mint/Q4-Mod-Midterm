@@ -1,0 +1,387 @@
+windowDef Desktop
+{
+	comment	"gui_parm_broken = 1 adds broken glass cracks to the gui, gui_parm_stroyent = 1 adds stroyent junk on the screen"
+	visible	1
+	rect	0,0,640,480
+	backcolor	0.0117,0.0666,0.0941,1
+	windowDef decal
+	{
+		rect	0,-86,640,640
+		visible	1
+		background	"gfx/guis/common/strogg/decal"
+		matcolor	0.454,0.760,0.796,.6
+	}
+	windowDef map
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/common/strogg/map2_bg"
+		matcolor	1,1,1,1*guitable_8_10[time*0.000432]
+	}
+	windowDef grid
+	{
+		rect	1,-154,640,616
+		visible	1
+		background	"gfx/guis/common/grid1"
+		matcolor	0.611,0.737,0.803,0.3*guitable_8_10[time*0.002]
+		shear	0, -.4
+	}
+	windowDef data
+	{
+		rect	8,-13,640,480
+		visible	1
+		background	"gfx/guis/common/strogg/data"
+		matcolor	0.862,0.996,0.337,0.1
+		shear	0, -.4
+		matscalex	-1
+	}
+	windowDef p_btns
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef t_bg2
+		{
+			rect	265,380,346,187
+			visible	1
+			background	"gfx/guis/common/simplebox"
+			matcolor	1,1,1,0.4
+			shear	0, -.4
+		}
+		windowDef t_bg
+		{
+			rect	275,388,336,179
+			visible	1
+			shear	0, -.4
+			backcolor	1,1,1,0.1
+		}
+		windowDef btn_bg
+		{
+			rect	317,-114,319,178
+			visible	1
+			shear	0, -.4
+			backcolor	1,1,1,0.1
+		}
+		windowDef btn_bg2
+		{
+			rect	302,-116,346,187
+			visible	1
+			background	"gfx/guis/common/simplebox"
+			matcolor	1,1,1,0.4
+			shear	0, -.4
+		}
+		windowDef btn1
+		{
+			rect	308,26,101,31
+			visible	1
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	0.0509,0.623,0.968,0.8
+			shear	0, -.4
+		}
+		windowDef btn2
+		{
+			rect	405,26,101,31
+			visible	1
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	0.0509,0.623,0.968,0.8
+			shear	0, -.4
+		}
+		windowDef btn3
+		{
+			rect	501,26,101,31
+			visible	1
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	0.0509,0.623,0.968,0.8
+			shear	0, -.4
+		}
+		windowDef t_btn1
+		{
+			rect	327,33,66,14
+			visible	1
+			forecolor	1,1,1,0.8
+			text	vector
+			textscale	0.4
+			font	"fonts/strogg"
+		}
+		windowDef t_btn2
+		{
+			rect	431,33,54,14
+			visible	1
+			forecolor	1,1,1,0.8
+			text	setup
+			textscale	0.4
+			font	"fonts/strogg"
+		}
+		windowDef t_btn3
+		{
+			rect	517,33,71,14
+			visible	1
+			forecolor	1,1,1,0.8
+			text	display
+			textscale	0.4
+			font	"fonts/strogg"
+		}
+	}
+	windowDef bg
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/common8_bg"
+		matcolor	0.235,0.403,0.690,1
+	}
+	windowDef decal1
+	{
+		rect	542,372,80,80
+		visible	1
+		background	"gfx/guis/common/strogg/decal1"
+		matcolor	0,0,0,0.28
+	}
+	windowDef t_top
+	{
+		rect	19,11,251,31
+		visible	1
+		forecolor	1,1,1,1
+		text	"xy coordinates"
+		textscale	0.72
+		font	"fonts/strogg"
+	}
+	windowDef t_btm1
+	{
+		rect	9,423,139,17
+		visible	1
+		forecolor	1,1,1,0.8
+		text	"4,384,797.97842"
+		textscale	0.4
+		font	"fonts/strogg"
+	}
+	windowDef t_btm2
+	{
+		rect	314,395,211,50
+		visible	1
+		forecolor	1,1,1,0.8
+		text	1563.734
+		textscale	1.2
+		font	"fonts/strogg"
+	}
+	windowDef circlemarker1
+	{
+		rect	197,168,75,75
+		visible	1
+		background	"gfx/guis/common/strogg/circlemarker"
+		matcolor	1,1,1,1
+		rotate	time*-0.04
+	}
+	windowDef circlemarker2
+	{
+		rect	160,130,150,150
+		visible	1
+		background	"gfx/guis/common/strogg/circlemarker"
+		matcolor	0.501,0.501,0.501,1
+		rotate	time*0.04
+	}
+	windowDef t_right
+	{
+		rect	404,84,154,145
+		visible	1
+		background	"gfx/guis/common/strogg/nonscrolltext2"
+		matcolor	0.454,0.760,0.796,1
+		shear	0, -.4
+	}
+	windowDef box1
+	{
+		rect	82,307,86,83
+		visible	1
+		background	"gfx/guis/common/simplebox"
+		matcolor	1,1,1,1
+		shear	0, -.4
+		windowDef box_b
+		{
+			rect	4,3,78,76
+			visible	1
+			backcolor	0,1,1,0.133
+			shear	0, -.4
+		}
+		windowDef searching
+		{
+			rect	4,68,74,11
+			visible	1
+			forecolor	1,0.980,0.654,1
+			text	"SEARCHING..."
+			textscale	0.24
+			font	"fonts/strogg"
+
+			onTime 0 {
+				set "text" "SE" ;
+			}
+
+			onTime 200 {
+				set "text" "SEA" ;
+			}
+
+			onTime 400 {
+				set "text" "SEAR" ;
+			}
+
+			onTime 600 {
+				set "text" "SEARC" ;
+			}
+
+			onTime 800 {
+				set "text" "SEARCH" ;
+			}
+
+			onTime 1000 {
+				set "text" "SEARCHI" ;
+			}
+
+			onTime 1200 {
+				set "text" "SEARCHIN" ;
+			}
+
+			onTime 1400 {
+				set "text" "SEARCHING" ;
+			}
+
+			onTime 1600 {
+				set "text" "SEARCHING." ;
+			}
+
+			onTime 1800 {
+				set "text" "SEARCHING.." ;
+			}
+
+			onTime 2000 {
+				set "text" "SEARCHING..." ;
+			}
+
+			onTime 2200 {
+				set "text" "S" ;
+			}
+
+			onTime 2400 {
+				resettime "0" ;
+			}
+
+		}
+	}
+	windowDef box2
+	{
+		rect	192,230,86,83
+		visible	0
+		background	"gfx/guis/common/simplebox"
+		matcolor	1,1,1,1
+		shear	0, -.4
+	}
+	windowDef box3
+	{
+		rect	323,307,86,83
+		visible	0
+		background	"gfx/guis/common/simplebox"
+		matcolor	1,1,1,1
+		shear	0, -.4
+	}
+	windowDef box4
+	{
+		rect	335,74,86,83
+		visible	0
+		background	"gfx/guis/common/simplebox"
+		matcolor	1,1,1,1
+		shear	0, -.4
+	}
+	windowDef box5
+	{
+		rect	434,231,86,83
+		visible	0
+		background	"gfx/guis/common/simplebox"
+		matcolor	1,1,1,1
+		shear	0, -.4
+	}
+	windowDef box6
+	{
+		rect	95,75,86,83
+		visible	0
+		background	"gfx/guis/common/simplebox"
+		matcolor	1,1,1,1
+		shear	0, -.4
+	}
+	windowDef anims
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 5000 {
+			transition "box1::rect" "$box1::rect" "$box2::rect" "1000" "200" "200" ;
+			set "cmd" "play guisound_beep2" ;
+		}
+
+		onTime 10000 {
+			transition "box1::rect" "$box2::rect" "$box3::rect" "1000" "200" "200"  ;
+		}
+
+		onTime 15000 {
+			transition "box1::rect" "$box3::rect" "$box4::rect" "1000" "200" "200"  ;
+		}
+
+		onTime 20000 {
+			transition "box1::rect" "$box4::rect" "$box5::rect" "1000" "200" "200"  ;
+		}
+
+		onTime 25000 {
+			transition "box1::rect" "$box5::rect" "$box6::rect" "1000" "200" "200"  ;
+		}
+
+		onTime 30000 {
+			transition "box1::rect" "$box6::rect" "$box1::rect" "1000" "200" "200"  ;
+			resettime "0" ;
+		}
+
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	2,-203,640,906
+			background	"gfx/guis/common/monitor_line4"
+			matcolor	0.580,0.650,0.705,0.1
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	-167,-77,1026,575
+			background	"gfx/guis/common/gradient"
+			matcolor	0.454,0.760,0.796,0.2
+		}
+		windowDef dirt_stroyent
+		{
+			rect	0,0,640,480
+			visible	"gui::gui_parm_stroyent"
+			background	"gfx/guis/common/screen_dirt6"
+			matcolor	0.286,0.325,0.0823,.8
+		}
+		windowDef broken_glass_b
+		{
+			visible	"gui::gui_parm_broken"
+			rect	3,3,640,480
+			background	"gfx/guis/common/broken_glass4"
+			matcolor	0,0,0,1
+			rotate	180
+		}
+		windowDef broken_glass
+		{
+			visible	"gui::gui_parm_broken"
+			rect	0,0,640,480
+			background	"gfx/guis/common/broken_glass4"
+			matcolor	0.819,0.905,0.921,1
+			rotate	180
+		}
+		windowDef monitor_darkedge
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+}

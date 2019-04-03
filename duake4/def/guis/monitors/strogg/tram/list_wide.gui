@@ -1,0 +1,151 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	visible	1
+	definevec4	"logo_on"	0.266,1,0.686,1
+	definevec4	"logo_off"	0.266,1,0.686,0
+	windowDef bg
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/listscroll_bg"
+		matcolor	1,1,1,1
+	}
+	windowDef scroll_img
+	{
+		rect	-451,0,1540,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/marquee_scroll1"
+		matcolor	0,0.368,0.368,1
+	}
+	windowDef scroll_img2
+	{
+		rect	-450,0,1540,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/marquee_scroll2"
+		matcolor	0,0.368,0.368,1
+	}
+	windowDef scroll1
+	{
+		rect	-13,67,154,351
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/listscroll_1"
+		matcolor	1,1,1,1
+	}
+	windowDef scroll2
+	{
+		rect	116,67,154,351
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/listscroll_2"
+		matcolor	1,1,1,1
+	}
+	windowDef scroll3
+	{
+		rect	372,67,154,351
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/listscroll_3"
+		matcolor	1,1,1,1
+	}
+	windowDef scroll4
+	{
+		rect	501,67,154,351
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/listscroll_4"
+		matcolor	1,1,1,1
+	}
+	windowDef logo1
+	{
+		rect	271,32,99,414
+		visible	1
+		background	"gfx/guis/common/strogg/logo_rotate1"
+		matcolor	0.266,1,0.686,1
+	}
+	windowDef logo2
+	{
+		rect	271,32,99,414
+		visible	1
+		background	"gfx/guis/common/strogg/logo_rotate2"
+		matcolor	0.894,0.811,0.470,0
+	}
+	windowDef logo3
+	{
+		rect	271,32,99,414
+		visible	1
+		background	"gfx/guis/common/strogg/logo_rotate3"
+		matcolor	0.894,0.811,0.470,0
+	}
+	windowDef logo4
+	{
+		rect	271,32,99,414
+		visible	1
+		background	"gfx/guis/common/strogg/logo_rotate4"
+		matcolor	0.894,0.811,0.470,0
+	}
+	windowDef anim_logo
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 0 {
+			transition "logo1::matcolor" "$desktop::logo_on" "$desktop::logo_off" "100" ;	
+			transition "logo2::matcolor" "$desktop::logo_off" "$desktop::logo_on" "100" ;	
+		}
+
+		onTime 200 {
+			transition "logo2::matcolor" "$desktop::logo_on" "$desktop::logo_off" "100" ;	
+			transition "logo3::matcolor" "$desktop::logo_off" "$desktop::logo_on" "100" ;	
+		}
+
+		onTime 400 {
+			transition "logo3::matcolor" "$desktop::logo_on" "$desktop::logo_off" "100" ;	
+			transition "logo4::matcolor" "$desktop::logo_off" "$desktop::logo_on" "100" ;	
+		}
+
+		onTime 600 {
+			transition "logo4::matcolor" "$desktop::logo_on" "$desktop::logo_off" "100" ;	
+			transition "logo3::matcolor" "$desktop::logo_off" "$desktop::logo_on" "100" ;	
+		}
+
+		onTime 800 {
+			transition "logo3::matcolor" "$desktop::logo_on" "$desktop::logo_off" "100" ;	
+			transition "logo2::matcolor" "$desktop::logo_off" "$desktop::logo_on" "100" ;	
+		}
+
+		onTime 1000 {
+			transition "logo2::matcolor" "$desktop::logo_on" "$desktop::logo_off" "100" ;	
+			transition "logo1::matcolor" "$desktop::logo_off" "$desktop::logo_on" "100" ;	
+		}
+
+		onTime 2500 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef static
+		{
+			visible	1
+			rect	0,-290,640,1068
+			background	"gfx/guis/common/monitor_line8"
+			matcolor	0,0.423,0.423,1
+		}
+		windowDef dirt
+		{
+			visible	1
+			rect	-102,-126,854,1348
+			background	"gfx/guis/common/screen_dirt5"
+			matcolor	0.596,0.533,0.447,1
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+}

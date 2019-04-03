@@ -1,0 +1,621 @@
+windowDef Desktop
+{
+	comment	"set gui_parm1 to the name of the script to raise the bridge, and set gui_parm2 to the name of the script to lower the bridge. use gui_parm_once == 1 to have the bridge only useable for one click."
+	visible	1
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	definevec4	"on"	1,1,1,1
+	definevec4	"off"	0.184,0.8,0.8,1
+	float	"bridgeup"	0
+	float	"once"	0
+
+	onInit {
+		if ( "gui::gui_parm_once" == 1 ) {
+			set "button::visible" "0" ;
+			set "button_once::visible" "1" ;
+		} else {
+			set "button::visible" "1" ;
+			set "button_once::visible" "0" ;
+		}
+	}
+
+	windowDef u_arrows
+	{
+		rect	237,-227,160,480
+		visible	1
+		background	"gfx/guis/common/strogg/dn_arrow_scroll"
+		matcolor	0.694,0.709,0.525,.4
+	}
+	windowDef d_arrows
+	{
+		rect	237,253,160,480
+		visible	1
+		background	"gfx/guis/common/strogg/dn_arrow_scroll"
+		matcolor	0.694,0.709,0.525,.4
+		matscaley	-1
+	}
+	windowDef over_arrows
+	{
+		rect	235,426,162,62
+		visible	1
+		backcolor	0,0,0,1
+	}
+	windowDef bg_l
+	{
+		rect	0,0,320,480
+		visible	1
+		background	"gfx/guis/maps/terminal/netbridge_bg"
+		matcolor	0.172,0.419,0.694,1
+	}
+	windowDef bg_r
+	{
+		rect	320,0,320,480
+		visible	1
+		background	"gfx/guis/maps/terminal/netbridge_bg"
+		matcolor	0.172,0.419,0.694,1
+		matscalex	-1
+	}
+	windowDef warn_l
+	{
+		rect	90,-2,104,104
+		visible	1
+		background	"gfx/guis/maps/terminal/netbridge_warn"
+		matcolor	0,0,0,1
+	}
+	windowDef warn_r
+	{
+		rect	446,-2,104,104
+		visible	1
+		background	"gfx/guis/maps/terminal/netbridge_warn"
+		matcolor	0,0,0,1
+		matscalex	-1
+	}
+	windowDef circle_l
+	{
+		rect	51,392,70,70
+		visible	1
+		background	"gfx/guis/common/circle5"
+		matcolor	1,0.533,0.0156,1
+		rotate	-.15*time
+	}
+	windowDef circle_r
+	{
+		rect	520,393,70,69
+		visible	1
+		background	"gfx/guis/common/circle5"
+		matcolor	1,0.533,0.0156,1
+		rotate	.15*time
+		matscalex	-1
+	}
+	windowDef t_title
+	{
+		rect	162,434,319,33
+		visible	1
+		forecolor	1,1,1,.4
+		text	"#str_200476"
+		textscale	.55
+		font	"fonts/r_strogg"
+	}
+	windowDef t_activate
+	{
+		rect	204,2,228,46
+		visible	1
+		forecolor	1,1,1,1*guitable_10_5[time*0.001]
+		text	"#str_200477"
+		textscale	0.8
+		font	"fonts/r_strogg"
+		textalign	1
+	}
+	windowDef t_bridge
+	{
+		rect	204,36,227,53
+		visible	1
+		forecolor	1,1,1,1*guitable_10_5[time*0.001]
+		text	"#str_200478"
+		textscale	1.04
+		font	"fonts/r_strogg"
+		textalign	1
+	}
+	windowDef d_parts
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef d_part_l3a
+		{
+			rect	100,113,86,84
+			visible	0
+			background	"gfx/guis/maps/terminal/netbridge_part3"
+			matcolor	0.945,0.588,0.0470,1
+		}
+		windowDef d_part_l2a
+		{
+			rect	152,105,104,100
+			visible	0
+			background	"gfx/guis/maps/terminal/netbridge_part2"
+			matcolor	0.945,0.588,0.0470,1
+		}
+		windowDef d_part_l1a
+		{
+			rect	223,105,110,100
+			visible	0
+			background	"gfx/guis/maps/terminal/netbridge_part1"
+			matcolor	0.945,0.588,0.0470,1
+		}
+		windowDef d_part_r3a
+		{
+			rect	455,113,86,84
+			visible	0
+			background	"gfx/guis/maps/terminal/netbridge_part3"
+			matcolor	0.945,0.588,0.0470,1
+			matscalex	-1
+		}
+		windowDef d_part_r2a
+		{
+			rect	383,105,104,100
+			visible	0
+			background	"gfx/guis/maps/terminal/netbridge_part2"
+			matcolor	0.945,0.588,0.0470,1
+			matscalex	-1
+		}
+		windowDef d_part_r1a
+		{
+			rect	305,105,110,100
+			visible	0
+			background	"gfx/guis/maps/terminal/netbridge_part1"
+			matcolor	0.945,0.588,0.0470,1
+			matscalex	-1
+		}
+		windowDef d_part_l3b
+		{
+			rect	100,211,86,84
+			visible	0
+			background	"gfx/guis/maps/terminal/netbridge_part3"
+			matcolor	0.945,0.588,0.0470,1
+		}
+		windowDef d_part_l2b
+		{
+			rect	152,203,104,100
+			visible	0
+			background	"gfx/guis/maps/terminal/netbridge_part2"
+			matcolor	0.945,0.588,0.0470,1
+		}
+		windowDef d_part_l1b
+		{
+			rect	223,203,110,100
+			visible	0
+			background	"gfx/guis/maps/terminal/netbridge_part1"
+			matcolor	0.945,0.588,0.0470,1
+		}
+		windowDef d_part_r3b
+		{
+			rect	455,211,86,84
+			visible	0
+			background	"gfx/guis/maps/terminal/netbridge_part3"
+			matcolor	0.945,0.588,0.0470,1
+			matscalex	-1
+		}
+		windowDef d_part_r2b
+		{
+			rect	383,203,104,100
+			visible	0
+			background	"gfx/guis/maps/terminal/netbridge_part2"
+			matcolor	0.945,0.588,0.0470,1
+			matscalex	-1
+		}
+		windowDef d_part_r1b
+		{
+			rect	305,203,110,100
+			visible	0
+			background	"gfx/guis/maps/terminal/netbridge_part1"
+			matcolor	0.945,0.588,0.0470,1
+			matscalex	-1
+		}
+		windowDef d_part_l3c
+		{
+			rect	100,309,86,84
+			visible	0
+			background	"gfx/guis/maps/terminal/netbridge_part3"
+			matcolor	0.945,0.588,0.0470,1
+		}
+		windowDef d_part_l2c
+		{
+			rect	152,301,104,100
+			visible	0
+			background	"gfx/guis/maps/terminal/netbridge_part2"
+			matcolor	0.945,0.588,0.0470,1
+		}
+		windowDef d_part_l1c
+		{
+			rect	223,301,110,100
+			visible	0
+			background	"gfx/guis/maps/terminal/netbridge_part1"
+			matcolor	0.945,0.588,0.0470,1
+		}
+		windowDef d_part_r3c
+		{
+			rect	455,309,86,84
+			visible	0
+			background	"gfx/guis/maps/terminal/netbridge_part3"
+			matcolor	0.945,0.588,0.0470,1
+			matscalex	-1
+		}
+		windowDef d_part_r2c
+		{
+			rect	383,301,104,100
+			visible	0
+			background	"gfx/guis/maps/terminal/netbridge_part2"
+			matcolor	0.945,0.588,0.0470,1
+			matscalex	-1
+		}
+		windowDef d_part_r1c
+		{
+			rect	305,301,110,100
+			visible	0
+			background	"gfx/guis/maps/terminal/netbridge_part1"
+			matcolor	0.945,0.588,0.0470,1
+			matscalex	-1
+		}
+	}
+	windowDef parts
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef part_l3a
+		{
+			rect	100,113,68,84
+			visible	1
+			background	"gfx/guis/maps/terminal/netbridge_part3"
+			matcolor	0.184,0.8,0.8,1
+		}
+		windowDef part_l2a
+		{
+			rect	150,105,60,100
+			visible	1
+			background	"gfx/guis/maps/terminal/netbridge_part2"
+			matcolor	0.184,0.8,0.8,1
+		}
+		windowDef part_l1a
+		{
+			rect	190,105,75,100
+			visible	1
+			background	"gfx/guis/maps/terminal/netbridge_part1"
+			matcolor	0.184,0.8,0.8,1
+		}
+		windowDef part_l3b
+		{
+			rect	100,211,68,84
+			visible	1
+			background	"gfx/guis/maps/terminal/netbridge_part3"
+			matcolor	0.184,0.8,0.8,1
+		}
+		windowDef part_l2b
+		{
+			rect	150,203,60,100
+			visible	1
+			background	"gfx/guis/maps/terminal/netbridge_part2"
+			matcolor	0.184,0.8,0.8,1
+		}
+		windowDef part_l1b
+		{
+			rect	190,203,75,100
+			visible	1
+			background	"gfx/guis/maps/terminal/netbridge_part1"
+			matcolor	0.184,0.8,0.8,1
+		}
+		windowDef part_l3c
+		{
+			rect	100,309,68,84
+			visible	1
+			background	"gfx/guis/maps/terminal/netbridge_part3"
+			matcolor	0.184,0.8,0.8,1
+		}
+		windowDef part_l2c
+		{
+			rect	150,301,60,100
+			visible	1
+			background	"gfx/guis/maps/terminal/netbridge_part2"
+			matcolor	0.184,0.8,0.8,1
+		}
+		windowDef part_l1c
+		{
+			rect	190,301,75,100
+			visible	1
+			background	"gfx/guis/maps/terminal/netbridge_part1"
+			matcolor	0.184,0.8,0.8,1
+		}
+		windowDef part_r3a
+		{
+			rect	473,113,68,84
+			visible	1
+			background	"gfx/guis/maps/terminal/netbridge_part3"
+			matcolor	0.184,0.8,0.8,1
+			matscalex	-1
+		}
+		windowDef part_r2a
+		{
+			rect	431,105,60,100
+			visible	1
+			background	"gfx/guis/maps/terminal/netbridge_part2"
+			matcolor	0.184,0.8,0.8,1
+			matscalex	-1
+		}
+		windowDef part_r1a
+		{
+			rect	377,105,75,100
+			visible	1
+			background	"gfx/guis/maps/terminal/netbridge_part1"
+			matcolor	0.184,0.8,0.8,1
+			matscalex	-1
+		}
+		windowDef part_r3b
+		{
+			rect	473,211,68,84
+			visible	1
+			background	"gfx/guis/maps/terminal/netbridge_part3"
+			matcolor	0.184,0.8,0.8,1
+			matscalex	-1
+		}
+		windowDef part_r2b
+		{
+			rect	431,203,60,100
+			visible	10
+			background	"gfx/guis/maps/terminal/netbridge_part2"
+			matcolor	0.184,0.8,0.8,1
+			matscalex	-1
+		}
+		windowDef part_r1b
+		{
+			rect	377,203,75,100
+			visible	1
+			background	"gfx/guis/maps/terminal/netbridge_part1"
+			matcolor	0.184,0.8,0.8,1
+			matscalex	-1
+		}
+		windowDef part_r3c
+		{
+			rect	473,309,68,84
+			visible	1
+			background	"gfx/guis/maps/terminal/netbridge_part3"
+			matcolor	0.184,0.8,0.8,1
+			matscalex	-1
+		}
+		windowDef part_r2c
+		{
+			rect	431,301,60,100
+			visible	1
+			background	"gfx/guis/maps/terminal/netbridge_part2"
+			matcolor	0.184,0.8,0.8,1
+			matscalex	-1
+		}
+		windowDef part_r1c
+		{
+			rect	377,301,75,100
+			visible	1
+			background	"gfx/guis/maps/terminal/netbridge_part1"
+			matcolor	0.184,0.8,0.8,1
+			matscalex	-1
+		}
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	0,-108,640,647
+			background	"gfx/guis/common/monitor_line7"
+			matcolor	0.988,1,0.882,.05
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,-13,640,592
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.368,0.615,0.450,1
+			matscaley	-1
+		}
+		windowDef scratches
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/screen_scratches5"
+			matcolor	0.725,0.850,0.819,0.6
+		}
+		windowDef broken_glass_b
+		{
+			visible	"gui::gui_parm_broken"
+			rect	-37,-59,678,598
+			background	"gfx/guis/common/broken_glass2"
+			matcolor	0,0,0,1
+		}
+		windowDef broken_glass
+		{
+			visible	"gui::gui_parm_broken"
+			rect	-34,-61,678,598
+			background	"gfx/guis/common/broken_glass2"
+			matcolor	0.8,0.917,0.847,1
+		}
+		windowDef blackedge
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef anim_raise
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "u_arrows::matcolor_w" "0.4" "0" "1500" ;
+			transition "d_arrows::matcolor_w" "0.4" "0" "1500" ;
+			
+			transition "part_l3a::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_l2a::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_l1a::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_l3b::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_l2b::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_l1b::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_l3c::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_l2c::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_l1c::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_r3a::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_r2a::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_r1a::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_r3b::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_r2b::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_r1b::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_r3c::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_r2c::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_r1c::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			
+			
+			transition "part_l3c::rect" "$part_l3c::rect" "$d_part_l3c::rect" "500" ;
+			transition "part_l2c::rect" "$part_l2c::rect" "$d_part_l2c::rect" "500" ;
+			transition "part_l1c::rect" "$part_l1c::rect" "$d_part_l1c::rect" "500" ;
+			
+			transition "part_r3c::rect" "$part_r3c::rect" "$d_part_r3c::rect" "500" ;
+			transition "part_r2c::rect" "$part_r2c::rect" "$d_part_r2c::rect" "500" ;
+			transition "part_r1c::rect" "$part_r1c::rect" "$d_part_r1c::rect" "500" ;
+		}
+
+		onTime +500 {
+			transition "part_l3b::rect" "$part_l3b::rect" "$d_part_l3b::rect" "500" ;
+			transition "part_l2b::rect" "$part_l2b::rect" "$d_part_l2b::rect" "500" ;
+			transition "part_l1b::rect" "$part_l1b::rect" "$d_part_l1b::rect" "500" ;
+			
+			transition "part_r3b::rect" "$part_r3b::rect" "$d_part_r3b::rect" "500" ;
+			transition "part_r2b::rect" "$part_r2b::rect" "$d_part_r2b::rect" "500" ;
+			transition "part_r1b::rect" "$part_r1b::rect" "$d_part_r1b::rect" "500" ;
+		}
+
+		onTime +500 {
+			transition "part_l3a::rect" "$part_l3a::rect" "$d_part_l3a::rect" "500" ;
+			transition "part_l2a::rect" "$part_l2a::rect" "$d_part_l2a::rect" "500" ;
+			transition "part_l1a::rect" "$part_l1a::rect" "$d_part_l1a::rect" "500" ;
+			
+			transition "part_r3a::rect" "$part_r3a::rect" "$d_part_r3a::rect" "500" ;
+			transition "part_r2a::rect" "$part_r2a::rect" "$d_part_r2a::rect" "500" ;
+			transition "part_r1a::rect" "$part_r1a::rect" "$d_part_r1a::rect" "500" ;
+		}
+
+		onTime +500 {
+			set "desktop::bridgeup" "1" ;
+			
+			if ("desktop::once" == 0) {
+				set "button::visible" "1" ;
+			}
+		}
+
+	}
+	windowDef anim_lower
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "u_arrows::matcolor_w" "0" "0.4" "1500" ;
+			transition "d_arrows::matcolor_w" "0" "0.4" "1500" ;
+			
+			transition "part_l3a::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_l2a::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_l1a::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_l3b::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_l2b::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_l1b::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_l3c::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_l2c::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_l1c::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_r3a::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_r2a::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_r1a::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_r3b::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_r2b::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_r1b::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_r3c::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_r2c::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			transition "part_r1c::matcolor" "$desktop::on" "$desktop::off" "1500" ;
+			
+			transition "part_l3a::rect" "$d_part_l3a::rect" "$part_l3a::rect" "500" ;
+			transition "part_l2a::rect" "$d_part_l2a::rect" "$part_l2a::rect" "500" ;
+			transition "part_l1a::rect" "$d_part_l1a::rect" "$part_l1a::rect" "500" ;
+			
+			transition "part_r3a::rect" "$d_part_r3a::rect" "$part_r3a::rect" "500" ;
+			transition "part_r2a::rect" "$d_part_r2a::rect" "$part_r2a::rect" "500" ;
+			transition "part_r1a::rect" "$d_part_r1a::rect" "$part_r1a::rect" "500" ;
+		}
+
+		onTime +500 {
+			transition "part_l3b::rect" "$d_part_l3b::rect" "$part_l3b::rect" "500" ;
+			transition "part_l2b::rect" "$d_part_l2b::rect" "$part_l2b::rect" "500" ;
+			transition "part_l1b::rect" "$d_part_l1b::rect" "$part_l1b::rect" "500" ;
+			
+			transition "part_r3b::rect" "$d_part_r3b::rect" "$part_r3b::rect" "500" ;
+			transition "part_r2b::rect" "$d_part_r2b::rect" "$part_r2b::rect" "500" ;
+			transition "part_r1b::rect" "$d_part_r1b::rect" "$part_r1b::rect" "500" ;
+		}
+
+		onTime +500 {
+			transition "part_l3c::rect" "$d_part_l3c::rect" "$part_l3c::rect" "500" ;
+			transition "part_l2c::rect" "$d_part_l2c::rect" "$part_l2c::rect" "500" ;
+			transition "part_l1c::rect" "$d_part_l1c::rect" "$part_l1c::rect" "500" ;
+			
+			transition "part_r3c::rect" "$d_part_r3c::rect" "$part_r3c::rect" "500" ;
+			transition "part_r2c::rect" "$d_part_r2c::rect" "$part_r2c::rect" "500" ;
+			transition "part_r1c::rect" "$d_part_r1c::rect" "$part_r1c::rect" "500" ;
+		}
+
+		onTime +500 {
+			set "desktop::bridgeup" "0" ;
+			if ("desktop::once" == 0) {
+				set "button::visible" "1" ;
+			}
+		}
+
+	}
+	windowDef button
+	{
+		rect	0,0,640,480
+		visible	1
+
+		onAction {	
+			if ("desktop::bridgeup" == 0) {
+				set "button::visible" "0" ;
+				resettime "anim_raise" "0" ;
+				set "cmd" "play guisound_beep2 ; runscript" "$gui::gui_parm1" ;
+			}
+			if ("desktop::bridgeup" == 1) {
+				set "button::visible" "0" ;
+				resettime "anim_lower" "0" ;
+				set "cmd" "play guisound_beep2 ; runscript" "$gui::gui_parm2" ;
+			}
+		}
+
+	}
+	windowDef button_once
+	{
+		rect	0,0,640,480
+		visible	0
+
+		onAction {	
+			if ("desktop::bridgeup" == 0 && "desktop::once" == 0) {
+				set "desktop::once" "1" ;
+				set "button_once::visible" "0" ;
+				resettime "anim_raise" "0" ;
+				set "cmd" "play guisound_beep2 ; runscript" "$gui::gui_parm1" ;
+			}
+			if ("desktop::bridgeup" == 1 && "desktop::once" == 0) {
+				set "desktop::once" "1" ;
+				set "button_once::visible" "0" ;
+				resettime "anim_lower" "0" ;
+				set "cmd" "play guisound_beep2 ; runscript" "$gui::gui_parm2" ;
+			}
+		}
+
+	}
+}

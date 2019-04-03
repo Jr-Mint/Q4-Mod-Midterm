@@ -1,0 +1,252 @@
+windowDef Desktop
+{
+	visible	1
+	rect	0,0,640,480
+	backcolor	0.0745,0.0666,0.0431,1
+	windowDef data
+	{
+		visible	1
+		rect	-282,-5,506,489
+		background	"gfx/guis/common/strogg/data_b"
+		matcolor	0.925,0.533,0,.32
+		shear	0,-.31
+	}
+	windowDef bar
+	{
+		visible	1
+		rect	145,46,502,237
+		background	"gfx/guis/monitors/strogg/elevator_status_bar"
+		matcolor	0.854,0.556,0.160,0.239
+	}
+	windowDef p_online
+	{
+		rect	0,0,640,480
+		visible	"gui::gui_parm_online"
+		windowDef bg
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/monitors/strogg/elevator_status_bg"
+			matcolor	0.392,0.647,0.270,1*guitable_8_10[time*.001]
+		}
+		windowDef warn
+		{
+			visible	1
+			rect	141,239,509,245
+			background	"gfx/guis/monitors/strogg/elevator_status_warn"
+			matcolor	0.392,0.647,0.270,1*guitable_8_10[time*.001]
+		}
+		windowDef eshaft
+		{
+			visible	1
+			rect	79,39,112,436
+			background	"gfx/guis/monitors/strogg/elevator_status_eshaft"
+			matcolor	0.392,0.647,0.270,1*guitable_8_10[time*.001]
+			shear	0,-.31
+		}
+		windowDef level
+		{
+			visible	1
+			rect	241,64,395,84
+			forecolor	0.643,0.533,0.156,1
+			text	"#str_200774"
+			textscale	1.6
+			font	"fonts/r_strogg"
+		}
+		windowDef floor_num
+		{
+			visible	1
+			rect	378,114,245,157
+			forecolor	0.819,0.694,0.270,1
+			text	"04"
+			textscale	3
+			font	"fonts/r_strogg"
+		}
+		windowDef arrow
+		{
+			visible	1
+			rect	290,154,88,100
+			background	"gfx/guis/common/arrow1"
+			matcolor	0.392,0.325,0.101,1
+			matscalex	-1
+		}
+		windowDef online
+		{
+			visible	1
+			rect	206,301,394,65
+			forecolor	0.717,0.878,0.537,1
+			text	"#str_200775"
+			textscale	1
+			font	"fonts/r_strogg"
+			textalign	1
+		}
+		windowDef status_online
+		{
+			visible	1
+			rect	443,397,188,41
+			forecolor	0.717,0.878,0.537,.4
+			text	"#str_200417"
+			textscale	0.55
+			font	"fonts/r_strogg"
+		}
+		windowDef d_elev
+		{
+			visible	0
+			rect	49,410,61,43
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	0.717,0.878,0.537,1
+			shear	0,-.31
+		}
+		windowDef elev
+		{
+			visible	1
+			rect	159,59,61,43
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	0.717,0.878,0.537,1
+			shear	0,-.31
+		}
+	}
+	windowDef p_offline
+	{
+		rect	0,0,640,480
+		visible	"gui::gui_parm_offline"
+		windowDef bg_off
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/monitors/strogg/elevator_status_bg"
+			matcolor	0.921,0.278,0,1*guitable_10_5[time*.001]
+		}
+		windowDef warn_off
+		{
+			visible	1
+			rect	141,239,509,245
+			background	"gfx/guis/monitors/strogg/elevator_status_warn"
+			matcolor	0.921,0.278,0,1*guitable_10_5[time*.001]
+		}
+		windowDef eshaft_off
+		{
+			visible	1
+			rect	79,39,112,436
+			background	"gfx/guis/monitors/strogg/elevator_status_eshaft"
+			matcolor	0.921,0.278,0,1*guitable_10_5[time*.001]
+			shear	0,-.31
+		}
+		windowDef level_off
+		{
+			visible	1
+			rect	241,64,395,84
+			forecolor	0.501,0.501,0.501,0.32
+			text	"#str_200774"
+			textscale	1.6
+			font	"fonts/r_strogg"
+		}
+		windowDef floor_num_off
+		{
+			visible	1
+			rect	378,114,245,157
+			forecolor	0.501,0.501,0.501,0.498
+			text	"00"
+			textscale	3
+			font	"fonts/r_strogg"
+		}
+		windowDef arrow_off
+		{
+			visible	1
+			rect	290,154,88,100
+			background	"gfx/guis/common/arrow1"
+			matcolor	0.341,0.341,0.341,0.6
+			matscalex	-1
+		}
+		windowDef offline
+		{
+			visible	1
+			rect	206,301,394,65
+			forecolor	1,0.572,0.105,1
+			text	"#str_200776"
+			textscale	1
+			font	"fonts/r_strogg"
+			textalign	1
+
+			onTime 0 {
+				set "visible" "0" ;
+			}
+
+			onTime 300 {
+				set "visible" "1" ;
+			}
+
+			onTime 600 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef status_offline
+		{
+			visible	1
+			rect	443,397,188,41
+			forecolor	1,0.576,0.109,.4
+			text	"#str_200417"
+			textscale	0.55
+			font	"fonts/r_strogg"
+		}
+		windowDef elev_off
+		{
+			visible	1
+			rect	49,410,61,43
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	1,0.576,0.109,1
+			shear	0,-.31
+		}
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline1
+		{
+			visible	1
+			rect	0,-349,640,1515
+			background	"gfx/guis/common/monitor_line6"
+			matcolor	0.933,0.847,0.717,0.1
+		}
+		windowDef gradient
+		{
+			visible	1
+			rect	-118,-95,864,386
+			background	"gfx/guis/common/gradient"
+			matcolor	0.501,1,1,0.26*guitable_8_10[time*.002]
+		}
+		windowDef dirt_stroyent
+		{
+			visible	"gui::gui_parm_stroyent"
+			rect	-151,-59,792,541
+			background	"gfx/guis/common/screen_dirt5"
+			matcolor	0.443,0.603,0.137,1
+			matscalex	-1
+		}
+		windowDef broken_glass_b
+		{
+			visible	"gui::gui_parm_broken"
+			rect	-4,1,658,487
+			background	"gfx/guis/common/broken_glass3"
+			matcolor	0,0,0,1
+			matscaley	-1
+		}
+		windowDef broken_glass
+		{
+			visible	"gui::gui_parm_broken"
+			rect	1,-3,641,486
+			background	"gfx/guis/common/broken_glass3"
+			matcolor	0.874,0.909,0.815,1
+			matscaley	-1
+		}
+		windowDef darkedge
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+}

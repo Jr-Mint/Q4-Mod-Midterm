@@ -1,0 +1,827 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	visible	1
+
+	onNamedEvent gui_start {
+		if ( "gui::gui_parm_warn" == 1 && "gui::gui_parm_off" == 0 )
+		{
+			resettime "anim_warn_on" "0" ;
+		}
+		
+		else
+		{
+			resettime "anim_off_on" "0" ;
+		}	
+	}
+
+	windowDef p_main
+	{
+		rect	0,0,640,480
+		visible	"gui::gui_parm_warn" == 0 && "gui::gui_parm_off" == 0
+		windowDef img
+		{
+			rect	334,265,306,215
+			visible	1
+			background	"gfx/guis/monitors/strogg/stroyent/str1_img3"
+			matcolor	1,1,1,1*guitable_8_10[time*0.0006]
+
+			onTime 0 {
+				set "background" "gfx/guis/monitors/strogg/stroyent/str1_img3" ;
+			}
+
+			onTime +2000 {
+				set "background" "gfx/guis/monitors/strogg/stroyent/str1_img1" ;
+			}
+
+			onTime +2000 {
+				set "background" "gfx/guis/monitors/strogg/stroyent/str1_img2" ;
+			}
+
+			onTime +2000 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef bg
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/monitors/strogg/stroyent/str1_bg"
+			matcolor	0.231*guitable_8_10[time*0.0006],0.619*guitable_8_10[time*0.0006],0.341*guitable_8_10[time*0.0006],1
+		}
+		windowDef t_levels
+		{
+			rect	387,16,116,26
+			visible	1
+			forecolor	1,0.784,0.305,1
+			text	"#str_200805"
+			textscale	.45
+			font	"fonts/r_strogg"
+		}
+		windowDef t_analysis
+		{
+			rect	421,38,140,28
+			visible	1
+			forecolor	1,0.784,0.305,1
+			text	"#str_200674"
+			textscale	.45
+			font	"fonts/r_strogg"
+		}
+		windowDef scrolltext
+		{
+			rect	414,67,188,133
+			visible	1
+			background	"gfx/guis/common/strogg/scrolltext1"
+			matcolor	1,1,0.501,1
+		}
+		windowDef p_bar1
+		{
+			rect	30,41,275,31
+			visible	1
+			windowDef bar1
+			{
+				rect	-209,1,275,31
+				visible	1
+				background	"gfx/guis/common/bar1"
+				matcolor	0.247,0.921,0.294,1
+			}
+			windowDef d_bar1
+			{
+				rect	0,0,275,31
+				visible	0
+				background	"gfx/guis/common/bar1"
+				matcolor	0.247,0.921,0.294,1
+			}
+		}
+		windowDef p_bar2
+		{
+			rect	30,95,275,31
+			visible	1
+			windowDef bar2
+			{
+				rect	-105,0,275,31
+				visible	1
+				background	"gfx/guis/common/bar1"
+				matcolor	0.247,0.921,0.294,1
+			}
+			windowDef d_bar2
+			{
+				rect	0,0,275,31
+				visible	0
+				background	"gfx/guis/common/bar1"
+				matcolor	0.247,0.921,0.294,1
+			}
+		}
+		windowDef p_bar3
+		{
+			rect	30,147,275,31
+			visible	1
+			windowDef bar3
+			{
+				rect	-164,0,275,31
+				visible	1
+				background	"gfx/guis/common/bar1"
+				matcolor	0.247,0.921,0.294,1
+			}
+			windowDef d_bar3
+			{
+				rect	0,0,275,31
+				visible	0
+				background	"gfx/guis/common/bar1"
+				matcolor	0.247,0.921,0.294,1
+			}
+		}
+		windowDef p_bar4
+		{
+			rect	30,301,275,31
+			visible	1
+			windowDef bar4
+			{
+				rect	-78,1,275,31
+				visible	1
+				background	"gfx/guis/common/bar1"
+				matcolor	0.247,0.921,0.294,1
+			}
+			windowDef d_bar4
+			{
+				rect	0,0,275,31
+				visible	0
+				background	"gfx/guis/common/bar1"
+				matcolor	0.247,0.921,0.294,1
+			}
+		}
+		windowDef p_bar5
+		{
+			rect	30,354,275,31
+			visible	1
+			windowDef bar5
+			{
+				rect	-192,0,275,31
+				visible	1
+				background	"gfx/guis/common/bar1"
+				matcolor	0.247,0.921,0.294,1
+			}
+			windowDef d_bar5
+			{
+				rect	0,0,275,31
+				visible	0
+				background	"gfx/guis/common/bar1"
+				matcolor	0.247,0.921,0.294,1
+			}
+		}
+		windowDef p_bar6
+		{
+			rect	30,407,275,31
+			visible	1
+			windowDef bar6
+			{
+				rect	-132,0,275,31
+				visible	1
+				background	"gfx/guis/common/bar1"
+				matcolor	0.247,0.921,0.294,1
+			}
+			windowDef d_bar6
+			{
+				rect	0,0,275,31
+				visible	0
+				background	"gfx/guis/common/bar1"
+				matcolor	0.247,0.921,0.294,1
+			}
+		}
+		windowDef num1
+		{
+			rect	319,44,55,32
+			visible	1
+			forecolor	0.764,0.960,0.305,.5
+			text	"17"
+			textscale	0.6
+			font	"fonts/r_strogg"
+
+			onTime 0 {
+				transition "bar1::rect" "$bar1::rect" "$d_bar1::rect" "4000" ;
+			}
+
+			onTime +500 {
+				set "num1::text" "24" ;
+			}
+
+			onTime +500 {
+				set "num1::text" "29" ;
+			}
+
+			onTime +500 {
+				set "num1::text" "36" ;
+			}
+
+			onTime +500 {
+				set "num1::text" "42" ;
+			}
+
+			onTime +500 {
+				set "num1::text" "48" ;
+			}
+
+			onTime +500 {
+				set "num1::text" "55" ;
+			}
+
+			onTime +500 {
+				set "num1::text" "67" ;
+			}
+
+			onTime +2000 {
+				transition "bar1::rect" "$d_bar1::rect" "$bar1::rect" "3000" ;
+			}
+
+			onTime +500 {
+				set "num1::text" "47" ;
+			}
+
+			onTime +500 {
+				set "num1::text" "39" ;
+			}
+
+			onTime +500 {
+				set "num1::text" "33" ;
+			}
+
+			onTime +500 {
+				set "num1::text" "25" ;
+			}
+
+			onTime +500 {
+				set "num1::text" "17" ;
+			}
+
+			onTime +2000 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef num2
+		{
+			rect	319,97,55,32
+			visible	1
+			forecolor	0.764,0.960,0.305,.5
+			text	"38"
+			textscale	0.6
+			font	"fonts/r_strogg"
+
+			onTime 0 {
+				transition "bar2::rect" "$bar2::rect" "$d_bar2::rect" "3000" ;
+			}
+
+			onTime +500 {
+				set "num2::text" "42" ;
+			}
+
+			onTime +500 {
+				set "num2::text" "49" ;
+			}
+
+			onTime +500 {
+				set "num2::text" "58" ;
+			}
+
+			onTime +500 {
+				set "num2::text" "64" ;
+			}
+
+			onTime +500 {
+				set "num2::text" "78" ;
+			}
+
+			onTime +1000 {
+				transition "bar2::rect" "$d_bar2::rect" "$bar2::rect" "1500" ;
+			}
+
+			onTime +500 {
+				set "num2::text" "72" ;
+			}
+
+			onTime +500 {
+				set "num2::text" "56" ;
+			}
+
+			onTime +500 {
+				set "num2::text" "38" ;
+			}
+
+			onTime +1000 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef num3
+		{
+			rect	319,151,55,32
+			visible	1
+			forecolor	0.764,0.960,0.305,.5
+			text	"22"
+			textscale	0.6
+			font	"fonts/r_strogg"
+
+			onTime 0 {
+				transition "bar3::rect" "$bar3::rect" "$d_bar3::rect" "3400" ;
+			}
+
+			onTime +500 {
+				set "num3::text" "26" ;
+			}
+
+			onTime +500 {
+				set "num3::text" "34" ;
+			}
+
+			onTime +500 {
+				set "num3::text" "45" ;
+			}
+
+			onTime +500 {
+				set "num3::text" "53" ;
+			}
+
+			onTime +500 {
+				set "num3::text" "68" ;
+			}
+
+			onTime +500 {
+				set "num3::text" "72" ;
+			}
+
+			onTime +500 {
+				set "num3::text" "78" ;
+			}
+
+			onTime +1400 {
+				transition "bar3::rect" "$d_bar3::rect" "$bar3::rect" "1900" ;
+			}
+
+			onTime +500 {
+				set "num3::text" "74" ;
+			}
+
+			onTime +500 {
+				set "num3::text" "64" ;
+			}
+
+			onTime +500 {
+				set "num3::text" "53" ;
+			}
+
+			onTime +500 {
+				set "num3::text" "22" ;
+			}
+
+			onTime +1500 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef num4
+		{
+			rect	319,303,55,32
+			visible	1
+			forecolor	0.764,0.960,0.305,.5
+			text	"96"
+			textscale	0.6
+			font	"fonts/r_strogg"
+
+			onTime 0 {
+				transition "bar4::rect" "$bar4::rect" "$d_bar4::rect" "4250" ;
+			}
+
+			onTime +500 {
+				set "num4::text" "54" ;
+			}
+
+			onTime +500 {
+				set "num4::text" "52" ;
+			}
+
+			onTime +500 {
+				set "num4::text" "47" ;
+			}
+
+			onTime +500 {
+				set "num4::text" "44" ;
+			}
+
+			onTime +500 {
+				set "num4::text" "40" ;
+			}
+
+			onTime +500 {
+				set "num4::text" "36" ;
+			}
+
+			onTime +500 {
+				set "num4::text" "33" ;
+			}
+
+			onTime +2000 {
+				transition "bar4::rect" "$d_bar4::rect" "$bar4::rect" "3350" ;
+			}
+
+			onTime +500 {
+				set "num4::text" "35" ;
+			}
+
+			onTime +500 {
+				set "num4::text" "37" ;
+			}
+
+			onTime +500 {
+				set "num4::text" "42" ;
+			}
+
+			onTime +500 {
+				set "num4::text" "48" ;
+			}
+
+			onTime +500 {
+				set "num4::text" "56" ;
+			}
+
+			onTime +2350 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef num5
+		{
+			rect	319,356,55,32
+			visible	1
+			forecolor	0.764,0.960,0.305,.5
+			text	"20"
+			textscale	0.6
+			font	"fonts/r_strogg"
+
+			onTime 0 {
+				transition "bar5::rect" "$bar5::rect" "$d_bar5::rect" "4550" ;
+			}
+
+			onTime +500 {
+				set "num5::text" "23" ;
+			}
+
+			onTime +500 {
+				set "num5::text" "28" ;
+			}
+
+			onTime +500 {
+				set "num5::text" "34" ;
+			}
+
+			onTime +500 {
+				set "num5::text" "44" ;
+			}
+
+			onTime +500 {
+				set "num5::text" "49" ;
+			}
+
+			onTime +500 {
+				set "num5::text" "57" ;
+			}
+
+			onTime +500 {
+				set "num5::text" "63" ;
+			}
+
+			onTime +500 {
+				set "num5::text" "76" ;
+			}
+
+			onTime +2100 {
+				transition "bar5::rect" "$d_bar5::rect" "$bar5::rect" "2800" ;
+			}
+
+			onTime +500 {
+				set "num5::text" "45" ;
+			}
+
+			onTime +500 {
+				set "num5::text" "38" ;
+			}
+
+			onTime +500 {
+				set "num5::text" "34" ;
+			}
+
+			onTime +500 {
+				set "num5::text" "27" ;
+			}
+
+			onTime +500 {
+				set "num5::text" "20" ;
+			}
+
+			onTime +2100 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef num6
+		{
+			rect	319,410,55,32
+			visible	1
+			forecolor	0.764,0.960,0.305,.5
+			text	"43"
+			textscale	0.6
+			font	"fonts/r_strogg"
+
+			onTime 0 {
+				transition "bar6::rect" "$bar6::rect" "$d_bar6::rect" "2700" ;
+			}
+
+			onTime +500 {
+				set "num6::text" "47" ;
+			}
+
+			onTime +500 {
+				set "num6::text" "52" ;
+			}
+
+			onTime +500 {
+				set "num6::text" "57" ;
+			}
+
+			onTime +500 {
+				set "num6::text" "62" ;
+			}
+
+			onTime +500 {
+				set "num6::text" "68" ;
+			}
+
+			onTime +1600 {
+				transition "bar6::rect" "$d_bar6::rect" "$bar6::rect" "2100" ;
+			}
+
+			onTime +500 {
+				set "num6::text" "65" ;
+			}
+
+			onTime +500 {
+				set "num6::text" "59" ;
+			}
+
+			onTime +500 {
+				set "num6::text" "54" ;
+			}
+
+			onTime +500 {
+				set "num6::text" "43" ;
+			}
+
+			onTime +1350 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef l_warn
+		{
+			rect	-33,219,226,40
+			visible	1
+			background	"gfx/guis/common/warnbar2"
+			matcolor	1,0.784,0.305,1
+			shear	0,.2
+		}
+		windowDef t_online
+		{
+			rect	194,208,247,57
+			visible	1
+			forecolor	1,0.776,0.298,1
+			text	"#str_200400"
+			textscale	1
+			font	"fonts/r_strogg"
+			textalign	1
+		}
+		windowDef r_warn
+		{
+			rect	445,219,226,40
+			visible	1
+			background	"gfx/guis/common/warnbar2"
+			matcolor	1,0.784,0.305,1
+			shear	0,.2
+		}
+	}
+	windowDef flash
+	{
+		rect	0,0,640,480
+		visible	1
+		backcolor	0.5,1,0.5,0
+	}
+	windowDef p_warn
+	{
+		rect	0,0,640,480
+		visible	"gui::gui_parm_warn" == 1
+		windowDef bg_black
+		{
+			rect	0,0,640,480
+			visible	1
+			backcolor	0,0,0,1
+		}
+		windowDef bg1
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/monitors/strogg/stroyent/str1_bg"
+			matcolor	0.784,0.207,0.0431,1
+		}
+		windowDef top_grad
+		{
+			rect	-122,-23,889,313
+			visible	1
+			background	"gfx/guis/common/gradient"
+			matcolor	0,0,0,1
+		}
+		windowDef btm_grad
+		{
+			rect	-121,195,889,313
+			visible	1
+			background	"gfx/guis/common/gradient"
+			matcolor	0,0,0,1
+			matscaley	-1
+		}
+		windowDef l_warn2
+		{
+			rect	-32,219,226,40
+			visible	1
+			background	"gfx/guis/common/warnbar2"
+			matcolor	1*guitable_10_5[time*0.002],0.415*guitable_10_5[time*0.002],0.066*guitable_10_5[time*0.002],1
+			shear	0,.2
+		}
+		windowDef t_offline
+		{
+			rect	194,208,247,57
+			visible	1
+			forecolor	1*guitable_10_5[time*0.002],0.415*guitable_10_5[time*0.002],0.066*guitable_10_5[time*0.002],1
+			text	"#str_200402"
+			textscale	1
+			font	"fonts/r_strogg"
+			textalign	1
+		}
+		windowDef r_warn2
+		{
+			rect	445,219,226,40
+			visible	1
+			background	"gfx/guis/common/warnbar2"
+			matcolor	1*guitable_10_5[time*0.002],0.415*guitable_10_5[time*0.002],0.066*guitable_10_5[time*0.002],1
+			shear	0,.2
+		}
+		windowDef d_top_grad
+		{
+			rect	-121,-314,889,313
+			visible	0
+			background	"gfx/guis/common/gradient"
+			matcolor	0,0,0,1
+		}
+		windowDef d_btm_grad
+		{
+			rect	-120,483,889,313
+			visible	0
+			background	"gfx/guis/common/gradient"
+			matcolor	0,0,0,1
+			matscaley	-1
+		}
+	}
+	windowDef p_off
+	{
+		rect	0,0,640,480
+		visible	"gui::gui_parm_off" == 1
+		windowDef bg_black2
+		{
+			rect	0,0,640,480
+			visible	1
+			backcolor	0,0,0,1
+		}
+		windowDef top_grad2
+		{
+			rect	-104,-871,889,1178
+			visible	1
+			background	"gfx/guis/common/gradient"
+			matcolor	0.996,0.713,0.427,1
+		}
+		windowDef sm1
+		{
+			rect	0,240,640,1
+			visible	1
+			background	"gfx/guis/monitors/strogg/stroyent/str1_small"
+			matcolor	1,1,1,0
+		}
+		windowDef d_sm1
+		{
+			rect	0,0,640,480
+			visible	0
+			background	"gfx/guis/monitors/strogg/stroyent/str1_small"
+			matcolor	1,1,1,1
+		}
+		windowDef d_sm2
+		{
+			rect	0,141,640,132
+			visible	0
+			background	"gfx/guis/monitors/strogg/stroyent/str1_small"
+			matcolor	1,1,1,1
+		}
+		windowDef static2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/static3"
+			matcolor	0.890,0.890,0.890,0.2
+			matscalex	-1
+		}
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef static
+		{
+			visible	1
+			rect	-1,0,640,480
+			background	"gfx/guis/common/static1"
+			matcolor	0.894,0.894,0.894,.3
+		}
+		windowDef dirt
+		{
+			visible	1
+			rect	0,-28,640,524
+			background	"gfx/guis/common/screen_dirt10"
+			matcolor	0.494,0.521,0.305,1
+			matscalex	-1
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef anim_warn_on
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "top_grad::rect" "$top_grad::rect" "$d_top_grad::rect" "1000" ;
+			transition "btm_grad::rect" "$btm_grad::rect" "$d_btm_grad::rect" "1000" ;
+			
+			transition "l_warn2::matcolor_w" "1" "0" "1000" ;
+			transition "t_offline::forecolor_w" "1" "0" "1000" ;
+			transition "r_warn2::matcolor_w" "1" "0" "1000" ;
+		}
+
+		onTime +1000 {
+			set "p_main::visible" "1" ;
+			transition "bg_black::backcolor_w" "1" "0" "500" ;
+			transition "bg1::matcolor_w" "1" "0" "500" ;
+		}
+
+		onTime +500 {
+			set "p_warn::visible" "0" ;
+			transition "flash::backcolor_w" ".2" "0" "500" ;
+		}
+
+	}
+	windowDef anim_off_on
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "sm1::rect" "$sm1::rect" "$d_sm1::rect" "250" ;
+			transition "sm1::matcolor_w" "0" "1" "250" ;
+		}
+
+		onTime +150 {
+			transition "sm1::rect" "$d_sm1::rect" "$d_sm2::rect" "50" ;
+		}
+
+		onTime +50 {
+			transition "sm1::rect" "$d_sm1::rect" "$d_sm2::rect" "100" ;
+		}
+
+		onTime +100 {
+			set "p_main::visible" "1" ;
+			transition "sm1::matcolor_w" "1" "0" "150" ;
+			transition "sm1::rect" "$d_sm1::rect" "$sm1::rect" "150" ;
+			transition "bg_black2::backcolor_w" "1" "0" "1000" ;
+			transition "top_grad2::matcolor_w" "1" "0" "1000" ;
+			transition "static2::matcolor_w" ".2" "0" "1000" ;
+		}
+
+		onTime +1000 {
+			set "p_off::visible" "0" ;
+			transition "flash::backcolor_w" ".2" "0" "500" ;
+		}
+
+	}
+}

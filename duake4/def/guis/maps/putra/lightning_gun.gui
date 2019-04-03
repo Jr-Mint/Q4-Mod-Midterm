@@ -1,0 +1,421 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	visible	1
+	definevec4	"yellow"	0.8,0.776,0.274,1
+	definevec4	"orange"	0.835,0.560,0.192,1
+	definevec4	"red"	0.886,0.254,0.0941,1
+	definevec4	"black"	0,0,0,1
+
+	onNamedEvent gui_start {
+		if ( "gui::gui_parm_warn" == 1 && "gui::gui_parm_off" == 0 )
+		{
+			resettime "anim_warn_on" "0" ;
+		}
+		
+		else
+		{
+			resettime "anim_off_on" "0" ;
+		}	
+	}
+
+	windowDef button
+	{
+		rect	365,105,275,274
+		visible	1
+		background	"gfx/guis/maps/putra/lightning_button"
+		matcolor	0.227,0.615,0.337,1
+	}
+	windowDef p_main
+	{
+		rect	0,0,640,480
+		visible	"gui::gui_parm_warn" == 0 && "gui::gui_parm_off" == 0
+		windowDef bg
+		{
+			rect	0,0,649,480
+			visible	1
+			background	"gfx/guis/maps/putra/lightning_bg"
+			matcolor	0.227,0.615,0.337,1
+			matscalex	-1
+		}
+		windowDef output
+		{
+			rect	391,401,137,40
+			visible	1
+			forecolor	0.756,0.952,0.298,0.494
+			text	"#str_200514"
+			textscale	0.5
+			font	"fonts/r_strogg"
+			textalign	2
+		}
+		windowDef num2
+		{
+			rect	550,397,49,39
+			visible	1
+			forecolor	0.756,0.952,0.298,0.494
+			text	"29"
+			textscale	0.6
+			font	"fonts/r_strogg"
+			textalign	2
+
+			onTime 0 {
+				set "num2::text" "32" ;
+			}
+
+			onTime +500 {
+				set "num2::text" "29" ;
+			}
+
+			onTime +500 {
+				set "num2::text" "28" ;
+			}
+
+			onTime +500 {
+				set "num2::text" "24" ;
+			}
+
+			onTime +500 {
+				set "num2::text" "18" ;
+			}
+
+			onTime +500 {
+				set "num2::text" "22" ;
+			}
+
+			onTime +500 {
+				set "num2::text" "16" ;
+			}
+
+			onTime +500 {
+				set "num2::text" "11" ;
+			}
+
+			onTime +1000 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef num3
+		{
+			rect	16,361,289,75
+			visible	1
+			forecolor	0.745,0.941,0.286,0.482
+			text	"#str_200515"
+			textscale	0.55
+			font	"fonts/r_strogg"
+		}
+		windowDef num
+		{
+			rect	128,39,200,86
+			visible	1
+			forecolor	0.976,0.772,0.294,0.8
+			text	"028"
+			textscale	1.5
+			font	"fonts/r_strogg"
+			textalign	2
+		}
+	}
+	windowDef num2_2
+	{
+		rect	550,397,49,39
+		visible	1
+		forecolor	0.756,0.952,0.298,0
+		text	"0"
+		textscale	0.6
+		font	"fonts/r_strogg"
+		textalign	2
+	}
+	windowDef glow
+	{
+		rect	11,116,326,159
+		visible	1
+		background	"gfx/guis/maps/putra/lightning_glow"
+		matcolor	0.976,0.772,0.294,0.3
+
+		onTime 0 {
+			transition "glow::matcolor" "0.976,0.772,0.294,0.35" "0.976,0.772,0.294,0.1" "500" ;
+		}
+
+		onTime +700 {
+			transition "glow::matcolor" "0.976,0.772,0.294,0.1" "0.976,0.772,0.294,0.35" "500" ;
+		}
+
+		onTime +700 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef gun
+	{
+		rect	22,115,310,159
+		visible	1
+		background	"gfx/guis/maps/putra/lightning_gun"
+		matcolor	1,1,1,1
+	}
+	windowDef t2
+	{
+		rect	23,57,156,62
+		visible	1
+		forecolor	0.968,0.764,0.286,0.8
+		text	"#str_200516"
+		textscale	0.45
+		font	"fonts/r_strogg"
+	}
+	windowDef t1
+	{
+		rect	420,187,166,95
+		visible	1
+		forecolor	0.968,0.764,0.286,0.8
+		text	"#str_200517"
+		textscale	0.85
+		font	"fonts/r_strogg"
+	}
+	windowDef disconnect
+	{
+		rect	372,114,240,40
+		visible	1
+		forecolor	0.976,0.772,0.294,0
+		text	"#str_200518"
+		textscale	0.45
+		font	"fonts/r_strogg"
+		textalign	2
+	}
+	windowDef line1
+	{
+		rect	0,312,309,41
+		visible	1
+		background	"gfx/guis/monitors/strogg/streamhub/hub5_line1"
+		matcolor	0.2,0.8,1,0.4
+
+		onTime 0 {
+			transition "line1::rect" "$line1::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 100 {
+			transition "line2::rect" "$line2::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 200 {
+			transition "line3::rect" "$line3::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 300 {
+			transition "line4::rect" "$line4::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 1000 {
+			transition "line1::rect" "$d_line::rect" "$line1::rect" "1000" ;
+		}
+
+		onTime 1100 {
+			transition "line2::rect" "$d_line::rect" "$line2::rect" "1000" ;
+		}
+
+		onTime 1200 {
+			transition "line3::rect" "$d_line::rect" "$line3::rect" "1000" ;
+		}
+
+		onTime 1300 {
+			transition "line4::rect" "$d_line::rect" "$line4::rect" "1000" ;
+		}
+
+		onTime 2000 {
+			transition "line1::rect" "$line1::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 2100 {
+			transition "line2::rect" "$line2::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 2200 {
+			transition "line3::rect" "$line3::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 2300 {
+			transition "line4::rect" "$line4::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 3000 {
+			transition "line1::rect" "$d_line::rect" "$line1::rect" "1000" ;
+		}
+
+		onTime 3100 {
+			transition "line2::rect" "$d_line::rect" "$line2::rect" "1000" ;
+		}
+
+		onTime 3200 {
+			transition "line3::rect" "$d_line::rect" "$line3::rect" "1000" ;
+		}
+
+		onTime 3300 {
+			transition "line4::rect" "$d_line::rect" "$line4::rect" "1000" ;
+		}
+
+		onTime 4000 {
+			transition "line1::rect" "$line1::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 4100 {
+			transition "line2::rect" "$line2::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 4200 {
+			transition "line3::rect" "$line3::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 4300 {
+			transition "line4::rect" "$line4::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 5000 {
+			transition "line1::rect" "$d_line::rect" "$line1::rect" "1000" ;
+		}
+
+		onTime 5100 {
+			transition "line2::rect" "$d_line::rect" "$line2::rect" "1000" ;
+		}
+
+		onTime 5200 {
+			transition "line3::rect" "$d_line::rect" "$line3::rect" "1000" ;
+		}
+
+		onTime 5300 {
+			transition "line4::rect" "$d_line::rect" "$line4::rect" "1000" ;
+		}
+
+		onTime 10000 {
+			resetTime "0" ;
+		}
+
+	}
+	windowDef line2
+	{
+		rect	0,312,309,41
+		visible	1
+		background	"gfx/guis/monitors/strogg/streamhub/hub5_line1"
+		matcolor	0.2,0.8,1,0.6
+		matscalex	0.75
+	}
+	windowDef line3
+	{
+		rect	0,312,309,41
+		visible	1
+		background	"gfx/guis/monitors/strogg/streamhub/hub5_line1"
+		matcolor	0.6,1,1,0.8
+		matscalex	0.5
+	}
+	windowDef line4
+	{
+		rect	0,312,309,41
+		visible	1
+		background	"gfx/guis/monitors/strogg/streamhub/hub5_line1"
+		matcolor	1,1,1,0.8
+		matscalex	0.25
+	}
+	windowDef d_line
+	{
+		rect	0,283,307,101
+		visible	0
+	}
+	windowDef line
+	{
+		rect	227,276,87,156
+		visible	1
+		background	"gfx/guis/monitors/strogg/streamhub/hub1_line"
+		matcolor	1,0.788,0.305,1
+		matscaley	-1
+		matscalex	-1
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef static
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/static1"
+			matcolor	1,1,1,0.239
+			matscalex	-1
+		}
+		windowDef dirt
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/screen_dirt8"
+			matcolor	0.482,0.509,0.294,0.717
+			matscalex	-1
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	-1,2,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef b_button
+	{
+		rect	366,121,274,236
+		visible	1
+
+		onMouseEnter {
+			transition "button::matcolor" "0.227,0.615,0.337,1" "0.968,0.764,0.286,1" "0" ;
+			set "t1::forecolor" "0,0,0,1" ;
+		}
+
+		onMouseExit {
+			
+			transition "button::matcolor" "0.968,0.764,0.286,1" "0.227,0.615,0.337,1" "300" ;
+			transition "t1::forecolor" "0,0,0,1" "0.968,0.764,0.286,0.8" "300" ;
+		}
+
+		onAction {
+			nonInteractive "1" ;
+			set "cmd" "play guisound_beep2 ; activate ; runscript" "$gui::gui_Parm_script";
+			set "visible" "0" ;
+			
+			resettime "anim" "0" ;
+		}
+
+	}
+	windowDef anim
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "button::rect" "$button::rect" "$d_button::rect" "700" ;
+			transition "t1::rect" "$t1::rect" "$d_t1::rect" "700" ;
+			transition "num2::forecolor" "0.756,0.952,0.298,0.494" "0.756,0.952,0.298,0" "300" ;
+			transition "num2_2::forecolor" "0.756,0.952,0.298,0" "0.756,0.952,0.298,0.494" "300" ;
+			transition "line1::matcolor" "0.2,0.8,1,0.4" "0.2,0.8,1,0" "400" ;
+			transition "line2::matcolor" "0.2,0.8,1,0.6" "0.2,0.8,1,0" "600" ;
+			transition "line3::matcolor" "0.6,1,1,0.8" "0.6,1,1,0" "800" ;
+			transition "line4::matcolor" "1,1,1,0.8" "1,1,1,0" "1000" ;
+		}
+
+		onTime 600 {
+			transition "disconnect::forecolor" "0.976,0.772,0.294,0" "0.976,0.772,0.294,0.8" "300" ;
+		}
+
+	}
+	windowDef d_button
+	{
+		rect	637,105,275,274
+		visible	0
+		background	"gfx/guis/maps/putra/lightning_button"
+		matcolor	0.227,0.615,0.337,1
+	}
+	windowDef d_t1
+	{
+		rect	692,187,166,95
+		visible	0
+		forecolor	0.968,0.764,0.286,0.8
+		text	"#str_200517"
+		textscale	0.85
+		font	"fonts/r_strogg"
+	}
+}

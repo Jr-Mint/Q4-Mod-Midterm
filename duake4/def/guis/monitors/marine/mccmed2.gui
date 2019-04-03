@@ -1,0 +1,312 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	windowDef bg
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/marine/mccmed2_all"
+		matcolor	1,1,1,1
+	}
+	windowDef medlabs
+	{
+		rect	102,9,192,42
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200713"
+		textscale	0.6
+		font	"fonts/marine"
+	}
+	windowDef s
+	{
+		rect	16,-3,33,56
+		visible	1
+		forecolor	1,1,1,1
+		text	"s"
+		textscale	0.9
+		font	"fonts/marine"
+	}
+	windowDef m
+	{
+		rect	39,-3,36,56
+		visible	1
+		forecolor	1,1,1,1
+		text	"m"
+		textscale	0.9
+		font	"fonts/marine"
+	}
+	windowDef c
+	{
+		rect	67,-3,35,56
+		visible	1
+		forecolor	1,1,1,1
+		text	"c"
+		textscale	0.9
+		font	"fonts/marine"
+	}
+	windowDef txt
+	{
+		rect	26,121,343,194
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200714"
+		textscale	0.3
+		font	"fonts/lowpixel"
+	}
+	windowDef menu
+	{
+		rect	421,437,93,42
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200715"
+		textscale	0.5
+		font	"fonts/marine"
+	}
+	windowDef studies
+	{
+		rect	195,437,136,42
+		visible	1
+		forecolor	0,0,0,1
+		text	"#str_200716"
+		textscale	0.5
+		font	"fonts/marine"
+	}
+	windowDef subject
+	{
+		rect	23,77,136,35
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200658"
+		textscale	0.6
+		font	"fonts/marine"
+	}
+	windowDef number
+	{
+		rect	161,78,167,34
+		visible	1
+		forecolor	0.603,0.823,0.894,1
+		text	"#str_200717"
+		textscale	0.6
+		font	"fonts/marine"
+	}
+	windowDef caption
+	{
+		rect	409,318,222,62
+		visible	1
+		forecolor	0.603,0.823,0.894,1
+		text	"#str_200718"
+		textscale	0.29
+		font	"fonts/lowpixel"
+	}
+	windowDef p_cells
+	{
+		rect	412,99,221,162
+		visible	1
+
+		onTime 0 {
+			transition "cells::rect" "$cells::rect" "$d_cells1::rect" "2000" "500" "500" ;
+		}
+
+		onTime +5000 {
+			transition "cells::rect" "$d_cells1::rect" "$d_cells2::rect" "2000" "500" "500" ;
+		}
+
+		onTime +5000 {
+			transition "cells::rect" "$d_cells2::rect" "$d_cells3::rect" "2000" "500" "500" ;
+		}
+
+		onTime +5000 {
+			transition "cells::rect" "$d_cells3::rect" "$cells::rect" "2000" "500" "500" ;
+		}
+
+		onTime +5000 {
+			resettime "0" ;
+		}
+
+		windowDef cells
+		{
+			rect	-5,-83,559,489
+			visible	1
+			background	"gfx/guis/monitors/marine/mccmed2_cells"
+			matcolor	1,1,1,1
+		}
+		windowDef d_cells1
+		{
+			rect	-293,-207,558,488
+			visible	0
+			background	"gfx/guis/monitors/marine/mccmed2_cells"
+			matcolor	1,1,1,1
+		}
+		windowDef d_cells2
+		{
+			rect	-5,-239,558,488
+			visible	0
+			background	"gfx/guis/monitors/marine/mccmed2_cells"
+			matcolor	1,1,1,1
+		}
+		windowDef d_cells3
+		{
+			rect	-322,-101,558,488
+			visible	0
+			background	"gfx/guis/monitors/marine/mccmed2_cells"
+			matcolor	1,1,1,1
+		}
+	}
+	windowDef t_num1
+	{
+		rect	417,193,122,36
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200332"
+		textscale	0.4
+		font	"fonts/lowpixel"
+
+		onTime 0 {
+			set "text" "#str_200332" ;
+		}
+
+		onTime +100 {
+			set "text" "#str_200333" ;
+		}
+
+		onTime +100 {
+			set "text" "#str_200334" ;
+		}
+
+		onTime +100 {
+			set "text" "#str_200335" ;
+		}
+
+		onTime +100 {
+			set "text" "#str_200336" ;
+		}
+
+		onTime +100 {
+			set "text" "#str_200337" ;
+		}
+
+		onTime +100 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef t_num2
+	{
+		rect	417,215,122,36
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200338"
+		textscale	0.4
+		font	"fonts/lowpixel"
+
+		onTime 0 {
+			set "text" "#str_200338" ;
+		}
+
+		onTime +150 {
+			set "text" "#str_200339" ;
+		}
+
+		onTime +150 {
+			set "text" "#str_200340" ;
+		}
+
+		onTime +150 {
+			set "text" "#str_200341" ;
+		}
+
+		onTime +150 {
+			set "text" "#str_200342" ;
+		}
+
+		onTime +150 {
+			set "text" "#str_200343" ;
+		}
+
+		onTime +150 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef t_num3
+	{
+		rect	417,236,122,36
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200344"
+		textscale	0.4
+		font	"fonts/lowpixel"
+
+		onTime 0 {
+			set "text" "#str_200344" ;
+		}
+
+		onTime +200 {
+			set "text" "#str_200345" ;
+		}
+
+		onTime +200 {
+			set "text" "#str_200346" ;
+		}
+
+		onTime +200 {
+			set "text" "#str_200347" ;
+		}
+
+		onTime +200 {
+			set "text" "#str_200348" ;
+		}
+
+		onTime +200 {
+			set "text" "#str_200349" ;
+		}
+
+		onTime +200 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef search
+	{
+		rect	416,45,204,42
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200719"
+		textscale	0.4
+		font	"fonts/marine"
+	}
+	windowDef topstuff
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef monitor_darkedge
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+		windowDef sline
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_line3"
+			matcolor	0.380,0.380,0.380,1
+		}
+		windowDef scratches
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/screen_scratches4"
+			matcolor	0.717,0.890,0.925,0.133
+			matscaley	-1
+		}
+		windowDef topreflect
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_glow2"
+			matcolor	0.737,0.972,0.945,0.478
+		}
+	}
+}

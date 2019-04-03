@@ -1,0 +1,233 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	windowDef bg
+	{
+		rect	0,0,639,481
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc8_all"
+		matcolor	1,1,1,1
+	}
+	windowDef s
+	{
+		rect	19,-18,41,56
+		visible	1
+		forecolor	1,1,1,1
+		text	"s"
+		textscale	1.1
+		font	"fonts/marine"
+	}
+	windowDef m
+	{
+		rect	48,-18,41,56
+		visible	1
+		forecolor	1,1,1,1
+		text	"m"
+		textscale	1.1
+		font	"fonts/marine"
+	}
+	windowDef c
+	{
+		rect	83,-18,41,56
+		visible	1
+		forecolor	1,1,1,1
+		text	"c"
+		textscale	1.1
+		font	"fonts/marine"
+	}
+	windowDef techpanel
+	{
+		rect	23,32,97,24
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200621"
+		textscale	0.3
+		font	"fonts/marine"
+	}
+	windowDef progress
+	{
+		rect	434,257,147,33
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200637"
+		textscale	0.5
+		font	"fonts/marine"
+	}
+	windowDef file
+	{
+		rect	163,9,150,37
+		visible	1
+		forecolor	0,0,0,1
+		text	"#str_200638"
+		textscale	0.5
+		font	"fonts/marine"
+	}
+	windowDef search
+	{
+		rect	341,9,123,37
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200639"
+		textscale	0.5
+		font	"fonts/marine"
+	}
+	windowDef tools
+	{
+		rect	505,9,130,37
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200640"
+		textscale	0.5
+		font	"fonts/marine"
+	}
+	windowDef progress1
+	{
+		rect	69,54,286,44
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200641"
+		textscale	0.7
+		font	"fonts/marine"
+	}
+	windowDef progress2
+	{
+		rect	397,59,235,44
+		visible	1
+		forecolor	0.564,0.603,0.305,1
+		text	"#str_200642"
+		textscale	0.6
+		font	"fonts/marine"
+	}
+	windowDef progress3
+	{
+		rect	401,169,204,64
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200643"
+		textscale	0.3
+		font	"fonts/marine"
+	}
+	windowDef progress5
+	{
+		rect	434,323,147,33
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200644"
+		textscale	0.5
+		font	"fonts/marine"
+	}
+	windowDef progress6
+	{
+		rect	434,394,147,33
+		visible	1
+		forecolor	0,0,0,1
+		text	"#str_200638"
+		textscale	0.5
+		font	"fonts/marine"
+	}
+	windowDef progress7
+	{
+		rect	32,147,250,28
+		visible	1
+		forecolor	0.686,0.686,0.588,1
+		text	"04.22.2245 /// 0706"
+		textscale	0.42
+		font	"fonts/marine"
+	}
+	windowDef progress8
+	{
+		rect	32,180,250,28
+		visible	1
+		forecolor	0.682,0.682,0.584,1
+		text	"04.22.2245 /// 1440"
+		textscale	0.42
+		font	"fonts/marine"
+	}
+	windowDef progress9
+	{
+		rect	32,217,250,28
+		visible	1
+		forecolor	0.678,0.678,0.580,1
+		text	"04.21.2245 /// 0955"
+		textscale	0.42
+		font	"fonts/marine"
+	}
+	windowDef progress10
+	{
+		rect	32,255,250,28
+		visible	1
+		forecolor	0.674,0.674,0.576,1
+		text	"04.20.2245 /// 0809"
+		textscale	0.42
+		font	"fonts/marine"
+	}
+	windowDef progress11
+	{
+		rect	32,289,250,28
+		visible	1
+		forecolor	1,1,1,1
+		text	"04.19.2245 /// 2338"
+		textscale	0.42
+		font	"fonts/marine"
+
+		onTime 0 {
+			transition "forecolor_w" "1" "0.2" "800" ;
+		}
+
+		onTime 800 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef progress12
+	{
+		rect	32,325,250,28
+		visible	1
+		forecolor	0.666,0.666,0.568,1
+		text	"04.19.2245 /// 1923"
+		textscale	0.42
+		font	"fonts/marine"
+	}
+	windowDef progress13
+	{
+		rect	32,363,250,28
+		visible	1
+		forecolor	0.662,0.662,0.564,1
+		text	"04.07.2245 /// 1718"
+		textscale	0.42
+		font	"fonts/marine"
+	}
+	windowDef topstuff
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef monitor_darkedge
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+		windowDef sline
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_line8"
+			matcolor	0.172,0.172,0.172,1
+		}
+		windowDef scratches
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/screen_scratches4"
+			matcolor	0.917,0.976,0.8,0.305
+		}
+		windowDef topreflect
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_glow3"
+			matcolor	0.886,0.952,0.764,0.705
+		}
+	}
+}

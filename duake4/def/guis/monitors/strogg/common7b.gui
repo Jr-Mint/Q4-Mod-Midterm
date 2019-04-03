@@ -1,0 +1,380 @@
+windowDef Desktop
+{
+	comment	"gui_parm_broken = 1 adds broken glass cracks to the gui, gui_parm_stroyent = 1 adds stroyent junk on the screen"
+	visible	1
+	rect	0,0,640,480
+	backcolor	0.0117,0.0666,0.0941,1
+	definevec4	"white"	1,1,1,1
+	definevec4	"white_0"	1,1,1,0
+	definevec4	"box_0"	0.454,0.760,0.796,0
+	definevec4	"box"	0.454,0.760,0.796,1
+	windowDef data
+	{
+		visible	1
+		rect	54,0,562,480
+		background	"gfx/guis/common/strogg/data_c"
+		matcolor	0.454,0.760,0.796,0.06
+		shear	0,.38
+	}
+	windowDef bg_circ2
+	{
+		rect	14,-8,640,480
+		visible	1
+		background	"gfx/guis/doors/strogg/open_bgcirc"
+		matcolor	0.454,0.760,0.796,0.35
+		rotate	time*0.01
+	}
+	windowDef bg_circ1
+	{
+		rect	101,57,467,351
+		visible	1
+		background	"gfx/guis/doors/strogg/open_bgcirc"
+		matcolor	0.454,0.760,0.796,0.5
+		rotate	time*-0.02
+	}
+	windowDef bg
+	{
+		visible	1
+		rect	0,0,640,480
+		background	"gfx/guis/monitors/strogg/common7_bg"
+		matcolor	0.235,0.403,0.690,.8*guitable_8_10[time*0.000276]
+	}
+	windowDef planet
+	{
+		visible	1
+		rect	120,28,430,430
+		background	"gfx/guis/common/planet1"
+		matcolor	1,1,1,1
+	}
+	windowDef orbit1
+	{
+		rect	113,155,446,149
+		visible	1
+		background	"gfx/guis/common/dash_circle"
+		matcolor	0.454,0.760,0.796,0.8
+		rotate	35
+		matscalex	-1
+	}
+	windowDef orbit2
+	{
+		rect	113,155,446,149
+		visible	1
+		background	"gfx/guis/common/dash_circle"
+		matcolor	0.454,0.760,0.796,0.8
+		rotate	0
+	}
+	windowDef scrolltext1
+	{
+		visible	1
+		rect	46,308,126,138
+		background	"gfx/guis/common/strogg/scrolltext2"
+		matcolor	0.454,0.760,0.796,0.8
+		shear	0,.38
+	}
+	windowDef scrolltext2
+	{
+		visible	1
+		rect	514,43,96,135
+		background	"gfx/guis/common/strogg/scrolltext4"
+		matcolor	0.454,0.760,0.796,0.8
+		shear	0,.38
+	}
+	windowDef nonscrolltext3
+	{
+		visible	1
+		rect	422,447,159,113
+		background	"gfx/guis/common/strogg/nonscrolltext2"
+		matcolor	0.454,0.760,0.796,0.8
+		shear	0,.38
+	}
+	windowDef p_btns
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef btn1
+		{
+			visible	1
+			rect	511,261,90,34
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	0.235,0.403,0.690,.8
+			shear	0,.38
+		}
+		windowDef btn2
+		{
+			visible	1
+			rect	525,301,90,34
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	0.235,0.403,0.690,1*guitable_8_5[time*0.002]
+			shear	0,.38
+		}
+		windowDef btn3
+		{
+			visible	1
+			rect	280,411,112,34
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	0.752,0.752,0.752,0.8
+			shear	0,.38
+		}
+		windowDef btn4
+		{
+			visible	1
+			rect	390,411,112,34
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	0.752,0.752,0.752,0.8
+			shear	0,.38
+		}
+		windowDef btn5
+		{
+			visible	1
+			rect	501,411,112,34
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	0.752,0.752,0.752,0.8
+			shear	0,.38
+		}
+		windowDef t_btn1
+		{
+			rect	523,270,67,18
+			visible	1
+			forecolor	0.752,0.752,0.752,.8
+			text	"7435 2"
+			textscale	0.4
+			font	"fonts/strogg"
+		}
+		windowDef t_btn2
+		{
+			rect	537,310,68,19
+			visible	1
+			forecolor	0.752,0.752,0.752,.8*guitable_8_5[time*0.002]
+			text	"974 23"
+			textscale	0.4
+			font	"fonts/strogg"
+		}
+		windowDef t_btn3
+		{
+			rect	300,419,74,22
+			visible	1
+			forecolor	0,0,0,.6
+			text	levels
+			textscale	0.46
+			font	"fonts/strogg"
+		}
+		windowDef t_btn4
+		{
+			rect	410,419,76,22
+			visible	1
+			forecolor	0,0,0,.6
+			text	"data b"
+			textscale	0.46
+			font	"fonts/strogg"
+		}
+		windowDef t_btn5
+		{
+			rect	527,419,61,22
+			visible	1
+			forecolor	0,0,0,.6
+			text	login
+			textscale	0.46
+			font	"fonts/strogg"
+		}
+	}
+	windowDef numbers
+	{
+		rect	19,269,129,31
+		visible	1
+		forecolor	0,0,0,.6
+		text	"646.037"
+		textscale	0.8
+		font	"fonts/strogg"
+	}
+	windowDef t_top
+	{
+		rect	160,21,167,32
+		visible	1
+		forecolor	0.752,0.752,0.752,1
+		text	"stroggos"
+		textscale	0.8
+		font	"fonts/strogg"
+	}
+	windowDef t_top2
+	{
+		rect	178,56,150,19
+		visible	1
+		forecolor	0.949,0.847,0.109,0.8
+		text	"785349-4535-324"
+		textscale	.4
+		font	"fonts/strogg"
+	}
+	windowDef decal
+	{
+		visible	1
+		rect	554,170,76,76
+		background	"gfx/guis/common/strogg/decal"
+		matcolor	0,0,0,0.52
+	}
+	windowDef t_planet1
+	{
+		visible	1
+		rect	397,248,85,85
+		background	"gfx/guis/common/strogg/nonscrolltext2"
+		matcolor	0.454,0.760,0.796,0.8
+		shear	0,.38
+	}
+	windowDef t_planet2
+	{
+		visible	1
+		rect	351,302,59,54
+		background	"gfx/guis/common/strogg/nonscrolltext1"
+		matcolor	0.454,0.760,0.796,0.8
+		shear	0,.42
+		matscalex	-1
+	}
+	windowDef d_p2
+	{
+		visible	0
+		rect	82,93,259,193
+		background	"gfx/guis/common/planet2"
+		matcolor	1,1,1,1
+		shear	0,.38
+	}
+	windowDef d_p2_box
+	{
+		visible	0
+		rect	70,86,282,209
+		background	"gfx/guis/common/simplebox"
+		matcolor	0.976,0.866,0.490,1
+		shear	0,.38
+	}
+	windowDef p2
+	{
+		visible	1
+		rect	321,191,43,41
+		background	"gfx/guis/common/planet2"
+		matcolor	1,1,1,0
+		shear	0,.38
+	}
+	windowDef p2_box
+	{
+		visible	1
+		rect	319,189,46,45
+		background	"gfx/guis/common/simplebox"
+		matcolor	0.454,0.760,0.796,0
+		shear	0,.38
+	}
+	windowDef d_t_p2_1
+	{
+		rect	117,249,1,13
+		visible	1
+		windowDef t_p2_1
+		{
+			rect	0,0,185,13
+			visible	1
+			forecolor	1,1,1,1
+			text	"scanning planet surface"
+			textscale	0.3
+			font	"fonts/strogg"
+		}
+	}
+	windowDef d_t_p2_2
+	{
+		rect	121,265,1,13
+		visible	1
+		windowDef t_p2_2
+		{
+			rect	0,0,196,13
+			visible	1
+			forecolor	1,1,1,1
+			text	"foreign organism located"
+			textscale	0.3
+			font	"fonts/strogg"
+		}
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	1,-101,640,680
+			background	"gfx/guis/common/monitor_line7"
+			matcolor	0.972,0.741,0.321,0.026
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	-50,-37,741,563
+			background	"gfx/guis/common/monitor_reflect"
+			matcolor	0.576,0.788,0.858,.142
+		}
+		windowDef dirt_stroyent
+		{
+			visible	"gui::gui_parm_stroyent"
+			rect	0,0,640,480
+			background	"gfx/guis/common/screen_dirt7"
+			matcolor	0.282,0.321,0.0784,1
+			matscalex	-1
+		}
+		windowDef broken_glass_b
+		{
+			visible	"gui::gui_parm_broken"
+			rect	0,4,640,480
+			background	"gfx/guis/common/broken_glass5"
+			matcolor	0,0,0,1
+			rotate	180
+		}
+		windowDef broken_glass
+		{
+			visible	"gui::gui_parm_broken"
+			rect	0,0,640,480
+			background	"gfx/guis/common/broken_glass5"
+			matcolor	0.819,0.905,0.921,1
+			rotate	180
+		}
+		windowDef monitor_darkedge
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef anims
+	{
+		visible	1
+		rect	0,0,1,1
+
+		onTime 0 {
+			transition "p2::rect" "$p2::rect" "$d_p2::rect" "200" ;
+			transition "p2_box::rect" "$p2_box::rect" "$d_p2_box::rect" "200" "50" "50" ;
+			
+			transition "p2::matcolor" "$Desktop::white_0" "$Desktop::white" "200" ;
+			transition "p2_box::matcolor" "$Desktop::box_0" "$Desktop::box" "200" ;
+		}
+
+		onTime 200 {
+			transition "d_t_p2_1::rect" "$d_t_p2_1::rect" "$t_p2_1::rect" "200" ;
+		}
+
+		onTime 400 {
+			transition "d_t_p2_2::rect" "$d_t_p2_2::rect" "$t_p2_2::rect" "200" ;
+		}
+
+		onTime 3800 {
+			transition "d_t_p2_1::rect" "$t_p2_1::rect" "$d_t_p2_1::rect" "200" ;
+			transition "d_t_p2_2::rect" "$t_p2_2::rect" "$d_t_p2_2::rect" "200" ;
+		}
+
+		onTime 4000 {
+			transition "p2::rect" "$d_p2::rect" "$p2::rect" "200" ;
+			transition "p2_box::rect" "$d_p2_box::rect" "$p2_box::rect" "200" "50" "50" ;
+			
+			transition "p2::matcolor" "$Desktop::white" "$Desktop::white_0" "200" ;
+			transition "p2_box::matcolor" "$Desktop::box" "$Desktop::box_0" "200" ;
+		}
+
+		onTime 12000 {
+			resettime "0" ;
+		}
+
+	}
+}

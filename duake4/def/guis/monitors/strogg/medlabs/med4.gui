@@ -1,0 +1,217 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	visible	1
+	windowDef bg1
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med4_1"
+		matcolor	1,1,1,0
+	}
+	windowDef bg2
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med4_2"
+		matcolor	1,1,1,0
+	}
+	windowDef bg3
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med4_3"
+		matcolor	1,1,1,0
+	}
+	windowDef bg4
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med4_4"
+		matcolor	1,1,1,1
+	}
+	windowDef decal
+	{
+		rect	0,-42,640,560
+		visible	1
+		background	"gfx/guis/common/strogg/decal"
+		matcolor	1,1,1,.1
+	}
+	windowDef symbol
+	{
+		rect	493,273,143,169
+		visible	1
+		forecolor	0.980,0.772,0.278,.8
+		text	b
+		textscale	4.5
+		font	"fonts/strogg"
+	}
+	windowDef t_edge
+	{
+		rect	0,0,640,120
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med4_edge"
+		matcolor	0.682,0.729,0.545,1*guitable_8_10[time*0.0008]
+	}
+	windowDef b_edge
+	{
+		rect	0,360,640,120
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med4_edge"
+		matcolor	0.682,0.729,0.545,1*guitable_8_10[time*0.0008]
+		matscaley	-1
+	}
+	windowDef scan
+	{
+		rect	-329,80,311,322
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med4_scan"
+		matcolor	1,1,1,.8*guitable_10_5[time*0.002]
+		windowDef scan1
+		{
+			rect	93,204,125,110
+			visible	1
+			windowDef scan2
+			{
+				rect	0,0,129,246
+				visible	1
+				background	"gfx/guis/common/strogg/scrolltext1"
+				matcolor	0.760,0.976,0.525,.8
+			}
+		}
+		windowDef t_scan
+		{
+			rect	92,11,125,44
+			visible	1
+			forecolor	0.760,0.976,0.525,.6
+			text	"863-d"
+			textscale	1
+			font	"fonts/strogg"
+		}
+	}
+	windowDef d_scan
+	{
+		rect	653,80,311,322
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med4_scan"
+		matcolor	1,1,1,1
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline1
+		{
+			visible	1
+			rect	0,-249,640,888
+			background	"gfx/guis/common/monitor_line4"
+			matcolor	0.752,0.850,0.913,0.1
+		}
+		windowDef blood
+		{
+			rect	0,0,640,480
+			visible	"gui::gui_parm_blood"
+			background	"gfx/guis/common/bloodsplat2"
+			matcolor	.6,.6,.6,1
+			matscaley	-1
+		}
+		windowDef static
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/static3"
+			matcolor	0.752,0.850,0.913,.14
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef anim_scan
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 0 {
+			transition "scan::rect" "$scan::rect" "$d_scan::rect" "6000" ;
+		}
+
+		onTime 6000 {
+			transition "scan::rect" "$d_scan::rect" "$scan::rect" "6000" ;
+		}
+
+		onTime 12000 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef anim_letter
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 0 {
+			set "symbol::text" "b" ;
+			transition "symbol::forecolor" "1,1,1,.8" "0.980,0.772,0.278,.8" "150" ;
+		}
+
+		onTime 2300 {
+			set "symbol::text" "g" ;
+			transition "symbol::forecolor" "1,1,1,.8" "0.980,0.772,0.278,.8" "150" ;
+		}
+
+		onTime 4750 {
+			set "symbol::text" "c" ;
+			transition "symbol::forecolor" "1,1,1,.8" "0.980,0.772,0.278,.8" "150" ;
+		}
+
+		onTime 6700 {
+			set "symbol::text" "p" ;
+			transition "symbol::forecolor" "1,1,1,.8" "0.980,0.772,0.278,.8" "150" ;
+		}
+
+		onTime 9400 {
+			set "symbol::text" "z" ;
+			transition "symbol::forecolor" "1,1,1,.8" "0.980,0.772,0.278,.8" "150" ;
+		}
+
+		onTime 13500 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef anim_bg
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 0 {
+			transition "bg4::matcolor" "1,1,1,1" "1,1,1,0" "500" ;
+			transition "bg1::matcolor" "1,1,1,0" "1,1,1,1" "500" ;
+		}
+
+		onTime 5000 {
+			transition "bg1::matcolor" "1,1,1,1" "1,1,1,0" "500" ;
+			transition "bg2::matcolor" "1,1,1,0" "1,1,1,1" "500" ;
+		}
+
+		onTime 10000 {
+			transition "bg2::matcolor" "1,1,1,1" "1,1,1,0" "500" ;
+			transition "bg3::matcolor" "1,1,1,0" "1,1,1,1" "500" ;
+		}
+
+		onTime 15000 {
+			transition "bg3::matcolor" "1,1,1,1" "1,1,1,0" "500" ;
+			transition "bg4::matcolor" "1,1,1,0" "1,1,1,1" "500" ;
+		}
+
+		onTime 20000 {
+			resettime "0" ;
+		}
+
+	}
+}

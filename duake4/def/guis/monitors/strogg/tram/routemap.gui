@@ -1,0 +1,539 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	visible	1
+	windowDef p_main
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef bg
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/monitors/strogg/tram/map_bg"
+			matcolor	1,1,1,1*guitable_random2[time*0.002]
+		}
+		windowDef hex1
+		{
+			rect	62,160,22,22
+			visible	1
+			background	"gfx/guis/monitors/strogg/tram/map_hex"
+			rotate	90
+			matcolor	0.137,0.588,0.462,1
+		}
+		windowDef hex1a
+		{
+			rect	62,179,22,21
+			visible	1
+			background	"gfx/guis/monitors/strogg/tram/map_hex"
+			rotate	90
+			matcolor	0.137,0.588,0.462,1
+		}
+		windowDef hex2
+		{
+			rect	231,179,22,21
+			visible	1
+			background	"gfx/guis/monitors/strogg/tram/map_hex"
+			rotate	90
+			matcolor	0.137,0.588,0.462,1
+		}
+		windowDef hex3
+		{
+			rect	384,284,22,21
+			visible	1
+			background	"gfx/guis/monitors/strogg/tram/map_hex"
+			matcolor	0.137,0.588,0.462,1
+		}
+		windowDef hex4
+		{
+			rect	384,345,22,21
+			visible	1
+			background	"gfx/guis/monitors/strogg/tram/map_hex"
+			matcolor	0.137,0.588,0.462,1
+		}
+		windowDef hex5
+		{
+			rect	486,143,22,21
+			visible	1
+			background	"gfx/guis/monitors/strogg/tram/map_hex"
+			matcolor	0.137,0.588,0.462,1
+		}
+		windowDef hex1_at
+		{
+			rect	62,160,22,22
+			visible	"gui::gui_parm_at1"
+			background	"gfx/guis/monitors/strogg/tram/map_hex_at"
+			rotate	90
+			matcolor	1,1,1,1
+
+			onTime 0 {
+				transition "matcolor" "1,1,1,1" ".4,.4,.4,1" "300" ;
+			}
+
+			onTime 300 {
+				transition "matcolor" ".4,.4,.4,1" "1,1,1,1" "300" ;
+			}
+
+			onTime 800 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef hex1a_at
+		{
+			rect	62,179,22,21
+			visible	"gui::gui_parm_at1"
+			background	"gfx/guis/monitors/strogg/tram/map_hex_at"
+			rotate	90
+			matcolor	1,1,1,1
+
+			onTime 0 {
+				transition "matcolor" "1,1,1,1" ".4,.4,.4,1" "300" ;
+			}
+
+			onTime 300 {
+				transition "matcolor" ".4,.4,.4,1" "1,1,1,1" "300" ;
+			}
+
+			onTime 800 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef hex2_at
+		{
+			rect	231,179,22,21
+			visible	"gui::gui_parm_at2"
+			background	"gfx/guis/monitors/strogg/tram/map_hex_at"
+			rotate	90
+			matcolor	1,1,1,1
+
+			onTime 0 {
+				transition "matcolor" "1,1,1,1" ".4,.4,.4,1" "300" ;
+			}
+
+			onTime 300 {
+				transition "matcolor" ".4,.4,.4,1" "1,1,1,1" "300" ;
+			}
+
+			onTime 800 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef hex3_at
+		{
+			rect	384,284,22,21
+			visible	"gui::gui_parm_at3"
+			background	"gfx/guis/monitors/strogg/tram/map_hex_at"
+			matcolor	1,1,1,1
+
+			onTime 0 {
+				transition "matcolor" "1,1,1,1" ".4,.4,.4,1" "300" ;
+			}
+
+			onTime 300 {
+				transition "matcolor" ".4,.4,.4,1" "1,1,1,1" "300" ;
+			}
+
+			onTime 800 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef hex4_at
+		{
+			rect	384,345,22,21
+			visible	"gui::gui_parm_at4"
+			background	"gfx/guis/monitors/strogg/tram/map_hex_at"
+			matcolor	1,1,1,1
+
+			onTime 0 {
+				transition "matcolor" "1,1,1,1" ".4,.4,.4,1" "300" ;
+			}
+
+			onTime 300 {
+				transition "matcolor" ".4,.4,.4,1" "1,1,1,1" "300" ;
+			}
+
+			onTime 800 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef hex5_at
+		{
+			rect	486,143,22,21
+			visible	"gui::gui_parm_at5"
+			background	"gfx/guis/monitors/strogg/tram/map_hex_at"
+			matcolor	1,1,1,1
+
+			onTime 0 {
+				transition "matcolor" "1,1,1,1" ".4,.4,.4,1" "300" ;
+			}
+
+			onTime 300 {
+				transition "matcolor" ".4,.4,.4,1" "1,1,1,1" "300" ;
+			}
+
+			onTime 800 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef at_1
+		{
+			rect	30,129,28,28
+			visible	1
+			background	"gfx/guis/monitors/strogg/tram/map_1"
+			matcolor	0.266,1,0.686,.8
+		}
+		windowDef t1
+		{
+			rect	63,123,96,21
+			visible	1
+			forecolor	1,1,1,1
+			text	"#str_200870"
+			textscale	0.35
+			font	"fonts/r_strogg"
+		}
+		windowDef t1a
+		{
+			rect	63,138,96,20
+			visible	1
+			forecolor	1,1,1,1
+			text	"#str_200871"
+			textscale	0.35
+			font	"fonts/r_strogg"
+		}
+		windowDef at_2
+		{
+			rect	199,202,28,28
+			visible	1
+			background	"gfx/guis/monitors/strogg/tram/map_2"
+			matcolor	0.266,1,0.686,.8
+		}
+		windowDef t2
+		{
+			rect	232,196,96,21
+			visible	1
+			forecolor	1,1,1,1
+			text	"#str_200872"
+			textscale	0.35
+			font	"fonts/r_strogg"
+		}
+		windowDef t2a
+		{
+			rect	232,211,96,20
+			visible	1
+			forecolor	1,1,1,1
+			text	"#str_200871"
+			textscale	0.35
+			font	"fonts/r_strogg"
+		}
+		windowDef at_3
+		{
+			rect	352,293,28,28
+			visible	1
+			background	"gfx/guis/monitors/strogg/tram/map_3"
+			matcolor	0.266,1,0.686,.8
+		}
+		windowDef t3
+		{
+			rect	286,287,59,21
+			visible	1
+			forecolor	1,1,1,1
+			text	"#str_200870"
+			textscale	0.35
+			font	"fonts/r_strogg"
+			textalign	2
+		}
+		windowDef t3a
+		{
+			rect	286,302,59,20
+			visible	1
+			forecolor	1,1,1,1
+			text	"#str_200873"
+			textscale	0.35
+			font	"fonts/r_strogg"
+			textalign	2
+		}
+		windowDef at_4
+		{
+			rect	359,348,20,20
+			visible	1
+			background	"gfx/guis/monitors/strogg/tram/map_4"
+			matcolor	0.266,1,0.686,.7
+		}
+		windowDef t4
+		{
+			rect	236,343,118,21
+			visible	1
+			forecolor	1,1,1,1
+			text	"#str_200874"
+			textscale	0.24
+			font	"fonts/r_strogg"
+			textalign	2
+		}
+		windowDef t4a
+		{
+			rect	236,354,118,20
+			visible	1
+			forecolor	1,1,1,1
+			text	"#str_200875"
+			textscale	0.24
+			font	"fonts/r_strogg"
+			textalign	2
+		}
+		windowDef at_5
+		{
+			rect	510,139,28,28
+			visible	1
+			background	"gfx/guis/monitors/strogg/tram/map_5"
+			matcolor	0.266,1,0.686,.8
+		}
+		windowDef t5
+		{
+			rect	543,133,81,21
+			visible	1
+			forecolor	1,1,1,1
+			text	"#str_200870"
+			textscale	0.35
+			font	"fonts/r_strogg"
+		}
+		windowDef t5a
+		{
+			rect	543,148,81,20
+			visible	1
+			forecolor	1,1,1,1
+			text	"#str_200876"
+			textscale	0.35
+			font	"fonts/r_strogg"
+		}
+		windowDef hex6
+		{
+			rect	184,389,14,14
+			visible	1
+			background	"gfx/guis/monitors/strogg/tram/map_hex"
+			rotate	90
+			matcolor	0.137,0.588,0.462,1
+		}
+		windowDef hex7
+		{
+			rect	411,155,14,13
+			visible	1
+			background	"gfx/guis/monitors/strogg/tram/map_hex"
+			rotate	90
+			matcolor	0.137,0.588,0.462,1
+		}
+		windowDef hex8
+		{
+			rect	147,31,14,13
+			visible	1
+			background	"gfx/guis/monitors/strogg/tram/map_hex"
+			rotate	90
+			matcolor	0.137,0.588,0.462,1
+		}
+	}
+	windowDef p_small
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef st1
+		{
+			rect	222,48,30,17
+			visible	1
+			background	"gfx/guis/common/smalltext4"
+			matcolor	0.117,0.941,0.384,.75
+		}
+		windowDef st2
+		{
+			rect	458,327,30,17
+			visible	1
+			background	"gfx/guis/common/smalltext5"
+			matcolor	0.117,0.941,0.384,.75
+		}
+		windowDef st3
+		{
+			rect	553,300,30,17
+			visible	1
+			background	"gfx/guis/common/smalltext6"
+			matcolor	0.117,0.941,0.384,.75
+		}
+		windowDef st4
+		{
+			rect	45,252,30,17
+			visible	1
+			background	"gfx/guis/common/smalltext6"
+			matcolor	0.117,0.941,0.384,.75
+		}
+		windowDef st5
+		{
+			rect	267,401,30,17
+			visible	1
+			background	"gfx/guis/common/smalltext5"
+			matcolor	0.117,0.941,0.384,.75
+		}
+		windowDef st6
+		{
+			rect	419,393,30,17
+			visible	1
+			background	"gfx/guis/common/smalltext4"
+			matcolor	0.117,0.941,0.384,.75
+			matscalex	-1
+		}
+		windowDef st7
+		{
+			rect	382,96,30,17
+			visible	1
+			background	"gfx/guis/common/smalltext4"
+			matcolor	0.117,0.941,0.384,.75
+			matscalex	-1
+		}
+		windowDef st8
+		{
+			rect	452,82,30,17
+			visible	1
+			background	"gfx/guis/common/smalltext6"
+			matcolor	0.117,0.941,0.384,.75
+			matscalex	-1
+		}
+		windowDef st9
+		{
+			rect	175,278,30,17
+			visible	1
+			background	"gfx/guis/common/smalltext6"
+			matcolor	0.117,0.941,0.384,.75
+		}
+		windowDef st10
+		{
+			rect	512,410,30,17
+			visible	1
+			background	"gfx/guis/common/smalltext4"
+			matcolor	0.117,0.941,0.384,.75
+			matscalex	-1
+		}
+		windowDef st11
+		{
+			rect	502,205,30,17
+			visible	1
+			background	"gfx/guis/common/smalltext4"
+			matcolor	0.117,0.941,0.384,.75
+			matscalex	-1
+		}
+		windowDef st12
+		{
+			rect	524,40,30,17
+			visible	1
+			background	"gfx/guis/common/smalltext5"
+			matcolor	0.117,0.941,0.384,.75
+		}
+		windowDef st13
+		{
+			rect	349,33,30,17
+			visible	1
+			background	"gfx/guis/common/smalltext4"
+			matcolor	0.117,0.941,0.384,.75
+			matscalex	-1
+		}
+		windowDef st14
+		{
+			rect	112,204,30,17
+			visible	1
+			background	"gfx/guis/common/smalltext6"
+			matcolor	0.117,0.941,0.384,.75
+		}
+		windowDef st15
+		{
+			rect	118,41,30,17
+			visible	1
+			background	"gfx/guis/common/smalltext5"
+			matcolor	0.117,0.941,0.384,.75
+			matscalex	-1
+		}
+		windowDef x
+		{
+			rect	233,117,40,40
+			visible	1
+			background	"gfx/guis/monitors/strogg/tram/map_x"
+			matcolor	1,1,1,1
+
+			onTime 0 {
+				transition "x::rect" "$x::rect" "$d_x::rect" "100" ;
+			}
+
+			onTime 100 {
+				transition "x::rect" "$d_x::rect" "$x::rect" "500" ;
+			}
+
+			onTime 600 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef d_x
+		{
+			rect	223,107,60,60
+			visible	0
+			background	"gfx/guis/monitors/strogg/tram/map_x"
+			matcolor	1,1,1,1
+		}
+		windowDef circle
+		{
+			rect	214,98,80,80
+			visible	1
+			background	"gfx/guis/common/strogg/circle5"
+			matcolor	1,0.796,0.317,0.32
+			rotate	.1*time
+		}
+		windowDef st16
+		{
+			rect	426,151,30,17
+			visible	1
+			background	"gfx/guis/common/smalltext6"
+			matcolor	0.117,0.941,0.384,.75
+		}
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef static
+		{
+			visible	1
+			rect	-67,-24,798,559
+			background	"gfx/guis/common/img_static3"
+			matcolor	1,1,1,0.08
+			matscalex	-1
+		}
+		windowDef gradient
+		{
+			visible	1
+			rect	-42,-75,713,578
+			background	"gfx/guis/common/monitor_reflect"
+			matcolor	0,1,1,0.2
+		}
+		windowDef dirt
+		{
+			visible	1
+			rect	0,-131,828,612
+			background	"gfx/guis/common/screen_dirt4"
+			matcolor	0.666,0.603,0.474,1
+		}
+		windowDef static2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/static1"
+			matcolor	0.717,1,1,.2
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+}

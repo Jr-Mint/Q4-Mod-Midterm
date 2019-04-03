@@ -1,0 +1,241 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	windowDef gear
+	{
+		rect	122,42,400,400
+		visible	1
+		background	"gfx/guis/common/strogg/gear1"
+		matcolor	0.501,0.501,0.501,0.4
+		rotate	.01*time
+	}
+	windowDef bg_blur
+	{
+		rect	80,0,480,480
+		visible	1
+		background	"gfx/guis/common/blur_circle2"
+		matcolor	0.803,0.443,0.0392,0.494*guitable_8_10[time*0.003]
+	}
+	windowDef bg_circ
+	{
+		rect	80,0,480,480
+		visible	1
+		background	"gfx/guis/common/strogg/dualcircle"
+		matcolor	0.803,0.443,0.0392,0.4
+	}
+	windowDef temp
+	{
+		rect	80,0,480,480
+		visible	0
+		background	"gfx/guis/test/circlegui"
+		matcolor	0.882,0.682,0,1
+	}
+	windowDef tl_edge
+	{
+		rect	91,0,196,196
+		visible	1
+		background	"gfx/guis/common/strogg/circ_edge1"
+		matcolor	0.709,0.490,0.0901,1
+	}
+	windowDef tr_edge
+	{
+		rect	360,0,196,196
+		visible	1
+		background	"gfx/guis/common/strogg/circ_edge1"
+		matcolor	0.709,0.490,0.0901,1
+		matscalex	-1
+	}
+	windowDef bl_edge
+	{
+		rect	91,284,196,196
+		visible	1
+		background	"gfx/guis/common/strogg/circ_edge1"
+		matcolor	0.709,0.490,0.0901,1
+		matscaley	-1
+	}
+	windowDef br_edge
+	{
+		rect	358,284,196,196
+		visible	1
+		background	"gfx/guis/common/strogg/circ_edge1"
+		matcolor	0.709,0.490,0.0901,1
+		matscaley	-1
+		matscalex	-1
+	}
+	windowDef scrolltext1
+	{
+		rect	264,91,99,80
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext1"
+		matcolor	0.882,0.682,0,1
+		shear	0,.55
+		matscalex	-1
+	}
+	windowDef scrolltext2
+	{
+		rect	348,62,69,81
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext1fast"
+		matcolor	0.882,0.682,0,1
+		shear	0,.55
+	}
+	windowDef scrolltext3
+	{
+		rect	243,281,108,110
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext2fast"
+		matcolor	0.882,0.682,0,1
+		shear	0,-.55
+	}
+	windowDef decal
+	{
+		rect	237,136,175,152
+		visible	1
+		background	"gfx/guis/common/strogg/decal"
+		matcolor	0.501,0.501,0.501,1
+	}
+	windowDef l_levels1
+	{
+		rect	134,187,99,48
+		visible	1
+		background	"gfx/guis/common/strogg/levels1"
+		matcolor	0.929,0.686,0.188,1
+
+		onTime 0 {
+			transition "l_levels4::matcolor" "0.929,0.686,0.188,1" "0.929,0.686,0.188,.4" "300" ;
+		}
+
+		onTime 500 {
+			transition "l_levels3::matcolor" "0.929,0.686,0.188,1" "0.929,0.686,0.188,.4" "300" ;
+		}
+
+		onTime 1000 {
+			transition "l_levels2::matcolor" "0.929,0.686,0.188,1" "0.929,0.686,0.188,.4" "300" ;
+		}
+
+		onTime 1500 {
+			transition "l_levels1::matcolor" "0.929,0.686,0.188,1" "0.929,0.686,0.188,.4" "300" ;
+		}
+
+		onTime 3000 {
+			transition "l_levels1::matcolor" "0.929,0.686,0.188,.4" "0.929,0.686,0.188,1" "300" ;
+		}
+
+		onTime 3500 {
+			transition "l_levels2::matcolor" "0.929,0.686,0.188,.4" "0.929,0.686,0.188,1" "300" ;
+		}
+
+		onTime 4000 {
+			transition "l_levels3::matcolor" "0.929,0.686,0.188,.4" "0.929,0.686,0.188,1" "300" ;
+		}
+
+		onTime 4500 {
+			transition "l_levels4::matcolor" "0.929,0.686,0.188,.4" "0.929,0.686,0.188,1" "300" ;
+		}
+
+		onTime 5000 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef l_levels2
+	{
+		rect	127,219,122,62
+		visible	1
+		background	"gfx/guis/common/strogg/levels2"
+		matcolor	0.929,0.686,0.188,1
+	}
+	windowDef l_levels3
+	{
+		rect	137,224,126,131
+		visible	1
+		background	"gfx/guis/common/strogg/levels3"
+		matcolor	0.929,0.686,0.188,1
+	}
+	windowDef l_levels4
+	{
+		rect	158,258,133,129
+		visible	1
+		background	"gfx/guis/common/strogg/levels4"
+		matcolor	0.929,0.686,0.188,1
+
+		onTime 3000 {
+			transition "r_levels4::matcolor" "0.929,0.686,0.188,1" "0.929,0.686,0.188,.4" "300" ;
+		}
+
+		onTime 3500 {
+			transition "r_levels3::matcolor" "0.929,0.686,0.188,1" "0.929,0.686,0.188,.4" "300" ;
+		}
+
+		onTime 5000 {
+			transition "r_levels3::matcolor" "0.929,0.686,0.188,.4" "0.929,0.686,0.188,1" "300" ;
+		}
+
+		onTime 5500 {
+			transition "r_levels4::matcolor" "0.929,0.686,0.188,.4" "0.929,0.686,0.188,1" "300" ;
+		}
+
+		onTime 6000 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef r_levels1
+	{
+		rect	411,187,99,48
+		visible	1
+		background	"gfx/guis/common/strogg/levels1"
+		matcolor	0.929,0.686,0.188,1
+		matscalex	-1
+	}
+	windowDef r_levels2
+	{
+		rect	398,219,122,62
+		visible	1
+		background	"gfx/guis/common/strogg/levels2"
+		matcolor	0.929,0.686,0.188,1
+		matscalex	-1
+	}
+	windowDef r_levels3
+	{
+		rect	384,224,126,131
+		visible	1
+		background	"gfx/guis/common/strogg/levels3"
+		matcolor	0.929,0.686,0.188,1
+		matscalex	-1
+	}
+	windowDef r_levels4
+	{
+		rect	356,258,133,129
+		visible	1
+		background	"gfx/guis/common/strogg/levels4"
+		matcolor	0.929,0.686,0.188,1
+		matscalex	-1
+	}
+	windowDef l_numbers
+	{
+		rect	148,170,76,19
+		visible	1
+		forecolor	0.929,0.686,0.188,1
+		text	"843.07"
+		textscale	0.5
+		font	"fonts/strogg"
+	}
+	windowDef r_numbers
+	{
+		rect	419,170,76,19
+		visible	1
+		forecolor	0.925,0.682,0.184,1
+		text	406.32
+		textscale	0.5
+		font	"fonts/strogg"
+		textalign	2
+	}
+	windowDef decal1
+	{
+		rect	354,327,70,70
+		visible	1
+		background	"gfx/guis/common/strogg/decal1"
+		matcolor	0.341,0.341,0.341,1
+	}
+}

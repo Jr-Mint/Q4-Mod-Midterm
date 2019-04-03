@@ -1,0 +1,505 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	visible	1
+	definevec4	"on"	1,1,1,.6
+	definevec4	"off"	1,1,1,0
+	windowDef gradient1
+	{
+		visible	1
+		rect	-92,-77,887,682
+		background	"gfx/guis/common/gradient"
+		matcolor	0.0745,0.133,0.207,1
+		matscaley	-1
+	}
+	windowDef gear
+	{
+		rect	200,-15,480,480
+		visible	1
+		background	"gfx/guis/common/strogg/gear1"
+		matcolor	0.541,0.690,0.776,.2*guitable_8_10[time*.004]
+		rotate	.05*time
+	}
+	windowDef title1
+	{
+		rect	20,38,176,57
+		visible	1
+		forecolor	0.760,0.976,0.525,.8
+		text	"ekg 3"
+		textscale	1.3
+		font	"fonts/strogg"
+	}
+	windowDef p_ekg
+	{
+		rect	0,86,640,223
+		visible	1
+		windowDef ekgbg1
+		{
+			rect	33,-3,504,110
+			visible	1
+			background	"gfx/guis/monitors/strogg/medlabs/med7_bar"
+			matcolor	0.290,0.482,0.584,0.8
+			shear	0,.45
+		}
+		windowDef ekgbg2
+		{
+			rect	74,106,504,110
+			visible	1
+			background	"gfx/guis/monitors/strogg/medlabs/med7_bar"
+			matcolor	0.290,0.482,0.584,0.8
+			shear	0,.45
+		}
+		windowDef ekg1
+		{
+			rect	43,18,472,48
+			visible	1
+			background	"gfx/guis/common/ekg2"
+			matcolor	0.749,1,0.925,1
+			shear	0,.45
+		}
+		windowDef ekg2
+		{
+			rect	88,129,471,48
+			visible	1
+			background	"gfx/guis/common/ekg3"
+			matcolor	0.749,1,0.925,1
+			shear	0,.45
+		}
+		windowDef num1
+		{
+			rect	411,76,62,42
+			visible	1
+			forecolor	0.980,0.909,0.513,0.6
+			text	"46"
+			textscale	1
+			font	"fonts/strogg"
+			textalign	2
+		}
+		windowDef num2
+		{
+			rect	458,184,62,41
+			visible	1
+			forecolor	0.984,0.913,0.517,0.6
+			text	"37"
+			textscale	1
+			font	"fonts/strogg"
+			textalign	2
+		}
+		windowDef bpm1
+		{
+			rect	479,76,55,28
+			visible	1
+			forecolor	0.760,0.976,0.525,.8
+			text	bpm
+			textscale	.62
+			font	"fonts/strogg"
+		}
+		windowDef bpm2
+		{
+			rect	525,185,54,27
+			visible	1
+			forecolor	0.760,0.976,0.525,.8
+			text	bpm
+			textscale	.62
+			font	"fonts/strogg"
+		}
+	}
+	windowDef dp_ekg
+	{
+		rect	0,86,640,1
+		visible	0
+	}
+	windowDef ekgbg3
+	{
+		rect	120,302,504,110
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med7_bar"
+		matcolor	0.290,0.482,0.584,0.8
+		shear	0,.45
+	}
+	windowDef ekg3
+	{
+		rect	133,325,471,48
+		visible	1
+		background	"gfx/guis/common/ekg4"
+		matcolor	0.749,1,0.925,1
+		shear	0,.45
+	}
+	windowDef num3
+	{
+		rect	499,381,62,41
+		visible	1
+		forecolor	0.980,0.909,0.513,0.6
+		text	"52"
+		textscale	1
+		font	"fonts/strogg"
+		textalign	2
+	}
+	windowDef bpm3
+	{
+		rect	563,382,55,28
+		visible	1
+		forecolor	0.760,0.976,0.525,.8
+		text	bpm
+		textscale	.62
+		font	"fonts/strogg"
+	}
+	windowDef med7_1
+	{
+		rect	96,92,220,220
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med7_1"
+		matcolor	1,1,1,0
+	}
+	windowDef med7_2
+	{
+		rect	333,89,233,233
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med7_2"
+		matcolor	1,1,1,0
+	}
+	windowDef line1
+	{
+		rect	499,98,139,60
+		visible	1
+		background	"gfx/guis/common/line2"
+		matcolor	0.682,0.729,0.545,0
+	}
+	windowDef line2
+	{
+		rect	1,135,174,60
+		visible	1
+		background	"gfx/guis/common/line2"
+		matcolor	0.682,0.729,0.545,0
+		matscalex	-1
+	}
+	windowDef scrolltext1
+	{
+		rect	17,148,78,118
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext2"
+		matcolor	0.760,0.976,0.525,0
+	}
+	windowDef scrolltext2
+	{
+		rect	560,111,78,117
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext1"
+		matcolor	0.760,0.976,0.525,0
+	}
+	windowDef gradient
+	{
+		rect	-166,57,159,261
+		visible	1
+		background	"gfx/guis/common/gradient2"
+		matcolor	1,1,1,.4
+	}
+	windowDef d_gradient
+	{
+		rect	658,57,642,261
+		visible	0
+		background	"gfx/guis/common/gradient2"
+		matcolor	1,1,1,.4
+	}
+	windowDef edge
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med2_edge"
+		matcolor	0.682,0.729,0.545,.8*guitable_random1[time*0.0002]
+		matscaley	-1
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef static
+		{
+			visible	1
+			rect	0,-744,640,1224
+			background	"gfx/guis/common/static1"
+			matcolor	0.752,0.850,0.913,.14
+		}
+		windowDef sline
+		{
+			visible	1
+			rect	0,-927,640,1908
+			background	"gfx/guis/common/monitor_line7"
+			matcolor	0.752,0.850,0.913,0.01
+		}
+		windowDef blood
+		{
+			rect	16,-197,551,672
+			visible	"gui::gui_parm_blood"
+			background	"gfx/guis/common/bloodsplat1"
+			matcolor	.6,.6,.6,1
+			rotate	330
+		}
+		windowDef flicker2
+		{
+			visible	1
+			rect	0,0,640,480
+			backcolor	0.701,0.788,0.815,0
+
+			onTime 0 {
+				set "backcolor" "0.701,0.788,0.815,.05" ;
+			}
+
+			onTime 50 {
+				set "backcolor" "0.701,0.788,0.815,0" ;
+			}
+
+			onTime 300 {
+				set "backcolor" "0.701,0.788,0.815,.1" ;
+			}
+
+			onTime 450 {
+				set "backcolor" "0.701,0.788,0.815,0" ;
+			}
+
+			onTime 1500 {
+				set "backcolor" "0.701,0.788,0.815,.05" ;
+			}
+
+			onTime 1750 {
+				set "backcolor" "0.701,0.788,0.815,0" ;
+			}
+
+			onTime 1900 {
+				set "backcolor" "0.701,0.788,0.815,.1" ;
+			}
+
+			onTime 2050 {
+				set "backcolor" "0.701,0.788,0.815,0" ;
+			}
+
+			onTime 3400 {
+				set "backcolor" "0.701,0.788,0.815,.1" ;
+			}
+
+			onTime 3450 {
+				set "backcolor" "0.701,0.788,0.815,0" ;
+			}
+
+			onTime 3500 {
+				set "backcolor" "0.701,0.788,0.815,.05" ;
+			}
+
+			onTime 3550 {
+				set "backcolor" "0.701,0.788,0.815,0" ;
+			}
+
+			onTime 7200 {
+				set "backcolor" "0.701,0.788,0.815,.1" ;
+			}
+
+			onTime 7250 {
+				set "backcolor" "0.701,0.788,0.815,0" ;
+			}
+
+			onTime 7300 {
+				set "backcolor" "0.701,0.788,0.815,.05" ;
+			}
+
+			onTime 7350 {
+				set "backcolor" "0.701,0.788,0.815,0" ;
+			}
+
+			onTime 9000 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef anim_num1
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 0 {
+			set "num1::text" "46" ;
+			transition "num1::forecolor" "1,1,1,.8" "0.988,0.917,0.521,.6" "150" ;
+		}
+
+		onTime 500 {
+			set "num1::text" "83" ;
+			transition "num1::forecolor" "1,1,1,.8" "0.988,0.917,0.521,.6" "150" ;
+		}
+
+		onTime 900 {
+			set "num1::text" "41" ;
+			transition "num1::forecolor" "1,1,1,.8" "0.988,0.917,0.521,.6" "150" ;
+		}
+
+		onTime 1800 {
+			set "num1::text" "50" ;
+			transition "num1::forecolor" "1,1,1,.8" "0.988,0.917,0.521,.6" "150" ;
+		}
+
+		onTime 2400 {
+			set "num1::text" "72" ;
+			transition "num1::forecolor" "1,1,1,.8" "0.988,0.917,0.521,.6" "150" ;
+		}
+
+		onTime 3600 {
+			set "num1::text" "17" ;
+			transition "num1::forecolor" "1,1,1,.8" "0.988,0.917,0.521,.6" "150" ;
+		}
+
+		onTime 4300 {
+			set "num1::text" "64" ;
+			transition "num1::forecolor" "1,1,1,.8" "0.988,0.917,0.521,.6" "150" ;
+		}
+
+		onTime 5700 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef anim_num2
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 250 {
+			set "num2::text" "37" ;
+			transition "num2::forecolor" "1,1,1,.8" "0.988,0.917,0.521,.6" "150" ;
+		}
+
+		onTime 1050 {
+			set "num2::text" "19" ;
+			transition "num2::forecolor" "1,1,1,.8" "0.988,0.917,0.521,.6" "150" ;
+		}
+
+		onTime 1700 {
+			set "num2::text" "65" ;
+			transition "num2::forecolor" "1,1,1,.8" "0.988,0.917,0.521,.6" "150" ;
+		}
+
+		onTime 2200 {
+			set "num2::text" "84" ;
+			transition "num2::forecolor" "1,1,1,.8" "0.988,0.917,0.521,.6" "150" ;
+		}
+
+		onTime 2400 {
+			set "num2::text" "92" ;
+			transition "num2::forecolor" "1,1,1,.8" "0.988,0.917,0.521,.6" "150" ;
+		}
+
+		onTime 3100 {
+			set "num2::text" "76" ;
+			transition "num2::forecolor" "1,1,1,.8" "0.988,0.917,0.521,.6" "150" ;
+		}
+
+		onTime 4300 {
+			set "num2::text" "28" ;
+			transition "num2::forecolor" "1,1,1,.8" "0.988,0.917,0.521,.6" "150" ;
+		}
+
+		onTime 5100 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef anim_num3
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 150 {
+			set "num3::text" "52" ;
+			transition "num3::forecolor" "1,1,1,.8" "0.988,0.917,0.521,.6" "150" ;
+		}
+
+		onTime 950 {
+			set "num3::text" "87" ;
+			transition "num3::forecolor" "1,1,1,.8" "0.988,0.917,0.521,.6" "150" ;
+		}
+
+		onTime 1400 {
+			set "num3::text" "34" ;
+			transition "num3::forecolor" "1,1,1,.8" "0.988,0.917,0.521,.6" "150" ;
+		}
+
+		onTime 1800 {
+			set "num3::text" "68" ;
+			transition "num3::forecolor" "1,1,1,.8" "0.988,0.917,0.521,.6" "150" ;
+		}
+
+		onTime 2200 {
+			set "num3::text" "59" ;
+			transition "num3::forecolor" "1,1,1,.8" "0.988,0.917,0.521,.6" "150" ;
+		}
+
+		onTime 2700 {
+			set "num3::text" "78" ;
+			transition "num3::forecolor" "1,1,1,.8" "0.988,0.917,0.521,.6" "150" ;
+		}
+
+		onTime 3850 {
+			set "num3::text" "43" ;
+			transition "num3::forecolor" "1,1,1,.8" "0.988,0.917,0.521,.6" "150" ;
+		}
+
+		onTime 4750 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef anim
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 0 {
+			transition "p_ekg::rect" "$p_ekg::rect" "$dp_ekg::rect" "300" ;
+		}
+
+		onTime 300 {
+			transition "gradient::rect" "$gradient::rect" "$d_gradient::rect" "600" ;
+			
+			transition "med7_1::matcolor" "$desktop::off" "$desktop::on" "300" ;
+			transition "line1::matcolor" "0.682,0.729,0.545,0" "0.682,0.729,0.545,.8"  "300" ;
+			transition "scrolltext1::matcolor" "0.760,0.976,0.525,0" "0.760,0.976,0.525,1"  "300" ;
+		}
+
+		onTime 600 {
+			transition "med7_2::matcolor" "$desktop::off" "$desktop::on" "300" ;
+			transition "line2::matcolor" "0.682,0.729,0.545,0" "0.682,0.729,0.545,.8" "300" ;
+			transition "scrolltext2::matcolor" "0.760,0.976,0.525,0" "0.760,0.976,0.525,1" "300" ;
+		}
+
+		onTime 3400 {
+			transition "gradient::rect" "$gradient::rect" "$d_gradient::rect" "600" ;
+		}
+
+		onTime 4000 {
+			transition "med7_2::matcolor" "$desktop::on" "$desktop::off" "300" ;
+			transition "line2::matcolor" "0.682,0.729,0.545,.8" "0.682,0.729,0.545,0" "300" ;
+			transition "scrolltext2::matcolor" "0.760,0.976,0.525,1" "0.760,0.976,0.525,0"  "300" ;
+		}
+
+		onTime 4300 {
+			transition "med7_1::matcolor" "$desktop::on" "$desktop::off" "300" ;
+			transition "line1::matcolor" "0.682,0.729,0.545,.8" "0.682,0.729,0.545,0" "300" ;
+			transition "scrolltext1::matcolor" "0.760,0.976,0.525,1" "0.760,0.976,0.525,0"  "300" ;
+		}
+
+		onTime 4600 {
+			transition "p_ekg::rect" "$dp_ekg::rect" "$p_ekg::rect" "300" ;
+		}
+
+		onTime 12000 {
+			resettime "0" ;
+		}
+
+	}
+}

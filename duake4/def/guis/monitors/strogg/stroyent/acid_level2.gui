@@ -1,0 +1,699 @@
+windowDef Desktop
+{
+	visible	1
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	definevec4	"white_34"	1,1,1,.34
+	definevec4	"white_1"	1,1,1,1
+	definevec4	"irisbar_on"	0.745,0.788,0.494,1
+	definevec4	"irisbar_off"	0.745,0.788,0.494,0
+
+	onNamedEvent start_heart_shock {
+		resettime "anim_static" "0" ;
+	}
+
+	onNamedEvent end_heart_shock {
+		resettime "anim_static_end" "0" ;
+	}
+
+	editDef data
+	{
+		rect	0,0,396,480
+		visible	1
+		background	"gfx/guis/common/strogg/data_b"
+		matcolor	0.670,0.956,0,.32
+		shear	0,-.2
+	}
+	windowDef acid_parent
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef acidwarn
+		{
+			rect	329,87,251,415
+			visible	0
+			shear	0,-.2
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	0.949,0.239,0,1*guitable_10_0[time*.002]
+		}
+		windowDef acid2
+		{
+			rect	329,87,251,415
+			visible	0
+			shear	0,-.2
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	0.670,0.956,0,.4
+		}
+		windowDef acid
+		{
+			rect	329,87,251,415
+			visible	1
+			shear	0,-.2
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	0.670,0.956,0,1
+		}
+		windowDef acid_refill4a
+		{
+			rect	326,131,251,369
+			visible	0
+			shear	0,-.2
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	0.670,0.956,0,1
+		}
+		windowDef acid_refill4
+		{
+			rect	326,155,251,345
+			visible	0
+			shear	0,-.2
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	0.670,0.956,0,1
+		}
+		windowDef acid_refill3a
+		{
+			rect	314,214,251,286
+			visible	0
+			shear	0,-.2
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	0.670,0.956,0,1
+		}
+		windowDef acid_refill3
+		{
+			rect	314,234,251,266
+			visible	0
+			shear	0,-.2
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	0.670,0.956,0,1
+		}
+		windowDef acid_refill2a
+		{
+			rect	306,289,251,211
+			visible	0
+			shear	0,-.2
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	0.670,0.956,0,1
+		}
+		windowDef acid_refill2
+		{
+			rect	306,310,251,190
+			visible	0
+			shear	0,-.2
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	0.670,0.956,0,1
+		}
+		windowDef acid_refill1a
+		{
+			rect	303,367,251,133
+			visible	0
+			shear	0,-.2
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	0.670,0.956,0,1
+		}
+		windowDef acid_refill1
+		{
+			rect	301,387,251,113
+			visible	0
+			shear	0,-.2
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	0.670,0.956,0,1
+		}
+		windowDef d_acid
+		{
+			rect	301,387,251,113
+			visible	0
+			shear	0,-.2
+			background	"gfx/guis/common/strogg/sq1"
+			matcolor	0.670,0.956,0,1
+		}
+		windowDef bubbles
+		{
+			rect	365,117,176,385
+			visible	1
+			shear	0,-.2
+			background	"gfx/guis/common/bubbles"
+			matcolor	0.670,0.956,0,1
+		}
+		windowDef d_bubbles
+		{
+			rect	307,397,176,385
+			visible	0
+			shear	0,-.2
+			background	"gfx/guis/common/bubbles"
+			matcolor	0.670,0.956,0,1
+		}
+		windowDef d_bubbles1
+		{
+			rect	312,378,176,385
+			visible	0
+			shear	0,-.2
+			background	"gfx/guis/common/bubbles"
+			matcolor	0.670,0.956,0,1
+		}
+		windowDef d_bubbles1a
+		{
+			rect	323,325,176,385
+			visible	0
+			shear	0,-.2
+			background	"gfx/guis/common/bubbles"
+			matcolor	0.670,0.956,0,1
+		}
+		windowDef d_bubbles2
+		{
+			rect	329,306,176,385
+			visible	0
+			shear	0,-.2
+			background	"gfx/guis/common/bubbles"
+			matcolor	0.670,0.956,0,1
+		}
+		windowDef d_bubbles2a
+		{
+			rect	337,257,176,385
+			visible	0
+			shear	0,-.2
+			background	"gfx/guis/common/bubbles"
+			matcolor	0.670,0.956,0,1
+		}
+		windowDef d_bubbles3
+		{
+			rect	341,238,176,385
+			visible	0
+			shear	0,-.2
+			background	"gfx/guis/common/bubbles"
+			matcolor	0.670,0.956,0,1
+		}
+		windowDef d_bubbles3a
+		{
+			rect	352,182,176,385
+			visible	0
+			shear	0,-.2
+			background	"gfx/guis/common/bubbles"
+			matcolor	0.670,0.956,0,1
+		}
+		windowDef d_bubbles4
+		{
+			rect	358,160,176,385
+			visible	0
+			shear	0,-.2
+			background	"gfx/guis/common/bubbles"
+			matcolor	0.670,0.956,0,1
+		}
+		windowDef d_bubbles4a
+		{
+			rect	366,119,176,385
+			visible	0
+			shear	0,-.2
+			background	"gfx/guis/common/bubbles"
+			matcolor	0.670,0.956,0,1
+		}
+	}
+	windowDef bg_black
+	{
+		rect	39,37,583,431
+		visible	1
+		background	"gfx/guis/monitors/strogg/acid_level1_bg"
+		matcolor	0,0,0,1
+	}
+	windowDef bg
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/acid_level1_bg"
+		matcolor	0.607,0.607,0,1
+	}
+	windowDef lines
+	{
+		rect	246,16,436,449
+		visible	1
+		background	"gfx/guis/monitors/strogg/acid_level1_lines"
+		matcolor	1,1,1,0.46
+	}
+	windowDef iris_parent
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef iris_bar
+		{
+			rect	-8,109,101,51
+			visible	1
+			background	"gfx/guis/common/strogg/irisbar"
+			matcolor	0.745,0.788,0.494,1
+			shear	0,-.2
+		}
+		windowDef iris
+		{
+			rect	50,0,300,300
+			visible	1
+			background	"gfx/guis/common/strogg/iris1"
+			matcolor	0.745,0.788,0.494,1
+			rotate	0
+		}
+		windowDef iris_circle
+		{
+			rect	93,43,214,214
+			visible	1
+			background	"gfx/guis/common/strogg/circle3"
+			matcolor	0.819,0.909,0.549,1
+		}
+		windowDef d_iris_circle
+		{
+			rect	180,130,40,40
+			visible	0
+			background	"gfx/guis/common/strogg/circle3"
+			matcolor	0.819,0.909,0.549,1
+		}
+		windowDef iris_arc1
+		{
+			rect	104,169,194,80
+			visible	1
+			background	"gfx/guis/common/strogg/fadearc1"
+			matcolor	0.854,0.705,0.180,1
+		}
+		windowDef iris_arc2
+		{
+			rect	104,54,194,80
+			visible	1
+			background	"gfx/guis/common/strogg/fadearc1"
+			matcolor	0.854,0.705,0.180,1
+			matscaley	-1
+		}
+		windowDef t_valveopen
+		{
+			rect	140,120,117,65
+			visible	1
+			forecolor	0.858,0.913,0.678,1*guitable_8_10[time*.002]
+			text	"#str_200405"
+			textscale	0.5
+			font	"fonts/r_strogg"
+			textalign	1
+		}
+		windowDef arrow1
+		{
+			rect	-1,134,69,65
+			visible	1
+			background	"gfx/guis/monitors/strogg/common10_arrow2"
+			matcolor	1,1,1,.34
+			rotate	30
+		}
+		windowDef arrow2
+		{
+			rect	11,179,69,65
+			visible	1
+			background	"gfx/guis/monitors/strogg/common10_arrow2"
+			matcolor	1,1,1,.34
+			rotate	40
+		}
+		windowDef arrow3
+		{
+			rect	32,217,69,65
+			visible	1
+			background	"gfx/guis/monitors/strogg/common10_arrow2"
+			matcolor	1,1,1,.34
+			rotate	50
+		}
+		windowDef arrow4
+		{
+			rect	61,247,69,65
+			visible	1
+			background	"gfx/guis/monitors/strogg/common10_arrow2"
+			matcolor	1,1,1,.34
+			rotate	70
+		}
+		windowDef arrow5
+		{
+			rect	96,267,69,65
+			visible	1
+			background	"gfx/guis/monitors/strogg/common10_arrow2"
+			matcolor	1,1,1,.34
+			rotate	85
+		}
+	}
+	windowDef scrolltext1
+	{
+		rect	199,289,114,118
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext2"
+		matcolor	1,1,1,.6
+		shear	0,-.2
+		matscalex	-1
+	}
+	windowDef scrolltext2
+	{
+		rect	581,202,142,196
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext1fast"
+		matcolor	1,1,1,0.6
+		shear	0,-.2
+	}
+	windowDef title_bar
+	{
+		rect	-55,320,384,159
+		visible	1
+		background	"gfx/guis/common/strogg/box5"
+		matcolor	0.784,0.901,0.376,.66
+		shear	0,.2
+	}
+	windowDef title
+	{
+		rect	34,338,166,117
+		visible	1
+		forecolor	0.858,0.913,0.678,1
+		text	"#str_200801"
+		textscale	1.1
+		font	"fonts/r_strogg"
+		textalign	2
+	}
+	windowDef title2
+	{
+		rect	199,316,110,139
+		visible	1
+		forecolor	0.858,0.913,0.678,1
+		text	"b"
+		textscale	2.8
+		font	"fonts/r_strogg"
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef black
+		{
+			visible	1
+			rect	0,0,640,480
+			backcolor	0,0,0,0
+		}
+		windowDef static1
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/img_static3"
+			matcolor	1,1,1,0
+		}
+		windowDef static2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/static1"
+			matcolor	1,1,1,0
+		}
+		windowDef sline
+		{
+			visible	1
+			rect	2,-98,640,751
+			background	"gfx/guis/common/monitor_line3"
+			matcolor	0.682,0.733,0.533,1
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	-165,-75,1026,575
+			background	"gfx/guis/common/monitor_reflect"
+			matcolor	0.984,0.792,0.215,.2
+		}
+		windowDef screendirt
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/screen_dirt5"
+			matcolor	0.443,0.521,0.160,0.8
+		}
+		windowDef screendirt2
+		{
+			visible	1
+			rect	0,0,764,480
+			background	"gfx/guis/common/screen_dirt4"
+			matcolor	0,0,0,0.4
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef monitor_darkedge
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+		windowDef flicker
+		{
+			rect	0,0,640,480
+			visible	1
+			backcolor	0,0,0,.2*guitable_random1[time*.4]
+		}
+	}
+	windowDef anim_empty
+	{
+		visible	1
+		rect	0,0,1,1
+		notime	1
+
+		onTime 0 {
+			set "t_valveopen::visible" "0"	;
+			set "iris_arc1::visible" "0"	;
+			set "iris_arc2::visible" "0"	;
+			
+			set "acid2::visible" "0"	;
+			
+			transition "iris::rotate" "0" "90" "7200" "500" "2000" ;
+			transition "iris_circle::rect" "$iris_circle::rect" "$d_iris_circle::rect" "7200" "500" "1500" ;
+			
+			transition "acid::rect" "$acid::rect" "$d_acid::rect" "7200" "500" "1500" ;
+			transition "bubbles::rect" "$bubbles::rect" "$d_bubbles::rect" "7200" "500" "1500" ;
+			
+			transition "arrow1::matcolor" "$desktop::white_34" "$desktop::white_1" "1200" ;
+		}
+
+		onTime 1200 {
+			transition "arrow2::matcolor" "$desktop::white_34" "$desktop::white_1" "1200" ;
+			
+			transition "arrow1::matcolor" "$desktop::white_1" "$desktop::white_34" "1200" ;
+		}
+
+		onTime 2400 {
+			transition "arrow3::matcolor" "$desktop::white_34" "$desktop::white_1" "1200" ;
+			
+			transition "arrow2::matcolor" "$desktop::white_1" "$desktop::white_34" "1200" ;
+		}
+
+		onTime 3600 {
+			transition "arrow4::matcolor" "$desktop::white_34" "$desktop::white_1" "1200" ;
+			
+			transition "arrow3::matcolor" "$desktop::white_1" "$desktop::white_34" "1200" ;
+		}
+
+		onTime 4800 {
+			transition "arrow5::matcolor" "$desktop::white_34" "$desktop::white_1" "1200" ;
+			
+			transition "arrow4::matcolor" "$desktop::white_1" "$desktop::white_34" "1200" ;
+		}
+
+		onTime 6000 {
+			transition "arrow5::matcolor" "$desktop::white_1" "$desktop::white_34" "1200" ;
+		}
+
+		onTime 7200 {
+			//set "iris_circle::visible" "0" ;
+			set "acidwarn::visible" "1" ;
+		}
+
+	}
+	windowDef anim_drain
+	{
+		visible	1
+		rect	0,0,1,1
+		notime	0
+
+		onTime 0 {
+			set "acid2::visible" "1"	;
+			set "acidwarn::visible" "0"	;
+			
+			transition "acid::rect" "$acid::rect" "$d_acid::rect" "7200" "500" "1500" ;
+			transition "bubbles::rect" "$bubbles::rect" "$d_bubbles::rect" "7200" "500" "1500" ;
+		}
+
+		onTime 10000 {
+			resettime "anim_fill" "0" ;
+		}
+
+	}
+	windowDef anim_fill
+	{
+		visible	1
+		rect	0,0,1,1
+		notime	1
+
+		onTime 0 {
+			transition "acid::rect" "$acid_refill1::rect" "$acid_refill1a::rect" "1000";
+			transition "bubbles::rect" "$d_bubbles::rect" "$d_bubbles1::rect" "1000";
+		}
+
+		onTime 1000 {
+			transition "acid::rect" "$acid_refill1a::rect" "$acid_refill2::rect" "500";
+			transition "bubbles::rect" "$d_bubbles1::rect" "$d_bubbles1a::rect" "500";
+		}
+
+		onTime 1500 {
+			transition "acid::rect" "$acid_refill2::rect" "$acid_refill2a::rect" "1000";
+			transition "bubbles::rect" "$d_bubbles1a::rect" "$d_bubbles2::rect" "1000";
+		}
+
+		onTime 2500 {
+			transition "acid::rect" "$acid_refill2a::rect" "$acid_refill3::rect" "500";
+			transition "bubbles::rect" "$d_bubbles2::rect" "$d_bubbles2a::rect" "500";
+		}
+
+		onTime 3000 {
+			transition "acid::rect" "$acid_refill3::rect" "$acid_refill3a::rect" "1000";
+			transition "bubbles::rect" "$d_bubbles2a::rect" "$d_bubbles3::rect" "1000";
+		}
+
+		onTime 4000 {
+			transition "acid::rect" "$acid_refill3a::rect" "$acid_refill4::rect" "500";
+			transition "bubbles::rect" "$d_bubbles3::rect" "$d_bubbles3a::rect" "500";
+		}
+
+		onTime 4500 {
+			transition "acid::rect" "$acid_refill4::rect" "$acid_refill4a::rect" "1000";
+			transition "bubbles::rect" "$d_bubbles3a::rect" "$d_bubbles4::rect" "1000";
+		}
+
+		onTime 5500 {
+			transition "acid::rect" "$acid_refill4a::rect" "$acid::rect" "500";
+			transition "bubbles::rect" "$d_bubbles4::rect" "$d_bubbles4a::rect" "500";
+		}
+
+		onTime 6000 {
+			set "acid2::visible" "0"	;
+		}
+
+		onTime 10000 {
+			resettime "anim_drain" "0" ;
+		}
+
+	}
+	windowDef anim_static
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "black::backcolor" "0,0,0,0" "0,0,0,.8" "50";
+			transition "static1::matcolor" "1,1,1,0" "1,1,1,.4" "50";
+			transition "static2::matcolor" "1,1,1,0" "1,1,1,.6" "50";
+		}
+
+		onTime 500 {
+			transition "black::backcolor" "0,0,0,.8" ".2,.2,.2,1" "0" ;
+			transition "static1::matcolor" "1,1,1,.4" "1,1,1,.6" "50";
+			transition "static2::matcolor" "1,1,1,.6" "1,1,1,.8" "50";
+		}
+
+		onTime 550 {
+			transition "black::backcolor" ".2,.2,.2,1" "0,0,0,.8" "0" ;
+			transition "static1::matcolor" "1,1,1,.6" "1,1,1,.1" "50" ;
+			transition "static2::matcolor" "1,1,1,.8" "1,1,1,.2" "50" ;
+		}
+
+		onTime 600 {
+			transition "black::backcolor" "0,0,0,.2" "0,0,0,1" "50" ;
+			transition "static1::matcolor" "1,1,1,.1" "1,1,1,.4" "50" ;
+			transition "static2::matcolor" "1,1,1,.2" "1,1,1,.6" "50" ;
+		}
+
+		onTime 1400 {
+			transition "black::backcolor" "0,0,0,1" "0,0,0,.4" "0" ;
+			transition "static1::matcolor" "1,1,1,.4" "1,1,1,0" "0" ;
+			transition "static2::matcolor" "1,1,1,.6" "1,1,1,0" "0" ;
+		}
+
+		onTime 1450 {
+			transition "black::backcolor" "0,0,0,.4" "0,0,0,.8" "0" ;
+			transition "static1::matcolor" "1,1,1,0" "1,1,1,.4" "0" ;
+			transition "static2::matcolor" "1,1,1,0" "1,1,1,.6" "0" ;
+		}
+
+		onTime 1500 {
+			transition "black::backcolor" "0,0,0,.8" "0,0,0,.2" "0" ;
+		}
+
+		onTime 1550 {
+			transition "black::backcolor" "0,0,0,.2" "0,0,0,.8" "0" ;
+		}
+
+		onTime 1900 {
+			transition "black::backcolor" "0,0,0,.8" ".2,.2,.2,1" "0" ;
+		}
+
+		onTime 1950 {
+			transition "black::backcolor" ".2,.2,.2,1" "0,0,0,.8" "0" ;
+		}
+
+		onTime 2000 {
+			transition "black::backcolor" "0,0,0,.8" ".4,.4,.4,1" "0" ;
+		}
+
+		onTime 2050 {
+			transition "black::backcolor" ".4,.4,.4,1" "0,0,0,.8" "0" ;
+		}
+
+		onTime 2150 {
+			transition "black::backcolor" "0,0,0,.8" ".2,.2,.2,1" "0" ;
+		}
+
+		onTime 2200 {
+			transition "black::backcolor" ".2,.2,.2,1" "0,0,0,.8" "0" ;
+		}
+
+		onTime 2600 {
+			transition "black::backcolor" "0,0,0,1" "0,0,0,.4" "0" ;
+			transition "static1::matcolor" "1,1,1,.4" "1,1,1,.8" "0" ;
+			transition "static2::matcolor" "1,1,1,.6" "1,1,1,1" "0" ;
+		}
+
+		onTime 2800 {
+			transition "black::backcolor" "0,0,0,.4" "0,0,0,1" "50" ;
+			transition "static1::matcolor" "1,1,1,.8" "1,1,1,.4" "50" ;
+			transition "static2::matcolor" "1,1,1,1" "1,1,1,.6" "50" ;
+		}
+
+		onTime 3000 {
+			transition "black::backcolor" "0,0,0,1" "0,0,0,.5" "0" ;
+			transition "static1::matcolor" "1,1,1,.4" "1,1,1,.2" "0" ;
+			transition "static2::matcolor" "1,1,1,.6" "1,1,1,.3" "0" ;
+		}
+
+		onTime 3050 {
+			transition "black::backcolor" "0,0,0,.5" "0,0,0,1" "0" ;
+			transition "static1::matcolor" "1,1,1,.2" "1,1,1,.4" "0" ;
+			transition "static2::matcolor" "1,1,1,.3" "1,1,1,.6" "0" ;
+		}
+
+	}
+	windowDef anim_static_end
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "black::backcolor" "0,0,0,.8" "0,0,0,0" "200" ;
+			transition "static1::matcolor" "1,1,1,.4" "1,1,1,0" "200" ;
+			transition "static2::matcolor" "1,1,1,.6" "1,1,1,0" "200" ;
+		}
+
+		onTime 300 {
+			transition "black::backcolor" "1,1,1,0" "1,1,1,.2" "0" ;
+		}
+
+		onTime 400 {
+			transition "black::backcolor" "1,1,1,.2" "1,1,1,0" "0" ;
+		}
+
+		onTime 500 {
+			transition "black::backcolor" "1,1,1,0" "1,1,1,.1" "0" ;
+		}
+
+		onTime 600 {
+			transition "black::backcolor" "1,1,1,.1" "1,1,1,0" "0" ;
+		}
+
+	}
+}

@@ -1,0 +1,913 @@
+windowDef Desktop
+{
+	visible	1
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	definevec4	"pbox_on"	0.843,0.882,0.890,1
+	definevec4	"pbox_off"	0.843,0.882,0.890,0
+	definevec4	"fence_on"	0.898,0.329,0.0549,1
+	definevec4	"fence_off"	0.6,0.6,0.5,1
+	definevec4	"white"	1,1,1,1
+	definevec4	"white_2"	1,1,1,.2
+	definevec4	"white_0"	1,1,1,0
+	definevec4	"btn_on"	0.933,0.650,0.266,1
+	definevec4	"btn_off"	0.294,0.486,0.603,1
+	float	"power"	1
+	float	"active"	0
+	windowDef p_main
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef bg
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/maps/bldg_b/bctrl_bg"
+			matcolor	0.588,0.827,0.921,1*guitable_8_10[time*.001]
+		}
+		windowDef btn
+		{
+			visible	1
+			rect	-4,314,420,168
+			background	"gfx/guis/maps/bldg_b/bctrl_btn"
+			matcolor	0.294,0.486,0.603,1
+		}
+		windowDef btn_off
+		{
+			visible	0
+			rect	-3,314,420,168
+			background	"gfx/guis/maps/bldg_b/bctrl_btn"
+			matcolor	0.682,0.101,0.0823,1
+
+			onTime 0 {
+				transition "matcolor" "0.682,0.101,0.0823,1" "0.847,0.360,0.0705,1" "350" ;
+			}
+
+			onTime 350 {
+				transition "matcolor" "0.847,0.360,0.0705,1" "0.682,0.101,0.0823,1" "350" ;
+			}
+
+			onTime 700 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef line
+		{
+			visible	1
+			rect	383,313,272,129
+			background	"gfx/guis/maps/bldg_b/bctrl_line"
+			matcolor	0.556,0.619,0.635,1*guitable_8_10[time*.001]
+		}
+		windowDef scrolltext1
+		{
+			visible	1
+			rect	400,382,217,198
+			background	"gfx/guis/common/strogg/scrolltext1"
+			matcolor	0.839,0.819,0.780,1*guitable_8_10[time*.001]
+			shear	0,-.14
+		}
+		windowDef t_secper
+		{
+			visible	1
+			rect	35,389,120,43
+			forecolor	1,1,1,1
+			text	"security perimeter"
+			textscale	0.4
+			font	"fonts/strogg"
+			textalign	2
+		}
+		windowDef t_c
+		{
+			visible	1
+			rect	159,381,15,48
+			forecolor	1,1,1,1
+			text	:
+			textscale	0.8
+			font	"fonts/r_strogg"
+			textalign	1
+		}
+		windowDef t_status
+		{
+			visible	1
+			rect	167,384,199,44
+			forecolor	1,1,1,1
+			text	online
+			textscale	1.1
+			font	"fonts/strogg"
+			textalign	1
+		}
+		windowDef t_fence1
+		{
+			visible	1
+			rect	312,47,57,31
+			background	"gfx/guis/common/arrow5"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef b_fence1
+		{
+			visible	1
+			rect	312,78,57,30
+			background	"gfx/guis/common/arrow5"
+			matcolor	0.901,0.333,0.0588,1
+			matscaley	-1
+		}
+		windowDef t_fence2
+		{
+			visible	1
+			rect	480,135,34,19
+			background	"gfx/guis/common/arrow5"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef b_fence2
+		{
+			visible	1
+			rect	480,153,34,19
+			background	"gfx/guis/common/arrow5"
+			matcolor	0.901,0.333,0.0588,1
+			matscaley	-1
+		}
+		windowDef t_fence3
+		{
+			visible	1
+			rect	142,202,34,19
+			background	"gfx/guis/common/arrow5"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef b_fence3
+		{
+			visible	1
+			rect	142,221,34,19
+			background	"gfx/guis/common/arrow5"
+			matcolor	0.901,0.333,0.0588,1
+			matscaley	-1
+		}
+		windowDef t_fence4
+		{
+			visible	1
+			rect	312,228,34,19
+			background	"gfx/guis/common/arrow5"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef b_fence4
+		{
+			visible	1
+			rect	312,247,34,19
+			background	"gfx/guis/common/arrow5"
+			matcolor	0.901,0.333,0.0588,1
+			matscaley	-1
+		}
+	}
+	windowDef t_r1
+	{
+		visible	1
+		rect	404,308,229,54
+		forecolor	1,1,1,0
+		text	"perimeter command center"
+		textscale	0.55
+		font	"fonts/strogg"
+	}
+	windowDef t_r2
+	{
+		visible	1
+		rect	404,308,220,53
+		forecolor	1,1,1,0
+		text	"fuel pumping station 87-r"
+		textscale	0.55
+		font	"fonts/strogg"
+	}
+	windowDef t_r3
+	{
+		visible	1
+		rect	404,308,220,50
+		forecolor	1,1,1,0
+		text	"auxilliary resupply depot"
+		textscale	0.55
+		font	"fonts/strogg"
+	}
+	windowDef t_r4
+	{
+		visible	1
+		rect	404,308,219,54
+		forecolor	1,1,1,0
+		text	"communication node junction"
+		textscale	0.55
+		font	"fonts/strogg"
+	}
+	windowDef selbox
+	{
+		visible	1
+		rect	287,23,114,117
+		background	"gfx/guis/common/strogg/box7"
+		matcolor	0.956,0.721,0.282,1
+		shear	0,-.12
+	}
+	windowDef d_selbox1
+	{
+		visible	0
+		rect	434,99,114,117
+		background	"gfx/guis/common/strogg/box7"
+		matcolor	0.956,0.721,0.282,1
+		shear	0,-.12
+	}
+	windowDef d_selbox2
+	{
+		visible	0
+		rect	109,178,114,117
+		background	"gfx/guis/common/strogg/box7"
+		matcolor	0.956,0.721,0.282,1
+		shear	0,-.12
+	}
+	windowDef d_selbox3
+	{
+		visible	0
+		rect	266,178,114,117
+		background	"gfx/guis/common/strogg/box7"
+		matcolor	0.956,0.721,0.282,1
+		shear	0,-.12
+	}
+	windowDef popup_box1
+	{
+		visible	1
+		rect	295,43,95,85
+		background	"gfx/guis/maps/bldg_b/bctrl_box"
+		matcolor	0.843,0.882,0.890,0
+		shear	0,-.14
+	}
+	windowDef popup_box2
+	{
+		visible	1
+		rect	442,120,95,85
+		background	"gfx/guis/maps/bldg_b/bctrl_box"
+		matcolor	0.843,0.882,0.890,0
+		shear	0,-.14
+	}
+	windowDef popup_box3
+	{
+		visible	1
+		rect	117,199,95,85
+		background	"gfx/guis/maps/bldg_b/bctrl_box"
+		matcolor	0.843,0.882,0.890,0
+		shear	0,-.14
+	}
+	windowDef popup_box4
+	{
+		visible	1
+		rect	274,199,95,85
+		background	"gfx/guis/maps/bldg_b/bctrl_box"
+		matcolor	0.843,0.882,0.890,0
+		shear	0,-.14
+	}
+	windowDef p_popup1
+	{
+		visible	0
+		rect	57,28,325,289
+		windowDef l_post
+		{
+			visible	1
+			rect	51,25,42,203
+			background	"gfx/guis/maps/bldg_b/bctrl_post"
+			matcolor	0.898,0.329,0.0549,1
+		}
+		windowDef r_post
+		{
+			visible	1
+			rect	241,25,42,203
+			background	"gfx/guis/maps/bldg_b/bctrl_post"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef fence1
+		{
+			visible	1
+			rect	94,50,145,22
+			background	"gfx/guis/maps/bldg_b/bctrl_fence"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef fence2
+		{
+			visible	1
+			rect	94,73,145,22
+			background	"gfx/guis/maps/bldg_b/bctrl_fence"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef fence3
+		{
+			visible	1
+			rect	94,96,145,22
+			background	"gfx/guis/maps/bldg_b/bctrl_fence"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef fence4
+		{
+			visible	1
+			rect	94,130,145,22
+			background	"gfx/guis/maps/bldg_b/bctrl_fence"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef fence5
+		{
+			visible	1
+			rect	94,153,145,22
+			background	"gfx/guis/maps/bldg_b/bctrl_fence"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef fence6
+		{
+			visible	1
+			rect	94,176,145,22
+			background	"gfx/guis/maps/bldg_b/bctrl_fence"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef smalltext
+		{
+			visible	1
+			rect	187,225,92,38
+			background	"gfx/guis/common/smalltext1"
+			matcolor	0.976,0.850,0.556,1
+		}
+		windowDef smalltext2
+		{
+			visible	1
+			rect	18,175,32,67
+			background	"gfx/guis/common/smalltext2"
+			matcolor	0.976,0.850,0.556,1
+		}
+	}
+	windowDef p_popup2
+	{
+		visible	0
+		rect	157,10,325,289
+		windowDef l_post_2
+		{
+			visible	1
+			rect	51,25,42,203
+			background	"gfx/guis/maps/bldg_b/bctrl_post"
+			matcolor	0.898,0.329,0.0549,1
+		}
+		windowDef r_post_2
+		{
+			visible	1
+			rect	241,25,42,203
+			background	"gfx/guis/maps/bldg_b/bctrl_post"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef fence1_2
+		{
+			visible	1
+			rect	94,50,145,22
+			background	"gfx/guis/maps/bldg_b/bctrl_fence"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef fence2_2
+		{
+			visible	1
+			rect	94,73,145,22
+			background	"gfx/guis/maps/bldg_b/bctrl_fence"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef fence3_2
+		{
+			visible	1
+			rect	94,96,145,22
+			background	"gfx/guis/maps/bldg_b/bctrl_fence"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef fence4_2
+		{
+			visible	1
+			rect	94,130,145,22
+			background	"gfx/guis/maps/bldg_b/bctrl_fence"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef fence5_2
+		{
+			visible	1
+			rect	94,153,145,22
+			background	"gfx/guis/maps/bldg_b/bctrl_fence"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef fence6_2
+		{
+			visible	1
+			rect	94,176,145,22
+			background	"gfx/guis/maps/bldg_b/bctrl_fence"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef smalltext_2
+		{
+			visible	1
+			rect	187,225,92,38
+			background	"gfx/guis/common/smalltext1"
+			matcolor	0.976,0.850,0.556,1
+		}
+		windowDef smalltext2_2
+		{
+			visible	1
+			rect	18,175,32,67
+			background	"gfx/guis/common/smalltext2"
+			matcolor	0.976,0.850,0.556,1
+		}
+	}
+	windowDef p_popup3
+	{
+		visible	0
+		rect	276,16,325,289
+		windowDef l_post_3
+		{
+			visible	1
+			rect	51,25,42,203
+			background	"gfx/guis/maps/bldg_b/bctrl_post"
+			matcolor	0.898,0.329,0.0549,1
+		}
+		windowDef r_post_3
+		{
+			visible	1
+			rect	241,25,42,203
+			background	"gfx/guis/maps/bldg_b/bctrl_post"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef fence1_3
+		{
+			visible	1
+			rect	94,50,145,22
+			background	"gfx/guis/maps/bldg_b/bctrl_fence"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef fence2_3
+		{
+			visible	1
+			rect	94,73,145,22
+			background	"gfx/guis/maps/bldg_b/bctrl_fence"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef fence3_3
+		{
+			visible	1
+			rect	94,96,145,22
+			background	"gfx/guis/maps/bldg_b/bctrl_fence"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef fence4_3
+		{
+			visible	1
+			rect	94,130,145,22
+			background	"gfx/guis/maps/bldg_b/bctrl_fence"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef fence5_3
+		{
+			visible	1
+			rect	94,153,145,22
+			background	"gfx/guis/maps/bldg_b/bctrl_fence"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef fence6_3
+		{
+			visible	1
+			rect	94,176,145,22
+			background	"gfx/guis/maps/bldg_b/bctrl_fence"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef smalltext_3
+		{
+			visible	1
+			rect	187,225,92,38
+			background	"gfx/guis/common/smalltext1"
+			matcolor	0.976,0.850,0.556,1
+		}
+		windowDef smalltext2_3
+		{
+			visible	1
+			rect	18,175,32,67
+			background	"gfx/guis/common/smalltext2"
+			matcolor	0.976,0.850,0.556,1
+		}
+	}
+	windowDef p_popup4
+	{
+		visible	0
+		rect	38,69,325,289
+		windowDef l_post_4
+		{
+			visible	1
+			rect	51,25,42,203
+			background	"gfx/guis/maps/bldg_b/bctrl_post"
+			matcolor	0.898,0.329,0.0549,1
+		}
+		windowDef r_post_4
+		{
+			visible	1
+			rect	241,25,42,203
+			background	"gfx/guis/maps/bldg_b/bctrl_post"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef fence1_4
+		{
+			visible	1
+			rect	94,50,145,22
+			background	"gfx/guis/maps/bldg_b/bctrl_fence"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef fence2_4
+		{
+			visible	1
+			rect	94,73,145,22
+			background	"gfx/guis/maps/bldg_b/bctrl_fence"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef fence3_4
+		{
+			visible	1
+			rect	94,96,145,22
+			background	"gfx/guis/maps/bldg_b/bctrl_fence"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef fence4_4
+		{
+			visible	1
+			rect	94,130,145,22
+			background	"gfx/guis/maps/bldg_b/bctrl_fence"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef fence5_4
+		{
+			visible	1
+			rect	94,153,145,22
+			background	"gfx/guis/maps/bldg_b/bctrl_fence"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef fence6_4
+		{
+			visible	1
+			rect	94,176,145,22
+			background	"gfx/guis/maps/bldg_b/bctrl_fence"
+			matcolor	0.901,0.333,0.0588,1
+		}
+		windowDef smalltext_4
+		{
+			visible	1
+			rect	187,225,92,38
+			background	"gfx/guis/common/smalltext1"
+			matcolor	0.976,0.850,0.556,1
+		}
+		windowDef smalltext2_4
+		{
+			visible	1
+			rect	18,175,32,67
+			background	"gfx/guis/common/smalltext2"
+			matcolor	0.976,0.850,0.556,1
+		}
+	}
+	windowDef d_popup1
+	{
+		visible	0
+		rect	57,28,325,289
+	}
+	windowDef d_popup2
+	{
+		visible	0
+		rect	157,10,325,289
+		shear	0,-.14
+	}
+	windowDef d_popup3
+	{
+		visible	0
+		rect	276,16,325,289
+		shear	0,-.14
+	}
+	windowDef d_popup4
+	{
+		visible	0
+		rect	38,69,325,289
+		shear	0,-.14
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline1
+		{
+			visible	1
+			rect	0,-197,640,820
+			background	"gfx/guis/common/monitor_line7"
+			matcolor	0.709,0.8,0.823,0.0470
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	-171,-193,980,620
+			background	"gfx/guis/common/gradient"
+			matcolor	0.584,0.701,0.815,.2*guitable_10_5[time*.1]
+		}
+		windowDef dirt
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/screen_dirt7"
+			matcolor	0.458,0.439,0.301,1
+		}
+		windowDef blackedge
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef anim
+	{
+		visible	1
+		rect	0,0,1,1
+		notime	1
+
+		onTime 0 {
+			transition "t_r1::forecolor" "$desktop::white_0" "$desktop::white" "200" ;
+			
+			transition "popup_box1::matcolor" "$desktop::pbox_off" "$desktop::pbox_on" "300" ;
+			transition "popup_box1::rect" "$popup_box1::rect" "$d_popup1::rect" "300" "100" "100" ;
+		}
+
+		onTime 300 {
+			set "p_popup1::visible" "1" ;
+		}
+
+		onTime 400 {
+			if ("desktop::power" == 1) {
+				resettime "anim_fence1" "0" ;
+			}
+		}
+
+		onTime 900 {
+			set "p_popup1::visible" "0" ;
+			transition "popup_box1::matcolor" "$desktop::pbox_on" "$desktop::pbox_off" "200" ;
+			transition "popup_box1::rect" "$d_popup1::rect" "$popup_box1::rect" "300" "100" "100" ;
+		}
+
+		onTime 1500 {
+			transition "t_r1::forecolor" "$desktop::white" "$desktop::white_0" "200" ;
+			
+			transition "selbox::rect" "$selbox::rect" "$d_selbox1::rect" "300" "100" "100" ;
+		}
+
+		onTime 2000 {
+			transition "t_r2::forecolor" "$desktop::white_0" "$desktop::white" "200" ;
+			
+			transition "popup_box2::matcolor" "$desktop::pbox_off" "$desktop::pbox_on" "200" ;
+			transition "popup_box2::rect" "$popup_box2::rect" "$d_popup2::rect" "300" "100" "100" ;
+		}
+
+		onTime 2300 {
+			set "p_popup2::visible" "1" ;
+		}
+
+		onTime 2400 {
+			if ("desktop::power" == 1) {
+				resettime "anim_fence2" "0" ;
+			}
+		}
+
+		onTime 2900 {
+			set "p_popup2::visible" "0" ;
+			transition "popup_box2::matcolor" "$desktop::pbox_on" "$desktop::pbox_off" "200" ;
+			transition "popup_box2::rect" "$d_popup2::rect" "$popup_box2::rect" "300" "100" "100" ;
+		}
+
+		onTime 3500 {
+			transition "t_r2::forecolor" "$desktop::white" "$desktop::white_0" "200" ;
+			
+			transition "selbox::rect" "$d_selbox1::rect" "$d_selbox2::rect" "300" "100" "100" ;
+		}
+
+		onTime 4000 {
+			transition "t_r3::forecolor" "$desktop::white_0" "$desktop::white" "200" ;
+			
+			transition "popup_box3::matcolor" "$desktop::pbox_off" "$desktop::pbox_on" "200" ;
+			transition "popup_box3::rect" "$popup_box3::rect" "$d_popup3::rect" "300" "100" "100" ;
+		}
+
+		onTime 4300 {
+			set "p_popup3::visible" "1" ;
+		}
+
+		onTime 4400 {
+			if ("desktop::power" == 1) {
+				resettime "anim_fence3" "0" ;
+			}
+		}
+
+		onTime 4900 {
+			set "p_popup3::visible" "0" ;
+			transition "popup_box3::matcolor" "$desktop::pbox_on" "$desktop::pbox_off" "200" ;
+			transition "popup_box3::rect" "$d_popup3::rect" "$popup_box3::rect" "300" "100" "100" ;
+		}
+
+		onTime 5500 {
+			transition "t_r3::forecolor" "$desktop::white" "$desktop::white_0" "200" ;
+			
+			transition "selbox::rect" "$d_selbox2::rect" "$d_selbox3::rect" "300" "100" "100" ;
+		}
+
+		onTime 5800 {
+			transition "t_r4::forecolor" "$desktop::white_0" "$desktop::white" "200" ;
+			
+			transition "popup_box4::matcolor" "$desktop::pbox_off" "$desktop::pbox_on" "200" ;
+			transition "popup_box4::rect" "$popup_box4::rect" "$d_popup4::rect" "300" "100" "100" ;
+		}
+
+		onTime 6100 {
+			set "p_popup4::visible" "1" ;
+		}
+
+		onTime 6200 {
+			if ("desktop::power" == 1) {
+				resettime "anim_fence4" "0" ;
+			}
+		}
+
+		onTime 6700 {
+			set "p_popup4::visible" "0" ;
+			transition "popup_box4::matcolor" "$desktop::pbox_on" "$desktop::pbox_off" "200" ;
+			transition "popup_box4::rect" "$d_popup4::rect" "$popup_box4::rect" "300" "100" "100" ;
+		}
+
+		onTime 7300 {
+			transition "t_r4::forecolor" "$desktop::white" "$desktop::white_0" "200" ;
+			
+			transition "selbox::rect" "$d_selbox3::rect" "$selbox::rect" "300" "100" "100" ;
+		}
+
+		onTime 7600 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef anim_fence1
+	{
+		visible	1
+		rect	0,0,1,1
+		notime	1
+
+		onTime 0 {
+			transition "l_post::matcolor" "$desktop::fence_on" "$desktop::fence_off" "400" ;
+			transition "r_post::matcolor" "$desktop::fence_on" "$desktop::fence_off" "400" ;
+			
+			transition "fence1::matcolor" "$desktop::fence_on" "$desktop::white_2" "50" ;
+		}
+
+		onTime 200 {
+			transition "fence2::matcolor" "$desktop::fence_on" "$desktop::white_2" "50" ;
+		}
+
+		onTime 250 {
+			transition "fence3::matcolor" "$desktop::fence_on" "$desktop::white_2" "50" ;
+		}
+
+		onTime 300 {
+			transition "fence4::matcolor" "$desktop::fence_on" "$desktop::white_2" "50" ;
+		}
+
+		onTime 350 {
+			transition "fence5::matcolor" "$desktop::fence_on" "$desktop::white_2" "50" ;
+		}
+
+		onTime 400 {
+			transition "fence6::matcolor" "$desktop::fence_on" "$desktop::white_2" "50" ;
+		}
+
+	}
+	windowDef anim_fence2
+	{
+		visible	1
+		rect	0,0,1,1
+		notime	1
+
+		onTime 0 {
+			transition "l_post_2::matcolor" "$desktop::fence_on" "$desktop::fence_off" "400" ;
+			transition "r_post_2::matcolor" "$desktop::fence_on" "$desktop::fence_off" "400" ;
+			
+			transition "fence1_2::matcolor" "$desktop::fence_on" "$desktop::white_2" "50" ;
+		}
+
+		onTime 200 {
+			transition "fence2_2::matcolor" "$desktop::fence_on" "$desktop::white_2" "50" ;
+		}
+
+		onTime 250 {
+			transition "fence3_2::matcolor" "$desktop::fence_on" "$desktop::white_2" "50" ;
+		}
+
+		onTime 300 {
+			transition "fence4_2::matcolor" "$desktop::fence_on" "$desktop::white_2" "50" ;
+		}
+
+		onTime 350 {
+			transition "fence5_2::matcolor" "$desktop::fence_on" "$desktop::white_2" "50" ;
+		}
+
+		onTime 400 {
+			transition "fence6_2::matcolor" "$desktop::fence_on" "$desktop::white_2" "50" ;
+		}
+
+	}
+	windowDef anim_fence3
+	{
+		visible	1
+		rect	0,0,1,1
+		notime	1
+
+		onTime 0 {
+			transition "l_post_3::matcolor" "$desktop::fence_on" "$desktop::fence_off" "400" ;
+			transition "r_post_3::matcolor" "$desktop::fence_on" "$desktop::fence_off" "400" ;
+			
+			transition "fence1_3::matcolor" "$desktop::fence_on" "$desktop::white_2" "50" ;
+		}
+
+		onTime 200 {
+			transition "fence2_3::matcolor" "$desktop::fence_on" "$desktop::white_2" "50" ;
+		}
+
+		onTime 250 {
+			transition "fence3_3::matcolor" "$desktop::fence_on" "$desktop::white_2" "50" ;
+		}
+
+		onTime 300 {
+			transition "fence4_3::matcolor" "$desktop::fence_on" "$desktop::white_2" "50" ;
+		}
+
+		onTime 350 {
+			transition "fence5_3::matcolor" "$desktop::fence_on" "$desktop::white_2" "50" ;
+		}
+
+		onTime 400 {
+			transition "fence6_3::matcolor" "$desktop::fence_on" "$desktop::white_2" "50" ;
+		}
+
+	}
+	windowDef anim_fence4
+	{
+		visible	1
+		rect	0,0,1,1
+		notime	1
+
+		onTime 0 {
+			transition "l_post_4::matcolor" "$desktop::fence_on" "$desktop::fence_off" "400" ;
+			transition "r_post_4::matcolor" "$desktop::fence_on" "$desktop::fence_off" "400" ;
+			
+			transition "fence1_4::matcolor" "$desktop::fence_on" "$desktop::white_2" "50" ;
+		}
+
+		onTime 200 {
+			transition "fence2_4::matcolor" "$desktop::fence_on" "$desktop::white_2" "50" ;
+		}
+
+		onTime 250 {
+			transition "fence3_4::matcolor" "$desktop::fence_on" "$desktop::white_2" "50" ;
+		}
+
+		onTime 300 {
+			transition "fence4_4::matcolor" "$desktop::fence_on" "$desktop::white_2" "50" ;
+		}
+
+		onTime 350 {
+			transition "fence5_4::matcolor" "$desktop::fence_on" "$desktop::white_2" "50" ;
+		}
+
+		onTime 400 {
+			transition "fence6_4::matcolor" "$desktop::fence_on" "$desktop::white_2" "50" ;
+		}
+
+		onTime 450 {
+			set "desktop::power" "0" ;
+		}
+
+	}
+	windowDef b_on_off
+	{
+		rect	21,340,368,119
+		visible	1
+
+		onMouseEnter {
+			if ("desktop::active" == 0) {
+				transition "btn::matcolor" "$desktop::btn_off" "$desktop::btn_on" "250" ;
+			}
+		}
+
+		onMouseExit {
+			if ("desktop::active" == 0) {
+				transition "btn::matcolor" "$desktop::btn_on" "$desktop::btn_off" "250" ;
+			}
+		}
+
+		onAction {
+			transition "btn::matcolor" "$desktop::btn_on" "$desktop::btn_off" "250" ;
+			resettime "anim" "0" ;
+			set "desktop::active" "1" ;
+			set "t_status::text" "offline" ;
+			set "btn::visible" "0" ;
+			set "btn_off::visible" "1" ;
+			set "visible" "0" ;
+			set "cmd" "play guisound_beep2 ; runscript" "$gui::gui_Parm1" ;
+		}
+
+	}
+}

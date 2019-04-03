@@ -1,0 +1,363 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0.145,0.105,0.0117,1
+	visible	1
+	notime	1
+	definevec4	"logo_on"	0.956,0.996,0.705,1
+	definevec4	"logo_off"	0.956,0.996,0.705,0
+	float	"clicked"	0
+
+	onInit {
+		setFocus "button_script" ;
+	}
+
+	windowDef bg2
+	{
+		rect	362,0,279,481
+		visible	1
+		background	"gfx/guis/maps/process1/countdown_bg"
+		matcolor	0.611,0.803,0.811,1
+	}
+	windowDef bg3
+	{
+		rect	0,0,279,481
+		visible	1
+		background	"gfx/guis/maps/process1/countdown_bg"
+		matcolor	0.611,0.803,0.811,1
+		matscalex	-1
+	}
+	windowDef black_block
+	{
+		rect	221,-1,192,482
+		visible	1
+		backcolor	0,0,0,1
+	}
+	windowDef p_logo
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef logo1
+		{
+			rect	205,134,232,220
+			visible	1
+			background	"gfx/guis/common/strogg/logo3_rotate1"
+			matcolor	0.956,0.996,0.705,0
+		}
+		windowDef logo2
+		{
+			rect	205,134,232,220
+			visible	1
+			background	"gfx/guis/common/strogg/logo3_rotate2"
+			matcolor	0.956,0.996,0.705,0
+		}
+		windowDef logo3
+		{
+			rect	205,134,232,220
+			visible	1
+			background	"gfx/guis/common/strogg/logo3_rotate3"
+			matcolor	0.956,0.996,0.705,0
+		}
+		windowDef logo4
+		{
+			rect	205,134,232,220
+			visible	1
+			background	"gfx/guis/common/strogg/logo3_rotate4"
+			matcolor	0.956,0.996,0.705,0
+		}
+	}
+	windowDef blocker
+	{
+		rect	221,119,202,224
+		visible	1
+		backcolor	0,0,0,1
+	}
+	windowDef corner_UL
+	{
+		rect	0,0,222,167
+		visible	1
+		background	"gfx/guis/maps/core/security_corner"
+		matcolor	0.203,0.647,0.737,0.843
+	}
+	windowDef corner_UR
+	{
+		rect	420,0,221,166
+		visible	1
+		background	"gfx/guis/maps/core/security_corner"
+		matcolor	0.203,0.647,0.737,0.843
+		matscalex	-1
+	}
+	windowDef corner_LR
+	{
+		rect	419,314,221,166
+		visible	1
+		background	"gfx/guis/maps/core/security_corner"
+		matcolor	0.203,0.647,0.737,0.843
+		matscalex	-1
+		matscaley	-1
+	}
+	windowDef corner_LL
+	{
+		rect	0,315,221,166
+		visible	1
+		background	"gfx/guis/maps/core/security_corner"
+		matcolor	0.203,0.647,0.737,0.843
+		matscaley	-1
+	}
+	windowDef grid
+	{
+		rect	0,229,642,23
+		visible	1
+		background	"gfx/guis/maps/core/security_grid"
+		matcolor	0.905,0.894,0.694,0
+	}
+	windowDef center_top
+	{
+		rect	164,-13,316,118
+		visible	1
+		background	"gfx/guis/maps/core/security_center"
+		matcolor	0.133,0.478,1,1
+	}
+	windowDef center_bottom
+	{
+		rect	162,375,316,118
+		visible	1
+		background	"gfx/guis/maps/core/security_center"
+		matcolor	0.133,0.478,1,1
+		matscaley	-1
+	}
+	windowDef t1
+	{
+		rect	127,218,395,44
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200386"
+		textscale	0.7
+		font	"fonts/r_strogg"
+		textspacing	-1
+	}
+	windowDef arrow1
+	{
+		rect	505,21,15,12
+		visible	1
+		background	"gfx/guis/common/arrow6"
+		matcolor	1,0.784,0.301,1
+		matscaley	-1
+		rotate	270
+	}
+	windowDef t2
+	{
+		rect	522,18,55,19
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200387"
+		textscale	0.25
+		font	"fonts/r_strogg"
+	}
+	windowDef button
+	{
+		rect	0,156,642,169
+		visible	1
+		background	"gfx/guis/maps/core/security_button"
+		matcolor	0.517,0.949,0.768,0.698
+	}
+	windowDef t3
+	{
+		rect	425,184,137,25
+		visible	1
+		forecolor	0.972,0.988,0.611,0
+		text	"#str_200388"
+		textscale	0.25
+		font	"fonts/r_strogg"
+	}
+	windowDef scrolltext
+	{
+		rect	424,208,119,94
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext3"
+		matcolor	0.976,0.992,0.615,0
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	0,-54,640,581
+			background	"gfx/guis/common/monitor_line8"
+			matcolor	0.274,0.356,0.407,1
+		}
+		windowDef scratches
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/screen_scratches3"
+			matcolor	0.858,0.933,0.917,0.450
+			matscalex	-1
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	-1,-48,640,533
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.286,0.556,0.705,1
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef button_script
+	{
+		rect	89,151,461,180
+		visible	1
+
+		onMouseEnter {
+			set "button_script::notime" "1" ;
+			stoptransitions "button_script" ;
+			transition "button::matcolor" "0.517,0.949,0.768,0.698" "0.517,0.949,0.768,1" "0" ;
+			set "t1::forecolor" "1,1,1,1" ;
+		}
+
+		onMouseExit {
+			if ("desktop::clicked" == 0) {
+				transition "button::matcolor" "0.517,0.949,0.768,1" "0.517,0.949,0.768,0.698" "300" ;
+				transition "t1::forecolor" "1,1,1,1" "0.6,0.992,1,1" "300" ;
+				
+				resettime "button_script" "0" ;
+			}
+		}
+
+		onAction {
+			set "notime" "1" ;
+			nonInteractive "1" ;
+			set "cmd" "play guisound_beep2 ; activate ; runscript" "$gui::gui_Parm_script";
+			set "desktop::clicked" "1" ;
+			set "visible" "0" ;
+			
+			resettime "anim" "0" ;
+		}
+
+		onTime 0 {
+			transition "button::matcolor" "0.517,0.949,0.768,1" "0.517,0.949,0.768,0.35" "800" ;
+			transition "t1::forecolor" "1,1,1,1" "1,1,1,0.35" "800" ;
+		}
+
+		onTime 800 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef anim
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			stoptransitions "button_script" ;
+			transition "button::matcolor" "0.517,0.949,0.768,0.698" "0.517,0.949,0.768,0" "800" ;
+			transition "t1::forecolor" "1,1,1,1" "1,1,1,0" "800" ;
+			
+			transition "corner_UL::rect" "$corner_UL::rect" "$d_corner1::rect" "200" ;
+			transition "corner_UR::rect" "$corner_UR::rect" "$d_corner2::rect" "200" ;
+			transition "corner_LR::rect" "$corner_LR::rect" "$d_corner3::rect" "200" ;
+			transition "corner_LL::rect" "$corner_LL::rect" "$d_corner4::rect" "200" ;
+		}
+
+		onTime 300 {
+			transition "grid::rect" "$grid::rect" "$d_grid::rect" "200" ;
+			transition "grid::matcolor" "0.6,0.894,1,0" "0.6,0.894,1,0.3" "200" ;
+		}
+
+		onTime 900 {
+			transition "blocker::backcolor" "0,0,0,1" "0,0,0,0" "1200" ;
+			transition "t3::forecolor" "0.972,0.988,0.611,0" "0.972,0.988,0.611,0.7" "1000" ;
+			transition "scrolltext::matcolor" "0.972,0.988,0.611,0" "0.972,0.988,0.611,0.7" "1000" ;
+		}
+
+	}
+	windowDef anim_logo
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 0 {
+			transition "logo1::matcolor" "$desktop::logo_on" "$desktop::logo_off" "100" ;	
+			transition "logo2::matcolor" "$desktop::logo_off" "$desktop::logo_on" "100" ;	
+		}
+
+		onTime 200 {
+			transition "logo2::matcolor" "$desktop::logo_on" "$desktop::logo_off" "100" ;	
+			transition "logo3::matcolor" "$desktop::logo_off" "$desktop::logo_on" "100" ;	
+		}
+
+		onTime 400 {
+			transition "logo3::matcolor" "$desktop::logo_on" "$desktop::logo_off" "100" ;	
+			transition "logo4::matcolor" "$desktop::logo_off" "$desktop::logo_on" "100" ;	
+		}
+
+		onTime 600 {
+			transition "logo4::matcolor" "$desktop::logo_on" "$desktop::logo_off" "100" ;	
+			transition "logo3::matcolor" "$desktop::logo_off" "$desktop::logo_on" "100" ;	
+		}
+
+		onTime 800 {
+			transition "logo3::matcolor" "$desktop::logo_on" "$desktop::logo_off" "100" ;	
+			transition "logo2::matcolor" "$desktop::logo_off" "$desktop::logo_on" "100" ;	
+		}
+
+		onTime 1000 {
+			transition "logo2::matcolor" "$desktop::logo_on" "$desktop::logo_off" "100" ;	
+			transition "logo1::matcolor" "$desktop::logo_off" "$desktop::logo_on" "100" ;	
+		}
+
+		onTime 2500 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef d_corner1
+	{
+		rect	-23,-53,222,167
+		visible	0
+		background	"gfx/guis/maps/core/security_corner"
+		matcolor	0.843,0.533,0.117,0.85
+	}
+	windowDef d_corner2
+	{
+		rect	443,-52,221,166
+		visible	0
+		background	"gfx/guis/maps/core/security_corner"
+		matcolor	0.839,0.529,0.113,0.85
+		matscalex	-1
+	}
+	windowDef d_corner3
+	{
+		rect	444,368,221,166
+		visible	0
+		background	"gfx/guis/maps/core/security_corner"
+		matcolor	0.835,0.525,0.109,0.85
+		matscalex	-1
+		matscaley	-1
+	}
+	windowDef d_corner4
+	{
+		rect	-25,368,221,166
+		visible	0
+		background	"gfx/guis/maps/core/security_corner"
+		matcolor	0.831,0.521,0.105,0.85
+		matscaley	-1
+	}
+	windowDef d_grid
+	{
+		rect	0,92,642,300
+		visible	0
+		background	"gfx/guis/maps/core/security_grid"
+		matcolor	0.905,0.894,0.694,0
+	}
+}

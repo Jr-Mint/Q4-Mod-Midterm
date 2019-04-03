@@ -1,0 +1,177 @@
+windowDef Desktop
+{
+	comment	"gui_parm_text value sets the text label on the gui. use 'gui_parm_strogg' for unreadable text"
+	rect	0,0,640,480
+	visible	1
+	definevec4	"arrow_off"	0.450,0.356,0.235,1
+	definevec4	"arrow_on"	1,0.84,0.49,1
+
+	onInit {
+		if ( "gui::gui_parm_strogg" == 1 ) {
+			set "t_label::visible" "1";
+			set "t_label_r::visible" "0";
+		} else {
+			set "t_label::visible" "0";
+			set "t_label_r::visible" "1";
+		}
+	}
+
+	windowDef bg_l
+	{
+		rect	0,0,320,480
+		visible	1
+		background	"gfx/guis/common/strogg/dirsign1_bg"
+		matcolor	0.505,0.235,0.105,1
+	}
+	windowDef bg_r
+	{
+		rect	320,0,320,480
+		visible	1
+		background	"gfx/guis/common/strogg/dirsign1_bg"
+		matcolor	0.505,0.235,0.105,1
+		matscalex	-1
+	}
+	windowDef left
+	{
+		rect	0,0,320,480
+		visible	1
+		background	"gfx/guis/common/strogg/dirsign2_bg"
+		matcolor	0.568,0.403,0.156,1
+	}
+	windowDef right
+	{
+		rect	320,0,320,480
+		visible	1
+		background	"gfx/guis/common/strogg/dirsign2_bg"
+		matcolor	0.568,0.403,0.156,1
+		matscalex	-1
+	}
+	windowDef arrow1_1
+	{
+		rect	15,241,78,239
+		visible	1
+		background	"gfx/guis/common/strogg/dirsign2_arrow1"
+		matcolor	0.450,0.356,0.235,1
+	}
+	windowDef arrow1_2
+	{
+		rect	21,137,52,163
+		visible	1
+		background	"gfx/guis/common/strogg/dirsign2_arrow2"
+		matcolor	0.450,0.356,0.235,1
+	}
+	windowDef arrow1_3
+	{
+		rect	21,13,52,163
+		visible	1
+		background	"gfx/guis/common/strogg/dirsign2_arrow2"
+		matcolor	0.450,0.356,0.235,1
+	}
+	windowDef arrow2_1
+	{
+		rect	547,241,78,239
+		visible	1
+		background	"gfx/guis/common/strogg/dirsign2_arrow1"
+		matcolor	0.450,0.356,0.235,1
+		matscalex	-1
+	}
+	windowDef arrow2_2
+	{
+		rect	568,137,52,163
+		visible	1
+		background	"gfx/guis/common/strogg/dirsign2_arrow2"
+		matcolor	0.450,0.356,0.235,1
+		matscalex	-1
+	}
+	windowDef arrow2_3
+	{
+		rect	568,13,52,163
+		visible	1
+		background	"gfx/guis/common/strogg/dirsign2_arrow2"
+		matcolor	0.450,0.356,0.235,1
+		matscalex	-1
+	}
+	windowDef decal
+	{
+		rect	240,8,162,522
+		visible	1
+		background	"gfx/guis/common/strogg/decal"
+		matcolor	0,0,0,0.3
+		matscalex	-1
+	}
+	windowDef sline
+	{
+		visible	1
+		rect	-49,-341,734,764
+		background	"gfx/guis/common/monitor_line5"
+		matcolor	0.752,0.752,0.752,1
+		matscaley	-1
+	}
+	windowDef static
+	{
+		visible	1
+		rect	17,15,607,407
+		background	"gfx/guis/common/img_static3"
+		matcolor	1,0.996,0.866,.08
+	}
+	windowDef t_label_r
+	{
+		rect	0,0,640,480
+		visible	0
+		forecolor	1,0.984,0.768,0.68
+		text	"gui::gui_parm_text"
+		textscale	0.8
+		font	"fonts/r_strogg"
+		forceaspectheight	120
+		textaligny	28
+		textalign	1
+	}
+	windowDef t_label
+	{
+		rect	0,0,640,480
+		visible	0
+		forecolor	1,0.984,0.768,0.68
+		text	"gui::gui_parm_text"
+		textscale	0.9
+		font	"fonts/r_strogg"
+		forceaspectheight	120
+		textaligny	36
+		textalign	1
+	}
+	windowDef anim_arrows
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 0 {
+			transition "arrow1_1::matcolor" "$desktop::arrow_off" "$desktop::arrow_on" "500" ;
+			transition "arrow2_1::matcolor" "$desktop::arrow_off" "$desktop::arrow_on" "500" ;
+		}
+
+		onTime +500 {
+			transition "arrow1_1::matcolor" "$desktop::arrow_on" "$desktop::arrow_off" "500" ;
+			transition "arrow2_1::matcolor" "$desktop::arrow_on" "$desktop::arrow_off" "500" ;
+			
+			transition "arrow1_2::matcolor" "$desktop::arrow_off" "$desktop::arrow_on" "500" ;
+			transition "arrow2_2::matcolor" "$desktop::arrow_off" "$desktop::arrow_on" "500" ;
+		}
+
+		onTime +500 {
+			transition "arrow1_2::matcolor" "$desktop::arrow_on" "$desktop::arrow_off" "500" ;
+			transition "arrow2_2::matcolor" "$desktop::arrow_on" "$desktop::arrow_off" "500" ;
+			
+			transition "arrow1_3::matcolor" "$desktop::arrow_off" "$desktop::arrow_on" "500" ;
+			transition "arrow2_3::matcolor" "$desktop::arrow_off" "$desktop::arrow_on" "500" ;
+		}
+
+		onTime +500 {
+			transition "arrow1_3::matcolor" "$desktop::arrow_on" "$desktop::arrow_off" "500" ;
+			transition "arrow2_3::matcolor" "$desktop::arrow_on" "$desktop::arrow_off" "500" ;
+		}
+
+		onTime +500 {
+			resettime "0" ;
+		}
+
+	}
+}

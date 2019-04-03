@@ -1,0 +1,1396 @@
+windowDef Desktop
+{
+	comment	"named event 'changeover' will start the animation to change strogg text to readable strogg text"
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	visible	1
+	definevec4	"bluradd"	0.713,0.827,0.670,1
+	definevec4	"black"	0,0,0,1
+
+	onNamedEvent changeover {
+		resettime "anim" "0" ;
+	}
+
+	windowDef p_main
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef bg
+		{
+			rect	0,0,639,483
+			visible	1
+			background	"gfx/guis/common/gradient4"
+			matcolor	0.101,0.176,0.2,1
+			matscaley	-1
+		}
+		windowDef line1
+		{
+			rect	1,209,311,37
+			visible	1
+			background	"gfx/guis/monitors/strogg/streamhub/hub5_line2"
+			matcolor	0.2,1,0.478,0.3
+			matscalex	2
+		}
+		windowDef line2
+		{
+			rect	1,209,311,37
+			visible	1
+			background	"gfx/guis/monitors/strogg/streamhub/hub5_line2"
+			matcolor	1,1,1,0.3
+			matscalex	.8
+		}
+		windowDef ekg
+		{
+			rect	1,199,311,56
+			visible	1
+			background	"gfx/guis/common/ekg2"
+			matcolor	0.666,1,0.901,0.8
+		}
+		windowDef bg1
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/maps/medlabs1/tch_bg1"
+			matcolor	0.607,0.662,0.439,1
+		}
+		windowDef bg2
+		{
+			rect	0,240,640,240
+			visible	1
+			background	"gfx/guis/maps/medlabs1/tch_bg2"
+			matcolor	0.247,0.458,0.560,1
+		}
+		windowDef textbg
+		{
+			rect	10,1,305,164
+			visible	1
+			background	"gfx/guis/maps/medlabs1/tch_textbg"
+			matcolor	0.501,0.678,0.733,1
+		}
+		windowDef guy
+		{
+			rect	18,28,54,106
+			visible	1
+			background	"gfx/guis/maps/medlabs1/tch_guy"
+			matcolor	0.819,0.933,0.615,1
+		}
+		windowDef brain1
+		{
+			rect	481,81,168,168
+			visible	1
+			background	"gfx/guis/maps/medlabs1/tch_brain1"
+			matcolor	0.505,0.756,0.250,1
+		}
+		windowDef brain2
+		{
+			rect	345,131,168,168
+			visible	1
+			background	"gfx/guis/maps/medlabs1/tch_brain2"
+			matcolor	0.505,0.756,0.250,1
+		}
+		windowDef nanocyte2
+		{
+			rect	390,167,20,20
+			visible	1
+			background	"gfx/guis/common/add_box1"
+			matcolor	1,0.501,0,1
+		}
+		windowDef nanocyte1
+		{
+			rect	581,179,20,20
+			visible	1
+			background	"gfx/guis/common/add_box1"
+			matcolor	1,0.501,0,1
+		}
+		windowDef tl_bar
+		{
+			rect	10,274,310,80
+			visible	1
+			background	"gfx/guis/maps/medlabs1/tch_bar1"
+			matcolor	0.349,0.537,0.741,1
+		}
+		windowDef tr_bar
+		{
+			rect	320,274,310,80
+			visible	1
+			background	"gfx/guis/maps/medlabs1/tch_bar1"
+			matcolor	0.349,0.537,0.741,1
+			matscalex	-1
+		}
+		windowDef bl_bar
+		{
+			rect	10,402,310,80
+			visible	1
+			background	"gfx/guis/maps/medlabs1/tch_bar1"
+			matcolor	0.349,0.537,0.741,1
+			matscaley	-1
+		}
+		windowDef br_bar
+		{
+			rect	320,402,310,80
+			visible	1
+			background	"gfx/guis/maps/medlabs1/tch_bar1"
+			matcolor	0.349,0.537,0.741,1
+			matscalex	-1
+			matscaley	-1
+		}
+		windowDef nline1
+		{
+			rect	557,220,67,5
+			visible	1
+			background	"gfx/guis/common/line1"
+			matcolor	1,1,1,1
+			rotate	90
+		}
+		windowDef nline2
+		{
+			rect	384,148,57,5
+			visible	1
+			background	"gfx/guis/common/line1"
+			matcolor	1,1,1,1
+			rotate	60
+		}
+		windowDef arrow
+		{
+			rect	60,199,40,40
+			visible	1
+			background	"gfx/guis/common/arrow6"
+			matcolor	1,0.674,0,1
+			rotate	90
+
+			onTime 0 {
+				transition "arrow::rect" "$arrow::rect" "$d_arrow::rect" "50" ;
+			}
+
+			onTime 50 {
+				transition "arrow::rect" "$d_arrow::rect" "$arrow::rect" "250" ;
+			}
+
+			onTime 1000 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef d_arrow
+		{
+			rect	49,189,60,60
+			visible	0
+			background	"gfx/guis/common/arrow6"
+			matcolor	1,0.674,0,1
+			rotate	90
+		}
+	}
+	windowDef num
+	{
+		rect	17,194,44,38
+		visible	1
+		forecolor	0.878,0.866,0.619,0.8
+		text	"84"
+		textscale	0.8
+		font	"fonts/strogg"
+		textalign	2
+	}
+	windowDef bpm
+	{
+		rect	21,225,37,21
+		visible	1
+		forecolor	0.878,0.866,0.619,0.6
+		text	"#str_200393"
+		textscale	0.4
+		font	"fonts/strogg"
+		textalign	2
+	}
+	windowDef t_nnum1
+	{
+		rect	405,112,71,14
+		visible	1
+		forecolor	0.858,0.929,0.647,1
+		text	"345-247-3"
+		textscale	.3
+		font	"fonts/strogg"
+	}
+	windowDef t_nnum2
+	{
+		rect	516,242,71,14
+		visible	1
+		forecolor	0.858,0.929,0.647,1
+		text	"34-5-7583"
+		textscale	.3
+		font	"fonts/strogg"
+	}
+	windowDef num_r
+	{
+		rect	14,189,50,36
+		visible	1
+		forecolor	0.874,0.862,0.615,0
+		text	"84"
+		textscale	0.6
+		font	"fonts/r_strogg"
+		textalign	2
+	}
+	windowDef bpm_r
+	{
+		rect	23,221,39,21
+		visible	1
+		forecolor	0.878,0.866,0.619,0
+		text	"#str_200393"
+		textscale	0.3
+		font	"fonts/r_strogg"
+		textalign	2
+	}
+	windowDef t_nnum2_r
+	{
+		rect	403,111,76,14
+		visible	1
+		forecolor	0.858,0.929,0.647,0
+		text	"345-247-3"
+		textscale	.2
+		font	"fonts/r_strogg"
+	}
+	windowDef t_nnum1_r
+	{
+		rect	513,241,75,14
+		visible	1
+		forecolor	0.858,0.929,0.647,0
+		text	"34-5-7583"
+		textscale	.2
+		font	"fonts/r_strogg"
+	}
+	windowDef p_a1
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef t_active3
+		{
+			rect	23,358,337,54
+			visible	0
+			forecolor	0.854,0.925,0.643,0.498
+			text	"#str_200474"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	7
+		}
+		windowDef t_active4
+		{
+			rect	339,358,345,54
+			visible	0
+			forecolor	0.854,0.925,0.643,0.498
+			text	"#str_200475"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	8
+		}
+		windowDef t_a1
+		{
+			rect	23,358,35,42
+			visible	1
+			forecolor	0.854,0.925,0.643,1
+			text	"n"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	10
+		}
+		windowDef t_a2
+		{
+			rect	55,358,35,42
+			visible	1
+			forecolor	0.854,0.925,0.643,1
+			text	"e"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	10
+		}
+		windowDef t_a3
+		{
+			rect	88,358,35,42
+			visible	1
+			forecolor	0.854,0.925,0.643,1
+			text	"u"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	10
+		}
+		windowDef t_a4
+		{
+			rect	119,358,35,42
+			visible	1
+			forecolor	0.854,0.925,0.643,1
+			text	"r"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	10
+		}
+		windowDef t_a5
+		{
+			rect	153,358,35,42
+			visible	1
+			forecolor	0.854,0.925,0.643,1
+			text	"o"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	10
+		}
+		windowDef t_a6
+		{
+			rect	187,358,35,42
+			visible	1
+			forecolor	0.854,0.925,0.643,1
+			text	"c"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	10
+		}
+		windowDef t_a7
+		{
+			rect	218,358,35,42
+			visible	1
+			forecolor	0.854,0.925,0.643,1
+			text	"y"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	10
+		}
+		windowDef t_a8
+		{
+			rect	254,358,35,42
+			visible	1
+			forecolor	0.854,0.925,0.643,1
+			text	"t"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	10
+		}
+		windowDef t_a9
+		{
+			rect	283,358,35,42
+			visible	1
+			forecolor	0.854,0.925,0.643,1
+			text	"e"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	10
+		}
+		windowDef t_a10
+		{
+			rect	339,358,35,42
+			visible	1
+			forecolor	0.854,0.925,0.643,1
+			text	"i"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	10
+		}
+		windowDef t_a11
+		{
+			rect	368,358,35,42
+			visible	1
+			forecolor	0.854,0.925,0.643,1
+			text	"m"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	10
+		}
+		windowDef t_a12
+		{
+			rect	401,358,35,42
+			visible	1
+			forecolor	0.854,0.925,0.643,1
+			text	"p"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	10
+		}
+		windowDef t_a13
+		{
+			rect	433,358,35,42
+			visible	1
+			forecolor	0.854,0.925,0.643,1
+			text	"l"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	10
+		}
+		windowDef t_a14
+		{
+			rect	463,358,35,42
+			visible	1
+			forecolor	0.854,0.925,0.643,1
+			text	"a"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	10
+		}
+		windowDef t_a15
+		{
+			rect	496,358,35,42
+			visible	1
+			forecolor	0.854,0.925,0.643,1
+			text	"n"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	10
+		}
+		windowDef t_a16
+		{
+			rect	529,358,35,42
+			visible	1
+			forecolor	0.854,0.925,0.643,1
+			text	"t"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	10
+		}
+		windowDef t_a17
+		{
+			rect	559,358,35,42
+			visible	1
+			forecolor	0.854,0.925,0.643,1
+			text	"e"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	10
+		}
+		windowDef t_a18
+		{
+			rect	593,358,35,42
+			visible	1
+			forecolor	0.854,0.925,0.643,1
+			text	"d"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	10
+		}
+		windowDef t_active1_r1
+		{
+			rect	18,351,351,59
+			visible	0
+			forecolor	0.854,0.925,0.643,.5
+			text	"#str_200474"
+			textscale	0.85
+			font	"fonts/r_strogg"
+		}
+		windowDef t_active2_r1
+		{
+			rect	341,351,286,59
+			visible	0
+			forecolor	0.854,0.925,0.643,.5
+			text	"#str_200475"
+			textscale	0.85
+			font	"fonts/r_strogg"
+		}
+		windowDef t_ar1
+		{
+			rect	18,351,50,59
+			visible	1
+			forecolor	0.854,0.925,0.643,0
+			text	"n"
+			textscale	0.85
+			font	"fonts/r_strogg"
+		}
+		windowDef t_ar2
+		{
+			rect	53,351,50,59
+			visible	1
+			forecolor	0.854,0.925,0.643,0
+			text	"e"
+			textscale	0.85
+			font	"fonts/r_strogg"
+		}
+		windowDef t_ar3
+		{
+			rect	85,351,50,58
+			visible	1
+			forecolor	0.854,0.925,0.643,0
+			text	"u"
+			textscale	0.85
+			font	"fonts/r_strogg"
+		}
+		windowDef t_ar4
+		{
+			rect	117,351,50,58
+			visible	1
+			forecolor	0.854,0.925,0.643,0
+			text	"r"
+			textscale	0.85
+			font	"fonts/r_strogg"
+		}
+		windowDef t_ar5
+		{
+			rect	150,351,50,58
+			visible	1
+			forecolor	0.854,0.925,0.643,0
+			text	"o"
+			textscale	0.85
+			font	"fonts/r_strogg"
+		}
+		windowDef t_ar6
+		{
+			rect	185,351,50,58
+			visible	1
+			forecolor	0.854,0.925,0.643,0
+			text	"c"
+			textscale	0.85
+			font	"fonts/r_strogg"
+		}
+		windowDef t_ar7
+		{
+			rect	217,351,50,58
+			visible	1
+			forecolor	0.854,0.925,0.643,0
+			text	"y"
+			textscale	0.85
+			font	"fonts/r_strogg"
+		}
+		windowDef t_ar8
+		{
+			rect	248,351,50,58
+			visible	1
+			forecolor	0.854,0.925,0.643,0
+			text	"t"
+			textscale	0.85
+			font	"fonts/r_strogg"
+		}
+		windowDef t_ar9
+		{
+			rect	279,351,50,58
+			visible	1
+			forecolor	0.854,0.925,0.643,0
+			text	"e"
+			textscale	0.85
+			font	"fonts/r_strogg"
+		}
+		windowDef t_ar10
+		{
+			rect	341,351,50,58
+			visible	1
+			forecolor	0.854,0.925,0.643,0
+			text	"i"
+			textscale	0.85
+			font	"fonts/r_strogg"
+		}
+		windowDef t_ar11
+		{
+			rect	359,351,50,58
+			visible	1
+			forecolor	0.854,0.925,0.643,0
+			text	"m"
+			textscale	0.85
+			font	"fonts/r_strogg"
+		}
+		windowDef t_ar12
+		{
+			rect	394,351,50,58
+			visible	1
+			forecolor	0.854,0.925,0.643,0
+			text	"p"
+			textscale	0.85
+			font	"fonts/r_strogg"
+		}
+		windowDef t_ar13
+		{
+			rect	424,351,50,58
+			visible	1
+			forecolor	0.854,0.925,0.643,0
+			text	"l"
+			textscale	0.85
+			font	"fonts/r_strogg"
+		}
+		windowDef t_ar14
+		{
+			rect	458,351,50,58
+			visible	1
+			forecolor	0.854,0.925,0.643,0
+			text	"a"
+			textscale	0.85
+			font	"fonts/r_strogg"
+		}
+		windowDef t_ar15
+		{
+			rect	490,351,50,58
+			visible	1
+			forecolor	0.854,0.925,0.643,0
+			text	"n"
+			textscale	0.85
+			font	"fonts/r_strogg"
+		}
+		windowDef t_ar16
+		{
+			rect	525,351,50,58
+			visible	1
+			forecolor	0.854,0.925,0.643,0
+			text	"t"
+			textscale	0.85
+			font	"fonts/r_strogg"
+		}
+		windowDef t_ar17
+		{
+			rect	555,351,50,58
+			visible	1
+			forecolor	0.854,0.925,0.643,0
+			text	"e"
+			textscale	0.85
+			font	"fonts/r_strogg"
+		}
+		windowDef t_ar18
+		{
+			rect	588,351,50,58
+			visible	1
+			forecolor	0.854,0.925,0.643,0
+			text	"d"
+			textscale	0.85
+			font	"fonts/r_strogg"
+		}
+	}
+	windowDef p_s
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef t_s1
+		{
+			rect	92,39,28,37
+			visible	1
+			forecolor	0.858,0.929,0.647,1
+			text	"s"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	7
+		}
+		windowDef t_s2
+		{
+			rect	116,39,28,37
+			visible	1
+			forecolor	0.858,0.929,0.647,1
+			text	"u"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	7
+		}
+		windowDef t_s3
+		{
+			rect	147,39,28,37
+			visible	1
+			forecolor	0.858,0.929,0.647,1
+			text	"b"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	7
+		}
+		windowDef t_s4
+		{
+			rect	182,39,28,37
+			visible	1
+			forecolor	0.858,0.929,0.647,1
+			text	"j"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	7
+		}
+		windowDef t_s5
+		{
+			rect	210,39,28,37
+			visible	1
+			forecolor	0.858,0.929,0.647,1
+			text	"e"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	7
+		}
+		windowDef t_s6
+		{
+			rect	243,39,28,37
+			visible	1
+			forecolor	0.858,0.929,0.647,1
+			text	"c"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	7
+		}
+		windowDef t_s7
+		{
+			rect	274,39,28,37
+			visible	1
+			forecolor	0.858,0.929,0.647,1
+			text	"t"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	7
+		}
+		windowDef t_sr1
+		{
+			rect	84,32,36,46
+			visible	1
+			forecolor	0.858,0.929,0.647,0
+			text	"s"
+			textscale	.8
+			font	"fonts/r_strogg"
+		}
+		windowDef t_sr2
+		{
+			rect	115,32,35,46
+			visible	1
+			forecolor	0.858,0.929,0.647,0
+			text	"u"
+			textscale	.8
+			font	"fonts/r_strogg"
+		}
+		windowDef t_sr3
+		{
+			rect	146,32,35,46
+			visible	1
+			forecolor	0.858,0.929,0.647,0
+			text	"b"
+			textscale	.8
+			font	"fonts/r_strogg"
+		}
+		windowDef t_sr4
+		{
+			rect	178,32,35,46
+			visible	1
+			forecolor	0.858,0.929,0.647,0
+			text	"j"
+			textscale	.8
+			font	"fonts/r_strogg"
+		}
+		windowDef t_sr5
+		{
+			rect	208,32,35,46
+			visible	1
+			forecolor	0.858,0.929,0.647,0
+			text	"e"
+			textscale	.8
+			font	"fonts/r_strogg"
+		}
+		windowDef t_sr6
+		{
+			rect	239,32,35,46
+			visible	1
+			forecolor	0.858,0.929,0.647,0
+			text	"c"
+			textscale	.8
+			font	"fonts/r_strogg"
+		}
+		windowDef t_sr7
+		{
+			rect	269,32,35,46
+			visible	1
+			forecolor	0.858,0.929,0.647,0
+			text	"t"
+			textscale	.8
+			font	"fonts/r_strogg"
+		}
+	}
+	windowDef p_n
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef t_n1
+		{
+			rect	84,92,34,41
+			visible	1
+			forecolor	0.858,0.929,0.647,1
+			text	"8"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	6
+		}
+		windowDef t_n2
+		{
+			rect	115,92,34,41
+			visible	1
+			forecolor	0.858,0.929,0.647,1
+			text	"4"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	6
+		}
+		windowDef t_n3
+		{
+			rect	145,92,34,41
+			visible	1
+			forecolor	0.858,0.929,0.647,1
+			text	"6"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	6
+		}
+		windowDef t_n4
+		{
+			rect	174,92,34,41
+			visible	1
+			forecolor	0.858,0.929,0.647,1
+			text	"2"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	6
+		}
+		windowDef t_n5
+		{
+			rect	203,92,34,41
+			visible	1
+			forecolor	0.858,0.929,0.647,1
+			text	"-"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	6
+		}
+		windowDef t_n6
+		{
+			rect	232,92,34,41
+			visible	1
+			forecolor	0.858,0.929,0.647,1
+			text	"9"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	6
+		}
+		windowDef t_n7
+		{
+			rect	263,92,34,41
+			visible	1
+			forecolor	0.858,0.929,0.647,1
+			text	"b"
+			textscale	1
+			font	"fonts/strogg"
+			textspacing	6
+		}
+		windowDef t_nr1
+		{
+			rect	81,86,36,43
+			visible	1
+			forecolor	0.854,0.925,0.643,0
+			text	"8"
+			textscale	0.8
+			font	"fonts/r_strogg"
+		}
+		windowDef t_nr2
+		{
+			rect	111,86,36,43
+			visible	1
+			forecolor	0.858,0.929,0.647,0
+			text	"4"
+			textscale	.8
+			font	"fonts/r_strogg"
+		}
+		windowDef t_nr3
+		{
+			rect	143,86,36,43
+			visible	1
+			forecolor	0.858,0.929,0.647,0
+			text	"6"
+			textscale	.8
+			font	"fonts/r_strogg"
+		}
+		windowDef t_nr4
+		{
+			rect	176,86,36,43
+			visible	1
+			forecolor	0.858,0.929,0.647,0
+			text	"2"
+			textscale	.8
+			font	"fonts/r_strogg"
+		}
+		windowDef t_nr5
+		{
+			rect	207,86,36,43
+			visible	1
+			forecolor	0.858,0.929,0.647,0
+			text	"-"
+			textscale	.8
+			font	"fonts/r_strogg"
+		}
+		windowDef t_nr6
+		{
+			rect	228,86,36,43
+			visible	1
+			forecolor	0.858,0.929,0.647,0
+			text	"9"
+			textscale	.8
+			font	"fonts/r_strogg"
+		}
+		windowDef t_nr7
+		{
+			rect	259,86,36,43
+			visible	1
+			forecolor	0.858,0.929,0.647,0
+			text	"b"
+			textscale	.8
+			font	"fonts/r_strogg"
+		}
+	}
+	windowDef p_ba
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef ba1
+		{
+			rect	15,314,44,128
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef ba2
+		{
+			rect	48,314,44,128
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef ba3
+		{
+			rect	82,314,44,128
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef ba4
+		{
+			rect	113,314,44,128
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef ba5
+		{
+			rect	148,314,44,128
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef ba6
+		{
+			rect	181,314,44,128
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef ba7
+		{
+			rect	216,314,44,128
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef ba8
+		{
+			rect	248,314,44,128
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef ba9
+		{
+			rect	279,314,44,128
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef ba10
+		{
+			rect	331,314,44,128
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef ba11
+		{
+			rect	365,314,44,128
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef ba12
+		{
+			rect	396,314,44,128
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef ba13
+		{
+			rect	425,314,44,128
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef ba14
+		{
+			rect	459,314,44,128
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef ba15
+		{
+			rect	491,314,44,128
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef ba16
+		{
+			rect	525,314,44,128
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef ba17
+		{
+			rect	553,314,44,128
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef ba18
+		{
+			rect	586,314,44,128
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef sba1
+		{
+			rect	81,19,43,76
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef sba2
+		{
+			rect	109,19,43,76
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef sba3
+		{
+			rect	141,19,43,76
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef sba4
+		{
+			rect	175,19,43,76
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef sba5
+		{
+			rect	204,19,43,76
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef sba6
+		{
+			rect	236,19,43,76
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef sba7
+		{
+			rect	266,19,43,76
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef nba1
+		{
+			rect	77,79,42,69
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef nba2
+		{
+			rect	108,79,42,69
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef nba3
+		{
+			rect	137,79,42,69
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef nba4
+		{
+			rect	166,79,42,69
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef nba5
+		{
+			rect	197,79,42,69
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef nba6
+		{
+			rect	226,79,42,69
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef nba7
+		{
+			rect	259,79,42,69
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef ekba
+		{
+			rect	11,169,64,106
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef snba1
+		{
+			rect	494,213,110,71
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+		windowDef snba2
+		{
+			rect	384,83,110,71
+			visible	1
+			background	"gfx/guis/common/bluradd"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	0,-189,640,900
+			background	"gfx/guis/common/monitor_line8"
+			matcolor	0.125,0.384,0.372,1
+		}
+		windowDef static
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/static1"
+			matcolor	0.752,0.850,0.913,.1
+		}
+		windowDef glow
+		{
+			visible	1
+			rect	0,-21,640,639
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.380,0.623,0.317,1
+			matscaley	-1
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef anim
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "ba2::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			transition "ba12::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			
+			transition "t_a2::forecolor_w" "1" "0" "250" ;
+			transition "t_ar2::forecolor_w" "0" "1" "250" ;
+			transition "t_a12::forecolor_w" "1" "0" "250" ;
+			transition "t_ar12::forecolor_w" "0" "1" "250" ;
+			
+			transition "sba2::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			transition "nba6::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			
+			transition "t_s2::forecolor_w" "1" "0" "250" ;
+			transition "t_sr2::forecolor_w" "0" "1" "250" ;
+			transition "t_n6::forecolor_w" "1" "0" "250" ;
+			transition "t_nr6::forecolor_w" "0" "1" "250" ;
+			
+			set "localsound" "guisound_beep2" ;
+			
+		}
+
+		onTime +200 {
+			transition "ba4::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			transition "ba10::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			transition "ba18::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			
+			transition "t_a4::forecolor_w" "1" "0" "250" ;
+			transition "t_ar4::forecolor_w" "0" "1" "250" ;
+			transition "t_a10::forecolor_w" "1" "0" "250" ;
+			transition "t_ar10::forecolor_w" "0" "1" "250" ;
+			transition "t_a18::forecolor_w" "1" "0" "250" ;
+			transition "t_ar18::forecolor_w" "0" "1" "250" ;
+			
+			transition "sba5::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			transition "nba1::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			
+			transition "t_s5::forecolor_w" "1" "0" "250" ;
+			transition "t_sr5::forecolor_w" "0" "1" "250" ;
+			transition "t_n1::forecolor_w" "1" "0" "250" ;
+			transition "t_nr1::forecolor_w" "0" "1" "250" ;
+			
+			set "localsound" "guisound_beep2" ;
+		}
+
+		onTime +200 {
+			transition "ba7::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			transition "ba15::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			
+			transition "t_a7::forecolor_w" "1" "0" "250" ;
+			transition "t_ar7::forecolor_w" "0" "1" "250" ;
+			transition "t_a15::forecolor_w" "1" "0" "250" ;
+			transition "t_ar15::forecolor_w" "0" "1" "250" ;
+			
+			transition "sba7::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			transition "nba3::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			
+			transition "t_s7::forecolor_w" "1" "0" "250" ;
+			transition "t_sr7::forecolor_w" "0" "1" "250" ;
+			transition "t_n3::forecolor_w" "1" "0" "250" ;
+			transition "t_nr3::forecolor_w" "0" "1" "250" ;
+			
+			set "localsound" "guisound_beep2" ;
+		}
+
+		onTime +200 {
+			transition "ba3::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			transition "ba11::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			transition "ba17::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			
+			transition "t_a3::forecolor_w" "1" "0" "250" ;
+			transition "t_ar3::forecolor_w" "0" "1" "250" ;
+			transition "t_a11::forecolor_w" "1" "0" "250" ;
+			transition "t_ar11::forecolor_w" "0" "1" "250" ;
+			transition "t_a17::forecolor_w" "1" "0" "250" ;
+			transition "t_ar17::forecolor_w" "0" "1" "250" ;
+			
+			transition "sba3::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			transition "nba7::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			
+			transition "t_s3::forecolor_w" "1" "0" "250" ;
+			transition "t_sr3::forecolor_w" "0" "1" "250" ;
+			transition "t_n7::forecolor_w" "1" "0" "250" ;
+			transition "t_nr7::forecolor_w" "0" "1" "250" ;
+			
+			set "localsound" "guisound_beep2" ;
+		}
+
+		onTime +200 {
+			transition "ba6::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			
+			transition "t_a6::forecolor_w" "1" "0" "250" ;
+			transition "t_ar6::forecolor_w" "0" "1" "250" ;
+			
+			transition "sba1::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			transition "nba4::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			
+			transition "t_s1::forecolor_w" "1" "0" "250" ;
+			transition "t_sr1::forecolor_w" "0" "1" "250" ;
+			transition "t_n4::forecolor_w" "1" "0" "250" ;
+			transition "t_nr4::forecolor_w" "0" "1" "250" ;
+			
+			set "localsound" "guisound_beep2" ;
+		}
+
+		onTime +200 {
+			transition "ba1::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			transition "ba13::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			
+			transition "t_a1::forecolor_w" "1" "0" "250" ;
+			transition "t_ar1::forecolor_w" "0" "1" "250" ;
+			transition "t_a13::forecolor_w" "1" "0" "250" ;
+			transition "t_ar13::forecolor_w" "0" "1" "250" ;
+			
+			transition "sba6::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			transition "nba5::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			
+			transition "t_s6::forecolor_w" "1" "0" "250" ;
+			transition "t_sr6::forecolor_w" "0" "1" "250" ;
+			transition "t_n5::forecolor_w" "1" "0" "250" ;
+			transition "t_nr5::forecolor_w" "0" "1" "250" ;
+			
+			transition "snba1::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			transition "t_nnum1::forecolor_w" "1" "0" "250" ;
+			transition "t_nnum1_r::forecolor_w" "0" "1" "250" ;
+			
+			set "localsound" "guisound_beep2" ;
+		}
+
+		onTime +200 {
+			transition "ba5::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			transition "ba9::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			
+			transition "t_a5::forecolor_w" "1" "0" "250" ;
+			transition "t_ar5::forecolor_w" "0" "1" "250" ;
+			transition "t_a9::forecolor_w" "1" "0" "250" ;
+			transition "t_ar9::forecolor_w" "0" "1" "250" ;
+			
+			transition "sba4::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			transition "nba2::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			
+			transition "t_s4::forecolor_w" "1" "0" "250" ;
+			transition "t_sr4::forecolor_w" "0" "1" "250" ;
+			transition "t_n2::forecolor_w" "1" "0" "250" ;
+			transition "t_nr2::forecolor_w" "0" "1" "250" ;
+			
+			transition "snba2::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			transition "t_nnum2::forecolor_w" "1" "0" "250" ;
+			transition "t_nnum2_r::forecolor_w" "0" "1" "250" ;
+			
+			set "localsound" "guisound_beep2" ;
+		}
+
+		onTime +200 {
+			transition "ba8::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			transition "ba14::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			transition "ba16::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			
+			transition "t_a8::forecolor_w" "1" "0" "250" ;
+			transition "t_ar8::forecolor_w" "0" "1" "250" ;
+			transition "t_a14::forecolor_w" "1" "0" "250" ;
+			transition "t_ar14::forecolor_w" "0" "1" "250" ;
+			transition "t_a16::forecolor_w" "1" "0" "250" ;
+			transition "t_ar16::forecolor_w" "0" "1" "250" ;
+			
+			transition "ekba::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			transition "num::forecolor_w" ".8" "0" "250" ;
+			transition "num_r::forecolor_w" "0" ".8" "250" ;
+			transition "bpm::forecolor_w" ".6" "0" "250" ;
+			transition "bpm_r::forecolor_w" "0" ".6" "250" ;
+			
+			set "localsound" "guisound_beep2" ;
+		}
+
+		onTime +200 {
+			transition "ba9::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			transition "ba15::matcolor" "$desktop::bluradd" "$desktop::black" "500" ;
+			
+			transition "t_a9::forecolor_w" "1" "0" "250" ;
+			transition "t_ar9::forecolor_w" "0" "1" "250" ;
+			transition "t_a15::forecolor_w" "1" "0" "250" ;
+			transition "t_ar15::forecolor_w" "0" "1" "250" ;
+			
+			set "localsound" "guisound_beep2" ;
+		}
+
+	}
+}

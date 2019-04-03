@@ -1,0 +1,937 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	visible	1
+	alwaysThink	1
+	definevec4	"white"	1,1,1,1
+	definevec4	"yellow"	1,0.8,0,1
+	definevec4	"orange"	1,0.4,0,1
+	definevec4	"red"	1,0,0,1
+	definevec4	"stom"	0.474,0.690,0.317,1
+	definevec4	"stom_o"	0.901,0.384,0.133,1
+	definevec4	"b_on"	0.482,0.882,0.215,1
+	definevec4	"b_off"	0.454,0.674,0.309,1
+	definevec4	"b_on_5"	0.482,0.882,0.215,0.5
+	definevec4	"b_off_5"	0.454,0.674,0.309,0.5
+	definevec4	"warn"	0.925,0.403,0.0588,1
+	definevec4	"warnbar"	0.847,0.486,0.129,1
+	definevec4	"black"	0,0,0,1
+	definevec4	"confirm"	0.854,0.792,0.360,1
+	definevec4	"confirm_o"	1,0.5,0,1
+	float	"active"	0
+	float	"active2"	0
+	float	"feed"	0
+	windowDef p_main
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef top
+		{
+			rect	0,1,640,120
+			visible	1
+			background	"gfx/guis/maps/putra/fattyfeed_top"
+			matcolor	0.352,0.525,0.243,1
+		}
+		windowDef btm
+		{
+			rect	0,241,640,240
+			visible	1
+			background	"gfx/guis/maps/putra/fattyfeed_btm"
+			matcolor	0.639,0.670,0.227,1
+		}
+		windowDef decal
+		{
+			rect	171,-11,109,86
+			visible	1
+			background	"gfx/guis/common/strogg/decal"
+			matcolor	0,0,0,0.6
+		}
+		windowDef circle
+		{
+			rect	389,64,220,220
+			visible	1
+			background	"gfx/guis/common/circle6"
+			matcolor	0.929,0.827,0.262,.32
+			rotate	-.2*time
+			matscalex	-1
+		}
+		windowDef topbar
+		{
+			rect	0,66,640,84
+			visible	1
+			background	"gfx/guis/maps/putra/fattyfeed_bar1"
+			matcolor	0.196,0.227,0.129,1
+		}
+		windowDef btmbar
+		{
+			rect	0,200,640,84
+			visible	1
+			background	"gfx/guis/maps/putra/fattyfeed_bar1"
+			matcolor	0.196,0.227,0.129,1
+			matscaley	-1
+		}
+		windowDef topwarn
+		{
+			rect	401,84,193,71
+			visible	1
+			background	"gfx/guis/maps/putra/fattyfeed_warn"
+			matcolor	0,0,0,1
+		}
+		windowDef btmwarn
+		{
+			rect	401,195,193,71
+			visible	1
+			background	"gfx/guis/maps/putra/fattyfeed_warn"
+			matcolor	0,0,0,1
+			matscaley	-1
+		}
+		windowDef warning
+		{
+			rect	427,108,140,25
+			visible	1
+			forecolor	1,0.811,0.168,0
+			text	"#str_200370"
+			textscale	0.4
+			font	"fonts/r_strogg"
+			textalign	1
+		}
+		windowDef overfull
+		{
+			rect	430,218,140,25
+			visible	1
+			forecolor	1,0.811,0.168,0
+			text	"#str_200491"
+			textscale	0.4
+			font	"fonts/r_strogg"
+			textalign	1
+		}
+		windowDef title
+		{
+			rect	349,37,266,25
+			visible	1
+			forecolor	1,1,1,0.8
+			text	"#str_200492"
+			textscale	0.43
+			font	"fonts/r_strogg"
+		}
+		windowDef topbar2
+		{
+			rect	339,44,4,30
+			visible	1
+			background	"gfx/guis/common/128_sqsolid"
+			matcolor	0.196,0.227,0.129,1
+		}
+		windowDef topbar3
+		{
+			rect	621,44,4,30
+			visible	1
+			background	"gfx/guis/common/128_sqsolid"
+			matcolor	0.196,0.227,0.129,1
+		}
+		windowDef percent
+		{
+			rect	434,149,91,46
+			visible	1
+			forecolor	1,1,1,1
+			text	"093"
+			textscale	0.8
+			font	"fonts/r_strogg"
+			textalign	2
+		}
+		windowDef perc_sym
+		{
+			rect	525,138,42,62
+			visible	1
+			forecolor	1,1,1,1
+			text	"%"
+			textscale	1
+			font	"fonts/marine"
+			textalign	2
+		}
+		windowDef ekg_bar
+		{
+			rect	8,172,364,5
+			visible	1
+			background	"gfx/guis/common/128_sqsolid"
+			matcolor	0.196,0.227,0.129,1
+		}
+	}
+	windowDef p_content
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef p_lines
+		{
+			rect	0,0,640,480
+			visible	1
+			windowDef line1
+			{
+				rect	9,198,361,40
+				visible	1
+				background	"gfx/guis/monitors/strogg/streamhub/hub5_line2"
+				matcolor	0.2,1,0.756,0.25
+				matscalex	4
+
+				onTime 0 {
+					transition "line1::rect" "$line1::rect" "$d_line::rect" "1000" ;
+				}
+
+				onTime 100 {
+					transition "line2::rect" "$line2::rect" "$d_line::rect" "1000" ;
+				}
+
+				onTime 200 {
+					transition "line3::rect" "$line3::rect" "$d_line::rect" "1000" ;
+				}
+
+				onTime 300 {
+					transition "line4::rect" "$line4::rect" "$d_line::rect" "1000" ;
+				}
+
+				onTime 1000 {
+					transition "line1::rect" "$d_line::rect" "$line1::rect" "1000" ;
+				}
+
+				onTime 1100 {
+					transition "line2::rect" "$d_line::rect" "$line2::rect" "1000" ;
+				}
+
+				onTime 1200 {
+					transition "line3::rect" "$d_line::rect" "$line3::rect" "1000" ;
+				}
+
+				onTime 1300 {
+					transition "line4::rect" "$d_line::rect" "$line4::rect" "1000" ;
+				}
+
+				onTime 2000 {
+					transition "line1::rect" "$line1::rect" "$d_line::rect" "1000" ;
+				}
+
+				onTime 2100 {
+					transition "line2::rect" "$line2::rect" "$d_line::rect" "1000" ;
+				}
+
+				onTime 2200 {
+					transition "line3::rect" "$line3::rect" "$d_line::rect" "1000" ;
+				}
+
+				onTime 2300 {
+					transition "line4::rect" "$line4::rect" "$d_line::rect" "1000" ;
+				}
+
+				onTime 3000 {
+					transition "line1::rect" "$d_line::rect" "$line1::rect" "1000" ;
+				}
+
+				onTime 3100 {
+					transition "line2::rect" "$d_line::rect" "$line2::rect" "1000" ;
+				}
+
+				onTime 3200 {
+					transition "line3::rect" "$d_line::rect" "$line3::rect" "1000" ;
+				}
+
+				onTime 3300 {
+					transition "line4::rect" "$d_line::rect" "$line4::rect" "1000" ;
+				}
+
+				onTime 4000 {
+					transition "line1::rect" "$line1::rect" "$d_line::rect" "1000" ;
+				}
+
+				onTime 4100 {
+					transition "line2::rect" "$line2::rect" "$d_line::rect" "1000" ;
+				}
+
+				onTime 4200 {
+					transition "line3::rect" "$line3::rect" "$d_line::rect" "1000" ;
+				}
+
+				onTime 4300 {
+					transition "line4::rect" "$line4::rect" "$d_line::rect" "1000" ;
+				}
+
+				onTime 5000 {
+					transition "line1::rect" "$d_line::rect" "$line1::rect" "1000" ;
+				}
+
+				onTime 5100 {
+					transition "line2::rect" "$d_line::rect" "$line2::rect" "1000" ;
+				}
+
+				onTime 5200 {
+					transition "line3::rect" "$d_line::rect" "$line3::rect" "1000" ;
+				}
+
+				onTime 5300 {
+					transition "line4::rect" "$d_line::rect" "$line4::rect" "1000" ;
+				}
+
+				onTime 10000 {
+					resetTime "0" ;
+				}
+
+			}
+			windowDef line2
+			{
+				rect	9,198,361,40
+				visible	1
+				background	"gfx/guis/monitors/strogg/streamhub/hub5_line2"
+				matcolor	0.2,1,0.478,0.5
+				matscalex	3
+			}
+			windowDef line3
+			{
+				rect	9,198,361,40
+				visible	1
+				background	"gfx/guis/monitors/strogg/streamhub/hub5_line2"
+				matcolor	0.650,1,0.6,0.5
+				matscalex	2
+			}
+			windowDef line4
+			{
+				rect	9,198,361,40
+				visible	1
+				background	"gfx/guis/monitors/strogg/streamhub/hub5_line2"
+				matcolor	1,1,1,0.5
+				matscalex	1
+			}
+			windowDef d_line
+			{
+				rect	9,179,361,77
+				visible	0
+			}
+			windowDef p_ekg
+			{
+				rect	100,102,270,56
+				visible	1
+				windowDef ekg
+				{
+					rect	0,0,525,56
+					visible	1
+					background	"gfx/guis/common/ekg3"
+					matcolor	0.666,1,0.901,0.8
+				}
+				windowDef d_ekg
+				{
+					rect	0,0,270,56
+					visible	0
+				}
+			}
+		}
+		windowDef p_flatline2
+		{
+			rect	9,187,361,59
+			visible	0
+			windowDef flatline2
+			{
+				rect	0,0,477,58
+				visible	1
+				background	"gfx/guis/common/ekg_flatline"
+				matcolor	0.501,0.501,0.501,1
+				matscalex	1.8
+			}
+		}
+		windowDef flatline
+		{
+			rect	100,102,270,56
+			visible	0
+			background	"gfx/guis/common/ekg_flatline"
+			matcolor	0.501,0.501,0.501,1
+			matscalex	1.2
+		}
+		windowDef wavegrad1
+		{
+			rect	9,179,100,77
+			visible	1
+			background	"gfx/guis/common/gradient5"
+			matcolor	0,0,0,1
+		}
+		windowDef wavegrad2
+		{
+			rect	270,179,100,77
+			visible	1
+			background	"gfx/guis/common/gradient5"
+			matcolor	0,0,0,1
+			matscalex	-1
+		}
+		windowDef ekggrad1
+		{
+			rect	100,92,100,77
+			visible	1
+			background	"gfx/guis/common/gradient5"
+			matcolor	0,0,0,1
+		}
+		windowDef ekggrad2
+		{
+			rect	270,92,100,77
+			visible	1
+			background	"gfx/guis/common/gradient5"
+			matcolor	0,0,0,1
+			matscalex	-1
+		}
+		windowDef num
+		{
+			rect	22,106,44,28
+			visible	1
+			forecolor	0.882,0.870,0.623,.8
+			text	"84"
+			textscale	0.5
+			font	"fonts/r_strogg"
+			textalign	2
+		}
+		windowDef bpm
+		{
+			rect	22,130,40,18
+			visible	1
+			forecolor	0.882,0.870,0.623,.6
+			text	"#str_200393"
+			textscale	0.3
+			font	"fonts/r_strogg"
+			textalign	2
+		}
+		windowDef arrow
+		{
+			rect	62,111,40,40
+			visible	1
+			background	"gfx/guis/common/arrow6"
+			matcolor	0.835,0.250,0,1
+			rotate	90
+
+			onTime 0 {
+				transition "arrow::rect" "$arrow::rect" "$d_arrow::rect" "50" ;
+			}
+
+			onTime 50 {
+				transition "arrow::rect" "$d_arrow::rect" "$arrow::rect" "250" ;
+			}
+
+			onTime 1000 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef d_arrow
+		{
+			rect	51,101,60,60
+			visible	0
+			background	"gfx/guis/common/arrow6"
+			matcolor	0.662,0.333,0.00392,1
+			rotate	90
+		}
+		windowDef t_sanode
+		{
+			rect	93,83,280,16
+			visible	1
+			forecolor	0.886,1,0.686,0.4
+			text	"#str_200396"
+			textscale	0.2
+			font	"fonts/r_strogg"
+			textalign	2
+		}
+		windowDef t_biowave
+		{
+			rect	93,175,280,15
+			visible	1
+			forecolor	0.886,1,0.686,0.4
+			text	"#str_200493"
+			textscale	0.2
+			font	"fonts/r_strogg"
+			textalign	2
+		}
+	}
+	windowDef p_btn
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef fade
+		{
+			rect	0,0,640,480
+			visible	1
+			backcolor	0,0,0,0
+		}
+		windowDef btn_bl
+		{
+			rect	26,425,40,40
+			visible	1
+			background	"gfx/guis/common/btn_2pxborder_corner"
+			matcolor	0.454,0.674,0.309,1
+			matscaley	-1
+		}
+		windowDef btn_b
+		{
+			rect	66,445,508,20
+			visible	1
+			background	"gfx/guis/common/btn_2pxborder_horiz"
+			matcolor	0.454,0.674,0.309,1
+		}
+		windowDef btn_br
+		{
+			rect	574,425,40,40
+			visible	1
+			background	"gfx/guis/common/btn_2pxborder_corner"
+			matcolor	0.454,0.674,0.309,1
+			matscalex	-1
+			matscaley	-1
+		}
+		windowDef btn_l
+		{
+			rect	26,350,40,75
+			visible	1
+			background	"gfx/guis/common/btn_2pxborder_vert"
+			matcolor	0.454,0.674,0.309,1
+			matscaley	-1
+		}
+		windowDef btn_m
+		{
+			rect	66,350,508,95
+			visible	1
+			backcolor	0.454,0.674,0.309,.5
+		}
+		windowDef btn_r
+		{
+			rect	574,350,40,75
+			visible	1
+			background	"gfx/guis/common/btn_2pxborder_vert"
+			matcolor	0.454,0.674,0.309,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef btn_tl
+		{
+			rect	26,330,40,20
+			visible	1
+			background	"gfx/guis/common/btn_2pxborder_cornersm"
+			matcolor	0.454,0.674,0.309,1
+			matscaley	-1
+		}
+		windowDef btn_t
+		{
+			rect	66,330,508,20
+			visible	1
+			background	"gfx/guis/common/btn_2pxborder_horiz"
+			matcolor	0.454,0.674,0.309,1
+			matscaley	-1
+		}
+		windowDef btn_tr
+		{
+			rect	574,330,40,20
+			visible	1
+			background	"gfx/guis/common/btn_2pxborder_cornersm"
+			matcolor	0.454,0.674,0.309,1
+			matscalex	-1
+			matscaley	-1
+		}
+		windowDef t_btn
+		{
+			rect	29,371,582,58
+			visible	1
+			forecolor	1,1,1,0.6
+			text	"#str_200494"
+			textscale	.8
+			font	"fonts/r_strogg"
+			textalign	1
+		}
+		windowDef bgbar1
+		{
+			rect	58,353,528,36
+			visible	1
+			background	"gfx/guis/common/128_sqsolid"
+			matcolor	0,0,0,0
+		}
+		windowDef bar1
+		{
+			rect	67,357,0,25
+			visible	1
+			background	"gfx/guis/common/gradient4"
+			matcolor	0.878,0.443,0.121,0
+			matscaley	-1
+		}
+		windowDef d_bar1
+		{
+			rect	67,357,511,25
+			visible	0
+			background	"gfx/guis/common/gradient4"
+			matcolor	0.878,0.443,0.121,0.8
+			matscaley	-1
+		}
+		windowDef t_feeding
+		{
+			rect	29,395,582,40
+			visible	0
+			forecolor	1,1,1,1 *guitable_10_5[time*0.002]
+			text	"#str_200495"
+			textscale	.6
+			font	"fonts/r_strogg"
+			textalign	1
+		}
+		windowDef r_warn
+		{
+			rect	316,325,284,147
+			visible	0
+			background	"gfx/guis/maps/dispersal/bxsfer_warn"
+			matcolor	0.352,0.109,0.0627,1
+		}
+		windowDef l_warn
+		{
+			rect	40,325,284,147
+			visible	0
+			background	"gfx/guis/maps/dispersal/bxsfer_warn"
+			matcolor	0.352,0.109,0.0627,1
+			matscalex	-1
+		}
+		windowDef t_warn
+		{
+			rect	29,352,582,112
+			visible	0
+			forecolor	1,0.223,0,1*guitable_10_0[time*0.002]
+			text	"#str_200496"
+			textscale	0.8
+			font	"fonts/r_strogg"
+			textalign	1
+		}
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	-1,0,640,480
+			background	"gfx/guis/common/monitor_line6"
+			matcolor	0.447,1,0.435,0.1
+		}
+		windowDef dirt
+		{
+			visible	1
+			rect	0,-109,640,590
+			background	"gfx/guis/common/screen_dirt4"
+			matcolor	0.619,0.521,0.388,.8
+			matscalex	-1
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,-53,640,558
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.435,0.470,0.219,1
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge3"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef btn_feed
+	{
+		rect	28,333,584,129
+		visible	1
+
+		onMouseEnter {
+			transition "btn_bl::matcolor" "$desktop::b_off" "$desktop::b_on" "0" ;
+			transition "btn_l::matcolor" "$desktop::b_off" "$desktop::b_on" "0" ;
+			transition "btn_tl::matcolor" "$desktop::b_off" "$desktop::b_on" "0" ;
+			transition "btn_tr::matcolor" "$desktop::b_off" "$desktop::b_on" "0" ;
+			transition "btn_r::matcolor" "$desktop::b_off" "$desktop::b_on" "0" ;
+			transition "btn_b::matcolor" "$desktop::b_off" "$desktop::b_on" "0" ;
+			transition "btn_br::matcolor" "$desktop::b_off" "$desktop::b_on" "0" ;
+			transition "btn_t::matcolor" "$desktop::b_off" "$desktop::b_on" "0" ;
+			transition "btn_m::backcolor" "$desktop::b_off_5" "$desktop::b_on_5" "0" ;
+			transition "t_btn::forecolor_w" ".6" "1" "0" ;
+		}
+
+		onMouseExit {
+			if ("desktop::active" == 0) {
+				transition "btn_bl::matcolor" "$desktop::b_on" "$desktop::b_off" "250" ;
+				transition "btn_l::matcolor" "$desktop::b_on" "$desktop::b_off" "250" ;
+				transition "btn_tl::matcolor" "$desktop::b_on" "$desktop::b_off" "250" ;
+				transition "btn_tr::matcolor" "$desktop::b_on" "$desktop::b_off" "250" ;
+				transition "btn_r::matcolor" "$desktop::b_on" "$desktop::b_off" "250" ;
+				transition "btn_b::matcolor" "$desktop::b_on" "$desktop::b_off" "250" ;
+				transition "btn_br::matcolor" "$desktop::b_on" "$desktop::b_off" "250" ;
+				transition "btn_t::matcolor" "$desktop::b_on" "$desktop::b_off" "250" ;
+				transition "btn_m::backcolor" "$desktop::b_on_5" "$desktop::b_off_5" "250" ;
+				transition "t_btn::forecolor_w" "1" ".6" "250" ;
+			}
+		}
+
+		onAction {
+			set "visible" "0" ;
+			set "desktop::active" "1" ;	
+			
+			set "t_btn::visible" "0" ;
+			set "cmd" "play guisound_beep2 ; runscript" "$gui::gui_parm_script" ;
+			
+			resettime "anim_feed1" "0" ;
+		}
+
+	}
+	windowDef anim_feed1
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime +500 {
+			transition "bgbar1::matcolor_w" "0" "0.6" "150" ;
+			transition "bar1::matcolor_w" "0" "0.8" "150" ;
+			set "t_feeding::visible" "1" ;
+			
+			resettime "anim_bar1" "0" ;
+			resettime "anim_num1" "0" ;
+		}
+
+		onTime +2550 {
+			set "desktop::active" "0" ;
+			set "p_lines::visible" "0" ;
+			set "p_flatline2::visible" "1" ;
+			set "flatline::visible" "1" ;
+			set "num::text" "00" ;
+			
+			set "arrow::notime" "1" ;
+			stoptransitions "arrow" ;
+			set "arrow::matcolor" ".5,.5,.5,1" ;
+			
+			set "r_warn::visible" "1" ;
+			set "l_warn::visible" "1" ;
+			set "t_warn::visible" "1" ;
+			set "t_feeding::visible" "0" ;
+		}
+
+	}
+	windowDef anim_bar1
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "bar1::rect" "$bar1::rect" "$d_bar1::rect" "2550" ;
+			resettime "anim_num1" "0" ;
+		}
+
+	}
+	windowDef anim_num1
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "percent::forecolor" "$desktop::white" "$desktop::yellow" "1000" ;
+			transition "perc_sym::forecolor" "$desktop::white" "$desktop::yellow" "1000" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "097" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "104" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "112" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "118" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "122" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "126" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "131" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "142" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "148" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "152" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "157" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "162" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "168" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "173" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "177" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "185" ;
+		}
+
+		onTime +50 {
+			transition "percent::forecolor" "$desktop::yellow" "$desktop::orange" "1000" ;
+			transition "perc_sym::forecolor" "$desktop::yellow" "$desktop::orange" "1000" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "185" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "189" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "192" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "195" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "198" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "204" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "209" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "215" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "218" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "223" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "229" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "234" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "242" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "247" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "253" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "258" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "264" ;
+		}
+
+		onTime +50 {
+			transition "percent::forecolor" "$desktop::orange" "$desktop::red" "1000" ;
+			transition "perc_sym::forecolor" "$desktop::orange" "$desktop::red" "1000" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "264" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "274" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "279" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "285" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "293" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "306" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "315" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "322" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "326" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "334" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "342" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "346" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "354" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "363" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "370" ;
+		}
+
+		onTime +50 {
+			set "percent::text" "378" ;
+		}
+
+	}
+}

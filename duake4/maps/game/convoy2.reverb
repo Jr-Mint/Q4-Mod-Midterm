@@ -1,0 +1,20 @@
+reverb
+{
+	{ 0 Mountains }
+	{ 1 Stonecorridor }
+	{ 2 Stonecorridor }
+	{ 3 Mountains }
+	{ 4 Mountains }
+	{ 5 Stonecorridor }
+	{ 6 Mountains }
+	{ 7 Stonecorridor }
+	{ 8 Stonecorridor }
+	{ 9 Stonecorridor }
+	{ 10 Mountains }
+	{ 11 Stonecorridor }
+	{ 12 Stonecorridor }
+	{ 13 Mountains }
+	{ 14 Stonecorridor }
+	{ 15 Plain }
+	{ 16 Hallway }
+}

@@ -1,0 +1,109 @@
+windowDef Desktop
+{
+	comment	"'gui_parm_text_top' and 'gui_parm_text_btm' set the two text values"
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	visible	1
+	windowDef bg
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/directional_bg"
+		matcolor	1,1,1,1*guitable_random2[time*0.4]
+	}
+	windowDef arrow1
+	{
+		rect	47,56,228,134
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/directional_arrow"
+		matcolor	0.196,0.694,0.811,.35
+	}
+	windowDef arrow2
+	{
+		rect	26,116,267,184
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/directional_arrow"
+		matcolor	0.196,0.694,0.811,.35
+	}
+	windowDef arrow3
+	{
+		rect	2,205,312,228
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/directional_arrow"
+		matcolor	0.196,0.694,0.811,.35
+	}
+	windowDef top_text
+	{
+		rect	310,37,304,105
+		visible	1
+		forecolor	0.188,0.878,0.360,1*guitable_random2[time*0.4]
+		text	"gui::gui_parm_text_top"
+		textscale	1.14
+		font	"fonts/r_strogg"
+		forceaspectheight	300
+	}
+	windowDef btm_text
+	{
+		rect	309,81,326,319
+		visible	1
+		forecolor	0.184,0.874,0.356,1*guitable_random2[time*0.4]
+		text	"gui::gui_parm_text_btm"
+		textscale	3.75
+		font	"fonts/r_strogg"
+		forceaspectheight	300
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	0,-208,640,964
+			background	"gfx/guis/common/monitor_line6"
+			matcolor	0.643,1,0.952,0.1
+		}
+		windowDef dirt
+		{
+			visible	1
+			rect	-307,-195,1076,883
+			background	"gfx/guis/common/screen_dirt4"
+			matcolor	0.549,0.482,0.349,1
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef anim_arrows
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 0 {
+			transition "arrow3::matcolor_w" ".35" "1" "300" ;
+		}
+
+		onTime +300 {
+			transition "arrow3::matcolor_w" "1" ".35" "300" ;
+			transition "arrow2::matcolor_w" ".35" "1" "300" ;
+		}
+
+		onTime +300 {
+			transition "arrow2::matcolor_w" "1" ".35" "300" ;
+			transition "arrow1::matcolor_w" ".35" "1" "300" ;
+		}
+
+		onTime +300 {
+			transition "arrow1::matcolor_w" "1" ".35" "300" ;
+		}
+
+		onTime +300 {
+			resettime "0" ;
+		}
+
+	}
+}

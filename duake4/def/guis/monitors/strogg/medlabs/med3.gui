@@ -1,0 +1,430 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	visible	1
+	definevec4	"logo_on"	0.894,0.811,0.470,0.8
+	definevec4	"logo_off"	0.894,0.811,0.470,0
+	windowDef bg6
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med3_6"
+		matcolor	1,1,1,1
+	}
+	windowDef bg1
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med3_1"
+		matcolor	1,1,1,0
+	}
+	windowDef bg2
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med3_2"
+		matcolor	1,1,1,0
+	}
+	windowDef bg3
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med3_3"
+		matcolor	1,1,1,0
+	}
+	windowDef bg4
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med3_4"
+		matcolor	1,1,1,0
+	}
+	windowDef bg5
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med3_5"
+		matcolor	1,1,1,0
+	}
+	windowDef edge
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med3_edge"
+		matcolor	0.682,0.729,0.545,1*guitable_random1[time*0.0004]
+	}
+	windowDef csk
+	{
+		rect	35,290,180,180
+		visible	1
+		background	"gfx/guis/monitors/strogg/medlabs/med3_csk"
+		matcolor	0.749,1,0.925,1
+		rotate	340
+
+		onTime 0 {
+			transition "rotate" "-20" "20" "3000" ;
+		}
+
+		onTime 4000 {
+			transition "rotate" "20" "-20" "3000" ;
+		}
+
+		onTime 8000 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef scrolltext
+	{
+		rect	23,44,261,206
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext2"
+		matcolor	0.760,0.976,0.525,1
+		shear	0,.18
+	}
+	windowDef title
+	{
+		rect	12,12,195,22
+		visible	1
+		forecolor	0.980,0.772,0.278,1
+		text	"brain scan 84-b"
+		textscale	.5
+		font	"fonts/strogg"
+	}
+	windowDef title1
+	{
+		rect	7,421,45,21
+		visible	1
+		forecolor	0.980,0.772,0.278,1
+		text	"43-x"
+		textscale	.4
+		font	"fonts/strogg"
+	}
+	windowDef title2
+	{
+		rect	8,446,81,20
+		visible	1
+		forecolor	0.760,0.976,0.525,1
+		text	specimen
+		textscale	.4
+		font	"fonts/strogg"
+	}
+	windowDef title3
+	{
+		rect	521,42,85,36
+		visible	1
+		forecolor	0.760,0.976,0.525,1
+		text	"rf-2"
+		textscale	.8
+		font	"fonts/strogg"
+	}
+	windowDef title4
+	{
+		rect	570,77,37,52
+		visible	1
+		forecolor	0.980,0.772,0.278,1
+		text	"k"
+		textscale	1.4
+		font	"fonts/strogg"
+	}
+	windowDef logo1
+	{
+		rect	457,282,121,125
+		visible	1
+		background	"gfx/guis/common/strogg/logo_rotate1"
+		matcolor	0.976,0.768,0.274,0
+	}
+	windowDef logo2
+	{
+		rect	457,282,121,125
+		visible	1
+		background	"gfx/guis/common/strogg/logo_rotate2"
+		matcolor	0.976,0.768,0.274,0
+	}
+	windowDef logo3
+	{
+		rect	457,282,121,125
+		visible	1
+		background	"gfx/guis/common/strogg/logo_rotate3"
+		matcolor	0.976,0.768,0.274,0
+	}
+	windowDef logo4
+	{
+		rect	457,282,121,125
+		visible	1
+		background	"gfx/guis/common/strogg/logo_rotate4"
+		matcolor	0.976,0.768,0.274,0
+	}
+	windowDef p_btmright1
+	{
+		rect	225,395,1,13
+		visible	1
+		windowDef t_btmright1
+		{
+			rect	0,0,216,13
+			visible	1
+			forecolor	0.701,0.941,0.992,1
+			text	"sector 17 archive subsystem"
+			textscale	0.3
+			font	"fonts/strogg"
+		}
+	}
+	windowDef p_btmright2
+	{
+		rect	225,395,1,13
+		visible	1
+		windowDef t_btmright2
+		{
+			rect	0,0,196,13
+			visible	1
+			forecolor	0.701,0.941,0.992,1
+			text	"analysis of current data"
+			textscale	.3
+			font	"fonts/strogg"
+		}
+	}
+	windowDef d_btmright1c
+	{
+		rect	225,374,1,13
+		visible	0
+	}
+	windowDef d_btmright1
+	{
+		rect	225,374,216,13
+		visible	0
+	}
+	windowDef d_btmright1b
+	{
+		rect	225,395,216,13
+		visible	0
+	}
+	windowDef d_btmright2
+	{
+		rect	225,395,196,13
+		visible	0
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline1
+		{
+			visible	1
+			rect	0,-249,640,888
+			background	"gfx/guis/common/monitor_line6"
+			matcolor	0.752,0.850,0.913,0.08
+		}
+		windowDef blood
+		{
+			rect	0,0,640,480
+			visible	"gui::gui_parm_blood"
+			background	"gfx/guis/common/bloodsplat1"
+			matcolor	.6,.6,.6,1
+			matscaley	-1
+		}
+		windowDef static
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/static1"
+			matcolor	0.752,0.850,0.913,.2
+		}
+		windowDef static2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/img_static3"
+			matcolor	0.960,0.960,0.960,.14
+		}
+		windowDef flicker2
+		{
+			visible	1
+			rect	0,0,640,480
+			backcolor	0.701,0.788,0.815,0
+
+			onTime 0 {
+				set "backcolor" "0.701,0.788,0.815,.1" ;
+			}
+
+			onTime 50 {
+				set "backcolor" "0.701,0.788,0.815,0" ;
+			}
+
+			onTime 600 {
+				set "backcolor" "0.701,0.788,0.815,.1" ;
+			}
+
+			onTime 850 {
+				set "backcolor" "0.701,0.788,0.815,0" ;
+			}
+
+			onTime 1200 {
+				set "backcolor" "0.701,0.788,0.815,.2" ;
+			}
+
+			onTime 1250 {
+				set "backcolor" "0.701,0.788,0.815,0" ;
+			}
+
+			onTime 2400 {
+				set "backcolor" "0.701,0.788,0.815,.1" ;
+			}
+
+			onTime 2450 {
+				set "backcolor" "0.701,0.788,0.815,0" ;
+			}
+
+			onTime 4900 {
+				set "backcolor" "0.701,0.788,0.815,.3" ;
+			}
+
+			onTime 4950 {
+				set "backcolor" "0.701,0.788,0.815,0" ;
+			}
+
+			onTime 5200 {
+				set "backcolor" "0.701,0.788,0.815,.1" ;
+			}
+
+			onTime 5250 {
+				set "backcolor" "0.701,0.788,0.815,0" ;
+			}
+
+			onTime 12200 {
+				set "backcolor" "0.701,0.788,0.815,.2" ;
+			}
+
+			onTime 12250 {
+				set "backcolor" "0.701,0.788,0.815,0" ;
+			}
+
+			onTime 15200 {
+				set "backcolor" "0.701,0.788,0.815,.1" ;
+			}
+
+			onTime 15250 {
+				set "backcolor" "0.701,0.788,0.815,0" ;
+			}
+
+			onTime 18000 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef anim_scan
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 0 {
+			transition "bg6::matcolor" "1,1,1,1" "1,1,1,0" "500" ;
+			transition "bg1::matcolor" "1,1,1,0" "1,1,1,1" "500" ;
+		}
+
+		onTime +2500 {
+			transition "bg1::matcolor" "1,1,1,1" "1,1,1,0" "500" ;
+			transition "bg2::matcolor" "1,1,1,0" "1,1,1,1" "500" ;
+		}
+
+		onTime +2500 {
+			transition "bg2::matcolor" "1,1,1,1" "1,1,1,0" "500" ;
+			transition "bg3::matcolor" "1,1,1,0" "1,1,1,1" "500" ;
+		}
+
+		onTime +2500 {
+			transition "bg3::matcolor" "1,1,1,1" "1,1,1,0" "500" ;
+			transition "bg4::matcolor" "1,1,1,0" "1,1,1,1" "500" ;
+		}
+
+		onTime +2500 {
+			transition "bg4::matcolor" "1,1,1,1" "1,1,1,0" "500" ;
+			transition "bg5::matcolor" "1,1,1,0" "1,1,1,1" "500" ;
+		}
+
+		onTime +2500 {
+			transition "bg5::matcolor" "1,1,1,1" "1,1,1,0" "500" ;
+			transition "bg6::matcolor" "1,1,1,0" "1,1,1,1" "500" ;
+		}
+
+		onTime +2500 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef anim_text
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 0 {
+			transition "p_btmright1::rect" "$p_btmright1::rect" "$d_btmright1b::rect" "300" ;
+		}
+
+		onTime 300 {
+			transition "p_btmright1::rect" "$d_btmright1b::rect" "$d_btmright1::rect" "300" ;
+		}
+
+		onTime 600 {
+			transition "p_btmright2::rect" "$p_btmright2::rect" "$d_btmright2::rect" "300" ;
+		}
+
+		onTime 3000 {
+			transition "p_btmright1::rect" "$d_btmright1::rect" "$d_btmright1c::rect" "300" ;
+			transition "p_btmright2::rect" "$d_btmright2::rect" "$p_btmright2::rect" "300" ;
+		}
+
+		onTime 5000 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef anim_logo
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 0 {
+			transition "logo1::matcolor" "$desktop::logo_on" "$desktop::logo_off" "100" ;	
+			transition "logo2::matcolor" "$desktop::logo_off" "$desktop::logo_on" "100" ;	
+		}
+
+		onTime 200 {
+			transition "logo2::matcolor" "$desktop::logo_on" "$desktop::logo_off" "100" ;	
+			transition "logo3::matcolor" "$desktop::logo_off" "$desktop::logo_on" "100" ;	
+		}
+
+		onTime 400 {
+			transition "logo3::matcolor" "$desktop::logo_on" "$desktop::logo_off" "100" ;	
+			transition "logo4::matcolor" "$desktop::logo_off" "$desktop::logo_on" "100" ;	
+		}
+
+		onTime 600 {
+			transition "logo4::matcolor" "$desktop::logo_on" "$desktop::logo_off" "100" ;	
+			transition "logo3::matcolor" "$desktop::logo_off" "$desktop::logo_on" "100" ;	
+		}
+
+		onTime 800 {
+			transition "logo3::matcolor" "$desktop::logo_on" "$desktop::logo_off" "100" ;	
+			transition "logo2::matcolor" "$desktop::logo_off" "$desktop::logo_on" "100" ;	
+		}
+
+		onTime 1000 {
+			transition "logo2::matcolor" "$desktop::logo_on" "$desktop::logo_off" "100" ;	
+			transition "logo1::matcolor" "$desktop::logo_off" "$desktop::logo_on" "100" ;	
+		}
+
+		onTime 2500 {
+			resettime "0" ;
+		}
+
+	}
+}

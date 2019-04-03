@@ -1,0 +1,277 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	visible	1
+	backcolor	0.101,0.0470,0,1
+	windowDef bridge_L
+	{
+		rect	-246,57,312,173
+		visible	1
+		background	"gfx/guis/maps/waste/bridge_bridge"
+		matcolor	0.980,0.784,0.196,1
+	}
+	windowDef bridge_R
+	{
+		rect	574,57,312,173
+		visible	1
+		background	"gfx/guis/maps/waste/bridge_bridge"
+		matcolor	0.980,0.784,0.196,1
+		matscalex	-1
+	}
+	windowDef l_arrows_in
+	{
+		rect	-320,54,640,194
+		visible	1
+		background	"gfx/guis/common/strogg/rt_arrow_scroll"
+		matcolor	1,0.980,0.717,0
+	}
+	windowDef r_arrows_in
+	{
+		rect	320,54,640,194
+		visible	1
+		background	"gfx/guis/common/strogg/lf_arrow_scroll"
+		matcolor	1,0.980,0.717,0
+	}
+	windowDef l_arrows_out
+	{
+		rect	-320,54,640,194
+		visible	1
+		background	"gfx/guis/common/strogg/lf_arrow_scroll"
+		matcolor	1,0.980,0.717,0
+	}
+	windowDef r_arrows_out
+	{
+		rect	320,54,640,194
+		visible	1
+		background	"gfx/guis/common/strogg/rt_arrow_scroll"
+		matcolor	1,0.980,0.717,0
+	}
+	windowDef blackgrad1
+	{
+		rect	540,45,72,200
+		visible	1
+		background	"gfx/guis/common/gradient3"
+		matcolor	0,0,0,1
+		matscalex	-1
+	}
+	windowDef blackgrad2
+	{
+		rect	31,49,72,200
+		visible	1
+		background	"gfx/guis/common/gradient3"
+		matcolor	0,0,0,1
+	}
+	windowDef L_side
+	{
+		rect	0,0,100,480
+		visible	1
+		background	"gfx/guis/maps/waste/bridge_side"
+		matcolor	1,0.501,0,1
+	}
+	windowDef R_side
+	{
+		rect	540,0,100,480
+		visible	1
+		background	"gfx/guis/maps/waste/bridge_side"
+		matcolor	1,0.501,0,1
+		matscalex	-1
+	}
+	windowDef bracket
+	{
+		rect	-2,247,644,241
+		visible	1
+		background	"gfx/guis/maps/waste/bridge_bracket"
+		matcolor	0.988,0.690,0.137,1
+	}
+	windowDef button
+	{
+		rect	149,255,346,169
+		visible	1
+		background	"gfx/guis/maps/waste/bridge_button"
+		matcolor	0.980,0.784,0.196,1
+	}
+	windowDef top
+	{
+		rect	109,-2,425,54
+		visible	1
+		background	"gfx/guis/maps/waste/bridge_top"
+		matcolor	0.988,0.690,0.137,1
+	}
+	windowDef t1
+	{
+		rect	166,309,318,48
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200571"
+		textscale	0.65
+		font	"fonts/r_strogg"
+	}
+	windowDef t2
+	{
+		rect	194,30,247,28
+		visible	1
+		forecolor	1,0.835,0.250,0
+		text	"#str_200572"
+		textscale	0.4
+		font	"fonts/r_strogg"
+	}
+	windowDef t3
+	{
+		rect	193,30,259,28
+		visible	1
+		forecolor	1,0.835,0.250,0
+		text	"#str_200573"
+		textscale	0.4
+		font	"fonts/r_strogg"
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	0,-54,640,535
+			background	"gfx/guis/common/monitor_line3"
+			matcolor	1,0.823,0.290,0.576
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,-69,640,576
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.521,0.345,0.152,1
+		}
+		windowDef dirt
+		{
+			visible	1
+			rect	-22,-53,712,533
+			background	"gfx/guis/common/screen_dirt4"
+			matcolor	0.266,0.207,0.168,0.839
+		}
+		windowDef scratches
+		{
+			rect	-1,0,642,481
+			visible	1
+			background	"gfx/guis/common/screen_scratches2"
+			matcolor	0.933,0.901,0.658,0.423
+			matscaley	-1
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef b_button
+	{
+		rect	142,246,358,183
+		visible	1
+
+		onMouseEnter {
+			transition "button::matcolor" "0.980,0.784,0.196,1" "0.870,0.827,0.329,1" "0" ;
+			set "t1::forecolor" "0,0,0,1" ;
+		}
+
+		onMouseExit {
+			transition "button::matcolor" "0.870,0.827,0.329,1" "0.980,0.784,0.196,1" "300" ;
+			transition "t1::forecolor" "0,0,0,1" "1,1,1,1" "300" ;
+		}
+
+		onAction {
+			nonInteractive "1" ;
+			set "cmd" "play guisound_beep2 ; activate ; runscript" "$gui::gui_Parm_script";
+			set "desktop::clicked" "1" ;
+			set "visible" "0" ;
+			
+			resettime "anim" "0" ;	
+		}
+
+	}
+	windowDef d_bridge_L
+	{
+		rect	8,57,312,173
+		visible	0
+		background	"gfx/guis/maps/waste/bridge_bridge"
+		matcolor	0.741,0.733,0.368,1
+	}
+	windowDef d_bridge_R
+	{
+		rect	320,57,312,173
+		visible	0
+		background	"gfx/guis/maps/waste/bridge_bridge"
+		matcolor	0.737,0.729,0.364,1
+		matscalex	-1
+	}
+	windowDef anim
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "l_arrows_in::matcolor_w" "0" "0.4" "1500" ;
+			transition "r_arrows_in::matcolor_w" "0" "0.4" "1500" ;
+			transition "bridge_L::rect" "$bridge_L::rect" "$d_bridge_L::rect" "6200" ;
+			transition "bridge_R::rect" "$bridge_R::rect" "$d_bridge_R::rect" "6200" ;
+			transition "t2::forecolor" "1,0.835,0.250,0" "1,0.835,0.250,0.7" "200" ;
+			transition "bracket::rect" "$bracket::rect" "$d_bracket::rect" "200" ;
+		}
+
+		onTime +400 {
+			transition "t2::forecolor" "1,0.835,0.250,0.7" "1,0.835,0.250,0" "100" ;
+		}
+
+		onTime +200 {
+			transition "t2::forecolor" "1,0.835,0.250,0" "1,0.835,0.250,0.7" "200" ;
+		}
+
+		onTime +400 {
+			transition "t2::forecolor" "1,0.835,0.250,0.7" "1,0.835,0.250,0" "100" ;
+		}
+
+		onTime +200 {
+			transition "t2::forecolor" "1,0.835,0.250,0" "1,0.835,0.250,0.7" "200" ;
+		}
+
+		onTime +3000 {
+			transition "l_arrows_in::matcolor_w" "0.4" "0" "2000" ;
+			transition "r_arrows_in::matcolor_w" "0.4" "0" "2000" ;
+		}
+
+		onTime +100 {
+			transition "t2::forecolor" "1,0.835,0.250,0.7" "1,0.835,0.250,0" "100" ;
+		}
+
+		onTime +200 {
+			transition "t2::forecolor" "1,0.835,0.250,0" "1,0.835,0.250,0.7" "200" ;
+		}
+
+		onTime +400 {
+			transition "t2::forecolor" "1,0.835,0.250,0.7" "1,0.835,0.250,0" "100" ;
+		}
+
+		onTime +200 {
+			transition "t2::forecolor" "1,0.835,0.250,0" "1,0.835,0.250,0.7" "200" ;
+		}
+
+		onTime +400 {
+			transition "bracket::rect" "$d_bracket::rect" "$bracket::rect" "150" ;
+			transition "t2::forecolor" "1,0.835,0.250,0.7" "1,0.835,0.250,0" "300" ;
+		}
+
+		onTime +150 {
+			set "desktop::openstate" "0" ;
+		}
+
+	}
+	windowDef d_bracket
+	{
+		rect	-1,258,644,241
+		visible	0
+		background	"gfx/guis/maps/waste/bridge_bracket"
+		matcolor	0.988,0.690,0.137,1
+	}
+}

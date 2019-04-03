@@ -1,0 +1,184 @@
+windowDef Desktop
+{
+	visible	1
+	rect	0,0,640,480
+	backcolor	0.0549,0.101,0.0431,1
+	definevec4	"cell_orange"	0.984,0.674,0.450,0.52
+	definevec4	"cell_orange_0"	0.984,0.674,0.450,0
+	definevec4	"cell_green"	0.6,0.8,0.184,0.52
+	definevec4	"cell_green_0"	0.6,0.8,0.184,0
+	windowDef bg
+	{
+		rect	0,-40,640,573
+		visible	1
+		background	"gfx/guis/monitors/strogg/stroyent/digestbody_bg"
+		matcolor	0.870,0.411,0.105,1*guitable_8_10[time*.0004]
+	}
+	windowDef gear
+	{
+		rect	99,56,416,165
+		visible	1
+		background	"gfx/guis/common/strogg/gear1"
+		matcolor	0.741,0.752,0.560,0.6
+	}
+	windowDef black
+	{
+		rect	236,79,146,132
+		visible	1
+		backcolor	0,0,0,1
+	}
+	windowDef acid_bg
+	{
+		rect	223,74,177,160
+		visible	1
+		background	"gfx/guis/common/strogg/sq1"
+		matcolor	1,0.501,0,.4
+	}
+	windowDef acid
+	{
+		rect	223,74,177,160
+		visible	1
+		background	"gfx/guis/common/strogg/sq1"
+		matcolor	0.584,0.792,0.2,1*guitable_10_5[time*.0004]
+
+		onTime 0 {
+			transition "acid::rect" "$acid::rect" "$d_acid::rect" "5000" "300" "300" ;
+			transition "p_bubbles::rect" "$p_bubbles::rect" "$d_bubbles::rect" "5000" "300" "300" ;
+		}
+
+		onTime 6000 {
+			transition "acid::rect" "$d_acid::rect" "$acid::rect" "5000" "300" "300" ;
+			transition "p_bubbles::rect" "$d_bubbles::rect" "$p_bubbles::rect" "5000" "300" "300" ;
+		}
+
+		onTime 15000 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef p_bubbles
+	{
+		rect	223,85,174,122
+		visible	1
+		windowDef bubbles
+		{
+			rect	0,0,174,122
+			visible	1
+			background	"gfx/guis/common/bubbles"
+			matcolor	0.584,0.792,0.2,1
+		}
+	}
+	windowDef d_acid
+	{
+		rect	223,180,177,54
+		visible	0
+		background	"gfx/guis/common/strogg/sq1"
+		matcolor	1,0.501,0,1
+	}
+	windowDef d_bubbles
+	{
+		rect	223,184,174,33
+		visible	0
+	}
+	windowDef body
+	{
+		rect	30,24,584,252
+		visible	1
+		background	"gfx/guis/monitors/strogg/stroyent/digestbody"
+		matcolor	0.796,0.501,0.172,1
+	}
+	windowDef scrolltext1
+	{
+		rect	3,294,240,103
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext2fast"
+		matcolor	0.752,0.752,0.752,1
+		matscalex	-1
+	}
+	windowDef scrolltext2
+	{
+		rect	233,294,273,130
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext3"
+		matcolor	0.752,0.752,0.752,1
+	}
+	windowDef line1
+	{
+		rect	89,150,148,14
+		visible	1
+		background	"gfx/guis/common/line1"
+		matcolor	0.603,0.709,0.721,1
+	}
+	windowDef p_scrolltext3
+	{
+		rect	93,163,94,40
+		visible	1
+		windowDef scrolltext3
+		{
+			rect	0,0,97,128
+			visible	1
+			background	"gfx/guis/common/strogg/scrolltext5"
+			matcolor	0.6,0.701,0.713,1
+		}
+	}
+	windowDef line2
+	{
+		rect	384,114,148,14
+		visible	1
+		background	"gfx/guis/common/line1"
+		matcolor	0.603,0.709,0.721,1
+	}
+	windowDef p_scrolltext4
+	{
+		rect	425,127,106,63
+		visible	1
+		windowDef scrolltext4
+		{
+			rect	0,0,106,105
+			visible	1
+			background	"gfx/guis/common/strogg/scrolltext1"
+			matcolor	0.6,0.705,0.717,1
+			matscalex	-1
+		}
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	2,-98,640,751
+			background	"gfx/guis/common/monitor_line6"
+			matcolor	1,0.929,0.682,0.1
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	-160,-69,950,398
+			background	"gfx/guis/common/gradient"
+			matcolor	0.866,0.737,0.301,0.2*guitable_random1[time*.002]
+		}
+		windowDef screendirt
+		{
+			visible	1
+			rect	-559,-29,1530,510
+			background	"gfx/guis/common/screen_dirt4"
+			matcolor	0.619,0.713,0.411,0.66
+		}
+		windowDef screendirt2
+		{
+			visible	1
+			rect	-501,-27,1530,510
+			background	"gfx/guis/common/screen_dirt5"
+			matcolor	0.619,0.713,0.411,0.66
+		}
+		windowDef monitor_darkedge
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+}

@@ -1,0 +1,175 @@
+windowDef Desktop
+{
+	comment	"'gui_parm_text' sets the value of text to scroll by"
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	visible	1
+	windowDef bg
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/marquee_bg"
+		matcolor	1,1,1,1*guitable_random1[time*0.0004]
+	}
+	windowDef scroll1
+	{
+		rect	-729,0,2088,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/marquee_scroll1"
+		matcolor	0.447,0.349,0.121,1
+	}
+	windowDef scroll2
+	{
+		rect	-729,0,2088,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/marquee_scroll2"
+		matcolor	0.690,0.529,0.309,1
+	}
+	windowDef scroll3
+	{
+		rect	166,408,299,52
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/marquee_btmscroll"
+		matcolor	0.282,0.219,0.0745,1
+	}
+	windowDef header
+	{
+		rect	0,0,640,480
+		visible	1
+		forecolor	0.921,0.643,0.0784,1*guitable_random1[time*0.0004]
+		text	"#str_200373"
+		textscale	0.2
+		font	"fonts/r_strogg"
+		forceaspectheight	80
+		textalign	1
+		textalignx	40
+		textaligny	-1
+	}
+	windowDef scrolltext
+	{
+		rect	0,0,640,480
+		visible	1
+		forecolor	0.921,0.643,0.0784,1*guitable_random1[time*0.0004]
+		text	"gui::gui_parm_text"
+		textscale	0.74
+		font	"fonts/r_strogg"
+		forceaspectheight	80
+		textalign	1
+		textaligny	17
+	}
+	windowDef scrolltext2
+	{
+		rect	-640,0,640,480
+		visible	1
+		forecolor	0.921,0.643,0.0784,1*guitable_random1[time*0.0004]
+		text	"gui::gui_parm_text"
+		textscale	0.74
+		font	"fonts/r_strogg"
+		forceaspectheight	80
+		textalign	1
+		textaligny	17
+	}
+	windowDef bg_scrolltext
+	{
+		rect	0,0,640,480
+		visible	1
+		forecolor	0.921,0.643,0.0784,.2*guitable_random1[time*0.0004]
+		text	"gui::gui_parm_text"
+		textscale	1.1
+		font	"fonts/strogg"
+		forceaspectheight	80
+		textalign	1
+		textaligny	20
+	}
+	windowDef bg_scrolltext2
+	{
+		rect	-640,0,640,480
+		visible	1
+		forecolor	0.921,0.643,0.0784,.2*guitable_random1[time*0.0004]
+		text	"gui::gui_parm_text"
+		textscale	1.1
+		font	"fonts/strogg"
+		forceaspectheight	80
+		textalign	1
+		textaligny	20
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef static
+		{
+			visible	1
+			rect	0,-394,640,1267
+			background	"gfx/guis/common/img_static3"
+			matcolor	1,1,1,0.05
+		}
+		windowDef dirt
+		{
+			visible	1
+			rect	0,-8,640,1644
+			background	"gfx/guis/common/screen_dirt8"
+			matcolor	0.494,0.427,0.329,0.68
+			matscalex	-1
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef unnamed
+	{
+		rect	0,0,640,480
+		visible	0
+		background	"gfx/guis/test/marquee2"
+		matcolor	1,1,1,1
+	}
+	windowDef l_scrolltext
+	{
+		rect	-640,0,640,480
+		visible	0
+	}
+	windowDef m_scrolltext
+	{
+		rect	0,0,640,480
+		visible	0
+	}
+	windowDef r_scrolltext
+	{
+		rect	640,0,640,480
+		visible	0
+	}
+	windowDef anim_scroll
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 0 {
+			transition "scrolltext::rect" "$m_scrolltext::rect" "$r_scrolltext::rect" "5000" ;
+			transition "scrolltext2::rect" "$l_scrolltext::rect" "$m_scrolltext::rect" "5000" ;
+		}
+
+		onTime 5000 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef anim_scroll2
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 0 {
+			transition "bg_scrolltext::rect" "$m_scrolltext::rect" "$r_scrolltext::rect" "8000" ;
+			transition "bg_scrolltext2::rect" "$l_scrolltext::rect" "$m_scrolltext::rect" "8000" ;
+		}
+
+		onTime 8000 {
+			resettime "0" ;
+		}
+
+	}
+}

@@ -1,0 +1,43 @@
+reverb
+{
+	{ 0 Plain }
+	{ 1 Mountains }
+	{ 2 Mountains }
+	{ 3 Stonecorridor }
+	{ 4 Stonecorridor }
+	{ 5 Stonecorridor }
+	{ 6 Hallway }
+	{ 7 Bathroom }
+	{ 8 Stonecorridor }
+	{ 9 Stonecorridor }
+	{ 10 Plain }
+	{ 11 Mountains }
+	{ 12 Stonecorridor }
+	{ 13 Mountains }
+	{ 14 Mountains }
+	{ 15 Hallway }
+	{ 16 Hallway }
+	{ 17 Hallway }
+	{ 18 Hallway }
+	{ 19 Bathroom }
+	{ 20 Hallway }
+	{ 21 Stonecorridor }
+	{ 22 Stonecorridor }
+	{ 23 Stonecorridor }
+	{ 24 Mountains }
+	{ 25 Stonecorridor }
+	{ 26 Mountains }
+	{ 27 Mountains }
+	{ 28 Stonecorridor }
+	{ 29 Stonecorridor }
+	{ 30 Stonecorridor }
+	{ 31 Stonecorridor }
+	{ 32 Stonecorridor }
+	{ 33 Stonecorridor }
+	{ 34 Mountains }
+	{ 35 Stonecorridor }
+	{ 36 Mountains }
+	{ 37 Stonecorridor }
+	{ 38 Stonecorridor }
+	{ 39 Plain }
+}

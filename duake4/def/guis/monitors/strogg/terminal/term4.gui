@@ -1,0 +1,422 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	visible	1
+	definevec4	"img"	0.533,0.6,0.635,1
+	definevec4	"img_on"	1,1,1,1
+	windowDef p_imgs
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef img1
+		{
+			rect	0,167,155,135
+			visible	1
+			background	"gfx/guis/monitors/strogg/terminal/term4_img1"
+			matcolor	0.533,0.6,0.635,1
+		}
+		windowDef img2
+		{
+			rect	0,288,155,135
+			visible	1
+			background	"gfx/guis/monitors/strogg/terminal/term4_img2"
+			matcolor	0.533,0.6,0.635,1
+		}
+		windowDef img3
+		{
+			rect	121,226,155,135
+			visible	1
+			background	"gfx/guis/monitors/strogg/terminal/term4_img3"
+			matcolor	0.533,0.6,0.635,1
+		}
+		windowDef img4
+		{
+			rect	121,345,155,135
+			visible	1
+			background	"gfx/guis/monitors/strogg/terminal/term4_img4"
+			matcolor	0.533,0.6,0.635,1
+		}
+		windowDef img5
+		{
+			rect	240,167,155,135
+			visible	1
+			background	"gfx/guis/monitors/strogg/terminal/term4_img5"
+			matcolor	0.533,0.6,0.635,1
+		}
+		windowDef img6
+		{
+			rect	240,288,155,135
+			visible	1
+			background	"gfx/guis/monitors/strogg/terminal/term4_img6"
+			matcolor	0.533,0.6,0.635,1
+		}
+		windowDef img7
+		{
+			rect	364,225,155,135
+			visible	1
+			background	"gfx/guis/monitors/strogg/terminal/term4_img7"
+			matcolor	0.533,0.6,0.635,1
+		}
+		windowDef img8
+		{
+			rect	364,345,155,135
+			visible	1
+			background	"gfx/guis/monitors/strogg/terminal/term4_img8"
+			matcolor	0.533,0.6,0.635,1
+		}
+		windowDef img9
+		{
+			rect	484,167,155,135
+			visible	1
+			background	"gfx/guis/monitors/strogg/terminal/term4_img9"
+			matcolor	0.533,0.6,0.635,1
+		}
+		windowDef img10
+		{
+			rect	484,288,155,135
+			visible	1
+			background	"gfx/guis/monitors/strogg/terminal/term4_img10"
+			matcolor	0.533,0.6,0.635,1
+		}
+	}
+	windowDef bg
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/terminal/term4_bg"
+		matcolor	0.901,0.458,0.0588,1
+	}
+	windowDef icon
+	{
+		rect	355,6,36,36
+		visible	1
+		background	"gfx/guis/common/strogg/term_symb"
+		matcolor	0.901,0.733,0.0588,1
+	}
+	windowDef title1
+	{
+		rect	396,0,237,41
+		visible	1
+		forecolor	0.890,0.615,0.101,1
+		text	"#str_200844"
+		textscale	0.5
+		font	"fonts/r_strogg"
+	}
+	windowDef title2
+	{
+		rect	396,26,237,26
+		visible	1
+		forecolor	0.752,0.752,0.752,1
+		text	"#str_200845"
+		textscale	0.3
+		font	"fonts/r_strogg"
+	}
+	windowDef t_left0
+	{
+		rect	16,50,286,20
+		visible	0
+	}
+	windowDef t_left1
+	{
+		rect	16,70,286,20
+		visible	1
+		forecolor	0.501,0.678,0.776,1
+		text	"#str_200846"
+		textscale	0.34
+		font	"fonts/r_strogg"
+	}
+	windowDef t_left2
+	{
+		rect	16,90,286,20
+		visible	1
+		forecolor	0.501,0.678,0.776,1
+		text	"#str_200847"
+		textscale	0.34
+		font	"fonts/r_strogg"
+	}
+	windowDef t_left3
+	{
+		rect	16,110,286,20
+		visible	1
+		forecolor	0.501,0.678,0.776,1
+		text	"#str_200848"
+		textscale	0.34
+		font	"fonts/r_strogg"
+	}
+	windowDef t_left4
+	{
+		rect	16,130,286,20
+		visible	1
+		forecolor	0.494,0.670,0.768,0
+		text	"#str_200849"
+		textscale	0.34
+		font	"fonts/r_strogg"
+	}
+	windowDef t_right0
+	{
+		rect	336,50,286,20
+		visible	0
+	}
+	windowDef t_right1
+	{
+		rect	336,70,286,20
+		visible	1
+		forecolor	0.501,0.678,0.776,1
+		text	"#str_200846"
+		textscale	0.34
+		font	"fonts/r_strogg"
+		textalign	2
+	}
+	windowDef t_right2
+	{
+		rect	336,90,286,20
+		visible	1
+		forecolor	0.501,0.678,0.776,1
+		text	"#str_200847"
+		textscale	0.34
+		font	"fonts/r_strogg"
+		textalign	2
+	}
+	windowDef t_right3
+	{
+		rect	336,110,286,20
+		visible	1
+		forecolor	0.501,0.678,0.776,1
+		text	"#str_200848"
+		textscale	0.34
+		font	"fonts/r_strogg"
+		textalign	2
+	}
+	windowDef t_right4
+	{
+		rect	336,130,286,20
+		visible	1
+		forecolor	0.498,0.674,0.772,0
+		text	"#str_200849"
+		textscale	0.34
+		font	"fonts/r_strogg"
+		textalign	2
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,-23,640,962
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.870,0.694,0.454,1
+			matscaley	-1
+		}
+		windowDef topreflect2
+		{
+			visible	1
+			rect	0,-986,640,1853
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.870,0.694,0.454,1
+			matscaley	-1
+		}
+		windowDef static
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/static1"
+			matcolor	1,0.988,0.725,0.14
+		}
+		windowDef scratches
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/screen_scratches4"
+			matcolor	0.878,0.945,0.933,0.52
+			matscaley	-1
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef anim_img
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 0 {
+			set "img1::background" "gfx/guis/monitors/strogg/terminal/term4_img7" ;
+			set "img4::background" "gfx/guis/monitors/strogg/terminal/term4_img5" ;
+			set "img5::background" "gfx/guis/monitors/strogg/terminal/term4_img10" ;
+			set "img6::background" "gfx/guis/monitors/strogg/terminal/term4_img1" ;
+			set "img8::background" "gfx/guis/monitors/strogg/terminal/term4_img3" ;
+			
+			transition "img1::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+			transition "img4::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+			transition "img5::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+			transition "img6::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+			transition "img8::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+			
+			transition "t_left1::rect" "$t_left1::rect" "$t_left0::rect" "250" ;
+			transition "t_left2::rect" "$t_left2::rect" "$t_left1::rect" "250" ;
+			transition "t_left3::rect" "$t_left3::rect" "$t_left2::rect" "250" ;
+			transition "t_left4::rect" "$t_left4::rect" "$t_left3::rect" "250" ;
+			
+			transition "t_left1::forecolor_w" "1" "0" "250" ;
+			transition "t_left4::forecolor_w" "0" "1" "250" ;
+		}
+
+		onTime +500 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term4_img4" ;
+			set "img3::background" "gfx/guis/monitors/strogg/terminal/term4_img2" ;
+			
+			transition "img2::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+			transition "img3::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+			
+			transition "t_right1::rect" "$t_right1::rect" "$t_right0::rect" "250" ;
+			transition "t_right2::rect" "$t_right2::rect" "$t_right1::rect" "250" ;
+			transition "t_right3::rect" "$t_right3::rect" "$t_right2::rect" "250" ;
+			transition "t_right4::rect" "$t_right4::rect" "$t_right3::rect" "250" ;
+			
+			transition "t_right1::forecolor_w" "1" "0" "250" ;
+			transition "t_right4::forecolor_w" "0" "1" "250" ;
+		}
+
+		onTime +500 {
+			set "img7::background" "gfx/guis/monitors/strogg/terminal/term4_img9" ;
+			set "img9::background" "gfx/guis/monitors/strogg/terminal/term4_img6" ;
+			set "img10::background" "gfx/guis/monitors/strogg/terminal/term4_img8" ;
+			
+			transition "img7::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+			transition "img9::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+			transition "img10::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+			
+			transition "t_left1::rect" "$t_left4::rect" "$t_left3::rect" "250" ;
+			transition "t_left2::rect" "$t_left1::rect" "$t_left0::rect" "250" ;
+			transition "t_left3::rect" "$t_left2::rect" "$t_left1::rect" "250" ;
+			transition "t_left4::rect" "$t_left3::rect" "$t_left2::rect" "250" ;
+			
+			transition "t_left2::forecolor_w" "1" "0" "250" ;
+			transition "t_left1::forecolor_w" "0" "1" "250" ;
+		}
+
+		onTime +2500 {
+			set "img1::background" "gfx/guis/monitors/strogg/terminal/term4_img9" ;
+			set "img4::background" "gfx/guis/monitors/strogg/terminal/term4_img2" ;
+			set "img5::background" "gfx/guis/monitors/strogg/terminal/term4_img8" ;
+			
+			transition "img1::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+			transition "img4::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+			transition "img5::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+			
+			transition "t_right1::rect" "$t_right4::rect" "$t_right3::rect" "250" ;
+			transition "t_right2::rect" "$t_right1::rect" "$t_right0::rect" "250" ;
+			transition "t_right3::rect" "$t_right2::rect" "$t_right1::rect" "250" ;
+			transition "t_right4::rect" "$t_right3::rect" "$t_right2::rect" "250" ;
+			
+			transition "t_right2::forecolor_w" "1" "0" "250" ;
+			transition "t_right1::forecolor_w" "0" "1" "250" ;
+		}
+
+		onTime +500 {
+			set "img6::background" "gfx/guis/monitors/strogg/terminal/term4_img6" ;
+			set "img8::background" "gfx/guis/monitors/strogg/terminal/term4_img4" ;
+			
+			transition "img6::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+			transition "img8::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+			
+			transition "t_left1::rect" "$t_left3::rect" "$t_left2::rect" "250" ;
+			transition "t_left2::rect" "$t_left4::rect" "$t_left3::rect" "250" ;
+			transition "t_left3::rect" "$t_left1::rect" "$t_left0::rect" "250" ;
+			transition "t_left4::rect" "$t_left2::rect" "$t_left1::rect" "250" ;
+			
+			transition "t_left3::forecolor_w" "1" "0" "250" ;
+			transition "t_left2::forecolor_w" "0" "1" "250" ;
+		}
+
+		onTime +500 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term4_img10" ;
+			set "img3::background" "gfx/guis/monitors/strogg/terminal/term4_img1" ;
+			set "img7::background" "gfx/guis/monitors/strogg/terminal/term4_img5" ;
+			
+			transition "img2::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+			transition "img3::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+			transition "img7::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+			
+			transition "t_right1::rect" "$t_right3::rect" "$t_right2::rect" "250" ;
+			transition "t_right2::rect" "$t_right4::rect" "$t_right3::rect" "250" ;
+			transition "t_right3::rect" "$t_right1::rect" "$t_right0::rect" "250" ;
+			transition "t_right4::rect" "$t_right2::rect" "$t_right1::rect" "250" ;
+			
+			transition "t_right3::forecolor_w" "1" "0" "250" ;
+			transition "t_right2::forecolor_w" "0" "1" "250" ;
+		}
+
+		onTime +500 {
+			set "img9::background" "gfx/guis/monitors/strogg/terminal/term4_img3" ;
+			set "img10::background" "gfx/guis/monitors/strogg/terminal/term4_img7" ;
+			
+			transition "img9::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+			transition "img10::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+		}
+
+		onTime +500 {
+			set "img1::background" "gfx/guis/monitors/strogg/terminal/term4_img1" ;
+			set "img4::background" "gfx/guis/monitors/strogg/terminal/term4_img4" ;
+			
+			transition "img1::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+			transition "img4::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+		}
+
+		onTime +2500 {
+			set "img5::background" "gfx/guis/monitors/strogg/terminal/term4_img5" ;
+			set "img6::background" "gfx/guis/monitors/strogg/terminal/term4_img6" ;
+			set "img8::background" "gfx/guis/monitors/strogg/terminal/term4_img8" ;
+			
+			transition "img5::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+			transition "img6::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+			transition "img8::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+			
+			transition "t_left1::rect" "$t_left2::rect" "$t_left1::rect" "250" ;
+			transition "t_left2::rect" "$t_left3::rect" "$t_left2::rect" "250" ;
+			transition "t_left3::rect" "$t_left4::rect" "$t_left3::rect" "250" ;
+			transition "t_left4::rect" "$t_left1::rect" "$t_left0::rect" "250" ;
+			
+			transition "t_left4::forecolor_w" "1" "0" "250" ;
+			transition "t_left3::forecolor_w" "0" "1" "250" ;
+		}
+
+		onTime +500 {
+			set "img7::background" "gfx/guis/monitors/strogg/terminal/term4_img7" ;
+			set "img9::background" "gfx/guis/monitors/strogg/terminal/term4_img9" ;
+			
+			transition "img7::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+			transition "img9::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+			
+			transition "t_right1::rect" "$t_right2::rect" "$t_right1::rect" "250" ;
+			transition "t_right2::rect" "$t_right3::rect" "$t_right2::rect" "250" ;
+			transition "t_right3::rect" "$t_right4::rect" "$t_right3::rect" "250" ;
+			transition "t_right4::rect" "$t_right1::rect" "$t_right0::rect" "250" ;
+			
+			transition "t_right4::forecolor_w" "1" "0" "250" ;
+			transition "t_right3::forecolor_w" "0" "1" "250" ;
+		}
+
+		onTime +500 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term4_img2" ;
+			set "img3::background" "gfx/guis/monitors/strogg/terminal/term4_img3" ;
+			set "img10::background" "gfx/guis/monitors/strogg/terminal/term4_img10" ;
+			
+			transition "img2::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+			transition "img3::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+			transition "img10::matcolor" "$desktop::img_on" "$desktop::img" "250" ;
+		}
+
+		onTime +2500 {
+			resettime "0" ;
+		}
+
+	}
+}

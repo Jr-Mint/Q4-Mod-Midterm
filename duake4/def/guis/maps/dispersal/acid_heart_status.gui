@@ -1,0 +1,880 @@
+windowDef Desktop
+{
+	visible	1
+	rect	0,0,640,480
+	backcolor	0.0549,0.101,0.0431,1
+	definevec4	"heart_off"	0.886,0.513,0.0941,1
+	definevec4	"heart_on"	1,0.933,0.549,1
+
+	onNamedEvent start_heart_shock {
+		resettime "anim_static" "0" ;
+	}
+
+	onNamedEvent end_heart_shock {
+		resettime "anim_static_end" "0" ;
+	}
+
+	windowDef d_all
+	{
+		rect	93,-28,640,480
+		visible	0
+	}
+	windowDef d2_all
+	{
+		rect	-58,-56,640,480
+		visible	0
+	}
+	windowDef d3_all
+	{
+		rect	-32,-76,640,480
+		visible	0
+	}
+	windowDef d4_all
+	{
+		rect	13,119,640,480
+		visible	0
+	}
+	windowDef d5_all
+	{
+		rect	-101,47,640,480
+		visible	0
+	}
+	windowDef p_all
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef data
+		{
+			rect	-305,-42,644,524
+			visible	1
+			background	"gfx/guis/common/strogg/data_c"
+			matcolor	1,1,1,.2
+			shear	0,-.48
+		}
+		windowDef p_online
+		{
+			rect	0,0,640,480
+			visible	1
+			windowDef bg
+			{
+				rect	0,240,640,240
+				visible	1
+				background	"gfx/guis/maps/dispersal/acid_heart_status_bg"
+				matcolor	0.886,0.513,0.0941,1
+			}
+			windowDef warn
+			{
+				rect	186,30,454,196
+				visible	1
+				background	"gfx/guis/maps/dispersal/acid_heart_status_warn"
+				matcolor	0.886,0.513,0.0941,1
+			}
+			windowDef fluidbox1
+			{
+				rect	298,278,102,194
+				visible	1
+				background	"gfx/guis/common/simplebox"
+				matcolor	0.890,0.678,0.235,1
+				shear	0,-.46
+			}
+			windowDef fluidbox2
+			{
+				rect	463,278,102,194
+				visible	1
+				background	"gfx/guis/common/simplebox"
+				matcolor	0.890,0.678,0.235,1
+				shear	0,-.46
+			}
+			windowDef ekgbox
+			{
+				rect	-26,32,234,155
+				visible	1
+				background	"gfx/guis/common/strogg/sq1"
+				matcolor	0.886,0.513,0.0941,1
+				shear	0,.16
+			}
+			windowDef t_ekg
+			{
+				rect	10,35,172,69
+				visible	1
+				background	"gfx/guis/common/ekg1"
+				matcolor	0.992,0.878,0.435,1
+			}
+			windowDef p_b_ekg
+			{
+				rect	10,108,183,69
+				visible	1
+				shear	0,.16
+				windowDef b_ekg
+				{
+					rect	0,0,317,69
+					visible	1
+					background	"gfx/guis/common/ekg1"
+					matcolor	0.992,0.878,0.435,1
+					shear	0,.16
+				}
+			}
+			windowDef t_online
+			{
+				rect	260,98,353,80
+				visible	1
+				forecolor	1,1,1,1
+				text	"#str_200400"
+				textscale	1.6
+				font	"fonts/r_strogg"
+			}
+			windowDef t_enzyme
+			{
+				rect	245,76,378,40
+				visible	1
+				forecolor	1,1,1,1
+				text	"#str_200401"
+				textscale	.66
+				font	"fonts/r_strogg"
+			}
+			windowDef l_num
+			{
+				rect	365,432,62,40
+				visible	1
+				forecolor	1,1,1,1
+				text	"76"
+				textscale	0.7
+				font	"fonts/r_strogg"
+			}
+			windowDef r_num
+			{
+				rect	535,432,59,40
+				visible	1
+				forecolor	1,1,1,1
+				text	"84"
+				textscale	.7
+				font	"fonts/r_strogg"
+			}
+			windowDef t_ekg_num
+			{
+				rect	137,77,51,29
+				visible	1
+				forecolor	1,1,1,1
+				text	"76"
+				textscale	.5
+				font	"fonts/r_strogg"
+
+				onTime 0 {
+					set "text" "76" ;
+				}
+
+				onTime 1200 {
+					set "text" "74" ;
+				}
+
+				onTime 4300 {
+					set "text" "72" ;
+				}
+
+				onTime 6700 {
+					set "text" "79" ;
+				}
+
+				onTime 8400 {
+					set "text" "81" ;
+				}
+
+				onTime 11200 {
+					set "text" "77" ;
+				}
+
+				onTime 15000 {
+					resettime "0" ;
+				}
+
+			}
+			windowDef b_ekg_num
+			{
+				rect	150,141,59,29
+				visible	1
+				forecolor	1,1,1,1
+				text	"89"
+				textscale	.5
+				font	"fonts/r_strogg"
+
+				onTime 0 {
+					set "text" "89" ;
+				}
+
+				onTime 1400 {
+					set "text" "95" ;
+				}
+
+				onTime 4100 {
+					set "text" "90" ;
+				}
+
+				onTime 7200 {
+					set "text" "84" ;
+				}
+
+				onTime 8800 {
+					set "text" "86" ;
+				}
+
+				onTime 11700 {
+					set "text" "92" ;
+				}
+
+				onTime 17000 {
+					resettime "0" ;
+				}
+
+			}
+			windowDef status_heart1
+			{
+				rect	12,202,242,232
+				visible	1
+				background	"gfx/guis/maps/dispersal/status_heart1"
+				matcolor	0.882,0.623,0.0901,1
+			}
+			windowDef status_heart_l
+			{
+				rect	39,240,110,176
+				visible	1
+				background	"gfx/guis/maps/dispersal/status_heart_r"
+				matcolor	0.886,0.513,0.0941,1
+				matscalex	-1
+			}
+			windowDef status_heart_r
+			{
+				rect	122,240,110,176
+				visible	1
+				background	"gfx/guis/maps/dispersal/status_heart_r"
+				matcolor	0.886,0.513,0.0941,1
+			}
+			windowDef b_r_acid
+			{
+				rect	463,275,102,199
+				visible	1
+				background	"gfx/guis/common/strogg/sq1"
+				matcolor	0.290,0.341,0.0901,1
+				shear	0,-.46
+			}
+			windowDef b_l_acid
+			{
+				rect	298,275,102,199
+				visible	1
+				background	"gfx/guis/common/strogg/sq1"
+				matcolor	0.290,0.341,0.0901,1
+				shear	0,-.46
+			}
+			windowDef l_acid
+			{
+				rect	265,430,102,32
+				visible	1
+				background	"gfx/guis/common/strogg/sq1"
+				matcolor	0.662,0.776,0.215,1
+				shear	0,-.46
+			}
+			windowDef r_acid
+			{
+				rect	463,275,102,199
+				visible	1
+				background	"gfx/guis/common/strogg/sq1"
+				matcolor	0.662,0.776,0.215,1
+				shear	0,-.46
+			}
+			windowDef d_r_acid
+			{
+				rect	430,430,102,32
+				visible	0
+				background	"gfx/guis/common/strogg/sq1"
+				matcolor	0.662,0.776,0.215,1
+				shear	0,-.46
+			}
+			windowDef d_l_acid
+			{
+				rect	298,275,102,199
+				visible	0
+				background	"gfx/guis/common/strogg/sq1"
+				matcolor	0.662,0.776,0.215,1
+				shear	0,-.46
+			}
+			windowDef d_l_bubbles
+			{
+				rect	306,290,86,169
+				visible	0
+				background	"gfx/guis/common/bubbles"
+				matcolor	0.647,0.760,0.2,1
+				shear	0,-.46
+			}
+			windowDef p_l_bubbles
+			{
+				rect	240,434,86,25
+				visible	1
+				shear	0,-.46
+				windowDef l_bubbles
+				{
+					rect	0,0,86,169
+					visible	1
+					background	"gfx/guis/common/bubbles"
+					matcolor	0.647,0.760,0.2,1
+					shear	0,-.46
+				}
+			}
+			windowDef p_r_bubbles
+			{
+				rect	471,290,86,169
+				visible	1
+				shear	0,-.46
+				windowDef r_bubbles
+				{
+					rect	0,0,86,169
+					visible	1
+					background	"gfx/guis/common/bubbles"
+					matcolor	0.647,0.760,0.2,1
+					shear	0,-.46
+				}
+			}
+			windowDef d_r_bubbles
+			{
+				rect	407,434,86,25
+				visible	0
+				shear	0,-.46
+			}
+		}
+		windowDef p_offline
+		{
+			rect	0,0,640,480
+			visible	0
+			windowDef bg
+			{
+				rect	0,240,640,240
+				visible	1
+				background	"gfx/guis/maps/dispersal/acid_heart_status_bg"
+				matcolor	0.768,0.156,0.156,1
+			}
+			windowDef warn
+			{
+				rect	186,30,454,196
+				visible	1
+				background	"gfx/guis/maps/dispersal/acid_heart_status_warn"
+				matcolor	0.768,0.156,0.156,1
+			}
+			windowDef fluidbox1
+			{
+				rect	298,278,102,194
+				visible	1
+				background	"gfx/guis/common/simplebox"
+				matcolor	0.768,0.156,0.156,1
+				shear	0,-.46
+			}
+			windowDef fluidbox2
+			{
+				rect	463,278,102,194
+				visible	1
+				background	"gfx/guis/common/simplebox"
+				matcolor	0.768,0.156,0.156,1
+				shear	0,-.46
+			}
+			windowDef ekgbox2
+			{
+				rect	-25,32,234,155
+				visible	1
+				background	"gfx/guis/common/strogg/sq1"
+				matcolor	0.768,0.156,0.156,1
+				shear	0,.16
+			}
+			windowDef t_ekg_flatline
+			{
+				rect	10,54,172,35
+				visible	1
+				background	"gfx/guis/common/ekg_flatline"
+				matcolor	0.992,0.878,0.435,1
+				shear	0,.16
+			}
+			windowDef p_b_ekg_flatline2
+			{
+				rect	10,108,183,69
+				visible	1
+				shear	0,.16
+				windowDef b_ekg_flatline2
+				{
+					rect	-46,15,236,42
+					visible	1
+					background	"gfx/guis/common/ekg_flatline"
+					matcolor	0.992,0.878,0.435,1
+					shear	0,.16
+				}
+			}
+			windowDef t_enzyme2
+			{
+				rect	245,76,378,40
+				visible	1
+				forecolor	1,1,1,1
+				text	"#str_200401"
+				textscale	.66
+				font	"fonts/r_strogg"
+
+				onTime 0 {
+					set "visible" "0" ;
+				}
+
+				onTime 250 {
+					set "visible" "1" ;
+				}
+
+				onTime 750 {
+					resettime "0" ;
+				}
+
+			}
+			windowDef t_offline
+			{
+				rect	242,98,397,80
+				visible	1
+				forecolor	1,1,1,1
+				text	"#str_200402"
+				textscale	1.6
+				font	"fonts/r_strogg"
+
+				onTime 0 {
+					set "visible" "0" ;
+				}
+
+				onTime 250 {
+					set "visible" "1" ;
+				}
+
+				onTime 750 {
+					resettime "0" ;
+				}
+
+			}
+			windowDef l_acid_warn
+			{
+				rect	298,275,102,199
+				visible	1
+				background	"gfx/guis/common/strogg/sq1"
+				matcolor	0.949,0.239,0,1*guitable_10_0[time*.0005]
+				shear	0,-.46
+			}
+			windowDef r_acid_warn
+			{
+				rect	463,275,102,199
+				visible	1
+				background	"gfx/guis/common/strogg/sq1"
+				matcolor	0.949,0.239,0,1*guitable_10_0[time*.0005]
+				shear	0,-.46
+			}
+			windowDef status_heart2
+			{
+				rect	12,202,242,232
+				visible	1
+				background	"gfx/guis/maps/dispersal/status_heart1"
+				matcolor	0.882,0.258,0.168,1
+			}
+			windowDef status_heart_l2
+			{
+				rect	31,240,110,176
+				visible	1
+				background	"gfx/guis/maps/dispersal/status_heart_r"
+				matcolor	0.937,0.439,0.105,1
+			}
+			windowDef status_heart_r2
+			{
+				rect	122,240,110,176
+				visible	1
+				background	"gfx/guis/maps/dispersal/status_heart_r"
+				matcolor	0.937,0.439,0.105,1
+			}
+			windowDef l_num2
+			{
+				rect	365,432,62,40
+				visible	1
+				forecolor	1,1,1,1
+				text	"00"
+				textscale	0.7
+				font	"fonts/r_strogg"
+			}
+			windowDef r_num2
+			{
+				rect	535,432,59,40
+				visible	1
+				forecolor	1,1,1,1
+				text	"00"
+				textscale	.7
+				font	"fonts/r_strogg"
+			}
+			windowDef t_ekg_num2
+			{
+				rect	137,77,51,29
+				visible	1
+				forecolor	1,1,1,1
+				text	"00"
+				textscale	.5
+				font	"fonts/r_strogg"
+			}
+			windowDef b_ekg_num2
+			{
+				rect	150,141,59,29
+				visible	1
+				forecolor	1,1,1,1
+				text	"00"
+				textscale	.5
+				font	"fonts/r_strogg"
+			}
+			windowDef red
+			{
+				rect	0,0,640,480
+				visible	1
+				backcolor	0.650,0,0,0.2*guitable_10_0[time*0.0035]
+			}
+		}
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	2,-98,640,751
+			background	"gfx/guis/common/monitor_line3"
+			matcolor	1,0.929,0.682,0.1
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	-157,-67,950,503
+			background	"gfx/guis/common/gradient"
+			matcolor	0.956,0.6,0.0588,0.26*guitable_8_10[time*.002]
+		}
+		windowDef screendirt_black
+		{
+			visible	1
+			rect	0,-21,640,517
+			background	"gfx/guis/common/screen_dirt7"
+			matcolor	0,0,0,1
+		}
+		windowDef screendirt
+		{
+			visible	1
+			rect	0,-44,812,525
+			background	"gfx/guis/common/screen_dirt4"
+			matcolor	0.517,0.572,0.294,1
+		}
+		windowDef black
+		{
+			rect	0,0,640,480
+			visible	1
+			backcolor	0,0,0,0
+		}
+		windowDef static1
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/img_static1"
+			matcolor	1,1,1,0
+		}
+		windowDef static2
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/colorstatic"
+			matcolor	1,1,1,0
+		}
+		windowDef monitor_darkedge
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef anim_l_num_up
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			set "l_num::text" "12" ;
+		}
+
+		onTime 500 {
+			set "l_num::text" "34" ;
+		}
+
+		onTime 1000 {
+			set "l_num::text" "49" ;
+		}
+
+		onTime 1500 {
+			set "l_num::text" "62" ;
+		}
+
+		onTime 2000 {
+			set "l_num::text" "76" ;
+		}
+
+	}
+	windowDef anim_l_num_dn
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			set "l_num::text" "76" ;
+		}
+
+		onTime 500 {
+			set "l_num::text" "62" ;
+		}
+
+		onTime 1000 {
+			set "l_num::text" "48" ;
+		}
+
+		onTime 1500 {
+			set "l_num::text" "32" ;
+		}
+
+		onTime 2000 {
+			set "l_num::text" "12" ;
+		}
+
+	}
+	windowDef anim_r_num_up
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			set "r_num::text" "14" ;
+		}
+
+		onTime 500 {
+			set "r_num::text" "32" ;
+		}
+
+		onTime 1000 {
+			set "r_num::text" "44" ;
+		}
+
+		onTime 1500 {
+			set "r_num::text" "64" ;
+		}
+
+		onTime 2000 {
+			set "r_num::text" "84" ;
+		}
+
+	}
+	windowDef anim_r_num_dn
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			set "r_num::text" "84" ;
+		}
+
+		onTime 500 {
+			set "r_num::text" "65" ;
+		}
+
+		onTime 1000 {
+			set "r_num::text" "47" ;
+		}
+
+		onTime 1500 {
+			set "r_num::text" "38" ;
+		}
+
+		onTime 2000 {
+			set "r_num::text" "14" ;
+		}
+
+	}
+	windowDef anim_online
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 0 {
+			transition "status_heart_l::matcolor" "$desktop::heart_off" "$desktop::heart_on" "300" ;
+			
+			transition "l_acid::rect" "$l_acid::rect" "$d_l_acid::rect" "2000" ;
+			transition "r_acid::rect" "$r_acid::rect" "$d_r_acid::rect" "2000" ;
+			
+			transition "p_l_bubbles::rect" "$p_l_bubbles::rect" "$d_l_bubbles::rect" "2000" ;
+			transition "p_r_bubbles::rect" "$p_r_bubbles::rect" "$d_r_bubbles::rect" "2000" ;
+			
+			resettime "anim_l_num_up" "0" ;
+			resettime "anim_r_num_dn" "0" ;
+		}
+
+		onTime 300 {
+			transition "status_heart_l::matcolor" "$desktop::heart_on" "$desktop::heart_off" "1200" ;
+		}
+
+		onTime 4000 {
+			transition "status_heart_r::matcolor" "$desktop::heart_off" "$desktop::heart_on" "300" ;
+			
+			transition "r_acid::rect" "$d_r_acid::rect" "$r_acid::rect" "2000" ;
+			transition "l_acid::rect" "$d_l_acid::rect" "$l_acid::rect" "2000" ;
+			
+			transition "p_l_bubbles::rect" "$d_l_bubbles::rect" "$p_l_bubbles::rect" "2000" ;
+			transition "p_r_bubbles::rect" "$d_r_bubbles::rect" "$p_r_bubbles::rect" "2000" ;
+			
+			resettime "anim_r_num_up" "0" ;
+			resettime "anim_l_num_dn" "0" ;
+		}
+
+		onTime 4300 {
+			transition "status_heart_r::matcolor" "$desktop::heart_on" "$desktop::heart_off" "1200" ;
+		}
+
+		onTime 8000 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef anim_static
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "p_all::rect" "$p_all::rect" "$d_all::rect" "0" ;
+		}
+
+		onTime 50 {
+			transition "p_all::rect" "$d_all::rect" "$d2_all::rect" "200" ;
+		}
+
+		onTime 100 {
+			transition "p_all::rect" "$d2_all::rect" "$d5_all::rect" "0" ;
+			
+			transition "black::backcolor" "0,0,0,0" "0,0,0,.8" "200" ;
+			transition "static1::matcolor" "1,1,1,0" "1,1,1,.4" "200" ;
+		}
+
+		onTime 150 {
+			transition "p_all::rect" "$d5_all::rect" "$d3_all::rect" "0" ;
+		}
+
+		onTime 200 {
+			transition "p_all::rect" "$d3_all::rect" "$d_all::rect" "0" ;
+			
+			transition "static2::matcolor" "1,1,1,0" "1,1,1,.6" "200" ;
+		}
+
+		onTime 250 {
+			transition "p_all::rect" "$d_all::rect" "$d4_all::rect" "200" ;
+		}
+
+		onTime 300 {
+			transition "static1::matcolor" "1,1,1,0.4" "1,1,1,0" "200" ;
+			
+			transition "p_all::rect" "$d4_all::rect" "$d3_all::rect" "0" ;
+		}
+
+		onTime 350 {
+			transition "p_all::rect" "$d3_all::rect" "$p_all::rect" "0" ;
+		}
+
+		onTime 600 {
+			transition "static1::matcolor" "1,1,1,0" "1,1,1,0.4" "0" ;
+		}
+
+		onTime 650 {
+			transition "static1::matcolor" "1,1,1,0.4" "1,1,1,0.0" "0" ;
+		}
+
+		onTime 700 {
+			transition "static1::matcolor" "1,1,1,0" "1,1,1,0.4" "0" ;
+		}
+
+		onTime 950 {
+			transition "static2::matcolor" "1,1,1,.6" "1,1,1,1" "0" ;
+		}
+
+		onTime 1000 {
+			transition "static2::matcolor" "1,1,1,1" "1,1,1,.6" "0" ;
+		}
+
+		onTime 1100 {
+			transition "p_all::rect" "$p_all::rect" "$d_all::rect" "0" ;
+		}
+
+		onTime 1150 {
+			transition "p_all::rect" "$d5_all::rect" "$d3_all::rect" "0" ;
+			
+			transition "static2::matcolor" "1,1,1,0" "1,1,1,0.6" "200" ;
+		}
+
+		onTime 1200 {
+			transition "p_all::rect" "$d3_all::rect" "$d_all::rect" "0" ;
+		}
+
+		onTime 1450 {
+			transition "p_all::rect" "$d_all::rect" "$d4_all::rect" "200" ;
+			
+			transition "black::backcolor" "0,0,0,.8" "0,0,0,0" "50" ;
+			
+			transition "static1::matcolor" "1,1,1,0.4" "1,1,1,0" "200" ;
+		}
+
+		onTime 1500 {
+			transition "p_all::rect" "$d4_all::rect" "$d3_all::rect" "0" ;
+			
+			transition "static1::matcolor" "1,1,1,0" "1,1,1,0.4" "200" ;
+		}
+
+		onTime 1550 {
+			transition "p_all::rect" "$d3_all::rect" "$p_all::rect" "0" ;
+			
+			transition "black::backcolor" "0,0,0,0" "0,0,0,1" "50" ;
+		}
+
+		onTime 2200 {
+			transition "static2::matcolor" "1,1,1,0.6" "1,1,1,1" "0" ;
+		}
+
+		onTime 2250 {
+			transition "static2::matcolor" "1,1,1,1" "1,1,1,0.6" "0" ;
+		}
+
+	}
+	windowDef anim_static_end
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "black::backcolor" "0,0,0,.8" "0,0,0,1" "500" ;
+			transition "static1::matcolor" "1,1,1,0.4" "1,1,1,0" "500" ;
+			transition "static2::matcolor" "1,1,1,0.6" "1,1,1,0" "500" ;
+		}
+
+		onTime 500 {
+			transition "p_all::rect" "$p_all::rect" "$d_all::rect" "0" ;
+		}
+
+		onTime 550 {
+			transition "p_all::rect" "$d_all::rect" "$d3_all::rect" "50" ;
+		}
+
+		onTime 600 {
+			transition "p_all::rect" "$d3_all::rect" "$d5_all::rect" "50" ;
+		}
+
+		onTime 650 {
+			transition "p_all::rect" "$d5_all::rect" "$p_all::rect" "50" ;
+		}
+
+	}
+}

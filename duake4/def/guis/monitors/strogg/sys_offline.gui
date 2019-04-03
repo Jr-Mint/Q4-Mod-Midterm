@@ -1,0 +1,326 @@
+windowDef Desktop
+{
+	comment	"gui_parm_strogg changes the writing to unreadable strogg. gui_parm_broken = 1 adds broken glass cracks to the gui, gui_parm_stroyent = 1 adds stroyent junk on the screen"
+	visible	1
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+
+	onInit {
+		if ( "gui::gui_parm_strogg" == 1 ) {
+			set "system_r::visible" "0";
+			set "offline_r::visible" "0";
+			set "system::visible" "1";
+			set "offline::visible" "1";
+		} else {
+			set "system_r::visible" "1";
+			set "offline_r::visible" "1";
+			set "system::visible" "0";
+			set "offline::visible" "0";
+		}
+	}
+
+	windowDef p_warn
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef decal
+		{
+			visible	1
+			rect	90,0,460,480
+			background	"gfx/guis/common/strogg/decal3"
+			matcolor	0.972,0.839,0.529,.14
+		}
+		windowDef bl_edge1
+		{
+			visible	1
+			rect	2,267,207,208
+			background	"gfx/guis/monitors/strogg/sys_offline_edge1"
+			matcolor	1,0.392,0.101,1
+		}
+		windowDef br_edge1
+		{
+			visible	1
+			rect	434,267,207,208
+			background	"gfx/guis/monitors/strogg/sys_offline_edge1"
+			matcolor	1,0.392,0.101,1
+			matscalex	-1
+		}
+		windowDef tl_edge1
+		{
+			visible	1
+			rect	2,6,207,208
+			background	"gfx/guis/monitors/strogg/sys_offline_edge1"
+			matcolor	1,0.392,0.101,1
+			matscaley	-1
+		}
+		windowDef tr_edge1
+		{
+			visible	1
+			rect	434,6,207,208
+			background	"gfx/guis/monitors/strogg/sys_offline_edge1"
+			matcolor	1,0.392,0.101,1
+			rotate	180
+		}
+		windowDef bl_edge2
+		{
+			visible	1
+			rect	48,307,128,128
+			background	"gfx/guis/monitors/strogg/sys_offline_edge2"
+			matcolor	0.615,0.321,0.101,1
+		}
+		windowDef br_edge2
+		{
+			visible	1
+			rect	466,307,128,128
+			background	"gfx/guis/monitors/strogg/sys_offline_edge2"
+			matcolor	0.615,0.321,0.101,1
+			matscalex	-1
+		}
+		windowDef tl_edge2
+		{
+			visible	1
+			rect	48,46,128,128
+			background	"gfx/guis/monitors/strogg/sys_offline_edge2"
+			matcolor	0.615,0.321,0.101,1
+			matscaley	-1
+		}
+		windowDef tr_edge2
+		{
+			visible	1
+			rect	466,46,128,128
+			background	"gfx/guis/monitors/strogg/sys_offline_edge2"
+			matcolor	0.615,0.321,0.101,1
+			rotate	180
+		}
+		windowDef tl_bg
+		{
+			visible	1
+			rect	43,141,277,97
+			background	"gfx/guis/monitors/strogg/sys_offline_bg"
+			matcolor	0.752,0.752,0.752,1
+		}
+		windowDef tr_bg
+		{
+			visible	1
+			rect	320,141,277,97
+			background	"gfx/guis/monitors/strogg/sys_offline_bg"
+			matcolor	0.752,0.752,0.752,1
+			matscalex	-1
+		}
+		windowDef bl_bg
+		{
+			visible	1
+			rect	43,238,277,97
+			background	"gfx/guis/monitors/strogg/sys_offline_bg"
+			matcolor	0.752,0.752,0.752,1
+			matscaley	-1
+		}
+		windowDef br_bg
+		{
+			visible	1
+			rect	320,238,277,97
+			background	"gfx/guis/monitors/strogg/sys_offline_bg"
+			matcolor	0.752,0.752,0.752,1
+			rotate	180
+		}
+		windowDef t_edge3
+		{
+			visible	1
+			rect	78,91,486,68
+			background	"gfx/guis/monitors/strogg/sys_offline_edge3"
+			matcolor	0.984,0.894,0.592,.4
+		}
+		windowDef b_edge3
+		{
+			visible	1
+			rect	78,322,486,68
+			background	"gfx/guis/monitors/strogg/sys_offline_edge3"
+			matcolor	0.984,0.894,0.592,.4
+			matscaley	-1
+		}
+		windowDef l_warn
+		{
+			rect	64,159,131,151
+			visible	1
+			background	"gfx/guis/common/strogg/warncorner2"
+			matcolor	0.913,0.709,0.0941,1
+			matscaley	-1
+		}
+		windowDef r_warn
+		{
+			rect	448,159,131,151
+			visible	1
+			background	"gfx/guis/common/strogg/warncorner2"
+			matcolor	0.909,0.705,0.0901,1
+			rotate	180
+		}
+		windowDef red
+		{
+			visible	1
+			rect	0,0,640,480
+			backcolor	1,0,0,0.2*guitable_10_0[time*0.002]
+		}
+		windowDef system
+		{
+			rect	210,178,221,58
+			visible	0
+			forecolor	1,0.980,0.615,1
+			text	"#str_200780"
+			textscale	1.4
+			font	"fonts/strogg"
+		}
+		windowDef offline
+		{
+			rect	120,243,417,68
+			visible	0
+			forecolor	1,0.980,0.615,1
+			text	"#str_200778"
+			textscale	1.65
+			font	"fonts/strogg"
+			textspacing	-3
+		}
+		windowDef system_r
+		{
+			rect	186,169,275,63
+			visible	0
+			forecolor	1,0.980,0.615,1
+			text	"#str_200779"
+			textscale	1.16
+			font	"fonts/r_strogg"
+		}
+		windowDef offline_r
+		{
+			rect	121,223,403,87
+			visible	0
+			forecolor	1,0.980,0.615,1
+			text	"#str_200402"
+			textscale	1.65
+			font	"fonts/r_strogg"
+		}
+	}
+	windowDef static1
+	{
+		visible	1
+		rect	0,0,640,480
+		background	"gfx/guis/common/colorstatic"
+		matcolor	0.992,0.450,0.192,0.454
+		matscalex	-1
+	}
+	windowDef static2
+	{
+		visible	1
+		rect	0,0,640,480
+		background	"gfx/guis/common/static1"
+		matcolor	0.992,0.450,0.192,0.454
+	}
+	windowDef p_warn1
+	{
+		rect	50,-168,640,480
+		visible	0
+	}
+	windowDef p_warn2
+	{
+		rect	-68,79,640,480
+		visible	0
+	}
+	windowDef p_warn3
+	{
+		rect	84,42,640,480
+		visible	0
+	}
+	windowDef p_warn4
+	{
+		rect	-100,-48,640,480
+		visible	0
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline1
+		{
+			visible	1
+			rect	0,-493,640,1584
+			background	"gfx/guis/common/monitor_line4"
+			matcolor	0.886,0.925,0.733,0.2
+		}
+		windowDef gradient
+		{
+			visible	1
+			rect	0,-156,640,689
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.839,0.360,0.0117,0.2
+		}
+		windowDef dirt
+		{
+			visible	1
+			rect	4,4,631,471
+			background	"gfx/guis/common/screen_dirt2"
+			matcolor	0.584,0.486,0.290,1
+		}
+		windowDef broken_glass_b
+		{
+			visible	"gui::gui_parm_broken"
+			rect	-4,7,640,480
+			background	"gfx/guis/common/broken_glass4"
+			matcolor	0,0,0,1
+			matscaley	-1
+		}
+		windowDef broken_glass
+		{
+			visible	"gui::gui_parm_broken"
+			rect	0,0,640,480
+			background	"gfx/guis/common/broken_glass4"
+			matcolor	0.921,0.886,0.811,1
+			matscaley	-1
+		}
+		windowDef darkedge
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+		windowDef dirt_stroyent
+		{
+			visible	"gui::gui_parm_stroyent"
+			rect	0,0,640,480
+			background	"gfx/guis/common/screen_dirt4"
+			matcolor	0.129,0.121,0.0274,1
+		}
+	}
+	windowDef anims
+	{
+		visible	1
+		rect	0,0,1,1
+
+		onTime 0 {
+			transition "p_warn::rect" "$p_warn::rect" "$p_warn3::rect" "50" ;
+		}
+
+		onTime +50 {
+			transition "p_warn::rect" "$p_warn::rect" "$p_warn2::rect" "50" ;
+		}
+
+		onTime +50 {
+			transition "p_warn::rect" "$p_warn1::rect" "$p_warn1::rect" "50" ;
+		}
+
+		onTime +50 {
+			transition "p_warn::rect" "$p_warn1::rect" "$p_warn4::rect" "50" ;
+		}
+
+		onTime +50 {
+			transition "p_warn::rect" "$p_warn3::rect" "$p_warn2::rect" "50" ;
+		}
+
+		onTime +50 {
+			transition "p_warn::rect" "$p_warn4::rect" "$p_warn::rect" "50" ;
+		}
+
+		onTime 4000 {
+			resettime "0" ;
+		}
+
+	}
+}

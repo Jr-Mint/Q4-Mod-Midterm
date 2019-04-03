@@ -1,0 +1,284 @@
+windowDef Desktop
+{
+	comment	"set gui_parm_script to fire gui"
+	rect	0,0,640,480
+	float	"clicked"	0
+	windowDef black_bg
+	{
+		rect	0,0,640,480
+		visible	1
+		backcolor	0,0,0,1
+	}
+	windowDef bg2
+	{
+		rect	-27,68,182,419
+		visible	1
+		background	"gfx/guis/maps/process1/countdown_bg"
+		matcolor	0,1,0.501,1
+		matscalex	-1
+	}
+	windowDef bg1
+	{
+		rect	488,67,182,419
+		visible	1
+		background	"gfx/guis/maps/process1/countdown_bg"
+		matcolor	0,1,0.501,1
+	}
+	windowDef grad
+	{
+		rect	-155,167,884,334
+		visible	1
+		background	"gfx/guis/common/gradient"
+		matcolor	0,1,0.8,0.4
+		matscaley	-1
+	}
+	windowDef bracket
+	{
+		rect	0,0,641,479
+		visible	1
+		background	"gfx/guis/maps/tram1/rotate_bracket"
+		matcolor	0.109,0.458,0.474,1
+	}
+	windowDef highlight
+	{
+		rect	-161,72,280,211
+		visible	1
+		background	"gfx/guis/maps/tram1/call_highlight"
+		matcolor	0.0235,1,0.450,0.6
+
+		onTime 0 {
+			transition "matcolor" "0.0196,1,0.447,0.6" "0.0196,1,0.447,0.4" "1500" ;
+		}
+
+		onTime 1500 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef highlight1
+	{
+		rect	521,73,280,210
+		visible	1
+		background	"gfx/guis/maps/tram1/call_highlight"
+		matcolor	0.0196,1,0.447,0.6
+		matscalex	-1
+
+		onTime 0 {
+			transition "matcolor" "0.0196,1,0.447,0.6" "0.0196,1,0.447,0.4" "1500" ;
+		}
+
+		onTime 1500 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef circle_highlight
+	{
+		rect	161,43,320,320
+		visible	1
+		background	"gfx/guis/maps/tram1/rotate_circle2"
+		matcolor	0.0156,1,0.443,0.7
+
+		onTime 0 {
+			transition "matcolor" "0.0196,1,0.447,0.8" "0.0196,1,0.447,0.5" "1500" ;
+		}
+
+		onTime 1500 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef circle
+	{
+		rect	181,63,280,280
+		visible	1
+		background	"gfx/guis/maps/tram1/rotate_circle"
+		matcolor	0.0784,0.349,0.360,1
+		rotate	0
+	}
+	windowDef tram
+	{
+		rect	259,83,130,246
+		visible	1
+		background	"gfx/guis/maps/tram1/rotate_tram"
+		matcolor	0.223,0.733,0.619,0.894
+		rotate	0
+		matscaley	-1
+	}
+	windowDef button_R
+	{
+		rect	328,233,316,246
+		visible	1
+		background	"gfx/guis/maps/tram1/rotate_button"
+		matcolor	0.552,0.615,0.517,0.68
+	}
+	windowDef button_L
+	{
+		rect	-2,233,316,246
+		visible	1
+		background	"gfx/guis/maps/tram1/rotate_button"
+		matcolor	0.301,0.815,0.843,0.8
+		matscalex	-1
+	}
+	windowDef t_proc1
+	{
+		rect	537,44,72,18
+		visible	1
+		forecolor	1,1,1,1
+		text	"84278.324"
+		textscale	0.36
+		font	"fonts/strogg"
+		textalign	2
+
+		onTime 0 {
+			set "text" "84278.324" ;
+		}
+
+		onTime +700 {
+			set "text" "43536.832" ;
+		}
+
+		onTime +700 {
+			set "text" "76245.003" ;
+		}
+
+		onTime +700 {
+			set "text" "57452.659" ;
+		}
+
+		onTime +700 {
+			set "text" "35945.202" ;
+		}
+
+		onTime +700 {
+			set "text" "94320.953" ;
+		}
+
+		onTime +700 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef t_proc2
+	{
+		rect	534,22,72,18
+		visible	1
+		forecolor	1,1,1,1
+		text	"84278324"
+		textscale	0.36
+		font	"fonts/strogg"
+		textalign	2
+
+		onTime 0 {
+			set "text" "84278.324" ;
+		}
+
+		onTime +200 {
+			set "text" "43536.832" ;
+		}
+
+		onTime +200 {
+			set "text" "76245.003" ;
+		}
+
+		onTime +200 {
+			set "text" "57452.659" ;
+		}
+
+		onTime +200 {
+			set "text" "35945.202" ;
+		}
+
+		onTime +200 {
+			set "text" "94320.953" ;
+		}
+
+		onTime +200 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef t_bar1
+	{
+		rect	499,46,35,15
+		visible	1
+		background	"gfx/guis/common/bar1"
+		matcolor	0.976,0.4,0.0156,1
+	}
+	windowDef t_bar2
+	{
+		rect	499,22,33,15
+		visible	1
+		background	"gfx/guis/common/bar1"
+		matcolor	0.976,0.4,0.0156,1
+	}
+	windowDef txt_title
+	{
+		rect	18,16,194,49
+		visible	1
+		forecolor	0.647,1,0.937,0.768
+		text	"#str_200558"
+		textscale	0.36
+		font	"fonts/r_strogg"
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	1,-169,640,782
+			background	"gfx/guis/common/monitor_line3"
+			matcolor	0.717,1,1,0.0392
+		}
+		windowDef dirt
+		{
+			visible	1
+			rect	-7,-173,740,651
+			background	"gfx/guis/common/screen_dirt6"
+			matcolor	0.8,0.635,0.490,0.6
+		}
+		windowDef scratches
+		{
+			visible	1
+			rect	0,1,641,480
+			background	"gfx/guis/common/screen_scratches3"
+			matcolor	1,1,1,0.2
+			matscalex	-1
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef button
+	{
+		rect	33,248,245,217
+		visible	1
+
+		onMouseEnter {
+			transition "button_L::matcolor" "0.301,0.815,0.843,0.8" "0.592,0.956,1,1" "0" ;
+		}
+
+		onMouseExit {
+			if ("desktop::clicked" == 0) {
+				transition "button_L::matcolor" "0.592,0.956,1,1" "0.301,0.815,0.843,0.8" "300" ;
+			}
+		}
+
+		onAction {
+			nonInteractive "1" ;
+			set "cmd" "play guisound_beep2 ; activate ; runscript" "$gui::gui_Parm_script";
+			set "desktop::clicked" "1" ;
+			set "visible" "0" ;
+			transition "circle::rotate" "0" "-90" "5000" ;
+			transition "tram::rotate" "0" "-90" "5000" ;
+			transition "button_L::matcolor" "0.592,0.956,1,1" "0.301,0.815,0.843,0.8" "300" ;
+		}
+
+	}
+}

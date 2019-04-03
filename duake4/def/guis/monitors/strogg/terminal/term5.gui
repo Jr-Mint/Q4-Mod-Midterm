@@ -1,0 +1,388 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	visible	1
+	windowDef bg
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/terminal/term5_bg"
+		matcolor	0.960,0.470,0.0274,1
+	}
+	windowDef top
+	{
+		rect	0,0,640,240
+		visible	1
+		background	"gfx/guis/monitors/strogg/terminal/term5_top"
+		matcolor	0.290,0.407,0.482,1
+	}
+	windowDef icon
+	{
+		rect	2,186,200,200
+		visible	1
+		background	"gfx/guis/common/strogg/term_symb"
+		matcolor	0.376,0.376,0.376,0.6
+	}
+	windowDef title1
+	{
+		rect	374,6,245,30
+		visible	1
+		forecolor	0.878,0.435,0.105,1
+		text	"#str_200840"
+		textscale	0.48
+		font	"fonts/r_strogg"
+	}
+	windowDef title2
+	{
+		rect	379,29,239,21
+		visible	1
+		forecolor	0.752,0.752,0.752,1
+		text	"#str_200841"
+		textscale	0.32
+		font	"fonts/r_strogg"
+	}
+	windowDef p_scrolltext
+	{
+		rect	14,41,134,120
+		visible	1
+		windowDef scrolltext
+		{
+			rect	0,0,133,202
+			visible	1
+			background	"gfx/guis/common/strogg/scrolltext3"
+			matcolor	1,1,0.501,1
+		}
+	}
+	windowDef scanning
+	{
+		rect	305,151,317,58
+		visible	1
+		forecolor	0.905,0.694,0.0627,1*guitable_10_0[time*0.002]
+		text	"#str_200842"
+		textscale	.9
+		font	"fonts/r_strogg"
+	}
+	windowDef datmat
+	{
+		rect	304,139,265,80
+		visible	0
+		forecolor	0.905,0.694,0.0627,1*guitable_10_5[time*0.001]
+		text	"#str_200843"
+		textscale	0.7
+		font	"fonts/r_strogg"
+	}
+	windowDef img1
+	{
+		rect	212,236,183,212
+		visible	1
+		background	"gfx/guis/monitors/strogg/terminal/term5_img1"
+		matcolor	0.949,0.858,0.325,1
+		shear	0,-.36
+	}
+	windowDef img2
+	{
+		rect	404,236,183,212
+		visible	1
+		background	"gfx/guis/monitors/strogg/terminal/term5_img2"
+		matcolor	0.949,0.858,0.325,1
+		shear	0,-.36
+	}
+	windowDef sl_top
+	{
+		rect	320,135,331,30
+		visible	1
+		background	"gfx/guis/common/2pxborder_horiz"
+		matcolor	0.870,0.603,0.105,0.8
+		matscaley	-1
+	}
+	windowDef sl_btm
+	{
+		rect	320,195,333,30
+		visible	1
+		background	"gfx/guis/common/2pxborder_horiz"
+		matcolor	0.870,0.603,0.105,0.8
+	}
+	windowDef sl_tl
+	{
+		rect	290,135,30,30
+		visible	1
+		background	"gfx/guis/common/2pxborder_cornersm"
+		matcolor	0.870,0.603,0.105,0.8
+	}
+	windowDef sl_tr
+	{
+		rect	290,165,30,30
+		visible	1
+		background	"gfx/guis/common/2pxborder_vert"
+		matcolor	0.870,0.603,0.105,0.8
+	}
+	windowDef sl_bl
+	{
+		rect	290,195,30,30
+		visible	1
+		background	"gfx/guis/common/2pxborder_cornersm"
+		matcolor	0.870,0.603,0.105,0.8
+		matscaley	-1
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,-113,640,618
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.752,0.752,0.752,1
+		}
+		windowDef static
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/static3"
+			matcolor	1,0.988,0.725,0.16
+		}
+		windowDef scratches
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/screen_scratches3"
+			matcolor	0.878,0.945,0.933,0.62
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef anim_scan
+	{
+		rect	0,0,1,1
+		visible	1
+
+		onTime 0 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img2" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img3" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img4" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img5" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img6" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img7" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img8" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img2" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img3" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img4" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img5" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img6" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img7" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img8" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img1" ;
+			set "scanning::visible" "0" ;
+			set "datmat::visible" "1" ;
+			
+			transition "img1::matcolor" "1,1,1,1" "0.949,0.858,0.325,1" "1000" ;	
+			transition "img2::matcolor" "1,1,1,1" "0.949,0.858,0.325,1" "1000" ;
+		}
+
+		onTime +2500 {
+			set "scanning::visible" "1" ;
+			set "datmat::visible" "0" ;
+			
+			set "img1::background" "gfx/guis/monitors/strogg/terminal/term5_img4" ;
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img1" ;
+			
+			set "img1::matcolor" "0.949,0.858,0.325,1" ;
+			set "img2::matcolor" "0.949,0.858,0.325,1" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img2" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img3" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img5" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img6" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img7" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img8" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img1" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img2" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img3" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img5" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img6" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img7" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img8" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img4" ;
+			set "scanning::visible" "0" ;
+			set "datmat::visible" "1" ;
+			
+			transition "img1::matcolor" "1,1,1,1" "0.949,0.858,0.325,1" "600" ;	
+			transition "img2::matcolor" "1,1,1,1" "0.949,0.858,0.325,1" "600" ;
+		}
+
+		onTime +2500 {
+			set "scanning::visible" "1" ;
+			set "datmat::visible" "0" ;
+			
+			set "img1::background" "gfx/guis/monitors/strogg/terminal/term5_img6" ;
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img1" ;
+			
+			set "img1::matcolor" "0.949,0.858,0.325,1" ;
+			set "img2::matcolor" "0.949,0.858,0.325,1" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img2" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img3" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img4" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img5" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img7" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img8" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img1" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img2" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img3" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img4" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img5" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img7" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img8" ;
+		}
+
+		onTime +200 {
+			set "img2::background" "gfx/guis/monitors/strogg/terminal/term5_img6" ;
+			set "scanning::visible" "0" ;
+			set "datmat::visible" "1" ;
+			
+			transition "img1::matcolor" "1,1,1,1" "0.949,0.858,0.325,1" "600" ;	
+			transition "img2::matcolor" "1,1,1,1" "0.949,0.858,0.325,1" "600" ;
+		}
+
+		onTime +2500 {
+			set "scanning::visible" "1" ;
+			set "datmat::visible" "0" ;
+			
+			set "img1::background" "gfx/guis/monitors/strogg/terminal/term5_img1" ;
+			
+			set "img1::matcolor" "0.949,0.858,0.325,1" ;
+			set "img2::matcolor" "0.949,0.858,0.325,1" ;
+			
+			resettime "0" ;
+		}
+
+	}
+}

@@ -1,0 +1,171 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	windowDef bg
+	{
+		rect	0,0,639,481
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc10_all"
+		matcolor	1,1,1,1
+	}
+	windowDef s
+	{
+		rect	19,-18,41,56
+		visible	1
+		forecolor	1,1,1,1
+		text	"s"
+		textscale	1.1
+		font	"fonts/marine"
+	}
+	windowDef m
+	{
+		rect	48,-18,41,56
+		visible	1
+		forecolor	1,1,1,1
+		text	"m"
+		textscale	1.1
+		font	"fonts/marine"
+	}
+	windowDef c
+	{
+		rect	83,-18,41,56
+		visible	1
+		forecolor	1,1,1,1
+		text	"c"
+		textscale	1.1
+		font	"fonts/marine"
+	}
+	windowDef techpanel
+	{
+		rect	23,32,97,24
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200621"
+		textscale	0.3
+		font	"fonts/marine"
+	}
+	windowDef progress
+	{
+		rect	206,88,156,33
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200661"
+		textscale	0.5
+		font	"fonts/marine"
+	}
+	windowDef file
+	{
+		rect	195,6,71,37
+		visible	1
+		forecolor	0,0,0,1
+		text	"#str_200626"
+		textscale	0.55
+		font	"fonts/marine"
+	}
+	windowDef search
+	{
+		rect	342,6,123,37
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200624"
+		textscale	0.55
+		font	"fonts/marine"
+	}
+	windowDef tools
+	{
+		rect	515,6,123,37
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200625"
+		textscale	0.55
+		font	"fonts/marine"
+	}
+	windowDef ssp_manual1
+	{
+		rect	60,94,113,31
+		visible	1
+		forecolor	0,0,0,1
+		text	"#str_200662"
+		textscale	0.37
+		font	"fonts/marine"
+	}
+	windowDef ssp_manual2
+	{
+		rect	304,149,247,106
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200663"
+		textscale	0.3
+		font	"fonts/marine"
+	}
+	windowDef ssp_manual3
+	{
+		rect	482,322,75,31
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200664"
+		textscale	0.5
+		font	"fonts/marine"
+	}
+	windowDef ssp_manual4
+	{
+		rect	18,141,139,45
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200665"
+		textscale	0.3
+		font	"fonts/marine"
+	}
+	windowDef ssp_manual5
+	{
+		rect	42,179,114,187
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200666"
+		textscale	0.3
+		font	"fonts/marine"
+	}
+	windowDef ssp_manual6
+	{
+		rect	17,350,139,90
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200667"
+		textscale	0.3
+		font	"fonts/marine"
+	}
+	windowDef topstuff
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef monitor_darkedge
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+		windowDef sline
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_line3"
+			matcolor	0.674,0.674,0.674,1
+		}
+		windowDef scratches
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/screen_scratches2"
+			matcolor	0.933,0.984,0.768,0.141
+			matscaley	-1
+		}
+		windowDef topreflect
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_glow3"
+			matcolor	0.976,1,0.917,0.431
+		}
+	}
+}

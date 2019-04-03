@@ -1,0 +1,162 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	definevec4	"off"	0,0,0,1
+	definevec4	"on"	1,0.274,0,1
+	windowDef bg
+	{
+		rect	0,0,639,481
+		visible	1
+		background	"gfx/guis/monitors/marine/mccmed4_all"
+		matcolor	1,1,1,1
+	}
+	windowDef txt_medlabs
+	{
+		rect	102,21,329,28
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200707"
+		textscale	0.47
+		font	"fonts/marine"
+	}
+	windowDef ssp_manual
+	{
+		rect	367,430,197,40
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200720"
+		textscale	0.6
+		font	"fonts/marine"
+	}
+	windowDef subject
+	{
+		rect	9,43,304,37
+		visible	1
+		forecolor	0.411,0.760,0.878,1
+		text	"#str_200725"
+		textscale	0.55
+		font	"fonts/marine"
+	}
+	windowDef s
+	{
+		rect	7,-1,41,56
+		visible	1
+		forecolor	1,1,1,1
+		text	"s"
+		textscale	1
+		font	"fonts/marine"
+	}
+	windowDef m
+	{
+		rect	65,-1,41,56
+		visible	1
+		forecolor	1,1,1,1
+		text	"c"
+		textscale	1
+		font	"fonts/marine"
+	}
+	windowDef c
+	{
+		rect	33,-1,41,56
+		visible	1
+		forecolor	1,1,1,1
+		text	"m"
+		textscale	1
+		font	"fonts/marine"
+	}
+	windowDef text_block
+	{
+		rect	14,82,197,152
+		visible	1
+		forecolor	0.6,0.8,0.835,1
+		text	"#str_200726"
+		textscale	0.22
+		font	"fonts/lowpixel"
+	}
+	windowDef number1
+	{
+		rect	555,276,76,22
+		visible	1
+		forecolor	1,1,1,1
+		text	"0453.4"
+		textscale	0.32
+		font	"fonts/marine"
+	}
+	windowDef number2
+	{
+		rect	554,303,75,22
+		visible	1
+		forecolor	1,1,1,1
+		text	"0455.3"
+		textscale	0.32
+		font	"fonts/marine"
+	}
+	windowDef number3
+	{
+		rect	554,331,75,22
+		visible	1
+		forecolor	1,1,1,1
+		text	"0455.6"
+		textscale	0.32
+		font	"fonts/marine"
+	}
+	windowDef number4
+	{
+		rect	554,358,75,22
+		visible	1
+		forecolor	1,1,1,1
+		text	"0455.7"
+		textscale	0.32
+		font	"fonts/marine"
+	}
+	windowDef number5
+	{
+		rect	554,384,75,22
+		visible	1
+		forecolor	1,1,1,1
+		text	"0455.8"
+		textscale	0.32
+		font	"fonts/marine"
+	}
+	windowDef scrolltext1
+	{
+		rect	112,316,138,88
+		visible	1
+		background	"gfx/guis/common/marine/scrolltext3"
+		matcolor	0.501,1,1,1
+	}
+	windowDef topstuff
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef sline
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_line3"
+			matcolor	0.552,0.650,0.678,0.360
+		}
+		windowDef monitor_darkedge
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0.0509,0.0509,0.0509,1
+		}
+		windowDef scratches
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/screen_scratches3"
+			matcolor	1,1,1,0.156
+			matscaley	-1
+		}
+		windowDef topreflect
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_glow2"
+			matcolor	0.780,0.901,0.905,0.494
+		}
+	}
+}

@@ -1,0 +1,750 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	comment	"gui_parm_modulenum = 1 to 3; 1 is the first core gui the player sees, 3 is the last"
+	visible	1
+	float	"modulenum"	1
+
+	onInit {	
+		set "desktop::modulenum" "$gui::gui_parm_modulenum" ;
+		
+		if ( "gui::gui_parm_modulenum" == 1 ) {
+			set "anim_R_glow::notime" "0" ;
+		} 
+		else if ( "gui::gui_parm_modulenum" == 2 ) {
+			set "outer_C::matcolor_x" "1" ;
+			set "outer_R::matcolor_x" "1" ;
+			set "connector_R::matcolor_x" "1" ;
+			set "anim_L_glow::notime" "0" ;
+		} 
+		else if ( "gui::gui_parm_modulenum" == 3 ) {
+			set "outer_C::matcolor_x" "1" ;
+			set "outer_R::matcolor_x" "1" ;
+			set "connector_R::matcolor_x" "1" ;
+			set "outer_L::matcolor_x" "1" ;
+			set "connector_L::matcolor_x" "1" ;
+			set "anim_U_glow::notime" "0" ;
+		} 
+		
+	}
+
+	windowDef bg
+	{
+		rect	0,0,640,480
+		visible	1
+		backcolor	0.290,0,0,1
+	}
+	windowDef gradient
+	{
+		rect	0,23,641,300
+		visible	1
+		background	"gfx/guis/common/gradient4"
+		matcolor	0.129,0,0,1
+		matscaley	-1
+	}
+	windowDef data
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/common/strogg/data"
+		matcolor	1,1,0.501,0.14
+	}
+	windowDef triangle
+	{
+		rect	125,-40,640,480
+		visible	1
+		background	"gfx/guis/maps/storage1/cc_triangle"
+		matcolor	0.952,0.368,0.0117,1
+	}
+	windowDef upper
+	{
+		rect	0,0,1266,238
+		visible	1
+		background	"gfx/guis/maps/storage1/cc_upper"
+		matcolor	0.635,0,0,1
+	}
+	windowDef connector_L
+	{
+		rect	333,240,76,62
+		visible	1
+		background	"gfx/guis/maps/storage1/cc_connector"
+		matcolor	0.501,0,0,1
+	}
+	windowDef connector_R
+	{
+		rect	478,241,76,62
+		visible	1
+		background	"gfx/guis/maps/storage1/cc_connector"
+		matcolor	0.501,0,0,1
+		matscalex	-1
+	}
+	windowDef connector_U
+	{
+		rect	438,123,12,52
+		visible	1
+		backcolor	0.498,0,0,1
+	}
+	windowDef outer_C
+	{
+		rect	387,173,113,113
+		visible	1
+		background	"gfx/guis/maps/storage1/cc_outer"
+		matcolor	0.501,0,0,1
+	}
+	windowDef outer_L
+	{
+		rect	290,268,69,69
+		visible	1
+		background	"gfx/guis/maps/storage1/cc_outer"
+		matcolor	0.501,0,0,1
+	}
+	windowDef outer_R
+	{
+		rect	530,268,68,68
+		visible	1
+		background	"gfx/guis/maps/storage1/cc_outer"
+		matcolor	0.501,0,0,1
+	}
+	windowDef outer_U
+	{
+		rect	409,57,68,68
+		visible	1
+		background	"gfx/guis/maps/storage1/cc_outer"
+		matcolor	0.501,0,0,1
+	}
+	windowDef inner_C
+	{
+		rect	389,175,109,109
+		visible	1
+		background	"gfx/guis/maps/storage1/cc_inner"
+		matcolor	0.670,0.145,0.0117,1
+	}
+	windowDef inner_L
+	{
+		rect	290,268,68,68
+		visible	1
+		background	"gfx/guis/maps/storage1/cc_inner"
+		matcolor	0.670,0.145,0.0117,1
+	}
+	windowDef inner_R
+	{
+		rect	531,269,67,67
+		visible	1
+		background	"gfx/guis/maps/storage1/cc_inner"
+		matcolor	0.839,0.180,0.0117,1
+	}
+	windowDef inner_U
+	{
+		rect	409,57,68,68
+		visible	1
+		background	"gfx/guis/maps/storage1/cc_inner"
+		matcolor	0.670,0.145,0.0117,1
+	}
+	windowDef btnbg
+	{
+		rect	-2,178,316,120
+		visible	1
+		background	"gfx/guis/maps/storage1/cc_button"
+		matcolor	0.917,0.301,0,1
+	}
+	windowDef txt_reactivate
+	{
+		rect	28,212,252,44
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200553"
+		textscale	0.57
+		font	"fonts/r_strogg"
+	}
+	windowDef lower
+	{
+		rect	0,359,640,122
+		visible	1
+		background	"gfx/guis/maps/storage1/cc_lower"
+		matcolor	0.894,0.294,0.00392,1
+	}
+	windowDef gradient1
+	{
+		rect	0,373,641,30
+		visible	1
+		background	"gfx/guis/common/gradient4"
+		matcolor	0.972,0.764,0.270,0.301
+		matscaley	-1
+	}
+	windowDef txt_coreconnect
+	{
+		rect	127,54,195,55
+		visible	1
+		forecolor	0.984,0.725,0.443,1
+		text	"#str_200554"
+		textscale	0.4
+		font	"fonts/r_strogg"
+	}
+	windowDef d_txt_coreconnect
+	{
+		rect	87,47,130,81
+		visible	1
+		forecolor	0.984,0.725,0.443,0
+		text	"#str_200554"
+		textscale	0.25
+		font	"fonts/r_strogg"
+	}
+	windowDef icon
+	{
+		rect	35,39,86,83
+		visible	1
+		background	"gfx/guis/common/strogg/term_symb"
+		matcolor	0.894,0.294,0.00392,1
+	}
+	windowDef p_transition_triangle
+	{
+		rect	0,0,640,480
+		visible	0
+		windowDef d_triangle
+		{
+			rect	-75,-58,797,588
+			visible	1
+			background	"gfx/guis/maps/storage1/cc_triangle"
+			matcolor	0.952,0.368,0.0117,1
+		}
+		windowDef d_connector_L
+		{
+			rect	184,295,84,64
+			visible	1
+			background	"gfx/guis/maps/storage1/cc_connector"
+			matcolor	0.501,0,0,1
+		}
+		windowDef d_connector_R
+		{
+			rect	373,294,84,64
+			visible	1
+			background	"gfx/guis/maps/storage1/cc_connector"
+			matcolor	1,0,0,1
+			matscalex	-1
+		}
+		windowDef d_connector_U
+		{
+			rect	317,144,11,52
+			visible	1
+			backcolor	0.501,0,0,1
+		}
+		windowDef d_outer_C
+		{
+			rect	248,200,148,147
+			visible	1
+			background	"gfx/guis/maps/storage1/cc_outer"
+			matcolor	1,0,0,1
+		}
+		windowDef d_outer_L
+		{
+			rect	129,319,89,87
+			visible	1
+			background	"gfx/guis/maps/storage1/cc_outer"
+			matcolor	0.501,0,0,1
+		}
+		windowDef d_outer_R
+		{
+			rect	426,319,89,87
+			visible	1
+			background	"gfx/guis/maps/storage1/cc_outer"
+			matcolor	1,0,0,1
+		}
+		windowDef d_outer_U
+		{
+			rect	277,60,89,87
+			visible	1
+			background	"gfx/guis/maps/storage1/cc_outer"
+			matcolor	0.501,0,0,1
+		}
+		windowDef d_inner_C
+		{
+			rect	242,195,159,157
+			visible	1
+			background	"gfx/guis/maps/storage1/cc_inner"
+			matcolor	0.670,0.145,0.0117,1
+		}
+		windowDef d_inner_L
+		{
+			rect	128,318,91,89
+			visible	1
+			background	"gfx/guis/maps/storage1/cc_inner"
+			matcolor	0.670,0.145,0.0117,1
+		}
+		windowDef d_inner_R
+		{
+			rect	425,318,91,89
+			visible	1
+			background	"gfx/guis/maps/storage1/cc_inner"
+			matcolor	0.839,0.180,0.0117,1
+		}
+		windowDef d_inner_U
+		{
+			rect	276,59,91,89
+			visible	1
+			background	"gfx/guis/maps/storage1/cc_inner"
+			matcolor	0.670,0.145,0.0117,1
+		}
+		windowDef d_upper
+		{
+			rect	-141,0,1267,238
+			visible	1
+			background	"gfx/guis/maps/storage1/cc_upper"
+			matcolor	0.635,0,0,1
+		}
+		windowDef d_btnbg
+		{
+			rect	-323,178,316,120
+			visible	0
+			background	"gfx/guis/maps/storage1/cc_button"
+			matcolor	0.917,0.301,0,1
+		}
+		windowDef d_txt_reactivate
+		{
+			rect	-294,212,252,44
+			visible	0
+			forecolor	1,1,1,1
+			text	"#str_200553"
+			textscale	0.57
+			font	"fonts/r_strogg"
+		}
+		windowDef d_lower
+		{
+			rect	0,432,640,122
+			visible	1
+			background	"gfx/guis/maps/storage1/cc_lower"
+			matcolor	0.894,0.294,0.00392,1
+		}
+		windowDef d_gradient1
+		{
+			rect	0,446,641,30
+			visible	1
+			background	"gfx/guis/common/gradient4"
+			matcolor	0.968,0.760,0.266,0.298
+			matscaley	-1
+		}
+		windowDef d_icon
+		{
+			rect	35,39,49,46
+			visible	0
+			background	"gfx/guis/common/strogg/term_symb"
+			matcolor	0.894,0.294,0.00392,1
+		}
+	}
+	windowDef p_topstuff
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef topstuff_border
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0.129,0,0,1
+		}
+		windowDef topstuff_lines
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_line3"
+			matcolor	1,0.741,0.505,1
+		}
+		windowDef topstuff_reflect
+		{
+			rect	0,-22,640,506
+			visible	1
+			background	"gfx/guis/common/monitor_reflect"
+			matcolor	0.792,0.850,0.725,0.443
+		}
+		windowDef topstuff_dirt
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/screen_dirt1"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef anim_R
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "txt_coreconnect::forecolor_w" "1" "0" "150" ;
+			transition "triangle::rect" "$triangle::rect" "$d_triangle::rect" "300" ;
+			transition "connector_L::rect" "$connector_L::rect" "$d_connector_L::rect" "300" ;
+			transition "connector_R::rect" "$connector_R::rect" "$d_connector_R::rect" "300" ;
+			transition "connector_U::rect" "$connector_U::rect" "$d_connector_U::rect" "300" ;
+			transition "outer_C::rect" "$outer_C::rect" "$d_outer_C::rect" "300" ;
+			transition "outer_L::rect" "$outer_L::rect" "$d_outer_L::rect" "300" ;
+			transition "outer_R::rect" "$outer_R::rect" "$d_outer_R::rect" "300" ;
+			transition "outer_U::rect" "$outer_U::rect" "$d_outer_U::rect" "300" ;
+			transition "inner_C::rect" "$inner_C::rect" "$d_inner_C::rect" "300" ;
+			transition "inner_L::rect" "$inner_L::rect" "$d_inner_L::rect" "300" ;
+			transition "inner_R::rect" "$inner_R::rect" "$d_inner_R::rect" "300" ;
+			transition "inner_U::rect" "$inner_U::rect" "$d_inner_U::rect" "300" ;
+			transition "upper::rect" "$upper::rect" "$d_upper::rect" "300" ;
+			transition "btnbg::rect" "$btnbg::rect" "$d_btnbg::rect" "300" ;
+			transition "txt_reactivate::rect" "$txt_reactivate::rect" "$d_txt_reactivate::rect" "300" ;
+			transition "lower::rect" "$lower::rect" "$d_lower::rect" "300" ;
+			transition "gradient1::rect" "$gradient1::rect" "$d_gradient1::rect" "300" ;
+			transition "icon::rect" "$icon::rect" "$d_icon::rect" "300" ;
+		}
+
+		onTime +300 {
+			transition "d_txt_coreconnect::forecolor_w" "0" "1" "300" ;
+		}
+
+		onTime +200 {
+			transition "outer_C::matcolor" "0.501,0,0,1" "1,0,0,1" "0" ;
+			transition "outer_R::matcolor" "0.501,0,0,1" "1,0,0,1" "0" ;
+			transition "connector_R::matcolor" "0.501,0,0,1" "1,0,0,1" "0" ;
+		}
+
+		onTime +50 {
+			transition "outer_C::matcolor" "1,0,0,1" "0.501,0,0,1" "0" ;
+			transition "outer_R::matcolor" "1,0,0,1" "0.501,0,0,1" "0" ;
+			transition "connector_R::matcolor" "1,0,0,1" "0.501,0,0,1" "0" ;
+		}
+
+		onTime +50 {
+			transition "outer_C::matcolor" "0.501,0,0,1" "1,0,0,1" "0" ;
+			transition "outer_R::matcolor" "0.501,0,0,1" "1,0,0,1" "0" ;
+			transition "connector_R::matcolor" "0.501,0,0,1" "1,0,0,1" "0" ;
+		}
+
+		onTime +50 {
+			transition "outer_C::matcolor" "1,0,0,1" "0.501,0,0,1" "0" ;
+			transition "outer_R::matcolor" "1,0,0,1" "0.501,0,0,1" "0" ;
+			transition "connector_R::matcolor" "1,0,0,1" "0.501,0,0,1" "0" ;
+		}
+
+		onTime +50 {
+			transition "outer_C::matcolor" "0.501,0,0,1" "1,0,0,1" "300" ;
+			transition "outer_R::matcolor" "0.501,0,0,1" "1,0,0,1" "300" ;
+			transition "connector_R::matcolor" "0.501,0,0,1" "1,0,0,1" "300" ;
+		}
+
+		onTime +300 {
+			resettime "anim_mid2" "0" ;
+			resettime "anim_R_spin" "0" ;
+		}
+
+	}
+	windowDef anim_L
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "txt_coreconnect::forecolor_w" "1" "0" "150" ;
+			transition "triangle::rect" "$triangle::rect" "$d_triangle::rect" "300" ;
+			transition "connector_L::rect" "$connector_L::rect" "$d_connector_L::rect" "300" ;
+			transition "connector_R::rect" "$connector_R::rect" "$d_connector_R::rect" "300" ;
+			transition "connector_U::rect" "$connector_U::rect" "$d_connector_U::rect" "300" ;
+			transition "outer_C::rect" "$outer_C::rect" "$d_outer_C::rect" "300" ;
+			transition "outer_L::rect" "$outer_L::rect" "$d_outer_L::rect" "300" ;
+			transition "outer_R::rect" "$outer_R::rect" "$d_outer_R::rect" "300" ;
+			transition "outer_U::rect" "$outer_U::rect" "$d_outer_U::rect" "300" ;
+			transition "inner_C::rect" "$inner_C::rect" "$d_inner_C::rect" "300" ;
+			transition "inner_L::rect" "$inner_L::rect" "$d_inner_L::rect" "300" ;
+			transition "inner_R::rect" "$inner_R::rect" "$d_inner_R::rect" "300" ;
+			transition "inner_U::rect" "$inner_U::rect" "$d_inner_U::rect" "300" ;
+			transition "upper::rect" "$upper::rect" "$d_upper::rect" "300" ;
+			transition "btnbg::rect" "$btnbg::rect" "$d_btnbg::rect" "300" ;
+			transition "txt_reactivate::rect" "$txt_reactivate::rect" "$d_txt_reactivate::rect" "300" ;
+			transition "lower::rect" "$lower::rect" "$d_lower::rect" "300" ;
+			transition "gradient1::rect" "$gradient1::rect" "$d_gradient1::rect" "300" ;
+			transition "icon::rect" "$icon::rect" "$d_icon::rect" "300" ;
+		}
+
+		onTime +300 {
+			transition "d_txt_coreconnect::forecolor_w" "0" "1" "300" ;
+		}
+
+		onTime +200 {
+			transition "outer_C::matcolor" "0.501,0,0,1" "1,0,0,1" "0" ;
+			transition "outer_L::matcolor" "0.501,0,0,1" "1,0,0,1" "0" ;
+			transition "connector_L::matcolor" "0.501,0,0,1" "1,0,0,1" "0" ;
+		}
+
+		onTime +50 {
+			transition "outer_C::matcolor" "1,0,0,1" "0.501,0,0,1" "0" ;
+			transition "outer_L::matcolor" "1,0,0,1" "0.501,0,0,1" "0" ;
+			transition "connector_L::matcolor" "1,0,0,1" "0.501,0,0,1" "0" ;
+		}
+
+		onTime +50 {
+			transition "outer_C::matcolor" "0.501,0,0,1" "1,0,0,1" "0" ;
+			transition "outer_L::matcolor" "0.501,0,0,1" "1,0,0,1" "0" ;
+			transition "connector_L::matcolor" "0.501,0,0,1" "1,0,0,1" "0" ;
+		}
+
+		onTime +50 {
+			transition "outer_C::matcolor" "1,0,0,1" "0.501,0,0,1" "0" ;
+			transition "outer_L::matcolor" "1,0,0,1" "0.501,0,0,1" "0" ;
+			transition "connector_L::matcolor" "1,0,0,1" "0.501,0,0,1" "0" ;
+		}
+
+		onTime +50 {
+			transition "outer_C::matcolor" "0.501,0,0,1" "1,0,0,1" "300" ;
+			transition "outer_L::matcolor" "0.501,0,0,1" "1,0,0,1" "300" ;
+			transition "connector_L::matcolor" "0.501,0,0,1" "1,0,0,1" "300" ;
+		}
+
+		onTime +300 {
+			resettime "anim_mid2" "0" ;
+			resettime "anim_L_spin" "0" ;
+		}
+
+	}
+	windowDef anim_U
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "txt_coreconnect::forecolor_w" "1" "0" "150" ;
+			transition "triangle::rect" "$triangle::rect" "$d_triangle::rect" "300" ;
+			transition "connector_L::rect" "$connector_L::rect" "$d_connector_L::rect" "300" ;
+			transition "connector_R::rect" "$connector_R::rect" "$d_connector_R::rect" "300" ;
+			transition "connector_U::rect" "$connector_U::rect" "$d_connector_U::rect" "300" ;
+			transition "outer_C::rect" "$outer_C::rect" "$d_outer_C::rect" "300" ;
+			transition "outer_L::rect" "$outer_L::rect" "$d_outer_L::rect" "300" ;
+			transition "outer_R::rect" "$outer_R::rect" "$d_outer_R::rect" "300" ;
+			transition "outer_U::rect" "$outer_U::rect" "$d_outer_U::rect" "300" ;
+			transition "inner_C::rect" "$inner_C::rect" "$d_inner_C::rect" "300" ;
+			transition "inner_L::rect" "$inner_L::rect" "$d_inner_L::rect" "300" ;
+			transition "inner_R::rect" "$inner_R::rect" "$d_inner_R::rect" "300" ;
+			transition "inner_U::rect" "$inner_U::rect" "$d_inner_U::rect" "300" ;
+			transition "upper::rect" "$upper::rect" "$d_upper::rect" "300" ;
+			transition "btnbg::rect" "$btnbg::rect" "$d_btnbg::rect" "300" ;
+			transition "txt_reactivate::rect" "$txt_reactivate::rect" "$d_txt_reactivate::rect" "300" ;
+			transition "lower::rect" "$lower::rect" "$d_lower::rect" "300" ;
+			transition "gradient1::rect" "$gradient1::rect" "$d_gradient1::rect" "300" ;
+			transition "icon::rect" "$icon::rect" "$d_icon::rect" "300" ;
+		}
+
+		onTime +300 {
+			transition "d_txt_coreconnect::forecolor_w" "0" "1" "300" ;
+		}
+
+		onTime +200 {
+			transition "outer_C::matcolor" "0.501,0,0,1" "1,0,0,1" "0" ;
+			transition "outer_U::matcolor" "0.501,0,0,1" "1,0,0,1" "0" ;
+			transition "connector_U::backcolor" "0.501,0,0,1" "1,0,0,1" "0" ;
+		}
+
+		onTime +50 {
+			transition "outer_C::matcolor" "1,0,0,1" "0.501,0,0,1" "0" ;
+			transition "outer_U::matcolor" "1,0,0,1" "0.501,0,0,1" "0" ;
+			transition "connector_U::backcolor" "1,0,0,1" "0.501,0,0,1" "0" ;
+		}
+
+		onTime +50 {
+			transition "outer_C::matcolor" "0.501,0,0,1" "1,0,0,1" "0" ;
+			transition "outer_U::matcolor" "0.501,0,0,1" "1,0,0,1" "0" ;
+			transition "connector_U::backcolor" "0.501,0,0,1" "1,0,0,1" "0" ;
+		}
+
+		onTime +50 {
+			transition "outer_C::matcolor" "1,0,0,1" "0.501,0,0,1" "0" ;
+			transition "outer_U::matcolor" "1,0,0,1" "0.501,0,0,1" "0" ;
+			transition "connector_U::backcolor" "1,0,0,1" "0.501,0,0,1" "0" ;
+		}
+
+		onTime +50 {
+			transition "outer_C::matcolor" "0.501,0,0,1" "1,0,0,1" "300" ;
+			transition "outer_U::matcolor" "0.501,0,0,1" "1,0,0,1" "300" ;
+			transition "connector_U::backcolor" "0.501,0,0,1" "1,0,0,1" "300" ;
+		}
+
+		onTime +300 {
+			resettime "anim_mid2" "0" ;
+			resettime "anim_U_spin" "0" ;
+		}
+
+	}
+	windowDef anim_R_glow
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "outer_C::matcolor" "0.501,0,0,1" "0.7,0,0,1" "400" ;
+			transition "outer_R::matcolor" "0.501,0,0,1" "0.7,0,0,1" "400" ;
+			transition "connector_R::matcolor" "0.501,0,0,1" "0.7,0,0,1" "400" ;
+			// transition "inner_R::rect" "$d2_inner_R::rect" "$inner_R::rect" "400" ;
+			// transition "inner_R::matcolor_w" "0.4" "1" "400" ;
+		}
+
+		onTime +400 {
+			transition "outer_C::matcolor" "0.7,0,0,1" "0.501,0,0,1" "400" ;
+			transition "outer_R::matcolor" "0.7,0,0,1" "0.501,0,0,1" "400" ;
+			transition "connector_R::matcolor" "0.7,0,0,1" "0.501,0,0,1" "400" ;
+			// transition "inner_R::rect" "$inner_R::rect" "$d2_inner_R::rect" "400" ;
+			// transition "inner_R::matcolor_w" "1" "0.4" "400" ;
+		}
+
+		onTime +400 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef anim_L_glow
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "outer_L::matcolor" "0.501,0,0,1" "0.7,0,0,1" "300" ;
+			transition "connector_L::matcolor" "0.501,0,0,1" "0.7,0,0,1" "300" ;
+		}
+
+		onTime +300 {
+			transition "outer_L::matcolor" "0.7,0,0,1" "0.501,0,0,1" "300" ;
+			transition "connector_L::matcolor" "0.7,0,0,1" "0.501,0,0,1" "300" ;
+		}
+
+		onTime +300 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef anim_U_glow
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "outer_U::matcolor" "0.501,0,0,1" "0.7,0,0,1" "300" ;
+			transition "connector_U::backcolor" "0.501,0,0,1" "0.7,0,0,1" "300" ;
+		}
+
+		onTime +300 {
+			transition "outer_U::matcolor" "0.7,0,0,1" "0.501,0,0,1" "300" ;
+			transition "connector_U::backcolor" "0.7,0,0,1" "0.501,0,0,1" "300" ;
+		}
+
+		onTime +300 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef anim_mid2
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "inner_C::matcolor_w" "1" "0.4" "400" ;
+		}
+
+		onTime 400 {
+			transition "inner_C::matcolor_w" "0.4" "1" "400" ;
+		}
+
+		onTime 800 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef anim_R_spin
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "inner_R::matcolor_w" "1" "0.4" "400" ;
+		}
+
+		onTime 400 {
+			transition "inner_R::matcolor_w" "0.4" "1" "400" ;
+		}
+
+		onTime 800 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef anim_L_spin
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "inner_L::matcolor_w" "1" "0.4" "400" ;
+		}
+
+		onTime 400 {
+			transition "inner_L::matcolor_w" "0.4" "1" "400" ;
+		}
+
+		onTime 800 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef anim_U_spin
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "inner_U::matcolor_w" "1" "0.4" "400" ;
+		}
+
+		onTime 400 {
+			transition "inner_U::matcolor_w" "0.4" "1" "400" ;
+		}
+
+		onTime 800 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef btn
+	{
+		rect	-1,178,316,120
+		visible	1
+
+		onMouseEnter {
+			transition "btnbg::matcolor" "0.917,0.301,0,1" "1,0.784,0.301,1" "0" ;
+			transition "txt_reactivate::forecolor" "1,1,1,1" "0,0,0,1" "0" ;
+		}
+
+		onMouseExit {
+			transition "btnbg::matcolor" "1,0.784,0.301,1" "0.917,0.301,0,1" "300" ;
+			transition "txt_reactivate::forecolor" "0,0,0,1" "1,1,1,1" "300" ;
+		}
+
+		onAction {
+			set "cmd" "play guisound_beep2 ; activate ; runscript" "$gui::gui_Parm_script";
+			set "visible" "0" ;
+			
+			set "anim_R_glow::notime" "1" ;
+			set "anim_L_glow::notime" "1" ;
+			set "anim_U_glow::notime" "1" ;
+			
+			if ("desktop::modulenum" == 1) {
+				resettime "anim_R" "0" ;
+			}
+			else if ("desktop::modulenum" == 2) {
+				resettime "anim_L" "0" ;
+			}
+			else if ("desktop::modulenum" == 3) {
+				resettime "anim_U" "0" ;
+			}
+		}
+
+	}
+}

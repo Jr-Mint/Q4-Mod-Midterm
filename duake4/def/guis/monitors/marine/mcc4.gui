@@ -1,0 +1,340 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	windowDef bg
+	{
+		rect	0,0,639,481
+		visible	1
+		background	"gfx/guis/monitors/marine/mcc4_all"
+		matcolor	1,1,1,1
+	}
+	windowDef ssp_manual
+	{
+		rect	432,433,109,40
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200590"
+		textscale	0.6
+		font	"fonts/marine"
+	}
+	windowDef mcc
+	{
+		rect	5,-9,105,56
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200969"
+		textscale	1
+		font	"fonts/marine"
+		textspacing	-3
+	}
+	windowDef community_bbs
+	{
+		rect	106,14,329,28
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200591"
+		textscale	0.47
+		font	"fonts/marine"
+	}
+	windowDef ssp_manual1
+	{
+		rect	212,433,109,40
+		visible	1
+		forecolor	0,0,0,1
+		text	"#str_200592"
+		textscale	0.6
+		font	"fonts/marine"
+	}
+	windowDef vatburgers
+	{
+		rect	11,79,383,20
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200593"
+		textscale	0.28
+		font	"fonts/marine"
+	}
+	windowDef name
+	{
+		rect	371,80,209,20
+		visible	1
+		forecolor	0.639,0.349,0.117,1
+		text	"#str_200594"
+		textscale	0.25
+		font	"fonts/marine"
+	}
+	windowDef vatburgers1
+	{
+		rect	50,97,138,20
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200595"
+		textscale	0.28
+		font	"fonts/marine"
+	}
+	windowDef name1
+	{
+		rect	193,99,209,20
+		visible	1
+		forecolor	0.635,0.345,0.113,1
+		text	"#str_200596"
+		textscale	0.25
+		font	"fonts/marine"
+	}
+	windowDef vatburgers2
+	{
+		rect	51,115,383,20
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200597"
+		textscale	0.28
+		font	"fonts/marine"
+	}
+	windowDef name2
+	{
+		rect	415,153,209,20
+		visible	1
+		forecolor	0.627,0.337,0.105,1
+		text	"#str_200598"
+		textscale	0.25
+		font	"fonts/marine"
+	}
+	windowDef name3
+	{
+		rect	169,134,209,20
+		visible	1
+		forecolor	0.627,0.337,0.105,1
+		text	"#str_200599"
+		textscale	0.25
+		font	"fonts/marine"
+	}
+	windowDef vatburgers3
+	{
+		rect	84,133,138,20
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200600"
+		textscale	0.28
+		font	"fonts/marine"
+	}
+	windowDef vatburgers4
+	{
+		rect	51,151,383,20
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200601"
+		textscale	0.28
+		font	"fonts/marine"
+	}
+	windowDef vatburgers5
+	{
+		rect	51,169,383,20
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200602"
+		textscale	0.28
+		font	"fonts/marine"
+	}
+	windowDef name4
+	{
+		rect	381,171,209,20
+		visible	1
+		forecolor	0.623,0.333,0.101,1
+		text	"#str_200603"
+		textscale	0.25
+		font	"fonts/marine"
+	}
+	windowDef vatburgers6
+	{
+		rect	85,187,383,20
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200604"
+		textscale	0.28
+		font	"fonts/marine"
+	}
+	windowDef name5
+	{
+		rect	384,207,209,20
+		visible	1
+		forecolor	0.627,0.337,0.105,1
+		text	"#str_200605"
+		textscale	0.25
+		font	"fonts/marine"
+	}
+	windowDef vatburgers7
+	{
+		rect	85,205,383,20
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200606"
+		textscale	0.28
+		font	"fonts/marine"
+	}
+	windowDef vatburgers8
+	{
+		rect	121,223,164,20
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200607"
+		textscale	0.28
+		font	"fonts/marine"
+	}
+	windowDef name6
+	{
+		rect	260,224,196,20
+		visible	1
+		forecolor	0.623,0.333,0.101,1
+		text	"#str_200608"
+		textscale	0.25
+		font	"fonts/marine"
+	}
+	windowDef name7
+	{
+		rect	326,242,196,20
+		visible	1
+		forecolor	0.619,0.329,0.0980,1
+		text	"#str_200609"
+		textscale	0.25
+		font	"fonts/marine"
+	}
+	windowDef vatburgers9
+	{
+		rect	165,259,201,20
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200610"
+		textscale	0.28
+		font	"fonts/marine"
+	}
+	windowDef name8
+	{
+		rect	373,260,209,20
+		visible	1
+		forecolor	0.623,0.333,0.101,1
+		text	"#str_200611"
+		textscale	0.25
+		font	"fonts/marine"
+	}
+	windowDef vatburgers10
+	{
+		rect	164,277,220,20
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200612"
+		textscale	0.28
+		font	"fonts/marine"
+	}
+	windowDef name9
+	{
+		rect	385,278,209,20
+		visible	1
+		forecolor	0.729,0.839,0.380,1
+		text	"#str_200613"
+		textscale	0.25
+		font	"fonts/marine"
+	}
+	windowDef vatburgers11
+	{
+		rect	51,295,414,20
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200614"
+		textscale	0.28
+		font	"fonts/marine"
+	}
+	windowDef name10
+	{
+		rect	419,296,209,20
+		visible	1
+		forecolor	0.619,0.329,0.0980,1
+		text	"#str_200615"
+		textscale	0.25
+		font	"fonts/marine"
+	}
+	windowDef vatburgers12
+	{
+		rect	12,343,406,20
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200616"
+		textscale	0.28
+		font	"fonts/marine"
+	}
+	windowDef name11
+	{
+		rect	423,344,209,20
+		visible	1
+		forecolor	0.725,0.835,0.376,1
+		text	"#str_200617"
+		textscale	0.25
+		font	"fonts/marine"
+	}
+	windowDef vatburgers13
+	{
+		rect	52,360,143,20
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200618"
+		textscale	0.28
+		font	"fonts/marine"
+	}
+	windowDef name12
+	{
+		rect	192,361,196,20
+		visible	1
+		forecolor	0.615,0.325,0.0941,1
+		text	"#str_200619"
+		textscale	0.25
+		font	"fonts/marine"
+	}
+	windowDef vatburgers14
+	{
+		rect	120,241,201,20
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200620"
+		textscale	0.28
+		font	"fonts/marine"
+	}
+	windowDef topstuff
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef monitor_darkedge
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+		windowDef sline
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_line4"
+			matcolor	0.768,0.768,0.768,0.0784
+		}
+		windowDef sline1
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_line3"
+			matcolor	0.568,0.568,0.568,0.568
+		}
+		windowDef scratches
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/screen_scratches"
+			matcolor	0.854,0.854,0.721,0.133
+		}
+		windowDef topreflect
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_glow1"
+			matcolor	0.854,0.854,0.713,1
+		}
+	}
+}

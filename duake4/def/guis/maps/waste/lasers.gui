@@ -1,0 +1,471 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0.152,0.0549,0.0549,1
+	visible	1
+	float	"clicked"	0
+	windowDef t3
+	{
+		rect	181,140,183,33
+		visible	0
+		forecolor	1,0,0,1
+		text	"#str_200402"
+		textscale	0.6
+		font	"fonts/r_strogg"
+		textspacing	2
+
+		onTime 0 {
+			transition "t3::forecolor" "1,0,0,1" "0.5,0,0,1" "1000" ;
+		}
+
+		onTime 1000 {
+			transition "t3::forecolor" "0.5,0,0,1" "1,0,0,1" "1000" ;
+		}
+
+		onTime 2000 {
+			resettime 0 ;
+		}
+
+	}
+	windowDef scrolltext1
+	{
+		rect	174,185,151,134
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext2"
+		matcolor	1,0,0,0.8
+	}
+	windowDef icon
+	{
+		rect	364,246,111,79
+		visible	1
+		background	"gfx/guis/maps/recomp/cell_icon"
+		matcolor	1,0,0,0.435
+		matscalex	-1
+	}
+	windowDef blocker
+	{
+		rect	129,102,373,280
+		visible	1
+		backcolor	0.152,0.0549,0.0549,1
+	}
+	windowDef laser1
+	{
+		rect	154,258,335,87
+		visible	1
+		background	"gfx/guis/maps/waste/lasers_laser"
+		matcolor	1,1,0.666,1
+
+		onTime 0 {
+			transition "laser1::rect" "$laser1::rect" "$d_laser1::rect" "500" ;
+		}
+
+		onTime +500 {
+			transition "laser1::rect" "$d_laser1::rect" "$laser1::rect" "300" ;
+		}
+
+		onTime +1000 {
+			transition "laser1::rect" "$laser1::rect" "$d_laser1::rect" "300" ;
+		}
+
+		onTime +500 {
+			transition "laser1::rect" "$d_laser1::rect" "$laser1::rect" "600" ;
+		}
+
+		onTime +600 {
+			transition "laser1::rect" "$laser1::rect" "$d_laser1::rect" "200" ;
+		}
+
+		onTime +800 {
+			transition "laser1::rect" "$d_laser1::rect" "$laser1::rect" "200" ;
+		}
+
+		onTime +200 {
+			transition "laser1::rect" "$laser1::rect" "$d_laser1::rect" "1500" ;
+		}
+
+		onTime +1500 {
+			transition "laser1::rect" "$d_laser1::rect" "$laser1::rect" "400" ;
+		}
+
+		onTime +900 {
+			resettime 0 ;
+		}
+
+	}
+	windowDef laser2
+	{
+		rect	153,193,335,87
+		visible	1
+		background	"gfx/guis/maps/waste/lasers_laser"
+		matcolor	1,1,0.666,1
+
+		onTime 0 {
+			transition "laser2::rect" "$laser2::rect" "$d_laser2::rect" "300" ;
+		}
+
+		onTime +700 {
+			transition "laser2::rect" "$d_laser2::rect" "$laser2::rect" "200" ;
+		}
+
+		onTime +200 {
+			transition "laser2::rect" "$laser2::rect" "$d_laser2::rect" "800" ;
+		}
+
+		onTime +800 {
+			transition "laser2::rect" "$d_laser2::rect" "$laser2::rect" "500" ;
+		}
+
+		onTime +800 {
+			transition "laser2::rect" "$laser2::rect" "$d_laser2::rect" "400" ;
+		}
+
+		onTime +400 {
+			transition "laser2::rect" "$d_laser2::rect" "$laser2::rect" "700" ;
+		}
+
+		onTime +700 {
+			transition "laser2::rect" "$laser2::rect" "$d_laser2::rect" "400" ;
+		}
+
+		onTime +500 {
+			transition "laser2::rect" "$d_laser2::rect" "$laser2::rect" "200" ;
+		}
+
+		onTime +200 {
+			resettime 0 ;
+		}
+
+	}
+	windowDef laser3
+	{
+		rect	154,128,335,87
+		visible	1
+		background	"gfx/guis/maps/waste/lasers_laser"
+		matcolor	1,1,0.666,1
+
+		onTime 0 {
+			transition "laser3::rect" "$laser3::rect" "$d_laser3::rect" "200" ;
+		}
+
+		onTime +200 {
+			transition "laser3::rect" "$d_laser3::rect" "$laser3::rect" "700" ;
+		}
+
+		onTime +700 {
+			transition "laser3::rect" "$laser3::rect" "$d_laser3::rect" "2000" ;
+		}
+
+		onTime +2000 {
+			transition "laser3::rect" "$d_laser3::rect" "$laser3::rect" "300" ;
+		}
+
+		onTime +600 {
+			transition "laser3::rect" "$laser3::rect" "$d_laser3::rect" "400" ;
+		}
+
+		onTime +400 {
+			transition "laser3::rect" "$d_laser3::rect" "$laser3::rect" "700" ;
+		}
+
+		onTime +900 {
+			transition "laser3::rect" "$laser3::rect" "$d_laser3::rect" "300" ;
+		}
+
+		onTime +300 {
+			transition "laser3::rect" "$d_laser3::rect" "$laser3::rect" "600" ;
+		}
+
+		onTime +1000 {
+			resettime 0 ;
+		}
+
+	}
+	windowDef back
+	{
+		rect	125,-47,392,475
+		visible	1
+		background	"gfx/guis/maps/waste/lasers_back"
+		matcolor	0.647,0.203,0.0117,1
+	}
+	windowDef bracket
+	{
+		rect	0,-11,640,480
+		visible	1
+		background	"gfx/guis/maps/waste/lasers_bracket"
+		matcolor	0.862,0.266,0.0117,1
+	}
+	windowDef button
+	{
+		rect	162,19,321,124
+		visible	1
+		background	"gfx/guis/maps/waste/lasers_button"
+		matcolor	1,0,0,1
+	}
+	windowDef stripe1a
+	{
+		rect	0,133,92,131
+		visible	1
+		background	"gfx/guis/maps/waste/lasers_stripe"
+		matcolor	1,0,0,1
+	}
+	windowDef stripe2a
+	{
+		rect	0,229,92,131
+		visible	1
+		background	"gfx/guis/maps/waste/lasers_stripe"
+		matcolor	1,0,0,1
+	}
+	windowDef stripe3a
+	{
+		rect	0,325,92,131
+		visible	1
+		background	"gfx/guis/maps/waste/lasers_stripe"
+		matcolor	1,0,0,1
+	}
+	windowDef stripe1b
+	{
+		rect	548,133,92,131
+		visible	1
+		background	"gfx/guis/maps/waste/lasers_stripe"
+		matcolor	1,0,0,1
+		matscalex	-1
+	}
+	windowDef stripe2b
+	{
+		rect	548,229,92,131
+		visible	1
+		background	"gfx/guis/maps/waste/lasers_stripe"
+		matcolor	1,0,0,1
+		matscalex	-1
+	}
+	windowDef stripe3b
+	{
+		rect	548,325,92,131
+		visible	1
+		background	"gfx/guis/maps/waste/lasers_stripe"
+		matcolor	1,0,0,1
+		matscalex	-1
+	}
+	windowDef fade
+	{
+		rect	0,0,640,480
+		visible	1
+		backcolor	0,0,0,0
+	}
+	windowDef t1
+	{
+		rect	195,43,251,70
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200565"
+		textscale	0.6
+		font	"fonts/r_strogg"
+		textalign	1
+		textspacing	2
+	}
+	windowDef block
+	{
+		rect	141,365,70,20
+		visible	1
+		background	"gfx/guis/common/bar1"
+		matcolor	1,0,0,1
+	}
+	windowDef t2
+	{
+		rect	221,361,257,27
+		visible	1
+		forecolor	1,0.521,0.356,1
+		text	"#str_200473"
+		textscale	0.4
+		font	"fonts/r_strogg"
+		textspacing	1
+
+		onTime 0 {
+			set "t2::text" "#str_200473" ;
+		}
+
+		onTime +100 {
+			set "t2::text" "#str_200566" ;
+		}
+
+		onTime +100 {
+			set "t2::text" "#str_200567" ;
+		}
+
+		onTime +100 {
+			set "t2::text" "#str_200568" ;
+		}
+
+		onTime +100 {
+			set "t2::text" "#str_200569" ;
+		}
+
+		onTime +100 {
+			set "t2::text" "#str_200570" ;
+		}
+
+		onTime +800 {
+			resettime 0 ;
+		}
+
+	}
+	windowDef scrolltext2
+	{
+		rect	508,34,103,98
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext2fast"
+		matcolor	1,1,0.5,0.4
+	}
+	windowDef icon1
+	{
+		rect	27,34,103,102
+		visible	1
+		background	"gfx/guis/common/strogg/decal3"
+		matcolor	0,0,0,0.6
+	}
+	windowDef side1_t
+	{
+		rect	106,413,40,40
+		visible	1
+		background	"gfx/guis/common/2pxborder_cornersm"
+		matcolor	0,0,0,0.4
+		matscaley	-1
+	}
+	windowDef side2_t
+	{
+		rect	493,413,40,40
+		visible	1
+		background	"gfx/guis/common/2pxborder_cornersm"
+		matcolor	0,0,0,0.4
+		matscaley	-1
+		matscalex	-1
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	0,-53,640,535
+			background	"gfx/guis/common/monitor_line3"
+			matcolor	1,0.823,0.290,0.576
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,-68,640,576
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.549,0.168,0.101,1
+		}
+		windowDef dirt
+		{
+			visible	1
+			rect	-120,-8,931,490
+			background	"gfx/guis/common/screen_dirt5"
+			matcolor	0.243,0.2,0.145,0.498
+		}
+		windowDef scratches
+		{
+			rect	-70,0,786,481
+			visible	1
+			background	"gfx/guis/common/screen_scratches3"
+			matcolor	0.941,0.756,0.635,0.415
+			matscaley	-1
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef b_button
+	{
+		rect	165,17,312,126
+		visible	1
+
+		onMouseEnter {
+			transition "button::matcolor" "1,0,0,1" "1,0.423,0,1" "0" ;
+			set "t1::forecolor" "0,0,0,1" ;
+		}
+
+		onMouseExit {
+			
+			if ("desktop::clicked" == "0") {
+				transition "button::matcolor" "1,0.423,0,1" "1,0,0,1" "300" ;
+				transition "t1::forecolor" "0,0,0,1" "1,1,1,1" "300" ;
+			}
+		}
+
+		onAction {
+			nonInteractive "1" ;
+			set "cmd" "play guisound_beep2 ; activate ; runscript" "$gui::gui_Parm_script";
+			set "desktop::clicked" "1" ;
+			set "visible" "0" ;
+			
+			resettime "anim" "0" ;
+		}
+
+	}
+	windowDef anim
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 200 {
+			transition "t1::forecolor" "1,1,1,1" "1,1,1,0" "1500" ;	
+			transition "laser1::matcolor" "1,1,0.666,1" "1,1,0.666,0" "1500" ;
+			transition "button::matcolor" "1,0,0,1" "1,0,0,0.6" "1200" ;
+			transition "stripe3a::matcolor" "1,0,0,1" "0.6,0,0,1" "1500" ;
+			transition "stripe3b::matcolor" "1,0,0,1" "0.6,0,0,1" "1500" ;
+			transition "block::matcolor" "1,0,0,1" "0.2,0,0,1" "1500" ;
+		}
+
+		onTime +1500 {
+			transition "laser2::matcolor" "1,1,0.666,1" "1,1,0.666,0" "1500" ;
+			transition "stripe2a::matcolor" "1,0,0,1" "0.6,0,0,1" "1500" ;
+			transition "stripe2b::matcolor" "1,0,0,1" "0.6,0,0,1" "1500" ;
+		}
+
+		onTime +1500 {
+			transition "t2::forecolor" "1,0.521,0.356,1" "1,0.521,0.356,0" "1500" ;
+			transition "laser3::matcolor" "1,1,0.666,1" "1,1,0.666,0" "1500" ;
+			transition "stripe1a::matcolor" "1,0,0,1" "0.6,0,0,1" "1500" ;
+			transition "stripe1b::matcolor" "1,0,0,1" "0.6,0,0,1" "1500" ;
+		}
+
+		onTime +1500 {
+			set "t3::visible" "1" ;
+			transition "blocker::backcolor" "0.152,0.0549,0.0549,1" "0.152,0.0549,0.0549,0" "1200" ;
+		}
+
+		onTime +500 {
+			transition "fade::backcolor" "0,0,0,0" "0,0,0,0.4" "9000" ;
+		}
+
+	}
+	windowDef d_laser1
+	{
+		rect	154,285,335,35
+		visible	0
+		background	"gfx/guis/maps/waste/lasers_laser"
+		matcolor	1,1,0.666,1
+	}
+	windowDef d_laser2
+	{
+		rect	154,214,335,46
+		visible	0
+		background	"gfx/guis/maps/waste/lasers_laser"
+		matcolor	1,1,0.666,1
+	}
+	windowDef d_laser3
+	{
+		rect	154,146,335,52
+		visible	0
+		background	"gfx/guis/maps/waste/lasers_laser"
+		matcolor	1,1,0.666,1
+	}
+}

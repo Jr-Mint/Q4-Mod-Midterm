@@ -1,0 +1,468 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	visible	1
+	comment	"namedevent 'repair' transitions from warning to operational state, namedevent 'broken' transitions from initial state to a broken state."
+
+	onNamedEvent broken {
+		resettime "anim" "0" ;
+	}
+
+	onNamedEvent repair {
+		resettime "anim2" "0" ;
+	}
+
+	windowDef bg
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/track_maint_bg"
+		matcolor	0.235,0.894,0.949,1*guitable_8_10[time*0.001]
+	}
+	windowDef bg2
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/track_maint_bg2"
+		matcolor	0.0313,1,0.458,1
+	}
+	windowDef line1a
+	{
+		rect	158,147,322,70
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/track_maint_line"
+		matcolor	0.235,0.894,0.949,1
+		notime	1
+
+		onTime 0 {
+			transition "line1a::rect" "$line1a::rect" "$d_line1a::rect" "3000" ;
+		}
+
+		onTime +3000 {
+			transition "line1a::rect" "$d_line1a::rect" "$line1a::rect" "3000" ;
+		}
+
+		onTime +3000 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef line2a
+	{
+		rect	158,237,322,69
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/track_maint_line"
+		matcolor	0.235,0.894,0.949,1
+		notime	1
+
+		onTime 0 {
+			transition "line2a::rect" "$line2a::rect" "$d_line2a::rect" "2200" ;
+		}
+
+		onTime +2200 {
+			transition "line2a::rect" "$d_line2a::rect" "$line2a::rect" "2200" ;
+		}
+
+		onTime +2200 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef d_line1a
+	{
+		rect	270,147,322,70
+		visible	0
+		background	"gfx/guis/monitors/strogg/tram/track_maint_line"
+		matcolor	1,0,0,1
+	}
+	windowDef d_line2a
+	{
+		rect	270,237,322,69
+		visible	0
+		background	"gfx/guis/monitors/strogg/tram/track_maint_line"
+		matcolor	1,0,0,1
+	}
+	windowDef scroll
+	{
+		rect	218,393,515,55
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/marquee_btmscroll"
+		matcolor	0.0901,0.266,0.192,1
+	}
+	windowDef scrolltext2
+	{
+		rect	473,3,162,144
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext1"
+		matcolor	0.592,0.976,0.929,.26
+		matscalex	-1
+	}
+	windowDef circle
+	{
+		rect	29,3,40,40
+		visible	1
+		background	"gfx/guis/common/circle5"
+		matcolor	0.0352,1,0.462,1
+		rotate	.08*time
+		matscalex	-1
+	}
+	windowDef title
+	{
+		rect	70,12,391,24
+		visible	1
+		forecolor	0.0313,1,0.458,1
+		text	"#str_200963"
+		textscale	0.36
+		font	"fonts/r_strogg"
+	}
+	windowDef arrow1
+	{
+		rect	167,392,75,75
+		visible	0
+		background	"gfx/guis/common/arrow6"
+		matcolor	1,0.5,0,1*guitable_10_5[time*0.0025]
+		rotate	45
+	}
+	windowDef warning
+	{
+		rect	230,387,403,71
+		visible	0
+		forecolor	1,1,1,1*guitable_10_5[time*0.0025]
+		text	"#str_200266"
+		textscale	1.1
+		font	"fonts/r_strogg"
+
+		onTime 0 {
+			set "text" "#str_200964" ;
+		}
+
+		onTime +2500 {
+			set "text" "#str_200266" ;
+		}
+
+		onTime +2500 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef arrow2
+	{
+		rect	167,392,75,75
+		visible	1
+		background	"gfx/guis/common/arrow6"
+		matcolor	0.0313,1,0.458,1*guitable_8_10[time*0.0025]
+		rotate	45
+		notime	1
+	}
+	windowDef nominal
+	{
+		rect	230,387,403,71
+		visible	1
+		forecolor	1,1,1,1*guitable_8_10[time*0.0025]
+		text	"#str_200965"
+		textscale	1.1
+		font	"fonts/r_strogg"
+		notime	0
+
+		onTime 0 {
+			set "text" "#str_200085" ;
+		}
+
+		onTime +2500 {
+			set "text" "#str_200965" ;
+		}
+
+		onTime +2500 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef gear
+	{
+		rect	-349,-4,480,525
+		visible	1
+		background	"gfx/guis/common/strogg/doorgui_outer_r"
+		matcolor	0.145,0.278,0.215,1
+	}
+	windowDef gear2
+	{
+		rect	-346,-1,480,525
+		visible	1
+		background	"gfx/guis/common/strogg/doorgui_inner_r"
+		matcolor	0.145,0.278,0.215,1
+	}
+	windowDef indicator
+	{
+		rect	40,16,400,400
+		visible	1
+		background	"gfx/guis/common/marine/indicator"
+		matcolor	0,0,0,1
+	}
+	windowDef p_line
+	{
+		rect	347,68,77,75
+		visible	1
+		windowDef line
+		{
+			rect	0,-10,77,151
+			visible	1
+			background	"gfx/guis/monitors/strogg/streamhub/hub1_line"
+			matcolor	1,0.792,0.309,1
+			matscaley	-1
+		}
+	}
+	windowDef line1
+	{
+		rect	350,83,273,36
+		visible	1
+		background	"gfx/guis/monitors/strogg/streamhub/hub5_line1"
+		matcolor	0.2,0.8,1,0.4
+
+		onTime 0 {
+			transition "line1::rect" "$line1::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 100 {
+			transition "line2::rect" "$line2::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 200 {
+			transition "line3::rect" "$line3::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 300 {
+			transition "line4::rect" "$line4::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 1000 {
+			transition "line1::rect" "$d_line::rect" "$line1::rect" "1000" ;
+		}
+
+		onTime 1100 {
+			transition "line2::rect" "$d_line::rect" "$line2::rect" "1000" ;
+		}
+
+		onTime 1200 {
+			transition "line3::rect" "$d_line::rect" "$line3::rect" "1000" ;
+		}
+
+		onTime 1300 {
+			transition "line4::rect" "$d_line::rect" "$line4::rect" "1000" ;
+		}
+
+		onTime 2000 {
+			transition "line1::rect" "$line1::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 2100 {
+			transition "line2::rect" "$line2::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 2200 {
+			transition "line3::rect" "$line3::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 2300 {
+			transition "line4::rect" "$line4::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 3000 {
+			transition "line1::rect" "$d_line::rect" "$line1::rect" "1000" ;
+		}
+
+		onTime 3100 {
+			transition "line2::rect" "$d_line::rect" "$line2::rect" "1000" ;
+		}
+
+		onTime 3200 {
+			transition "line3::rect" "$d_line::rect" "$line3::rect" "1000" ;
+		}
+
+		onTime 3300 {
+			transition "line4::rect" "$d_line::rect" "$line4::rect" "1000" ;
+		}
+
+		onTime 4000 {
+			transition "line1::rect" "$line1::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 4100 {
+			transition "line2::rect" "$line2::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 4200 {
+			transition "line3::rect" "$line3::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 4300 {
+			transition "line4::rect" "$line4::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 5000 {
+			transition "line1::rect" "$d_line::rect" "$line1::rect" "1000" ;
+		}
+
+		onTime 5100 {
+			transition "line2::rect" "$d_line::rect" "$line2::rect" "1000" ;
+		}
+
+		onTime 5200 {
+			transition "line3::rect" "$d_line::rect" "$line3::rect" "1000" ;
+		}
+
+		onTime 5300 {
+			transition "line4::rect" "$d_line::rect" "$line4::rect" "1000" ;
+		}
+
+		onTime 10000 {
+			resetTime "0" ;
+		}
+
+	}
+	windowDef line2
+	{
+		rect	350,83,273,36
+		visible	1
+		background	"gfx/guis/monitors/strogg/streamhub/hub5_line1"
+		matcolor	0.2,0.8,1,0.6
+		matscalex	0.75
+	}
+	windowDef line3
+	{
+		rect	350,83,273,36
+		visible	1
+		background	"gfx/guis/monitors/strogg/streamhub/hub5_line1"
+		matcolor	0.6,1,1,0.8
+		matscalex	0.5
+	}
+	windowDef line4
+	{
+		rect	350,83,273,36
+		visible	1
+		background	"gfx/guis/monitors/strogg/streamhub/hub5_line1"
+		matcolor	1,1,1,0.8
+		matscalex	0.25
+	}
+	windowDef arrow3
+	{
+		rect	386,113,32,32
+		visible	1
+		background	"gfx/guis/common/arrow6"
+		matcolor	0.980,0.376,0.0117,1
+		matscaley	-1
+	}
+	windowDef t_arrow3
+	{
+		rect	417,119,78,19
+		visible	1
+		forecolor	1,1,1,1*guitable_10_5[time*0.0005]
+		text	"84278324"
+		textscale	0.36
+		font	"fonts/strogg"
+	}
+	windowDef d_line
+	{
+		rect	350,69,273,69
+		visible	1
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef static
+		{
+			visible	1
+			rect	0,-106,640,714
+			background	"gfx/guis/common/monitor_line8"
+			matcolor	0,0.384,0.384,1
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,-85,640,568
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.454,0.513,0.545,1
+		}
+		windowDef dirt
+		{
+			visible	1
+			rect	-145,-102,815,588
+			background	"gfx/guis/common/screen_dirt1"
+			matcolor	0.737,0.654,0.545,0.6
+			matscalex	-1
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef anim
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			set "arrow1::visible" "1" ;
+			set "arrow2::visible" "0" ;
+			set "warning::visible" "1" ;
+			set "nominal::visible" "0" ;
+			
+			resettime "arrow1" "0" ;
+			resettime "warning" "0" ;
+			set "arrow2::notime" "0" ;
+			set "nominal::notime" "0" ;
+			stoptransitions "arrow2" ;
+			stoptransitions "nominal" ;
+			
+			transition "indicator::matcolor" "0,0,0,0" "1,0.5,0,1" "500" ;
+			
+			transition "line1a::matcolor" "0.235,0.894,0.949,1" "1,0.5,0,1" "500" ;
+			transition "line2a::matcolor" "0.235,0.894,0.949,1" "1,0.5,0,1" "500" ;
+			
+			resettime "line1a" "0" ;
+			resettime "line2a" "0" ;
+		}
+
+	}
+	windowDef anim2
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			set "arrow1::visible" "0" ;
+			set "arrow2::visible" "1" ;
+			set "warning::visible" "0" ;
+			set "nominal::visible" "1" ;
+			
+			resettime "arrow2" "0" ;
+			resettime "nominal" "0" ;
+			set "arrow1::notime" "1" ;
+			set "warning::notime" "1" ;
+			stoptransitions "arrow1" ;
+			stoptransitions "warning" ;
+			
+			transition "indicator::matcolor" "1,0.5,0,1" "0,0,0,0" "500" ;
+			transition "gear::matcolor" "0.145,0.278,0.215,1" "0.294,0.572,0.443,1" "500" ;
+			transition "gear2::matcolor" "0.145,0.278,0.215,1" "0.294,0.572,0.443,1" "500" ;
+			
+			transition "line1a::matcolor" "1,0.5,0,1" "0.235,0.894,0.949,1" "500" ;
+			transition "line2a::matcolor" "1,0.5,0,1" "0.235,0.894,0.949,1" "500" ;
+			
+			set "line1a::notime" "1" ;
+			set "line2a::notime" "1" ;
+			stoptransitions "line1a" ;
+			stoptransitions "line2a" ;
+			
+			transition "line1a::rect" "$d_line1a::rect" "$line1a::rect" "500" ;
+			transition "line2a::rect" "$d_line2a::rect" "$line2a::rect" "500" ;
+		}
+
+	}
+}

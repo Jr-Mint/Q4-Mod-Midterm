@@ -1,0 +1,331 @@
+windowDef Desktop
+{
+	comment	"gui_parm_strogg changes the writing to unreadable strogg. gui_parm_broken = 1 adds broken glass cracks to the gui."
+	visible	1
+	rect	0,0,640,480
+	backcolor	0.0666,0.0745,0.0509,1
+
+	onInit {
+		if ( "gui::gui_parm_strogg" == 1 ) {
+			set "system_r::visible" "0";
+			set "offline_r::visible" "0";
+			set "system::visible" "1";
+			set "offline::visible" "1";
+		} else {
+			set "system_r::visible" "1";
+			set "offline_r::visible" "1";
+			set "system::visible" "0";
+			set "offline::visible" "0";
+		}
+	}
+
+	windowDef p_warn
+	{
+		rect	0,0,640,480
+		visible	1
+
+		onTime 0 {
+			transition "p_warn::rect" "$p_warn::rect" "$p_warn_a::rect" "50" ;
+		}
+
+		onTime 50 {
+			transition "p_warn::rect" "$p_warn_c::rect" "$p_warn_b::rect" "50" ;
+		}
+
+		onTime 100 {
+			transition "p_warn::rect" "$p_warn_b::rect" "$p_warn::rect" "50" ;
+		}
+
+		onTime 150 {
+			transition "p_warn::rect" "$p_warn_a::rect" "$p_warn_c::rect" "50" ;
+		}
+
+		onTime 200 {
+			transition "p_warn::rect" "$p_warn_b::rect" "$p_warn::rect" "50" ;
+		}
+
+		onTime 250 {
+			transition "p_warn::rect" "$p_warn_b::rect" "$p_warn_a::rect" "50" ;
+		}
+
+		onTime 300 {
+			resettime "0" ;
+		}
+
+		windowDef decal3
+		{
+			rect	418,204,75,75
+			visible	1
+			background	"gfx/guis/common/marine/decal3"
+			matcolor	0.886,0.552,0.105,1
+
+			onTime 0 {
+				transition "matcolor_w" "1" "0.5" "800" ;
+			}
+
+			onTime 800 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef bar7
+		{
+			rect	-85,182,478,120
+			visible	1
+			background	"gfx/guis/monitors/marine/mcc2_parallelogram"
+			matcolor	0.737,0.847,0.388,1
+		}
+		windowDef bar8
+		{
+			rect	500,182,478,119
+			visible	1
+			background	"gfx/guis/monitors/marine/mcc2_parallelogram"
+			matcolor	0.737,0.847,0.388,1
+		}
+		windowDef sys_offline
+		{
+			rect	14,217,328,37
+			visible	1
+			forecolor	0,0,0,1
+			text	"#str_200768"
+			textscale	0.7
+			font	"fonts/marine"
+			textspacing	-1
+		}
+		windowDef topwarn
+		{
+			rect	0,-53,640,120
+			visible	1
+			background	"gfx/guis/common/marine/warnbar1_h"
+			matcolor	0.674,0.427,0.156,1
+
+			onTime 0 {
+				transition "matcolor_w" "1" "0.5" "800" ;
+			}
+
+			onTime 800 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef btmwarn
+		{
+			rect	0,417,640,120
+			visible	1
+			background	"gfx/guis/common/marine/warnbar1_h"
+			matcolor	0.674,0.427,0.156,1
+
+			onTime 0 {
+				transition "matcolor_w" "1" "0.5" "800" ;
+			}
+
+			onTime 800 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef mid2
+		{
+			rect	0,257,640,120
+			visible	1
+			background	"gfx/guis/common/marine/elevcall_bgmid"
+			matcolor	0.737,0.847,0.388,.4
+
+			onTime 0 {
+				transition "mid2::rect" "$mid2::rect" "$d_mid2::rect" "600" ;
+				transition "mid2::matcolor_w" ".6" "0" "600" ;
+			}
+
+			onTime 800 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef d_mid1
+		{
+			rect	0,45,640,120
+			visible	0
+			background	"gfx/guis/common/marine/elevcall_bgmid"
+			matcolor	0.737,0.847,0.388,.4
+			matscaley	-1
+		}
+		windowDef mid1
+		{
+			rect	0,107,640,120
+			visible	1
+			background	"gfx/guis/common/marine/elevcall_bgmid"
+			matcolor	0.737,0.847,0.388,.4
+			matscaley	-1
+
+			onTime 0 {
+				transition "mid1::rect" "$mid1::rect" "$d_mid1::rect" "600" ;
+				transition "mid1::matcolor_w" ".6" "0" "600" ;
+			}
+
+			onTime 800 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef d_mid2
+		{
+			rect	0,320,640,120
+			visible	0
+			background	"gfx/guis/common/marine/elevcall_bgmid"
+			matcolor	0.737,0.847,0.388,.4
+		}
+		windowDef smc_symbol
+		{
+			rect	80,0,460,480
+			visible	1
+			background	"gfx/guis/common/marine/decal4"
+			matcolor	0.933,0.925,0.635,0.12
+		}
+	}
+	windowDef p_warn1
+	{
+		rect	50,-169,640,480
+		visible	0
+	}
+	windowDef p_warn2
+	{
+		rect	-69,79,640,480
+		visible	0
+	}
+	windowDef p_warn3
+	{
+		rect	84,42,640,480
+		visible	0
+	}
+	windowDef p_warn4
+	{
+		rect	-101,-49,640,480
+		visible	0
+	}
+	windowDef p_warn_a
+	{
+		rect	8,-7,640,480
+		visible	0
+	}
+	windowDef p_warn_b
+	{
+		rect	-7,8,640,480
+		visible	0
+	}
+	windowDef p_warn_c
+	{
+		rect	-4,-7,640,480
+		visible	0
+	}
+	windowDef anims
+	{
+		visible	1
+		rect	0,0,1,1
+
+		onTime 0 {
+			transition "p_warn::rect" "$p_warn::rect" "$p_warn2::rect" "50" ;
+		}
+
+		onTime 100 {
+			transition "p_warn::rect" "$p_warn::rect" "$p_warn1::rect" "50" ;
+		}
+
+		onTime 150 {
+			transition "p_warn::rect" "$p_warn2::rect" "$p_warn4::rect" "50" ;
+		}
+
+		onTime 200 {
+			transition "p_warn::rect" "$p_warn1::rect" "$p_warn3::rect" "50" ;
+		}
+
+		onTime 250 {
+			transition "p_warn::rect" "$p_warn4::rect" "$p_warn::rect" "50" ;
+		}
+
+		onTime 300 {
+			transition "p_warn::rect" "$p_warn1::rect" "$p_warn2::rect" "50" ;
+		}
+
+		onTime 350 {
+			transition "p_warn::rect" "$p_warn3::rect" "$p_warn4::rect" "50" ;
+		}
+
+		onTime 400 {
+			transition "p_warn::rect" "$p_warn2::rect" "$p_warn3::rect" "50" ;
+		}
+
+		onTime 450 {
+			transition "p_warn::rect" "$p_warn4::rect" "$p_warn::rect" "50" ;
+		}
+
+		onTime 5000 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline1
+		{
+			visible	1
+			rect	0,-498,640,1361
+			background	"gfx/guis/common/monitor_line7"
+			matcolor	0.666,0.721,0.505,0.0392
+		}
+		windowDef static2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/img_static3"
+			matcolor	0.894,0.917,0.815,0.6
+		}
+		windowDef static3
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/img_static4"
+			matcolor	0.894,0.917,0.815,0.4
+			matscalex	-1
+		}
+		windowDef static1
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/static2"
+			matcolor	0.847,0.882,0.756,0.24
+			matscalex	-1
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	-16,-25,667,514
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.258,0.266,0.133,1
+		}
+		windowDef monitor_darkedge
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+		windowDef broken_glass_b
+		{
+			visible	"gui::gui_parm_broken"
+			rect	-1,5,640,480
+			background	"gfx/guis/common/broken_glass1"
+			matcolor	0,0,0,1
+			matscaley	-1
+		}
+		windowDef broken_glass
+		{
+			visible	"gui::gui_parm_broken"
+			rect	0,0,640,480
+			background	"gfx/guis/common/broken_glass1"
+			matcolor	0.925,0.890,0.807,1
+			matscaley	-1
+		}
+	}
+}

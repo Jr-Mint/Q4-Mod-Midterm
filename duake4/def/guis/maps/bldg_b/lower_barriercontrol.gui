@@ -1,0 +1,895 @@
+windowDef Desktop
+{
+	visible	1
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	float	"active"	0
+	windowDef mon
+	{
+		rect	35,-41,290,464
+		visible	1
+		background	"gfx/guis/maps/bldg_b/lowbctrl_mon"
+		matcolor	0.415,0.396,0.349,1
+	}
+	windowDef u_arrows
+	{
+		rect	31,-288,301,769
+		visible	1
+		background	"gfx/guis/common/strogg/dn_arrow_scroll"
+		matcolor	0.525,0.662,0.701,0.12
+	}
+	windowDef line1
+	{
+		rect	389,129,195,167
+		visible	1
+		background	"gfx/guis/monitors/strogg/streamhub/hub5_line1"
+		matcolor	0.2,0.8,1,0
+
+		onTime 0 {
+			transition "line1::rect" "$line1::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 100 {
+			transition "line2::rect" "$line2::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 200 {
+			transition "line3::rect" "$line3::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 300 {
+			transition "line4::rect" "$line4::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 1000 {
+			transition "line1::rect" "$d_line::rect" "$line1::rect" "1000" ;
+		}
+
+		onTime 1100 {
+			transition "line2::rect" "$d_line::rect" "$line2::rect" "1000" ;
+		}
+
+		onTime 1200 {
+			transition "line3::rect" "$d_line::rect" "$line3::rect" "1000" ;
+		}
+
+		onTime 1300 {
+			transition "line4::rect" "$d_line::rect" "$line4::rect" "1000" ;
+		}
+
+		onTime 2000 {
+			transition "line1::rect" "$line1::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 2100 {
+			transition "line2::rect" "$line2::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 2200 {
+			transition "line3::rect" "$line3::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 2300 {
+			transition "line4::rect" "$line4::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 3000 {
+			transition "line1::rect" "$d_line::rect" "$line1::rect" "1000" ;
+		}
+
+		onTime 3100 {
+			transition "line2::rect" "$d_line::rect" "$line2::rect" "1000" ;
+		}
+
+		onTime 3200 {
+			transition "line3::rect" "$d_line::rect" "$line3::rect" "1000" ;
+		}
+
+		onTime 3300 {
+			transition "line4::rect" "$d_line::rect" "$line4::rect" "1000" ;
+		}
+
+		onTime 4000 {
+			transition "line1::rect" "$line1::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 4100 {
+			transition "line2::rect" "$line2::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 4200 {
+			transition "line3::rect" "$line3::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 4300 {
+			transition "line4::rect" "$line4::rect" "$d_line::rect" "1000" ;
+		}
+
+		onTime 5000 {
+			transition "line1::rect" "$d_line::rect" "$line1::rect" "1000" ;
+		}
+
+		onTime 5100 {
+			transition "line2::rect" "$d_line::rect" "$line2::rect" "1000" ;
+		}
+
+		onTime 5200 {
+			transition "line3::rect" "$d_line::rect" "$line3::rect" "1000" ;
+		}
+
+		onTime 5300 {
+			transition "line4::rect" "$d_line::rect" "$line4::rect" "1000" ;
+		}
+
+		onTime 10000 {
+			resetTime "0" ;
+		}
+
+	}
+	windowDef line2
+	{
+		rect	389,129,195,167
+		visible	1
+		background	"gfx/guis/monitors/strogg/streamhub/hub5_line1"
+		matcolor	0.2,0.8,1,0
+		matscalex	0.75
+	}
+	windowDef line3
+	{
+		rect	389,129,195,167
+		visible	1
+		background	"gfx/guis/monitors/strogg/streamhub/hub5_line1"
+		matcolor	0.6,1,1,0
+		matscalex	0.5
+	}
+	windowDef line4
+	{
+		rect	389,129,195,167
+		visible	1
+		background	"gfx/guis/monitors/strogg/streamhub/hub5_line1"
+		matcolor	1,1,1,0
+		matscalex	0.25
+	}
+	windowDef d_line
+	{
+		rect	389,83,194,257
+		visible	0
+	}
+	windowDef bg
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/maps/bldg_b/lowbctrl_bg"
+		matcolor	0.737,0.521,0.227,1
+	}
+	windowDef arrow
+	{
+		rect	382,31,208,407
+		visible	1
+		background	"gfx/guis/maps/bldg_b/lowbctrl_arrow"
+		matcolor	1,0.419,0,1
+	}
+	windowDef circle_r
+	{
+		rect	292,41,56,56
+		visible	1
+		background	"gfx/guis/common/circle5"
+		matcolor	0.678,0.823,0.905,.8
+		rotate	.08*time
+		matscalex	-1
+	}
+	windowDef circle_l
+	{
+		rect	13,41,56,56
+		visible	1
+		background	"gfx/guis/common/circle5"
+		matcolor	0.678,0.823,0.905,.8
+		rotate	-.08*time
+	}
+	windowDef decal
+	{
+		rect	561,387,74,78
+		visible	1
+		background	"gfx/guis/common/strogg/decal3"
+		matcolor	0,0,0,.8
+	}
+	windowDef p_square
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef box_tl
+		{
+			rect	385,183,20,20
+			visible	1
+			background	"gfx/guis/common/2pxborder_cornersm"
+			matcolor	0.956,0.984,0.823,.6
+		}
+		windowDef box_tr
+		{
+			rect	567,183,20,20
+			visible	1
+			background	"gfx/guis/common/2pxborder_cornersm"
+			matcolor	0.956,0.984,0.823,.6
+			matscalex	-1
+		}
+		windowDef box_bl
+		{
+			rect	385,246,20,20
+			visible	1
+			background	"gfx/guis/common/2pxborder_cornersm"
+			matcolor	0.956,0.984,0.823,.6
+			matscaley	-1
+		}
+		windowDef box_br
+		{
+			rect	567,246,20,20
+			visible	1
+			background	"gfx/guis/common/2pxborder_cornersm"
+			matcolor	0.956,0.984,0.823,.6
+			matscalex	-1
+			matscaley	-1
+		}
+		windowDef box_t
+		{
+			rect	405,183,162,20
+			visible	1
+			background	"gfx/guis/common/2pxborder_horiz"
+			matcolor	0.956,0.984,0.823,.6
+			matscaley	-1
+		}
+		windowDef box_b
+		{
+			rect	405,246,162,20
+			visible	1
+			background	"gfx/guis/common/2pxborder_horiz"
+			matcolor	0.956,0.984,0.823,.6
+		}
+		windowDef box_l
+		{
+			rect	385,203,20,43
+			visible	1
+			background	"gfx/guis/common/2pxborder_vert"
+			matcolor	0.956,0.984,0.823,.6
+		}
+		windowDef box_r
+		{
+			rect	567,203,20,43
+			visible	1
+			background	"gfx/guis/common/2pxborder_vert"
+			matcolor	0.956,0.984,0.823,.6
+			matscalex	-1
+		}
+		windowDef d_box_tl
+		{
+			rect	385,68,20,20
+			visible	0
+			background	"gfx/guis/common/2pxborder_cornersm"
+			matcolor	0.956,0.984,0.823,.6
+		}
+		windowDef d_box_tr
+		{
+			rect	567,68,20,20
+			visible	0
+			background	"gfx/guis/common/2pxborder_cornersm"
+			matcolor	0.956,0.984,0.823,.6
+			matscalex	-1
+		}
+		windowDef d_box_bl
+		{
+			rect	385,336,20,20
+			visible	0
+			background	"gfx/guis/common/2pxborder_cornersm"
+			matcolor	0.956,0.984,0.823,.6
+			matscaley	-1
+		}
+		windowDef d_box_br
+		{
+			rect	567,336,20,20
+			visible	0
+			background	"gfx/guis/common/2pxborder_cornersm"
+			matcolor	0.956,0.984,0.823,.6
+			matscalex	-1
+			matscaley	-1
+		}
+		windowDef d_box_t
+		{
+			rect	405,68,162,20
+			visible	0
+			background	"gfx/guis/common/2pxborder_horiz"
+			matcolor	0.956,0.984,0.823,.6
+			matscaley	-1
+		}
+		windowDef d_box_b
+		{
+			rect	405,336,162,20
+			visible	0
+			background	"gfx/guis/common/2pxborder_horiz"
+			matcolor	0.956,0.984,0.823,.6
+		}
+		windowDef d_box_l
+		{
+			rect	385,88,20,248
+			visible	0
+			background	"gfx/guis/common/2pxborder_vert"
+			matcolor	0.956,0.984,0.823,.6
+		}
+		windowDef d_box_r
+		{
+			rect	567,88,20,248
+			visible	0
+			background	"gfx/guis/common/2pxborder_vert"
+			matcolor	0.956,0.984,0.823,.6
+			matscalex	-1
+		}
+	}
+	windowDef system_status
+	{
+		rect	387,39,196,26
+		visible	1
+		forecolor	1,0.960,0.509,0
+		text	"system status"
+		textscale	0.64
+		font	"fonts/strogg"
+		textalign	1
+	}
+	windowDef lower
+	{
+		rect	394,198,182,54
+		visible	1
+		forecolor	1,1,1,1*guitable_10_5[time*0.001]
+		text	"lower"
+		textscale	1.4
+		font	"fonts/strogg"
+		textalign	1
+	}
+	windowDef t_num1a
+	{
+		rect	394,85,196,18
+		visible	0
+		forecolor	0.686,0.784,0.811,.8
+		text	"power grid 2"
+		textscale	0.4
+		font	"fonts/strogg"
+	}
+	windowDef t_num1
+	{
+		rect	394,103,185,58
+		visible	0
+		forecolor	1,1,1,.6
+		text	834.32
+		textscale	1.4
+		font	"fonts/strogg"
+
+		onTime 0 {
+			set "text" "834.32" ;
+		}
+
+		onTime +100 {
+			set "text" "527.64" ;
+		}
+
+		onTime +100 {
+			set "text" "698.30" ;
+		}
+
+		onTime +100 {
+			set "text" "932.78" ;
+		}
+
+		onTime +100 {
+			set "text" "404.26" ;
+		}
+
+		onTime +100 {
+			set "text" "368.45" ;
+		}
+
+		onTime +100 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef t_num2a
+	{
+		rect	394,178,196,18
+		visible	0
+		forecolor	0.686,0.784,0.811,.8
+		text	"ambient flux"
+		textscale	0.4
+		font	"fonts/strogg"
+	}
+	windowDef t_num2
+	{
+		rect	394,198,185,58
+		visible	0
+		forecolor	1,1,1,.4
+		text	602.57
+		textscale	1.4
+		font	"fonts/strogg"
+
+		onTime 0 {
+			set "text" "602.57" ;
+		}
+
+		onTime +150 {
+			set "text" "257.46" ;
+		}
+
+		onTime +150 {
+			set "text" "968.03" ;
+		}
+
+		onTime +150 {
+			set "text" "392.87" ;
+		}
+
+		onTime +150 {
+			set "text" "440.62" ;
+		}
+
+		onTime +150 {
+			set "text" "638.54" ;
+		}
+
+		onTime +150 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef t_num3a
+	{
+		rect	394,269,196,18
+		visible	0
+		forecolor	0.686,0.784,0.811,.8
+		text	"dist capacitors"
+		textscale	0.4
+		font	"fonts/strogg"
+	}
+	windowDef t_num3
+	{
+		rect	394,288,185,58
+		visible	0
+		forecolor	1,1,1,.2
+		text	438.60
+		textscale	1.4
+		font	"fonts/strogg"
+
+		onTime 0 {
+			set "text" "438.60" ;
+		}
+
+		onTime +200 {
+			set "text" "257.46" ;
+		}
+
+		onTime +200 {
+			set "text" "968.03" ;
+		}
+
+		onTime +200 {
+			set "text" "392.87" ;
+		}
+
+		onTime +200 {
+			set "text" "440.62" ;
+		}
+
+		onTime +200 {
+			set "text" "638.54" ;
+		}
+
+		onTime +200 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef t_arrow
+	{
+		rect	37,385,50,55
+		visible	1
+		background	"gfx/guis/common/arrow7"
+		matcolor	0.678,0.823,0.905,.8
+	}
+	windowDef d_bar1
+	{
+		rect	90,386,113,16
+		visible	0
+		background	"gfx/guis/common/bar1"
+		matcolor	0.976,0.4,0.0156,1
+	}
+	windowDef t_bar1
+	{
+		rect	90,386,155,16
+		visible	1
+		background	"gfx/guis/common/bar1"
+		matcolor	0.976,0.4,0.0156,1
+		notime	1
+
+		onTime 0 {
+			transition "t_bar1::rect" "$t_bar1::rect" "$d_bar1::rect" "700" ;
+		}
+
+		onTime +700 {
+			transition "t_bar1::rect" "$d_bar1::rect" "$t_bar1::rect" "700" ;
+		}
+
+		onTime +1400 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef d_bar2
+	{
+		rect	90,404,62,16
+		visible	0
+		background	"gfx/guis/common/bar1"
+		matcolor	0.976,0.4,0.0156,1
+	}
+	windowDef t_bar2
+	{
+		rect	90,404,155,16
+		visible	1
+		background	"gfx/guis/common/bar1"
+		matcolor	0.976,0.4,0.0156,1
+		notime	1
+
+		onTime 0 {
+			transition "t_bar2::rect" "$t_bar2::rect" "$d_bar2::rect" "2300" ;
+		}
+
+		onTime +2300 {
+			transition "t_bar2::rect" "$d_bar2::rect" "$t_bar2::rect" "2300" ;
+		}
+
+		onTime +4600 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef d_bar3
+	{
+		rect	90,422,86,16
+		visible	0
+		background	"gfx/guis/common/bar1"
+		matcolor	0.976,0.4,0.0156,1
+	}
+	windowDef t_bar3
+	{
+		rect	90,422,155,16
+		visible	1
+		background	"gfx/guis/common/bar1"
+		matcolor	0.976,0.4,0.0156,1
+		notime	1
+
+		onTime 0 {
+			transition "t_bar3::rect" "$t_bar3::rect" "$d_bar3::rect" "1500" ;
+		}
+
+		onTime +1500 {
+			transition "t_bar3::rect" "$d_bar3::rect" "$t_bar3::rect" "1500" ;
+		}
+
+		onTime +3000 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef t_proc1
+	{
+		rect	243,387,78,19
+		visible	1
+		forecolor	1,1,1,1
+		text	84278.324
+		textscale	0.36
+		font	"fonts/strogg"
+		notime	1
+
+		onTime 0 {
+			set "text" "84278.324" ;
+		}
+
+		onTime +200 {
+			set "text" "43536.832" ;
+		}
+
+		onTime +200 {
+			set "text" "76245.003" ;
+		}
+
+		onTime +200 {
+			set "text" "57452.659" ;
+		}
+
+		onTime +200 {
+			set "text" "35945.202" ;
+		}
+
+		onTime +200 {
+			set "text" "94320.953" ;
+		}
+
+		onTime +200 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef t_proc2
+	{
+		rect	243,404,78,19
+		visible	1
+		forecolor	1,1,1,1
+		text	43536.832
+		textscale	0.36
+		font	"fonts/strogg"
+		notime	1
+
+		onTime 0 {
+			set "text" "84278.324" ;
+		}
+
+		onTime +50 {
+			set "text" "43536.832" ;
+		}
+
+		onTime +50 {
+			set "text" "76245.003" ;
+		}
+
+		onTime +50 {
+			set "text" "57452.659" ;
+		}
+
+		onTime +50 {
+			set "text" "35945.202" ;
+		}
+
+		onTime +50 {
+			set "text" "94320.953" ;
+		}
+
+		onTime +50 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef t_proc3
+	{
+		rect	243,421,78,19
+		visible	1
+		forecolor	1,1,1,1
+		text	76245.003
+		textscale	0.36
+		font	"fonts/strogg"
+		notime	1
+
+		onTime 0 {
+			set "text" "84278.324" ;
+		}
+
+		onTime +500 {
+			set "text" "43536.832" ;
+		}
+
+		onTime +500 {
+			set "text" "76245.003" ;
+		}
+
+		onTime +500 {
+			set "text" "57452.659" ;
+		}
+
+		onTime +500 {
+			set "text" "35945.202" ;
+		}
+
+		onTime +500 {
+			set "text" "94320.953" ;
+		}
+
+		onTime +500 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef monarrow_l
+	{
+		rect	-10,79,100,100
+		visible	1
+		background	"gfx/guis/common/arrow6"
+		matcolor	0.678,0.823,0.905,0
+		rotate	45
+		notime	1
+
+		onTime 0 {
+			transition "monarrow_l::rect" "$monarrow_l::rect" "$d_monarrow_l::rect" "300" ;
+			transition "monarrow_l::matcolor_w" "0" "1" "300" ;
+		}
+
+		onTime +300 {
+			transition "monarrow_l::matcolor_w" "1" "0" "100" ;
+		}
+
+		onTime +300 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef monarrow_r
+	{
+		rect	272,79,100,100
+		visible	1
+		background	"gfx/guis/common/arrow6"
+		matcolor	0.678,0.823,0.905,0
+		rotate	315
+		notime	1
+
+		onTime 0 {
+			transition "monarrow_r::rect" "$monarrow_r::rect" "$d_monarrow_r::rect" "300" ;
+			transition "monarrow_r::matcolor_w" "0" "1" "300" ;
+		}
+
+		onTime +300 {
+			transition "monarrow_r::matcolor_w" "1" "0" "100" ;
+		}
+
+		onTime +300 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef d_monarrow_l
+	{
+		rect	98,252,60,100
+		visible	0
+		background	"gfx/guis/common/arrow6"
+		matcolor	0.678,0.823,0.905,.8
+		rotate	45
+	}
+	windowDef d_monarrow_r
+	{
+		rect	198,252,60,100
+		visible	0
+		background	"gfx/guis/common/arrow6"
+		matcolor	0.678,0.823,0.905,.8
+		rotate	315
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	0,-108,640,647
+			background	"gfx/guis/common/monitor_line8"
+			matcolor	0.560,0.560,0.560,1
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,0,640,612
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.556,0.521,0.435,1
+			matscaley	-1
+		}
+		windowDef dirt
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/screen_dirt1"
+			matcolor	0.803,0.745,0.560,0.6
+		}
+		windowDef broken_glass_b
+		{
+			visible	"gui::gui_parm_broken"
+			rect	-37,-59,678,598
+			background	"gfx/guis/common/broken_glass2"
+			matcolor	0,0,0,1
+		}
+		windowDef broken_glass
+		{
+			visible	"gui::gui_parm_broken"
+			rect	-34,-61,678,598
+			background	"gfx/guis/common/broken_glass2"
+			matcolor	0.8,0.917,0.847,1
+		}
+		windowDef dirt_stroyent
+		{
+			rect	0,-31,722,512
+			visible	"gui::gui_parm_stroyent"
+			background	"gfx/guis/common/screen_dirt5"
+			matcolor	0.674,0.701,0.341,1
+		}
+		windowDef blackedge
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef anim
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "box_tl::rect" "$box_tl::rect" "$d_box_tl::rect" "250" ;
+			transition "box_tr::rect" "$box_tr::rect" "$d_box_tr::rect" "250" ;
+			transition "box_bl::rect" "$box_bl::rect" "$d_box_bl::rect" "250" ;
+			transition "box_br::rect" "$box_br::rect" "$d_box_br::rect" "250" ;
+			transition "box_t::rect" "$box_t::rect" "$d_box_t::rect" "250" ;
+			transition "box_b::rect" "$box_b::rect" "$d_box_b::rect" "250" ;
+			transition "box_l::rect" "$box_l::rect" "$d_box_l::rect" "250" ;
+			transition "box_r::rect" "$box_r::rect" "$d_box_r::rect" "250" ;
+			
+			transition "mon::matcolor" "0.415,0.396,0.349,1" "0.415,0.615,0.635,1" "500" ;
+			transition "u_arrows::matcolor_w" ".12" "0" "250" ;
+			
+			
+			transition "arrow::matcolor" "1,0.749,0,1" "1,0.419,0,0" "250" ;
+		}
+
+		onTime +250 {
+			transition "system_status::forecolor_w" "0" "1" "250" ;
+			
+			transition "line1::matcolor_w" "0" "0.15" "250" ;
+			transition "line2::matcolor_w" "0" "0.15" "250" ;
+			transition "line3::matcolor_w" "0" "0.3" "250" ;
+			transition "line4::matcolor_w" "0" "0.3" "250" ;
+			
+			resettime "t_bar1" "0" ;
+			resettime "t_bar2" "0" ;
+			resettime "t_bar3" "0" ;
+			resettime "t_proc1" "0" ;
+			resettime "t_proc2" "0" ;
+			resettime "t_proc3" "0" ;
+			
+			set "t_num1::visible" "1" ;
+			set "t_num1a::visible" "1" ;	
+		}
+
+		onTime +50 {
+			set "t_num2::visible" "1" ;
+			set "t_num2a::visible" "1" ;
+		}
+
+		onTime +50 {
+			set "t_num3::visible" "1" ;
+			set "t_num3a::visible" "1" ;
+			
+			resettime "monarrow_l" "0" ;
+			resettime "monarrow_r" "0" ;
+		}
+
+	}
+	windowDef button
+	{
+		rect	372,26,230,427
+		visible	1
+
+		onMouseEnter {
+			if ("desktop::active" == 0) {
+				set "arrow::matcolor" "1,0.749,0,1" ;
+			}
+		}
+
+		onMouseExit {
+			if ("desktop::active" == 0) {
+				transition "arrow::matcolor" "1,0.749,0,1" "1,0.419,0,1" "250" ;
+			}
+		}
+
+		onAction {
+			if ("desktop::active" == 0) {
+			set "desktop::active" "1" ;
+			set "lower::visible" "0" ;
+			set "button::visible" "0" ;
+			resettime "anim" "0" ;
+			set "cmd" "play guisound_beep2 ; runscript" "$gui::gui_Parm1" ;
+			}	
+		}
+
+	}
+}

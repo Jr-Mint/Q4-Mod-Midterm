@@ -1,0 +1,147 @@
+windowDef Desktop
+{
+	comment	"gui_parm_broken = 1 adds broken glass cracks to the gui, gui_parm_stroyent = 1 adds stroyent junk on the screen"
+	visible	1
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	windowDef bg
+	{
+		visible	1
+		rect	0,0,640,480
+		background	"gfx/guis/monitors/strogg/common6_bg"
+		matcolor	0.580,0.360,0.0392,1*guitable_8_10[time*0.0006]
+	}
+	windowDef data
+	{
+		visible	1
+		rect	42,51,555,346
+		background	"gfx/guis/common/strogg/data_b"
+		matcolor	1,1,1,0.1
+		shear	0,.14
+	}
+	windowDef decal
+	{
+		rect	124,3,400,400
+		visible	1
+		background	"gfx/guis/common/strogg/decal"
+		matcolor	1,1,1,.1*guitable_8_10[time*0.0008]
+	}
+	windowDef edge
+	{
+		visible	1
+		rect	2,-3,640,480
+		background	"gfx/guis/monitors/strogg/common6_edge"
+		matcolor	0.827,0.490,0.0392,1*guitable_8_10[time*0.0004]
+		shear	0,.14
+	}
+	windowDef btn1
+	{
+		visible	1
+		rect	378,379,253,70
+		background	"gfx/guis/monitors/strogg/common6_btn"
+		matcolor	0.976,0.4,0.0156,0.8
+		shear	0,.14
+	}
+	windowDef btn2
+	{
+		visible	1
+		rect	224,379,253,70
+		background	"gfx/guis/monitors/strogg/common6_btn"
+		matcolor	0.976,0.4,0.0156,0.8
+		shear	0,.14
+	}
+	windowDef btn3
+	{
+		visible	1
+		rect	71,379,253,70
+		background	"gfx/guis/monitors/strogg/common6_btn"
+		matcolor	0.976,0.4,0.0156,0.8
+		shear	0,.14
+	}
+	windowDef t_top
+	{
+		rect	48,27,173,36
+		visible	1
+		forecolor	0,0,0,1
+		text	"system 42"
+		textscale	0.78
+		font	"fonts/strogg"
+	}
+	windowDef t_btn1
+	{
+		rect	134,402,125,25
+		visible	1
+		forecolor	0,0,0,0.717
+		text	"login 46"
+		textscale	0.6
+		font	"fonts/strogg"
+	}
+	windowDef t_btn2
+	{
+		rect	289,402,119,25
+		visible	1
+		forecolor	0,0,0,0.717
+		text	"exec sys"
+		textscale	0.6
+		font	"fonts/strogg"
+	}
+	windowDef t_btn3
+	{
+		rect	448,402,115,25
+		visible	1
+		forecolor	0,0,0,0.717
+		text	"command"
+		textscale	0.6
+		font	"fonts/strogg"
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	1,-101,640,680
+			background	"gfx/guis/common/monitor_line3"
+			matcolor	0.972,0.741,0.321,0.2
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	-50,-37,741,563
+			background	"gfx/guis/common/gradient"
+			matcolor	0.576,0.788,0.858,0.26*guitable_8_10[time*0.001]
+		}
+		windowDef dirt_stroyent
+		{
+			visible	"gui::gui_parm_stroyent"
+			rect	0,0,640,480
+			background	"gfx/guis/common/screen_dirt6"
+			matcolor	0.411,0.447,0.164,.8
+			matscalex	-1
+		}
+		windowDef broken_glass_b
+		{
+			visible	"gui::gui_parm_broken"
+			rect	-1,5,640,480
+			background	"gfx/guis/common/broken_glass3"
+			matcolor	0,0,0,1
+			matscaley	-1
+		}
+		windowDef broken_glass
+		{
+			visible	"gui::gui_parm_broken"
+			rect	0,0,640,480
+			background	"gfx/guis/common/broken_glass3"
+			matcolor	0.819,0.905,0.921,1
+			matscaley	-1
+		}
+		windowDef monitor_darkedge
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+}

@@ -1,0 +1,194 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	visible	1
+	windowDef p_all
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef unnamed
+		{
+			rect	0,0,640,480
+			visible	0
+			background	"gfx/guis/test/marquee7"
+			matcolor	1,1,1,1*guitable_random1[time*0.0004]
+		}
+		windowDef bg
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/monitors/strogg/tram/directional_offline_bg"
+			matcolor	1,1,1,1*guitable_10_5[time*0.0014]
+		}
+		windowDef arrow1
+		{
+			rect	47,56,228,134
+			visible	1
+			background	"gfx/guis/monitors/strogg/tram/directional_arrow"
+			matcolor	1,.25,0,.5*guitable_10_5[time*0.0014]
+		}
+		windowDef arrow2
+		{
+			rect	26,116,267,184
+			visible	1
+			background	"gfx/guis/monitors/strogg/tram/directional_arrow"
+			matcolor	1,.25,0,.5*guitable_10_5[time*0.0014]
+		}
+		windowDef arrow3
+		{
+			rect	2,205,312,228
+			visible	1
+			background	"gfx/guis/monitors/strogg/tram/directional_arrow"
+			matcolor	1,.25,0,.5*guitable_10_5[time*0.0014]
+		}
+		windowDef top_text
+		{
+			rect	202,40,410,180
+			visible	1
+			forecolor	0.850,0.574,0,1*guitable_10_5[time*0.0014]
+			text	"#str_200889"
+			textscale	2
+			font	"fonts/r_strogg"
+			forceaspectheight	300
+		}
+		windowDef btm_text
+		{
+			rect	97,133,507,239
+			visible	1
+			forecolor	0.850,0.574,0,1*guitable_10_5[time*0.0014]
+			text	"#str_200402"
+			textscale	2.08
+			font	"fonts/r_strogg"
+			forceaspectheight	300
+		}
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef static
+		{
+			visible	1
+			rect	0,-87,640,659
+			background	"gfx/guis/common/static1"
+			matcolor	1,0.784,0.384,0.4
+		}
+		windowDef dirt
+		{
+			visible	1
+			rect	-211,-50,1209,544
+			background	"gfx/guis/common/screen_dirt5"
+			matcolor	0.686,0.580,0.352,1
+			matscalex	-1
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+		windowDef flicker
+		{
+			rect	0,0,640,480
+			visible	1
+			backcolor	1,0.411,0.243,0
+
+			onTime 0 {
+				set "backcolor_w" "0.2" ;
+				set "p_all::rect" "$p_all1::rect" ;
+			}
+
+			onTime +50 {
+				set "backcolor_w" "0.0" ;
+				set "p_all::rect" "$p_all0::rect" ;
+			}
+
+			onTime +500 {
+				set "backcolor_w" "0.4" ;
+				set "p_all::rect" "$p_all2::rect" ;
+			}
+
+			onTime +50 {
+				set "backcolor_w" "0.0" ;
+				set "p_all::rect" "$p_all0::rect" ;
+			}
+
+			onTime +50 {
+				set "backcolor_w" "0.2" ;
+				set "p_all::rect" "$p_all3::rect" ;
+			}
+
+			onTime +100 {
+				set "backcolor_w" "0.4" ;
+				set "p_all::rect" "$p_all4::rect" ;
+			}
+
+			onTime +50 {
+				set "backcolor_w" "0.0" ;
+				set "p_all::rect" "$p_all0::rect" ;
+			}
+
+			onTime +800 {
+				set "backcolor_w" "0.2" ;
+				set "p_all::rect" "$p_all2::rect" ;
+			}
+
+			onTime +50 {
+				set "backcolor_w" "0.0" ;
+				set "p_all::rect" "$p_all0::rect" ;
+			}
+
+			onTime +200 {
+				set "backcolor_w" "0.2" ;
+				set "p_all::rect" "$p_all1::rect" ;
+			}
+
+			onTime +50 {
+				set "backcolor_w" "0.0" ;
+				set "p_all::rect" "$p_all0::rect" ;
+			}
+
+			onTime +50 {
+				set "backcolor_w" "0.2" ;
+				set "p_all::rect" "$p_all3::rect" ;
+			}
+
+			onTime +50 {
+				set "backcolor_w" "0.0" ;
+				set "p_all::rect" "$p_all0::rect" ;
+			}
+
+			onTime +5000 {
+				resettime "0" ;
+			}
+
+		}
+	}
+	windowDef p_all0
+	{
+		rect	0,0,640,480
+		visible	0
+	}
+	windowDef p_all1
+	{
+		rect	36,-25,640,480
+		visible	0
+	}
+	windowDef p_all2
+	{
+		rect	-39,35,640,480
+		visible	0
+	}
+	windowDef p_all3
+	{
+		rect	44,13,640,480
+		visible	0
+	}
+	windowDef p_all4
+	{
+		rect	-17,-24,640,480
+		visible	0
+	}
+}

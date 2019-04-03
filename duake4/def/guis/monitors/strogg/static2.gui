@@ -1,0 +1,68 @@
+windowDef Desktop
+{
+	comment	"gui_parm_broken = 1 adds broken glass cracks to the gui."
+	visible	1
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.478,0.368,0.196,1
+		}
+		windowDef sline1
+		{
+			visible	1
+			rect	0,-111,640,717
+			background	"gfx/guis/common/monitor_line7"
+			matcolor	0.890,0.615,0.341,0.06
+		}
+		windowDef static1
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/static1"
+			matcolor	0.760,1,0.749,0.24
+		}
+		windowDef static2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/img_static3"
+			matcolor	0.713,0.474,0.396,0.4
+		}
+		windowDef glow3
+		{
+			visible	1
+			rect	0,0,640,474
+			background	"gfx/guis/common/monitor_glow3"
+			matcolor	0.592,0.203,0.0901,.7
+		}
+		windowDef broken_glass_b
+		{
+			visible	"gui::gui_parm_broken"
+			rect	2,6,640,480
+			background	"gfx/guis/common/broken_glass4"
+			matcolor	0,0,0,1
+		}
+		windowDef broken_glass
+		{
+			visible	"gui::gui_parm_broken"
+			rect	0,0,640,480
+			background	"gfx/guis/common/broken_glass4"
+			matcolor	0.819,0.905,0.921,1
+		}
+		windowDef monitor_darkedge
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+}

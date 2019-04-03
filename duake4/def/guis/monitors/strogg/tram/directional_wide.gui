@@ -1,0 +1,135 @@
+windowDef Desktop
+{
+	comment	"gui_parm_text_lf value sets the left directions' text, gui_parm_text_rt value sets the right directions' text."
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	visible	1
+	windowDef bg
+	{
+		rect	0,0,640,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/directional_wide_bg"
+		matcolor	1,1,1,1*guitable_8_10[time*0.0006]
+	}
+	windowDef unnamed
+	{
+		rect	0,0,640,480
+		visible	0
+		background	"gfx/guis/test/marquee3"
+		matcolor	1,1,1,1
+	}
+	windowDef left_arrow
+	{
+		rect	9,174,39,239
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/directional_wide_arrow"
+		matcolor	0.921,0.643,0.0784,1*guitable_8_10[time*0.0006]
+	}
+	windowDef right_arrow
+	{
+		rect	586,174,39,239
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/directional_wide_arrow"
+		matcolor	0.921,0.643,0.0784,1*guitable_8_10[time*0.0006]
+		matscalex	-1
+	}
+	windowDef scroll1
+	{
+		rect	-729,0,2088,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/marquee_scroll1"
+		matcolor	0.368,0.286,0.101,1
+	}
+	windowDef scroll2
+	{
+		rect	-728,0,2088,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/tram/marquee_scroll2"
+		matcolor	0.509,0.388,0.223,1
+	}
+	windowDef header
+	{
+		rect	0,0,640,480
+		visible	1
+		forecolor	0.921,0.643,0.0784,1*guitable_8_10[time*0.0006]
+		text	"#str_200869"
+		textscale	0.2
+		font	"fonts/r_strogg"
+		forceaspectheight	80
+		textalign	1
+		textalignx	20
+		textaligny	-1
+	}
+	windowDef right_text
+	{
+		rect	0,0,585,480
+		visible	1
+		forecolor	0.921,0.643,0.0784,1*guitable_8_10[time*0.0006]
+		text	"gui::gui_parm_text_rt"
+		textscale	0.6
+		font	"fonts/r_strogg"
+		forceaspectheight	80
+		textalign	2
+		textaligny	28
+	}
+	windowDef right_text2
+	{
+		rect	0,0,576,480
+		visible	1
+		forecolor	0.921,0.643,0.0784,.2*guitable_8_10[time*0.0006]
+		text	"gui::gui_parm_text_rt"
+		textscale	1
+		font	"fonts/strogg"
+		forceaspectheight	80
+		textalign	2
+		textaligny	27
+	}
+	windowDef left_text
+	{
+		rect	50,0,590,480
+		visible	1
+		forecolor	0.921,0.643,0.0784,1*guitable_8_10[time*0.0006]
+		text	"gui::gui_parm_text_lf"
+		textscale	0.6
+		font	"fonts/r_strogg"
+		forceaspectheight	80
+		textaligny	28
+	}
+	windowDef left_text2
+	{
+		rect	51,0,589,480
+		visible	1
+		forecolor	0.921,0.643,0.0784,.2*guitable_8_10[time*0.0006]
+		text	"gui::gui_parm_text_lf"
+		textscale	1
+		font	"fonts/strogg"
+		forceaspectheight	80
+		textaligny	27
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef static
+		{
+			visible	1
+			rect	0,-100,640,662
+			background	"gfx/guis/common/static3"
+			matcolor	1,0.976,0.690,0.12
+		}
+		windowDef dirt
+		{
+			visible	1
+			rect	0,-563,640,1123
+			background	"gfx/guis/common/screen_dirt8"
+			matcolor	0.494,0.427,0.329,0.68
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+}

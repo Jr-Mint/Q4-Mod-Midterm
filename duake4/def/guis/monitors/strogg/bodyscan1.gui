@@ -1,0 +1,590 @@
+windowDef Desktop
+{
+	comment	"gui_parm_broken = 1 adds broken glass cracks to the gui, gui_parm_stroyent = 1 adds stroyent junk on the screen"
+	visible	1
+	rect	0,0,640,480
+	backcolor	0.0549,0.101,0.0431,1
+	definevec4	"body"	0.854,0.639,0.137,0.68
+	definevec4	"body_0"	0.854,0.639,0.137,0
+	definevec4	"skel"	0.894,0.811,0.552,1
+	definevec4	"skel_0"	0.894,0.811,0.552,0
+	definevec4	"grey"	0.745,0.745,0.745,1
+	definevec4	"grey_0"	0.745,0.745,0.745,0
+	windowDef l_bg
+	{
+		rect	0,0,320,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/bodyscan1_bg"
+		matcolor	1,1,1,1*guitable_8_10[time*.0004]
+		matscalex	-1
+	}
+	windowDef r_bg
+	{
+		rect	320,0,320,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/bodyscan1_bg"
+		matcolor	1,1,1,1*guitable_8_10[time*.0004]
+	}
+	windowDef color_grad
+	{
+		visible	1
+		rect	-13,114,677,424
+		background	"gfx/guis/common/gradient"
+		matcolor	0.501,1,1,0.14*guitable_10_5[time*.2]
+		matscaley	-1
+	}
+	windowDef gear
+	{
+		rect	80,0,480,480
+		visible	1
+		background	"gfx/guis/common/strogg/gear1"
+		matcolor	0.541,0.690,0.776,.4*guitable_8_10[time*.004]
+		rotate	.05*time
+	}
+	windowDef l_piece
+	{
+		rect	-68,5,220,330
+		visible	1
+		background	"gfx/guis/common/strogg/sq1"
+		matcolor	0.541,0.690,0.776,0.6*guitable_8_10[time*.0008]
+		shear	0,-.2
+	}
+	windowDef r_piece
+	{
+		rect	500,145,220,330
+		visible	1
+		background	"gfx/guis/common/strogg/sq1"
+		matcolor	0.541,0.690,0.776,0.6*guitable_8_10[time*.0008]
+		shear	0,-.2
+	}
+	windowDef r_gradient
+	{
+		visible	1
+		rect	432,-98,247,688
+		background	"gfx/guis/common/gradient2"
+		matcolor	0,0,0,1
+	}
+	windowDef l_gradient
+	{
+		visible	1
+		rect	-37,-96,247,688
+		background	"gfx/guis/common/gradient2"
+		matcolor	0,0,0,1
+		matscalex	-1
+	}
+	windowDef title
+	{
+		rect	18,315,90,62
+		visible	1
+		forecolor	0.498,0.498,0.498,1
+		text	"bio-scan module 3b-gx64"
+		textscale	0.45
+		font	"fonts/strogg"
+		textalign	2
+	}
+	windowDef p_ekg
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef ekg
+		{
+			rect	140,353,127,68
+			visible	1
+			background	"gfx/guis/common/ekg1"
+			matcolor	0.501,0.501,0.501,1
+		}
+		windowDef waveform
+		{
+			rect	140,371,127,43
+			visible	1
+			background	"gfx/guis/common/waveform1fast"
+			matcolor	0.992,0.784,0.4,0.4
+		}
+		windowDef bpm
+		{
+			rect	194,413,44,23
+			visible	1
+			forecolor	0.501,0.501,0.501,1
+			text	bpm
+			textscale	0.5
+			font	"fonts/strogg"
+		}
+		windowDef num
+		{
+			rect	235,406,43,28
+			visible	1
+			forecolor	0.752,0.752,0.752,1
+			text	"76"
+			textscale	0.7
+			font	"fonts/strogg"
+
+			onTime 0 {
+				set "text" "76" ;
+			}
+
+			onTime 1200 {
+				set "text" "74" ;
+			}
+
+			onTime 4300 {
+				set "text" "72" ;
+			}
+
+			onTime 6700 {
+				set "text" "79" ;
+			}
+
+			onTime 8400 {
+				set "text" "81" ;
+			}
+
+			onTime 11200 {
+				set "text" "77" ;
+			}
+
+			onTime 15000 {
+				resettime "0" ;
+			}
+
+		}
+		windowDef d_ekg
+		{
+			rect	140,290,332,147
+			visible	0
+			background	"gfx/guis/common/ekg1"
+			matcolor	0.501,0.501,0.501,1
+		}
+		windowDef d_waveform
+		{
+			rect	140,329,332,93
+			visible	0
+			background	"gfx/guis/common/waveform1fast"
+			matcolor	0.992,0.784,0.4,0.4
+		}
+		windowDef d_bpm
+		{
+			rect	384,413,44,23
+			visible	0
+			forecolor	0.501,0.501,0.501,1
+			text	bpm
+			textscale	0.5
+			font	"fonts/strogg"
+		}
+		windowDef d_num
+		{
+			rect	426,406,43,28
+			visible	0
+			forecolor	0.752,0.752,0.752,1
+			text	"76"
+			textscale	0.7
+			font	"fonts/strogg"
+		}
+	}
+	windowDef p_body
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef front_skull
+		{
+			rect	187,44,280,280
+			visible	1
+			background	"gfx/guis/common/skull_front"
+			matcolor	0.894,0.811,0.552,0
+			matscalex	-1
+		}
+		windowDef side_skull
+		{
+			rect	187,44,280,280
+			visible	1
+			background	"gfx/guis/common/skull_side"
+			matcolor	0.894,0.811,0.552,0
+			matscalex	-1
+		}
+		windowDef front_skel
+		{
+			rect	104,20,440,440
+			visible	1
+			background	"gfx/guis/common/front_skeleton"
+			matcolor	0.894,0.811,0.552,1
+			matscalex	-1
+		}
+		windowDef front
+		{
+			rect	104,20,440,440
+			visible	1
+			background	"gfx/guis/common/body_front"
+			matcolor	0.854,0.639,0.137,0.68
+			matscalex	-1
+		}
+		windowDef side_skel
+		{
+			rect	266,20,110,440
+			visible	1
+			background	"gfx/guis/common/side_skeleton"
+			matcolor	0.894,0.811,0.552,0
+			matscalex	-1
+		}
+		windowDef side
+		{
+			rect	263,20,110,440
+			visible	1
+			background	"gfx/guis/common/body_side"
+			matcolor	0.854,0.639,0.137,0
+			matscalex	-1
+		}
+		windowDef blur
+		{
+			rect	104,20,440,440
+			visible	1
+			background	"gfx/guis/common/body_blur"
+			matcolor	0.894,0.811,0.552,0
+			matscalex	-1
+		}
+		windowDef d_blur
+		{
+			rect	175,20,282,440
+			visible	0
+		}
+		windowDef d_side_skel
+		{
+			rect	140,44,434,1741
+			visible	0
+		}
+		windowDef d_side
+		{
+			rect	128,44,434,1741
+			visible	0
+		}
+		windowDef d_front_skel
+		{
+			rect	-623,29,1920,1920
+			visible	0
+		}
+		windowDef d_front
+		{
+			rect	-623,29,1920,1920
+			visible	0
+		}
+		windowDef l_edge
+		{
+			rect	85,19,149,444
+			visible	1
+			background	"gfx/guis/monitors/strogg/bodyscan1_edge"
+			matcolor	0.901,0.694,0.0823,1*guitable_8_10[time*.0008]
+		}
+		windowDef r_edge
+		{
+			rect	416,19,149,444
+			visible	1
+			background	"gfx/guis/monitors/strogg/bodyscan1_edge"
+			matcolor	0.901,0.694,0.0823,1*guitable_8_10[time*.0008]
+			rotate	180
+		}
+		windowDef d_l_edge
+		{
+			rect	133,19,149,444
+			visible	0
+			background	"gfx/guis/monitors/strogg/bodyscan1_edge"
+			matcolor	0.843,0.619,0.156,1
+		}
+		windowDef d_r_edge
+		{
+			rect	365,19,149,444
+			visible	0
+			background	"gfx/guis/monitors/strogg/bodyscan1_edge"
+			matcolor	0.839,0.615,0.152,1
+			rotate	180
+		}
+	}
+	windowDef scrolltext1
+	{
+		rect	14,39,119,264
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext1fast"
+		matcolor	0.752,0.752,0.752,.68
+		shear	0,-.2
+		matscalex	-1
+	}
+	windowDef scrolltext2
+	{
+		rect	516,181,119,264
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext2"
+		matcolor	0.752,0.752,0.752,.68
+		shear	0,-.2
+	}
+	windowDef decal
+	{
+		rect	546,142,91,23
+		visible	1
+		background	"gfx/guis/common/strogg/decal2"
+		matcolor	0.752,0.752,0.752,.4
+		shear	0,-.24
+		matscalex	-1
+	}
+	windowDef p_front_details
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef front_sidetext1
+		{
+			rect	210,45,105,64
+			visible	1
+			background	"gfx/guis/common/smalltext1"
+			matcolor	0.752,0.752,0.752,1
+			shear	0,-.24
+			matscalex	-1
+		}
+		windowDef front_sidetext2
+		{
+			rect	412,73,83,96
+			visible	1
+			background	"gfx/guis/common/smalltext2"
+			matcolor	0.749,0.749,0.749,1
+			shear	0,-.24
+		}
+		windowDef front_sidetext3
+		{
+			rect	182,251,120,69
+			visible	1
+			background	"gfx/guis/common/smalltext3"
+			matcolor	0.749,0.749,0.749,1
+			shear	0,-.24
+			matscalex	-1
+		}
+	}
+	windowDef p_side_details
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef side_sidetext1
+		{
+			rect	316,149,109,67
+			visible	1
+			background	"gfx/guis/common/smalltext1"
+			matcolor	0.749,0.749,0.749,0
+			shear	0,-.24
+		}
+		windowDef side_sidetext2
+		{
+			rect	230,80,83,66
+			visible	1
+			background	"gfx/guis/common/smalltext3"
+			matcolor	0.745,0.745,0.745,0
+			shear	0,-.24
+			matscalex	-1
+		}
+		windowDef side_sidetext3
+		{
+			rect	248,340,90,115
+			visible	1
+			background	"gfx/guis/common/smalltext2"
+			matcolor	0.745,0.745,0.745,0
+			shear	0,-.24
+			matscalex	-1
+		}
+	}
+	windowDef p_sideskull_details
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef sideskull_sidetext1
+		{
+			rect	332,228,119,77
+			visible	1
+			background	"gfx/guis/common/smalltext1"
+			matcolor	0.749,0.749,0.749,0
+			shear	0,-.24
+		}
+		windowDef sideskull_sidetext2
+		{
+			rect	174,100,96,72
+			visible	1
+			background	"gfx/guis/common/smalltext3"
+			matcolor	0.745,0.745,0.745,0
+			shear	0,-.24
+			matscalex	-1
+		}
+	}
+	windowDef p_frontskull_details
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef frontskull_sidetext1
+		{
+			rect	162,180,144,88
+			visible	1
+			background	"gfx/guis/common/smalltext1"
+			matcolor	0.749,0.749,0.749,0
+			shear	0,-.24
+			matscalex	-1
+		}
+		windowDef frontskull_sidetext2
+		{
+			rect	360,69,133,89
+			visible	1
+			background	"gfx/guis/common/smalltext3"
+			matcolor	0.741,0.741,0.741,0
+			shear	0,-.24
+		}
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	2,-97,640,751
+			background	"gfx/guis/common/monitor_line7"
+			matcolor	0.811,0.858,0.862,0.032
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_reflect"
+			matcolor	0.470,0.705,0.678,.2
+		}
+		windowDef dirt_stroyent
+		{
+			visible	"gui::gui_parm_stroyent"
+			rect	0,-38,640,519
+			background	"gfx/guis/common/screen_dirt5"
+			matcolor	0.458,0.494,0.239,1
+		}
+		windowDef broken_glass_b
+		{
+			visible	"gui::gui_parm_broken"
+			rect	-2,4,640,480
+			background	"gfx/guis/common/broken_glass3"
+			matcolor	0,0,0,1
+			matscalex	-1
+		}
+		windowDef broken_glass
+		{
+			visible	"gui::gui_parm_broken"
+			rect	0,0,640,480
+			background	"gfx/guis/common/broken_glass3"
+			matcolor	0.823,0.909,0.925,1
+			matscalex	-1
+		}
+		windowDef monitor_darkedge
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef anim_body
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	0
+
+		onTime 0 {
+			transition "front::matcolor" "$desktop::body" "$desktop::body_0" "2000" ;
+		}
+
+		onTime 3000 {
+			transition "front_sidetext1::matcolor" "$desktop::grey" "$desktop::grey_0" "200" ;
+			transition "front_sidetext2::matcolor" "$desktop::grey" "$desktop::grey_0" "200" ;
+			transition "front_sidetext3::matcolor" "$desktop::grey" "$desktop::grey_0" "200" ;
+			
+			transition "front_skel::matcolor" "$desktop::skel" "$desktop::skel_0" "200" ;
+			transition "blur::matcolor" "$desktop::skel_0" "$desktop::skel" "200" ;
+		}
+
+		onTime 3200 {
+			transition "side_sidetext1::matcolor" "$desktop::grey_0" "$desktop::grey" "200" ;
+			transition "side_sidetext2::matcolor" "$desktop::grey_0" "$desktop::grey" "200" ;
+			transition "side_sidetext3::matcolor" "$desktop::grey_0" "$desktop::grey" "200" ;
+			
+			transition "side_skel::matcolor" "$desktop::skel_0" "$desktop::skel" "200" ;
+			transition "blur::matcolor" "$desktop::skel" "$desktop::skel_0" "200" ;
+		}
+
+		onTime 3300 {
+			transition "l_edge::rect" "$l_edge::rect" "$d_l_edge::rect" "100" ;
+			transition "r_edge::rect" "$r_edge::rect" "$d_r_edge::rect" "100" ;
+			
+			set "p_ekg::visible" "0" ;
+		}
+
+		onTime 3400 {
+			transition "side::matcolor" "$desktop::body_0" "$desktop::body" "2000" ;
+		}
+
+		onTime 7300 {
+			transition "l_edge::rect" "$d_l_edge::rect" "$l_edge::rect" "100" ;
+			transition "r_edge::rect" "$d_r_edge::rect" "$r_edge::rect" "100" ;
+			
+			set "p_ekg::visible" "1" ;
+			transition "ekg::rect" "$ekg::rect" "$d_ekg::rect" "100" ;
+			transition "waveform::rect" "$waveform::rect" "$d_waveform::rect" "100" ;
+			transition "bpm::rect" "$bpm::rect" "$d_bpm::rect" "100" ;
+			transition "num::rect" "$num::rect" "$d_num::rect" "100" ;
+		}
+
+		onTime 7400 {
+			transition "side_sidetext1::matcolor" "$desktop::grey" "$desktop::grey_0" "200" ;
+			transition "side_sidetext2::matcolor" "$desktop::grey" "$desktop::grey_0" "200" ;
+			transition "side_sidetext3::matcolor" "$desktop::grey" "$desktop::grey_0" "200" ;
+			
+			transition "side::rect" "$side::rect" "$d_side::rect" "200" ;
+			transition "side_skel::rect" "$side_skel::rect" "$d_side_skel::rect" "200" ;
+			
+			transition "side::matcolor" "$desktop::body" "$desktop::body_0" "200" ;
+			transition "side_skel::matcolor" "$desktop::skel" "$desktop::skel_0" "200" ;
+		}
+
+		onTime 7600 {
+			transition "sideskull_sidetext1::matcolor" "$desktop::grey_0" "$desktop::grey" "200" ;
+			transition "sideskull_sidetext2::matcolor" "$desktop::grey_0" "$desktop::grey" "200" ;
+			
+			transition "side_skull::matcolor" "$desktop::skel_0" "$desktop::skel" "200" ;
+		}
+
+		onTime 10000 {
+			transition "side_skull::matcolor" "$desktop::skel" "$desktop::skel_0" "200" ;
+			transition "front_skull::matcolor" "$desktop::skel_0" "$desktop::skel" "200" ;
+			
+			transition "sideskull_sidetext1::matcolor" "$desktop::grey" "$desktop::grey_0" "200" ;
+			transition "sideskull_sidetext2::matcolor" "$desktop::grey" "$desktop::grey_0" "200" ;
+			
+			transition "frontskull_sidetext1::matcolor" "$desktop::grey_0" "$desktop::grey" "200" ;
+			transition "frontskull_sidetext2::matcolor" "$desktop::grey_0" "$desktop::grey" "200" ;
+		}
+
+		onTime 12800 {
+			transition "front_skull::matcolor" "$desktop::skel" "$desktop::skel_0" "200" ;
+			
+			transition "frontskull_sidetext1::matcolor" "$desktop::grey" "$desktop::grey_0" "200" ;
+			transition "frontskull_sidetext2::matcolor" "$desktop::grey" "$desktop::grey_0" "200" ;
+		}
+
+		onTime 13000 {
+			transition "front_sidetext1::matcolor" "$desktop::grey_0" "$desktop::grey" "200" ;
+			transition "front_sidetext2::matcolor" "$desktop::grey_0" "$desktop::grey" "200" ;
+			
+			transition "ekg::rect" "$d_ekg::rect" "$ekg::rect" "100" ;
+			transition "waveform::rect" "$d_waveform::rect" "$waveform::rect" "100" ;
+			transition "bpm::rect" "$d_bpm::rect" "$bpm::rect" "100" ;
+			transition "num::rect" "$d_num::rect" "$num::rect" "100" ;
+			
+			transition "front::rect" "$d_front::rect" "$front::rect" "200" ;
+			transition "front_skel::rect" "$d_front_skel::rect" "$front_skel::rect" "200" ;
+			
+			transition "front::matcolor" "$desktop::body_0" "$desktop::body" "200" ;
+			transition "front_skel::matcolor" "$desktop::skel_0" "$desktop::skel" "200" ;
+		}
+
+		onTime 15000 {
+			set "side_skel::rect" "266,20,110,440" ;
+			set "side::rect" "263,20,110,440" ;
+			resettime "0" ;
+		}
+
+	}
+}

@@ -1,0 +1,410 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	definevec4	"rot_glow_on"	1,0.8,0.1,1
+	definevec4	"rot_glow_off"	0.862,0.529,0.0784,1
+	definevec4	"arrow_on"	0.2,0.8,1,1
+	definevec4	"arrow_off"	0.0509,0.690,1,0.7
+	float	"rotposition"	0
+
+	onNamedEvent disable {
+		set "button_l::visible" "0" ;
+		set "button_r::visible" "0" ;
+	}
+
+	onNamedEvent enable {
+		set "button_l::visible" "1" ;
+		set "button_r::visible" "1" ;
+	}
+
+	windowDef bg
+	{
+		rect	0,226,650,283
+		visible	1
+		background	"gfx/guis/maps/process2/nodecontroller_bg"
+		matcolor	0,0.662,0.984,1
+	}
+	windowDef bg1
+	{
+		rect	0,-28,651,291
+		visible	1
+		background	"gfx/guis/maps/process2/nodecontroller_bg"
+		matcolor	0,0.501,0.752,1
+		matscaley	-1
+	}
+	windowDef rotate_L
+	{
+		rect	8,3,324,477
+		visible	1
+		background	"gfx/guis/maps/process2/nodecontroller_rotate_outer"
+		matcolor	0.862,0.529,0.0784,1
+	}
+	windowDef rotate_R
+	{
+		rect	312,3,324,477
+		visible	1
+		background	"gfx/guis/maps/process2/nodecontroller_rotate_outer"
+		matcolor	0.862,0.529,0.0784,1
+		matscalex	-1
+	}
+	windowDef left_thing
+	{
+		rect	-20,-4,97,489
+		visible	1
+		background	"gfx/guis/maps/process2/nodecontroller_right2"
+		matcolor	0.172,0.521,0.780,1
+		matscalex	-1
+	}
+	windowDef right_thing
+	{
+		rect	566,-4,97,489
+		visible	1
+		background	"gfx/guis/maps/process2/nodecontroller_right2"
+		matcolor	0.168,0.517,0.776,1
+	}
+	windowDef innerRotate
+	{
+		rect	172,91,300,300
+		visible	1
+		windowDef lil_180
+		{
+			rect	7,134,15,33
+			visible	1
+			background	"gfx/guis/maps/process2/nodecontroller_lil_triangle"
+			matcolor	0,1,1,1
+		}
+		windowDef lil_0
+		{
+			rect	276,134,15,33
+			visible	1
+			background	"gfx/guis/maps/process2/nodecontroller_lil_triangle"
+			matcolor	0,1,1,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef lil_90
+		{
+			rect	133,8,32,15
+			visible	1
+			background	"gfx/guis/maps/process2/nodecontroller_lil_triangle2"
+			matcolor	0,1,1,1
+		}
+		windowDef lil_270
+		{
+			rect	133,277,32,15
+			visible	1
+			background	"gfx/guis/maps/process2/nodecontroller_lil_triangle2"
+			matcolor	0,1,1,1
+			matscalex	-1
+			matscaley	-1
+		}
+		windowDef arc_UL
+		{
+			rect	49,47,98,99
+			visible	1
+			background	"gfx/guis/maps/process2/nodecontroller_outer_arc"
+			matcolor	0,1,1,1
+		}
+		windowDef arc_LL
+		{
+			rect	49,154,98,99
+			visible	1
+			background	"gfx/guis/maps/process2/nodecontroller_outer_arc"
+			matcolor	0,1,1,1
+			matscaley	-1
+		}
+		windowDef arc_LR
+		{
+			rect	153,154,98,99
+			visible	1
+			background	"gfx/guis/maps/process2/nodecontroller_outer_arc"
+			matcolor	0,1,1,1
+			matscaley	-1
+			matscalex	-1
+		}
+		windowDef arc_UR
+		{
+			rect	153,47,98,99
+			visible	1
+			background	"gfx/guis/maps/process2/nodecontroller_outer_arc"
+			matcolor	0,1,1,1
+			matscalex	-1
+		}
+		windowDef inner_UL
+		{
+			rect	55,54,98,99
+			visible	1
+			background	"gfx/guis/maps/process2/nodecontroller_inner_arc"
+			matcolor	0,0.501,1,1
+		}
+		windowDef inner_UR
+		{
+			rect	148,54,98,99
+			visible	1
+			background	"gfx/guis/maps/process2/nodecontroller_inner_arc"
+			matcolor	0,0.501,1,1
+			matscalex	-1
+		}
+		windowDef inner_LR
+		{
+			rect	148,149,98,99
+			visible	1
+			background	"gfx/guis/maps/process2/nodecontroller_inner_arc"
+			matcolor	0,0.501,1,1
+			matscalex	-1
+			matscaley	-1
+		}
+		windowDef inner_LL
+		{
+			rect	55,148,98,99
+			visible	1
+			background	"gfx/guis/maps/process2/nodecontroller_inner_arc"
+			matcolor	0,0.501,1,1
+			matscaley	-1
+		}
+		windowDef elbow
+		{
+			rect	117,116,67,67
+			visible	1
+			background	"gfx/guis/maps/process2/nodecontroller_elbow"
+			matcolor	0,1,1,1
+			matscalex	-1
+			matscaley	-1
+		}
+		windowDef rotate_inner_L_up
+		{
+			rect	-28,-47,195,199
+			visible	1
+			background	"gfx/guis/maps/process2/nodecontroller_rotate_inner"
+			matcolor	0.858,0.525,0.0745,1
+		}
+		windowDef rotate_inner_L_down
+		{
+			rect	-28,150,195,199
+			visible	1
+			background	"gfx/guis/maps/process2/nodecontroller_rotate_inner"
+			matcolor	0.854,0.521,0.0705,1
+			matscaley	-1
+		}
+		windowDef rotate_inner_R_up
+		{
+			rect	134,-47,195,199
+			visible	1
+			background	"gfx/guis/maps/process2/nodecontroller_rotate_inner"
+			matcolor	0.847,0.513,0.0627,1
+			matscalex	-1
+		}
+		windowDef rotate_inner_R_down
+		{
+			rect	134,150,195,199
+			visible	1
+			background	"gfx/guis/maps/process2/nodecontroller_rotate_inner"
+			matcolor	0.843,0.509,0.0588,1
+			matscalex	-1
+			matscaley	-1
+		}
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	0,-104,640,647
+			background	"gfx/guis/common/monitor_line6"
+			matcolor	0.988,1,0.882,.1
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,-10,640,592
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.556,0.521,0.435,1
+			matscaley	-1
+		}
+		windowDef scratches
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/screen_scratches5"
+			matcolor	0.725,0.850,0.819,0.4
+		}
+		windowDef blackedge
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef anim_elbow_cw
+	{
+		rect	0,0,0,0
+		visible	1
+		notime	1
+
+		onTime 0 {
+			if ("desktop::rotposition" == 0)
+			{
+				// transition rotates don't work right now
+				transition "innerRotate::rotate" "0" "-90" "1000" "300" "300" ;
+				//set "innerRotate::rotate" "-90" ;
+				set "desktop::rotposition" "1" ;
+			}
+			else if ("desktop::rotposition" == 1)
+			{
+				transition "innerRotate::rotate" "-90" "-180" "1000" "300" "300" ;
+				//set "innerRotate::rotate" "-180" ;
+				set "desktop::rotposition" "2" ;
+			}
+			else if ("desktop::rotposition" == 2)
+			{
+				transition "innerRotate::rotate" "-180" "-270" "1000" "300" "300" ;
+				//set "innerRotate::rotate" "-270" ;
+				set "desktop::rotposition" "3" ;
+			}
+			else if ("desktop::rotposition" == 3)
+			{
+				transition "innerRotate::rotate" "-270" "-360" "1000" "300" "300" ;
+				//set "innerRotate::rotate" "-360" ;
+				set "desktop::rotposition" "0" ;
+			}
+		}
+
+		onTime +300 {
+			set "anim_inner::notime" "1" ;
+			transition "rotate_inner_L_up::matcolor" "$desktop::rot_glow_on" "$desktop::rot_glow_off" "800" ;
+			transition "rotate_inner_L_down::matcolor" "$desktop::rot_glow_on" "$desktop::rot_glow_off" "800" ;
+			transition "rotate_inner_R_up::matcolor" "$desktop::rot_glow_on" "$desktop::rot_glow_off" "800" ;
+			transition "rotate_inner_R_down::matcolor" "$desktop::rot_glow_on" "$desktop::rot_glow_off" "800" ;
+		}
+
+		onTime +1000 {
+			set "button_l::visible" "1" ;
+			set "button_r::visible" "1" ;
+		}
+
+	}
+	windowDef anim_elbow_ccw
+	{
+		rect	0,0,0,0
+		visible	1
+		notime	1
+
+		onTime 0 {
+			if ("desktop::rotposition" == 0)
+			{
+				// transition rotates don't work right now
+				transition "innerRotate::rotate" "0" "90" "1000" "300" "300" ;
+				//set "innerRotate::rotate" "90" ;
+				set "desktop::rotposition" "3" ;
+			}
+			else if ("desktop::rotposition" == 1)
+			{
+				transition "innerRotate::rotate" "270" "360" "1000" "300" "300" ;
+				//set "innerRotate::rotate" "360" ;
+				set "desktop::rotposition" "0" ;
+			}
+			else if ("desktop::rotposition" == 2)
+			{
+				transition "innerRotate::rotate" "180" "270" "1000" "300" "300" ;
+				//set "innerRotate::rotate" "270" ;
+				set "desktop::rotposition" "1" ;
+			}
+			else if ("desktop::rotposition" == 3)
+			{
+				transition "innerRotate::rotate" "90" "180" "1000" "300" "300" ;
+				//set "innerRotate::rotate" "180" ;
+				set "desktop::rotposition" "2" ;
+			}
+		}
+
+		onTime +300 {
+			set "anim_inner::notime" "1" ;
+			transition "rotate_inner_L_up::matcolor" "$desktop::rot_glow_on" "$desktop::rot_glow_off" "800" ;
+			transition "rotate_inner_L_down::matcolor" "$desktop::rot_glow_on" "$desktop::rot_glow_off" "800" ;
+			transition "rotate_inner_R_up::matcolor" "$desktop::rot_glow_on" "$desktop::rot_glow_off" "800" ;
+			transition "rotate_inner_R_down::matcolor" "$desktop::rot_glow_on" "$desktop::rot_glow_off" "800" ;
+		}
+
+		onTime +1000 {
+			set "button_l::visible" "1" ;
+			set "button_r::visible" "1" ;
+		}
+
+	}
+	windowDef anim_inner
+	{
+		rect	0,0,0,0
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "rotate_inner_L_up::matcolor" "$desktop::rot_glow_on" "$desktop::rot_glow_off" "800" ;
+			transition "rotate_inner_L_down::matcolor" "$desktop::rot_glow_on" "$desktop::rot_glow_off" "800" ;
+			transition "rotate_inner_R_up::matcolor" "$desktop::rot_glow_on" "$desktop::rot_glow_off" "800" ;
+			transition "rotate_inner_R_down::matcolor" "$desktop::rot_glow_on" "$desktop::rot_glow_off" "800" ;
+		}
+
+		onTime 800 {
+			transition "rotate_inner_L_up::matcolor" "$desktop::rot_glow_off" "$desktop::rot_glow_on" "800" ;
+			transition "rotate_inner_L_down::matcolor" "$desktop::rot_glow_off" "$desktop::rot_glow_on" "800" ;
+			transition "rotate_inner_R_up::matcolor" "$desktop::rot_glow_off" "$desktop::rot_glow_on" "800" ;
+			transition "rotate_inner_R_down::matcolor" "$desktop::rot_glow_off" "$desktop::rot_glow_on" "800" ;
+		}
+
+		onTime 1600 {
+			resettime "anim_inner" "0" ;
+		}
+
+	}
+	windowDef button_l
+	{
+		rect	79,37,131,407
+		visible	1
+
+		onMouseEnter {
+			transition "rotate_L::matcolor" "$desktop::rot_glow_off" "$desktop::rot_glow_on" "200" ;
+		}
+
+		onMouseExit {
+			transition "rotate_L::matcolor" "$desktop::rot_glow_on" "$desktop::rot_glow_off" "200" ;
+		}
+
+		onAction {
+			resettime "anim_elbow_cw" "0" ;
+			resettime "anim_inner" "0" ;
+			
+			set "button_l::visible" "0" ;
+			set "button_r::visible" "0" ;
+			
+			set "cmd" "play guisound_beep2 ; runscript" "$gui::gui_parm_script_right_button" ;
+		}
+
+	}
+	windowDef button_r
+	{
+		rect	431,37,131,407
+		visible	1
+
+		onMouseEnter {
+			transition "rotate_R::matcolor" "$desktop::rot_glow_off" "$desktop::rot_glow_on" "200" ;
+		}
+
+		onMouseExit {
+			transition "rotate_R::matcolor" "$desktop::rot_glow_on" "$desktop::rot_glow_off" "200"
+		}
+
+		onAction {
+			resettime "anim_elbow_ccw" "0" ;
+			resettime "anim_inner" "0" ;
+			
+			set "button_l::visible" "0" ;
+			set "button_r::visible" "0" ;
+			
+			set "cmd" "play guisound_beep2 ; runscript" "$gui::gui_parm_script_left_button" ;
+		}
+
+	}
+}

@@ -1,0 +1,334 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	backcolor	0,0,0,1
+	visible	1
+	definevec4	"arrow_4"	0.827,0.937,0.713,.4
+	definevec4	"arrow_8"	0.827,0.937,0.713,.8
+	definevec4	"grey_4"	0.5,0.5,0.5,.4
+	definevec4	"grey_8"	0.5,0.5,0.5,.8
+	windowDef temp
+	{
+		rect	0,0,640,480
+		visible	0
+		background	"gfx/guis/test/elevcall"
+		matcolor	0.482,0.537,0.427,1
+	}
+	windowDef decal
+	{
+		rect	56,9,526,325
+		visible	1
+		background	"gfx/guis/common/marine/decal1"
+		matcolor	0.874,0.870,0.709,.2
+	}
+	windowDef leftarrow2
+	{
+		rect	8,12,319,143
+		visible	1
+		background	"gfx/guis/common/marine/elevcall_arrow2"
+		matcolor	0.827,0.937,0.713,.4
+	}
+	windowDef leftarrow
+	{
+		rect	8,97,319,149
+		visible	1
+		background	"gfx/guis/common/marine/elevcall_arrow"
+		matcolor	0.827,0.937,0.713,.8
+	}
+	windowDef m_leftarrow
+	{
+		rect	8,97,319,149
+		visible	1
+		background	"gfx/guis/common/marine/elevcall_arrow"
+		matcolor	0.827,0.937,0.713,0
+		notime	0
+
+		onTime 0 {
+			transition "rect" "$m_leftarrow::rect" "$d_leftarrow::rect" "1000" ;
+			transition "matcolor_w" ".4" "0" "1000" ;
+		}
+
+		onTime 1500 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef d_leftarrow
+	{
+		rect	8,-47,319,149
+		visible	0
+		background	"gfx/guis/common/marine/elevcall_arrow"
+		matcolor	0.827,0.937,0.713,.2
+	}
+	windowDef leftarrow3
+	{
+		rect	8,194,319,120
+		visible	1
+		background	"gfx/guis/common/marine/elevcall_arrow3"
+		matcolor	0.827,0.937,0.713,.4
+	}
+	windowDef rightarrow3
+	{
+		rect	310,17,319,120
+		visible	1
+		background	"gfx/guis/common/marine/elevcall_arrow3"
+		matcolor	0.827,0.937,0.713,.4
+		matscaley	-1
+	}
+	windowDef rightarrow
+	{
+		rect	310,82,319,149
+		visible	1
+		background	"gfx/guis/common/marine/elevcall_arrow"
+		matcolor	0.827,0.937,0.713,.8
+		matscaley	-1
+	}
+	windowDef m_rightarrow
+	{
+		rect	310,82,319,149
+		visible	1
+		background	"gfx/guis/common/marine/elevcall_arrow"
+		matcolor	0.827,0.937,0.713,0
+		matscaley	-1
+		notime	0
+
+		onTime 0 {
+			transition "rect" "$m_rightarrow::rect" "$d_rightarrow::rect" "1000" ;
+			transition "matcolor_w" ".4" "0" "1000" ;
+		}
+
+		onTime 1500 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef d_rightarrow
+	{
+		rect	310,226,319,149
+		visible	0
+		background	"gfx/guis/common/marine/elevcall_arrow"
+		matcolor	0.827,0.937,0.713,.2
+		matscaley	-1
+	}
+	windowDef rightarrow2
+	{
+		rect	310,171,319,142
+		visible	1
+		background	"gfx/guis/common/marine/elevcall_arrow2"
+		matcolor	0.827,0.937,0.713,.4
+		matscaley	-1
+	}
+	windowDef black_top
+	{
+		rect	0,-454,640,513
+		visible	1
+		background	"gfx/guis/common/128_sqsolid"
+		matcolor	0,0,0,0.6
+	}
+	windowDef black_btm
+	{
+		rect	0,282,640,418
+		visible	1
+		background	"gfx/guis/common/128_sqsolid"
+		matcolor	0,0,0,0.6
+	}
+	windowDef bg_top
+	{
+		rect	0,0,640,60
+		visible	1
+		background	"gfx/guis/common/marine/elevcall_bgtop"
+		matcolor	0.776,0.603,0.250,1
+	}
+	windowDef bg_mid
+	{
+		rect	0,278,640,120
+		visible	1
+		background	"gfx/guis/common/marine/elevcall_bgmid"
+		matcolor	0.776,0.603,0.250,1
+	}
+	windowDef p_btm
+	{
+		rect	0,405,640,75
+		visible	1
+		windowDef bg_btm
+		{
+			rect	0,-44,640,120
+			visible	1
+			background	"gfx/guis/common/marine/elevcall_bgbtm"
+			matcolor	0.776,0.603,0.250,1
+		}
+		windowDef squares
+		{
+			rect	0,26,640,40
+			visible	1
+			background	"gfx/guis/common/marine/squares1"
+			matcolor	0,0,0,.32
+		}
+	}
+	windowDef d_btm
+	{
+		rect	0,434,640,75
+		visible	0
+	}
+	windowDef t_call
+	{
+		rect	0,254,640,179
+		visible	1
+		forecolor	1,0.992,0.615,1*guitable_8_10[time*0.002]
+		text	"#str_200326"
+		textscale	3.4
+		font	"fonts/marine"
+		textspacing	-3
+		forceaspectwidth	640
+		textalign	1
+	}
+	windowDef t_access
+	{
+		rect	0,299,640,103
+		visible	0
+		forecolor	1,0.427,0.0823,1*guitable_10_5[time*0.002]
+		text	"#str_200327"
+		textscale	1.9
+		font	"fonts/marine"
+		textspacing	-3
+		textalign	1
+	}
+	windowDef t_restricted
+	{
+		rect	0,344,640,129
+		visible	0
+		forecolor	1,0.427,0.0823,1*guitable_10_5[time*0.002]
+		text	"#str_200328"
+		textscale	2.1
+		font	"fonts/marine"
+		textspacing	-4
+		textalign	1
+	}
+	windowDef t_smc
+	{
+		rect	261,-13,125,61
+		visible	1
+		forecolor	0,0,0,0.56
+		text	"#str_200329"
+		textscale	1
+		font	"fonts/marine"
+		textspacing	-4
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	0,-169,640,867
+			background	"gfx/guis/common/monitor_line6"
+			matcolor	0.882,0.886,0.847,.1
+		}
+		windowDef static
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/static1"
+			matcolor	0.882,0.886,0.847,.2
+		}
+		windowDef topreflect
+		{
+			visible	1
+			rect	0,-62,640,542
+			background	"gfx/guis/common/monitor_reflect2"
+			matcolor	0.294,0.380,0.239,1
+		}
+		windowDef topreflect_red
+		{
+			visible	0
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_glow2"
+			matcolor	1,0.250,0.0352,1*guitable_10_0[time*0.002]
+		}
+		windowDef dirt
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/screen_dirt2"
+			matcolor	0.815,0.796,0.674,.6
+			rotate	180
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	editDef anim_restrict
+	{
+		rect	0,0,640,480
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "p_btm::rect" "$p_btm::rect" "$d_btm::rect" "250" ;
+			set "t_call::visible" "0" ;
+			
+			transition "leftarrow::matcolor" "$desktop::arrow_8" "$desktop::grey_8" "250" ;
+			transition "leftarrow2::matcolor" "$desktop::arrow_4" "$desktop::grey_4" "250" ;
+			transition "leftarrow3::matcolor" "$desktop::arrow_4" "$desktop::grey_4" "250" ;
+			transition "rightarrow::matcolor" "$desktop::arrow_8" "$desktop::grey_8" "250" ;
+			transition "rightarrow2::matcolor" "$desktop::arrow_4" "$desktop::grey_4" "250" ;
+			transition "rightarrow3::matcolor" "$desktop::arrow_4" "$desktop::grey_4" "250" ;
+		}
+
+		onTime +250 {
+			set "topreflect_red::visible" "1" ;
+			set "t_access::visible" "1" ;
+			set "t_restricted::visible" "1" ;
+			
+			set "m_leftarrow::visible" "0" ;
+			set "m_rightarrow::visible" "0" ;
+			stoptransitions "m_leftarrow" ;
+			stoptransitions "m_rightarrow" ;
+			set "m_leftarrow::notime" "1" ;
+			set "m_rightarrow::notime" "1" ;
+		}
+
+		onTime +2500 {
+			transition "p_btm::rect" "$d_btm::rect" "$p_btm::rect" "250" ;
+			set "t_access::visible" "0" ;
+			set "t_restricted::visible" "0" ;
+			set "topreflect_red::visible" "0" ;
+			
+			transition "leftarrow::matcolor" "$desktop::grey_8" "$desktop::arrow_8" "250" ;
+			transition "leftarrow2::matcolor" "$desktop::grey_4" "$desktop::arrow_4" "250" ;
+			transition "leftarrow3::matcolor" "$desktop::grey_4" "$desktop::arrow_4" "250" ;
+			transition "rightarrow::matcolor" "$desktop::grey_8" "$desktop::arrow_8" "250" ;
+			transition "rightarrow2::matcolor" "$desktop::grey_4" "$desktop::arrow_4" "250" ;
+			transition "rightarrow3::matcolor" "$desktop::grey_4" "$desktop::arrow_4" "250" ;
+		}
+
+		onTime +250 {
+			set "t_call::visible" "1" ;
+			set "btn::visible" "1" ;
+			
+			resettime "m_leftarrow" "0" ;
+			resettime "m_rightarrow" "0" ;
+			set "m_leftarrow::matcolor_w" "0" ;
+			set "m_rightarrow::matcolor_w" "0" ;
+			set "m_leftarrow::visible" "1" ;
+			set "m_rightarrow::visible" "1" ;
+		}
+
+	}
+	windowDef btn
+	{
+		rect	0,0,640,480
+		visible	1
+
+		onAction {
+			resettime "anim_restrict" "0" ;
+			set "visible" "0" ;
+		}
+
+	}
+}

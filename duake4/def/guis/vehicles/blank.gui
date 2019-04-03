@@ -1,0 +1,38 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	visible	1
+	nocursor	1
+	
+	onNamedEvent saveMessage {
+		set "quicksave_msg::forecolor_w" "1" ;
+		set "quicksave_msg::visible" "1" ;
+		resettime "quicksave_msg" "0" ;
+	}
+	
+//-----------------------		
+// quicksave notice
+//-----------------------
+
+	windowDef quicksave_msg
+	{
+		rect	0,64,640,20
+		visible	0
+		forecolor	1,1,1,1
+		text	"#str_200908"
+		textscale	0.25
+		font	"fonts/lowpixel"
+		textspacing	0
+		textalign	1
+		textstyle	1
+
+		onTime 2000 {
+			transition "forecolor_w" "1" "0" "1000" ;
+		}
+		
+		onTime +1000 {
+			set "quicksave_msg::visible" "0" ;
+		}
+
+	}
+}

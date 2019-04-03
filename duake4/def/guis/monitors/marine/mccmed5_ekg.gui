@@ -1,0 +1,236 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	windowDef bg
+	{
+		rect	0,0,639,481
+		visible	1
+		background	"gfx/guis/monitors/marine/mccmed5_all"
+		matcolor	1,1,1,1
+	}
+	windowDef s
+	{
+		rect	19,-18,41,56
+		visible	1
+		forecolor	0,0,0,1
+		text	"s"
+		textscale	1.1
+		font	"fonts/marine"
+	}
+	windowDef m
+	{
+		rect	48,-18,41,56
+		visible	1
+		forecolor	0,0,0,1
+		text	"m"
+		textscale	1.1
+		font	"fonts/marine"
+	}
+	windowDef c
+	{
+		rect	83,-18,41,56
+		visible	1
+		forecolor	0,0,0,1
+		text	"c"
+		textscale	1.1
+		font	"fonts/marine"
+	}
+	windowDef techpanel
+	{
+		rect	23,27,97,24
+		visible	1
+		forecolor	0,0,0,1
+		text	"#str_200707"
+		textscale	0.42
+		font	"fonts/marine"
+	}
+	windowDef progress
+	{
+		rect	34,386,180,24
+		visible	1
+		forecolor	0.552,0.650,0.678,1
+		text	"#str_200727"
+		textscale	0.4
+		font	"fonts/marine"
+	}
+	windowDef file
+	{
+		rect	195,6,71,37
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200626"
+		textscale	0.55
+		font	"fonts/marine"
+	}
+	windowDef search
+	{
+		rect	342,6,123,37
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200624"
+		textscale	0.55
+		font	"fonts/marine"
+	}
+	windowDef tools
+	{
+		rect	515,6,123,37
+		visible	1
+		forecolor	0,0,0,1
+		text	"#str_200625"
+		textscale	0.55
+		font	"fonts/marine"
+	}
+	windowDef file1
+	{
+		rect	417,435,179,37
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200728"
+		textscale	0.55
+		font	"fonts/marine"
+	}
+	windowDef cardiac
+	{
+		rect	53,62,316,29
+		visible	1
+		forecolor	0.431,0.705,0.764,1
+		text	"#str_200729"
+		textscale	0.55
+		font	"fonts/marine"
+	}
+	windowDef line1
+	{
+		rect	48,110,328,68
+		visible	1
+		background	"gfx/guis/monitors/marine/mccmed5_line1"
+		matcolor	0.533,0.780,0.874,1
+	}
+	windowDef line2
+	{
+		rect	48,193,328,32
+		visible	1
+		background	"gfx/guis/monitors/marine/mccmed5_line2"
+		matcolor	0.533,0.780,0.874,0.8
+	}
+	windowDef line3
+	{
+		rect	48,248,328,53
+		visible	1
+		background	"gfx/guis/monitors/marine/mccmed5_line3"
+		matcolor	0.533,0.780,0.874,1
+	}
+	windowDef cardiac1
+	{
+		rect	389,123,39,30
+		visible	1
+		forecolor	0.427,0.701,0.760,1
+		text	"#str_200730"
+		textscale	0.5
+		font	"fonts/marine"
+	}
+	windowDef cardiac2
+	{
+		rect	389,195,60,29
+		visible	1
+		forecolor	0.423,0.698,0.756,1
+		text	"#str_200731"
+		textscale	0.5
+		font	"fonts/marine"
+	}
+	windowDef cardiac3
+	{
+		rect	389,262,72,29
+		visible	1
+		forecolor	0.419,0.694,0.752,1
+		text	"#str_200732"
+		textscale	0.5
+		font	"fonts/marine"
+	}
+	windowDef cardiac4
+	{
+		rect	433,118,79,39
+		visible	1
+		forecolor	1,1,1,1
+		text	"130"
+		textscale	0.65
+		font	"fonts/marine"
+	}
+	windowDef cardiac5
+	{
+		rect	441,176,151,39
+		visible	1
+		forecolor	1,1,1,1
+		text	"127/86"
+		textscale	0.65
+		font	"fonts/marine"
+	}
+	windowDef cardiac6
+	{
+		rect	483,203,59,39
+		visible	1
+		forecolor	1,1,1,1
+		text	"99"
+		textscale	0.65
+		font	"fonts/marine"
+	}
+	windowDef cardiac7
+	{
+		rect	467,257,59,39
+		visible	1
+		forecolor	1,1,1,1
+		text	"98"
+		textscale	0.65
+		font	"fonts/marine"
+	}
+	windowDef progress1
+	{
+		rect	51,308,37,65
+		visible	1
+		forecolor	0.431,0.705,0.764,1
+		text	"#str_200733"
+		textscale	0.2
+		font	"fonts/marine"
+	}
+	windowDef progress2
+	{
+		rect	102,309,43,65
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200734"
+		textscale	0.2
+		font	"fonts/marine"
+	}
+	windowDef topstuff
+	{
+		rect	0,0,640,480
+		visible	1
+		windowDef monitor_darkedge
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+		windowDef sline
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_line3"
+			matcolor	0.701,0.701,0.701,1
+		}
+		windowDef scratches
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/screen_scratches5"
+			matcolor	0.713,0.886,0.921,0.145
+		}
+		windowDef topreflect
+		{
+			rect	0,0,640,480
+			visible	1
+			background	"gfx/guis/common/monitor_glow2"
+			matcolor	0.737,0.972,0.945,0.478
+		}
+	}
+}

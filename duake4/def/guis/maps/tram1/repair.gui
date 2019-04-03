@@ -1,0 +1,468 @@
+windowDef Desktop
+{
+	comment	"set "
+	gui_parm_script	" to fire gui"
+	rect	0,0,640,480
+	float	"clicked"	0
+	windowDef black_bg
+	{
+		rect	0,0,640,480
+		visible	1
+		backcolor	0,0,0,1
+	}
+	windowDef bg2
+	{
+		rect	-29,0,218,481
+		visible	1
+		background	"gfx/guis/maps/process1/countdown_bg"
+		matcolor	0,1,0.501,1
+		matscalex	-1
+	}
+	windowDef bg1
+	{
+		rect	451,0,218,481
+		visible	1
+		background	"gfx/guis/maps/process1/countdown_bg"
+		matcolor	0,1,0.501,1
+	}
+	windowDef arrows
+	{
+		rect	0,311,640,154
+		visible	1
+		background	"gfx/guis/common/strogg/rt_arrow_scroll"
+		matcolor	0.0470,1,0.474,0
+	}
+	windowDef grad
+	{
+		rect	-155,167,884,334
+		visible	1
+		background	"gfx/guis/common/gradient"
+		matcolor	0,1,0.8,0.4
+		matscaley	-1
+	}
+	windowDef bar
+	{
+		rect	595,334,100,33
+		visible	1
+		backcolor	0.192,0.737,0.768,1
+	}
+	windowDef bg
+	{
+		rect	0,0,641,479
+		visible	1
+		background	"gfx/guis/maps/tram1/repair_bg"
+		matcolor	0.192,0.737,0.768,1
+		shear	0,-.2
+	}
+	windowDef t_proc1
+	{
+		rect	373,133,72,18
+		visible	1
+		forecolor	1,1,1,1
+		text	"84278.324"
+		textscale	0.36
+		font	"fonts/strogg"
+		textalign	2
+
+		onTime 0 {
+			set "text" "84278.324" ;
+		}
+
+		onTime +700 {
+			set "text" "43536.832" ;
+		}
+
+		onTime +700 {
+			set "text" "76245.003" ;
+		}
+
+		onTime +700 {
+			set "text" "57452.659" ;
+		}
+
+		onTime +700 {
+			set "text" "35945.202" ;
+		}
+
+		onTime +700 {
+			set "text" "94320.953" ;
+		}
+
+		onTime +700 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef t_bar1
+	{
+		rect	332,135,35,15
+		visible	1
+		background	"gfx/guis/common/bar1"
+		matcolor	0.0156,1,0.443,1
+		shear	0,-0.2
+	}
+	windowDef t_proc2
+	{
+		rect	389,30,72,18
+		visible	1
+		forecolor	1,1,1,1
+		text	"84278324"
+		textscale	0.36
+		font	"fonts/strogg"
+		textalign	2
+
+		onTime 0 {
+			set "text" "84278.324" ;
+		}
+
+		onTime +2000 {
+			set "text" "43536.832" ;
+		}
+
+		onTime +2000 {
+			set "text" "76245.003" ;
+		}
+
+		onTime +2000 {
+			set "text" "57452.659" ;
+		}
+
+		onTime +2000 {
+			set "text" "35945.202" ;
+		}
+
+		onTime +2000 {
+			set "text" "94320.953" ;
+		}
+
+		onTime +2000 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef t_bar2
+	{
+		rect	354,30,33,15
+		visible	1
+		background	"gfx/guis/common/bar1"
+		matcolor	0.0156,1,0.443,1
+		shear	0,-0.2
+	}
+	windowDef button
+	{
+		rect	62,305,470,150
+		visible	1
+		background	"gfx/guis/maps/tram1/repair_button"
+		matcolor	0.113,0.996,0.643,0.898
+		shear	0,-.2
+	}
+	windowDef d_button
+	{
+		rect	26,489,470,150
+		visible	0
+		background	"gfx/guis/maps/tram1/repair_button"
+		matcolor	0.113,0.996,0.643,0.898
+		shear	0,-.2
+	}
+	windowDef txt_button
+	{
+		rect	160,315,247,58
+		visible	1
+		forecolor	0,0,0,1
+		text	"#str_200545"
+		textscale	1.1
+		font	"fonts/r_strogg"
+	}
+	windowDef txt_button2
+	{
+		rect	124,366,317,45
+		visible	1
+		forecolor	0,0,0,1
+		text	"#str_200546"
+		textscale	.8
+		font	"fonts/r_strogg"
+	}
+	windowDef txt_title
+	{
+		rect	139,14,194,31
+		visible	1
+		forecolor	0.00784,1,0.435,1
+		text	"#str_200559"
+		textscale	0.49
+		font	"fonts/r_strogg"
+		textspacing	-1
+	}
+	windowDef side1
+	{
+		rect	362,20,184,145
+		visible	1
+		background	"gfx/guis/monitors/strogg/streamhub/hub4_img1a"
+		matcolor	0.882,0.929,0.949,1
+	}
+	windowDef side2
+	{
+		rect	362,20,184,145
+		visible	1
+		background	"gfx/guis/monitors/strogg/streamhub/hub4_img1b"
+		matcolor	0.992,0.470,0,1
+	}
+	windowDef side3
+	{
+		rect	339,147,184,145
+		visible	1
+		background	"gfx/guis/monitors/strogg/streamhub/hub4_img2a"
+		matcolor	0.882,0.929,0.949,1
+	}
+	windowDef side4
+	{
+		rect	339,147,184,145
+		visible	1
+		background	"gfx/guis/monitors/strogg/streamhub/hub4_img2b"
+		matcolor	0.992,0.470,0,1
+	}
+	windowDef txt_title1
+	{
+		rect	128,45,160,49
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200560"
+		textscale	0.37
+		font	"fonts/r_strogg"
+	}
+	windowDef st_2
+	{
+		rect	319,214,71,44
+		visible	1
+		background	"gfx/guis/common/smalltext3"
+		matcolor	0.756,1,0.996,1
+		shear	0,-.2
+		matscalex	-1
+	}
+	windowDef st_1
+	{
+		rect	474,134,72,44
+		visible	1
+		background	"gfx/guis/common/smalltext1"
+		matcolor	0.756,1,0.996,1
+		shear	0,-.2
+	}
+	windowDef minimap
+	{
+		rect	130,117,93,85
+		visible	1
+		background	"gfx/guis/maps/tram1/repair_minimap"
+		matcolor	0,1,1,0.6
+		shear	0,-.2
+	}
+	windowDef map_highlight
+	{
+		rect	109,97,135,126
+		visible	1
+		background	"gfx/guis/maps/tram1/repair_mapselect"
+		matcolor	0.00784,1,0.435,1
+		shear	0,-.2
+
+		onTime 0 {
+			transition "matcolor_w" "1" "0.5" "1500" ;
+		}
+
+		onTime 1500 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef st_3
+	{
+		rect	215,114,95,55
+		visible	1
+		background	"gfx/guis/common/smalltext3"
+		matcolor	0.752,1,0.992,1
+		shear	0,-.2
+	}
+	windowDef map_highlight1
+	{
+		rect	197,153,26,4
+		visible	1
+		shear	0,-.2
+		backcolor	0.00784,1,0.435,1
+
+		onTime 0 {
+			transition "matcolor_w" "1" "0.5" "1500" ;
+		}
+
+		onTime 1500 {
+			resettime "0" ;
+		}
+
+	}
+	windowDef txt_title2
+	{
+		rect	250,105,67,18
+		visible	1
+		forecolor	1,1,1,1
+		text	"#str_200561"
+		textscale	0.2
+		font	"fonts/r_strogg"
+	}
+	windowDef p_scrolltext
+	{
+		rect	86,229,138,62
+		visible	1
+		shear	0,-.2
+		windowDef scrolltext
+		{
+			rect	8,-62,156,136
+			visible	1
+			background	"gfx/guis/common/strogg/scrolltext2"
+			matcolor	0.756,1,0.996,1
+			shear	0,-.2
+		}
+	}
+	windowDef ar1
+	{
+		rect	252,174,21,29
+		visible	1
+		background	"gfx/guis/common/arrow1"
+		matcolor	0.0470,1,0.474,.6
+	}
+	windowDef ar2
+	{
+		rect	265,174,21,29
+		visible	1
+		background	"gfx/guis/common/arrow1"
+		matcolor	0.0470,1,0.474,.6
+	}
+	windowDef ar3
+	{
+		rect	279,174,21,29
+		visible	1
+		background	"gfx/guis/common/arrow1"
+		matcolor	0.0470,1,0.474,.6
+	}
+	windowDef l_dot
+	{
+		rect	30,320,89,160
+		visible	0
+		background	"gfx/guis/common/strogg/genericseal_dot"
+		matcolor	1,1,1,.4*guitable_10_0[time*0.0015]
+		shear	0,.2
+	}
+	windowDef r_dot
+	{
+		rect	500,320,89,160
+		visible	0
+		background	"gfx/guis/common/strogg/genericseal_dot"
+		matcolor	1,1,1,.4*guitable_10_0[time*0.0015]
+		shear	0,.2
+	}
+	windowDef transit
+	{
+		rect	76,341,459,84
+		visible	0
+		forecolor	0.00784,1,0.435,1*guitable_10_0[time*0.0015]
+		text	"#str_200546"
+		textscale	1
+		textalign	1
+		font	"fonts/r_strogg"
+	}
+	windowDef transit2
+	{
+		rect	85,389,459,84
+		visible	0
+		forecolor	0.882,1,0.823,1*guitable_10_0[time*0.0015]
+		text	"#str_200550"
+		textscale	1.2
+		textalign	1
+		font	"fonts/r_strogg"
+	}
+	windowDef topstuff
+	{
+		visible	1
+		rect	0,0,640,480
+		windowDef sline
+		{
+			visible	1
+			rect	2,-168,640,782
+			background	"gfx/guis/common/monitor_line3"
+			matcolor	0.717,1,1,0.0392
+		}
+		windowDef dirt
+		{
+			visible	1
+			rect	-6,-25,677,504
+			background	"gfx/guis/common/screen_dirt5"
+			matcolor	0.8,0.631,0.486,0.6
+			matscalex	-1
+		}
+		windowDef scratches
+		{
+			visible	1
+			rect	0,1,641,480
+			background	"gfx/guis/common/screen_scratches3"
+			matcolor	1,1,1,0.2
+			matscalex	-1
+		}
+		windowDef monitor_darkedge2
+		{
+			visible	1
+			rect	0,0,640,480
+			background	"gfx/guis/common/monitor_darkedge2"
+			matcolor	0,0,0,1
+		}
+	}
+	windowDef b_call
+	{
+		rect	63,303,453,157
+		visible	1
+		shear	0,-.2
+
+		onMouseEnter {
+			set "button::matcolor" "0.0745,0.792,0.941,1" ;
+			set "txt_button::forecolor" "1,0.776,0,1" ;
+			set "txt_button2::forecolor" "1,0.776,0,1" ;
+		}
+
+		onMouseExit {
+			if ("desktop::clicked" == 0) {
+				transition "button::matcolor" "0.0745,0.792,0.941,1" "0.113,0.996,0.643,0.898" "400" ;
+				transition "txt_button::forecolor" "1,0.776,0,1" "0,0,0,1" "400" ;
+				transition "txt_button2::forecolor" "1,0.776,0,1" "0,0,0,1" "400" ;
+			}
+		}
+
+		onAction {
+			nonInteractive "1" ;
+			set "cmd" "play guisound_beep2 ; activate ; runscript" "$gui::gui_Parm_script";
+			set "desktop::clicked" "1" ;
+			resettime "anim" "0" ;
+			set "visible" "0" ;
+		}
+
+	}
+	windowDef anim
+	{
+		rect	0,0,1,1
+		visible	1
+		notime	1
+
+		onTime 0 {
+			transition "txt_button::forecolor_w" "1" "0" "100" ; 
+			transition "txt_button2::forecolor_w" "1" "0" "100" ; 
+		}
+
+		onTime +100 {
+			transition "button::rect" "$button::rect" "$d_button::rect" "500" ;
+			transition "button::matcolor_w" "1" "0" "500" ; 
+			
+			transition "arrows::matcolor_w" "0" "0.2" "500" ; 
+		}
+
+		onTime +500 {
+			set "l_dot::visible" "1" ;
+			set "r_dot::visible" "1" ;
+			set "transit::visible" "1" ;
+			set "transit2::visible" "1" ;
+		}
+
+	}
+}

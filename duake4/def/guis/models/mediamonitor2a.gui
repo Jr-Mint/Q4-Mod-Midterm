@@ -1,0 +1,155 @@
+windowDef Desktop
+{
+	rect	0,0,640,480
+	windowDef t_bg
+	{
+		rect	48,0,591,249
+		visible	1
+		background	"gfx/guis/monitors/strogg/media_monitor2a_bg"
+		matcolor	0.835,0.556,0.0431,1*guitable_8_10[time*0.001]
+		shear	0,-.2
+	}
+	windowDef l_bg
+	{
+		rect	0,236,596,249
+		visible	1
+		background	"gfx/guis/monitors/strogg/media_monitor2a_bg"
+		matcolor	0.835,0.556,0.0431,1*guitable_8_10[time*0.001]
+		matscaley	-1
+		shear	0,-.2
+	}
+	windowDef btns
+	{
+		rect	316,237,303,66
+		visible	1
+		background	"gfx/guis/monitors/strogg/media_monitor2a_btns"
+		matcolor	0.439,0.650,0.686,1*guitable_8_10[time*0.0006]
+		shear	0,-.2
+	}
+	windowDef img
+	{
+		rect	71,21,340,215
+		visible	1
+		background	"gfx/guis/monitors/strogg/media_monitor2a_img"
+		matcolor	0.843,1,1,1*guitable_random2[time*0.001]
+		shear	0,-.2
+	}
+	windowDef lines1
+	{
+		rect	35,258,329,197
+		visible	1
+		background	"gfx/guis/monitors/strogg/media_monitor2a_lines1"
+		matcolor	0,0,0,1
+		shear	0,-.2
+	}
+	windowDef lines2
+	{
+		rect	31,254,335,205
+		visible	1
+		background	"gfx/guis/monitors/strogg/media_monitor2a_lines2"
+		matcolor	0,0,0,0.8
+		shear	0,-.2
+	}
+	windowDef circ3
+	{
+		rect	165,314,152,119
+		visible	1
+		background	"gfx/guis/monitors/strogg/media_monitor2a_circ"
+		matcolor	0.858,0.545,0.125,0.247
+		shear	0,-.2
+	}
+	windowDef circ2
+	{
+		rect	142,276,199,177
+		visible	1
+		background	"gfx/guis/monitors/strogg/media_monitor2a_circ"
+		matcolor	0.866,0.419,0.125,0.498
+		shear	0,-.2
+	}
+	windowDef circ
+	{
+		rect	133,257,217,197
+		visible	1
+		background	"gfx/guis/monitors/strogg/media_monitor2a_circ"
+		matcolor	0.909,0.576,0.0745,1
+		shear	0,-.2
+	}
+	windowDef t_scrolltext
+	{
+		rect	420,27,184,161
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext5"
+		matcolor	1,1,1,.8
+		shear	0,-.2
+	}
+	windowDef b_scrolltext
+	{
+		rect	369,298,207,161
+		visible	1
+		background	"gfx/guis/common/strogg/scrolltext4"
+		matcolor	1,1,1,.6
+		shear	0,-.2
+	}
+	windowDef text
+	{
+		rect	398,202,200,27
+		visible	1
+		forecolor	0.835,0.556,0.0431,1*guitable_random2[time*0.001]
+		text	"SYSTEM 4 STATUS"
+		textscale	.54
+		font	"fonts/strogg"
+	}
+	windowDef numbers
+	{
+		rect	195,321,98,52
+		visible	1
+		forecolor	0,0,0,0.6*guitable_8_10[time*0.0027]
+		text	"963"
+		textscale	1.3
+		font	"fonts/strogg"
+	}
+	windowDef text2
+	{
+		rect	192,371,94,20
+		visible	1
+		forecolor	0,0,0,0.6*guitable_8_10[time*0.0027]
+		text	resource
+		textscale	.42
+		font	"fonts/strogg"
+	}
+	windowDef numbers2
+	{
+		rect	71,299,18,14
+		visible	1
+		forecolor	0.972,0.784,0.345,0.4*guitable_8_10[time*0.0007]
+		text	"18"
+		textscale	0.35
+		font	"fonts/strogg"
+	}
+	windowDef numbers3
+	{
+		rect	102,353,18,15
+		visible	1
+		forecolor	0.972,0.784,0.345,0.4*guitable_8_10[time*0.0007]
+		text	96
+		textscale	.35
+		font	"fonts/strogg"
+	}
+	windowDef numbers4
+	{
+		rect	318,420,20,17
+		visible	1
+		forecolor	0.972,0.784,0.345,0.4*guitable_8_10[time*0.0007]
+		text	57
+		textscale	.35
+		font	"fonts/strogg"
+	}
+	windowDef glow
+	{
+		rect	29,0,593,480
+		visible	1
+		background	"gfx/guis/monitors/strogg/media_monitor2a_glow"
+		matcolor	0,0.988,0.964,.6*guitable_8_10[time*0.02]
+		shear	0,-.2
+	}
+}
