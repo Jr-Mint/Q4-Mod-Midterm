@@ -4284,15 +4284,21 @@ float idPlayer::PowerUpModifier( int type ) {
 	if ( PowerUpActive( POWERUP_QUADDAMAGE ) ) {
 		switch( type ) {
 			case PMOD_PROJECTILE_DAMAGE: {
-				mod *= 3.0f;
+				mod *= 1.0f;
 				break;
 			}
 			case PMOD_MELEE_DAMAGE: {
-				mod *= 3.0f;
+				mod *= 2.0f;
 				break;
+
+			}
+			case PMOD_SPEED: {
+				mod *= 1.6f;
+				break;
+
 			}
 			case PMOD_PROJECTILE_DEATHPUSH: {
-				mod *= 2.0f;
+				mod *= 1.0f;
 				break;
 			}
 		}
@@ -4301,11 +4307,11 @@ float idPlayer::PowerUpModifier( int type ) {
 	if ( PowerUpActive( POWERUP_HASTE ) ) {
 		switch ( type ) {
 			case PMOD_SPEED:	
-				mod *= 1.3f;
+				mod *= 1.1f;
 				break;
 
 			case PMOD_FIRERATE:
-				mod *= 0.7f;
+				mod *= 1.0f;
 				break;
 		}
 	}
@@ -4409,6 +4415,8 @@ void idPlayer::StartPowerUpEffect( int powerup ) {
 		case POWERUP_QUADDAMAGE: {
 			powerUpOverlay = quadOverlay;
 
+			GiveItem("weapon_rocketlauncher");
+
 			StopEffect( "fx_regeneration" );
 			PlayEffect( "fx_quaddamage", animator.GetJointHandle( "chest" ), true );			
 			StartSound( "snd_quaddamage_idle", SND_CHANNEL_POWERUP_IDLE, 0, false, NULL );
@@ -4451,6 +4459,8 @@ void idPlayer::StartPowerUpEffect( int powerup ) {
 
 		case POWERUP_HASTE: {
 			powerUpOverlay = hasteOverlay;
+
+			GiveItem("weapon_lightninggun");
 
 			hasteEffect = PlayEffect( "fx_haste", GetPhysics()->GetOrigin(), GetPhysics()->GetAxis(), true );
 			break;
@@ -4549,6 +4559,8 @@ void idPlayer::StopPowerUpEffect( int powerup ) {
 			powerupEffectTime = 0;
 			powerupEffectType = 0;
 
+			RemoveWeapon("weapon_rocketlauncher");
+
 			StopEffect( "fx_quaddamage" );
 			break;
 		}
@@ -4567,6 +4579,7 @@ void idPlayer::StopPowerUpEffect( int powerup ) {
 		}
 		case POWERUP_HASTE: {
 			StopEffect( "fx_haste" );
+			RemoveWeapon("weapon_lightninggun");
 			break;
 		}
 		case POWERUP_INVISIBILITY: {
@@ -4700,8 +4713,8 @@ bool idPlayer::GivePowerUp( int powerup, int time, bool team ) {
 				gameLocal.mpGame.ScheduleAnnouncerSound( AS_GENERAL_REGENERATION, gameLocal.time, gameLocal.gameType == GAME_TOURNEY ? GetInstance() : -1 );
 			}
 			break;
-		}
-		case POWERUP_HASTE: {
+		}remove
+			;		case POWERUP_HASTE: {
 			gameLocal.mpGame.ScheduleAnnouncerSound( AS_GENERAL_HASTE, gameLocal.time, gameLocal.gameType == GAME_TOURNEY ? GetInstance() : -1 );
 			break;
 		}

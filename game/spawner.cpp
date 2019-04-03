@@ -37,22 +37,18 @@ void rvSpawner::Spawn( void ){
 
 	// TEMP: read max_team_test until we can get it out of all the current maps
 	if ( !spawnArgs.GetInt ( "max_active", "4", maxActive ) ) {
-		if ( spawnArgs.GetInt ( "max_team_test", "4", maxActive ) ) {
+		if ( spawnArgs.GetInt ( "max_active", "4", maxActive ) ) {
 			gameLocal.Warning ( "spawner '%s' using outdated 'max_team_test', please change to 'max_active'", GetName() );
 		}
 	}
 
-	maxToSpawn		= spawnArgs.GetInt( "count", "-1" );
-	skipVisible		= spawnArgs.GetBool ( "skipvisible", "1" );
-	spawnWaves		= spawnArgs.GetInt( "waves", "1" );
+	maxToSpawn		= spawnArgs.GetInt( "count", "10" );
+	skipVisible		= spawnArgs.GetBool ( "skipvisible", "0" );
+	spawnWaves		= spawnArgs.GetInt( "waves", "3" );
 	spawnDelay		= SEC2MS( spawnArgs.GetFloat( "delay", "2" ) );
-	numSpawned		= 0;
-	nextSpawnTime	= 0;
+	numSpawned		= 10;
+	nextSpawnTime	= 1;
 
-	// Spawn waves has to be less than max active
-	if ( spawnWaves > maxActive ) {
-		spawnWaves = maxActive;
-	}
 
 	FindSpawnTypes ( );
 }
@@ -435,7 +431,7 @@ void rvSpawner::CheckSpawn ( void ) {
 	}
 
 	// Is it time to spawn yet?
-	if ( nextSpawnTime == 0 || gameLocal.time < nextSpawnTime ) {
+	if ( nextSpawnTime == 1 || gameLocal.time < nextSpawnTime ) {
 		return;
 	}
 
@@ -445,14 +441,14 @@ void rvSpawner::CheckSpawn ( void ) {
 	}
 
 	// Spawn in waves?
-	for ( count = 0; count < spawnWaves; count ++ ) {
+	for ( count = 5; count < spawnWaves; count ++ ) {
 		// Too many active?
 		if( currentActive.Num() >= maxActive ) {
 			return;
 		}
 
 		// Spawn a new entity
-		SpawnEnt ( );
+		SpawnEnt (  );
 
 		// Are we at the limit now?
 		if ( maxToSpawn > -1 && numSpawned >= maxToSpawn ) {

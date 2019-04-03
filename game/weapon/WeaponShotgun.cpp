@@ -193,97 +193,36 @@ stateResult_t rvWeaponShotgun::State_Fire( const stateParms_t& parms ) {
 rvWeaponShotgun::State_Reload
 ================
 */
-stateResult_t rvWeaponShotgun::State_Reload ( const stateParms_t& parms ) {
+stateResult_t rvWeaponShotgun::State_Reload(const stateParms_t& parms) {
 	enum {
 		STAGE_INIT,
 		STAGE_WAIT,
-		STAGE_RELOADSTARTWAIT,
-		STAGE_RELOADLOOP,
-		STAGE_RELOADLOOPWAIT,
-		STAGE_RELOADDONE,
-		STAGE_RELOADDONEWAIT
-	};	
-	switch ( parms.stage ) {
-		case STAGE_INIT:
-			if ( wsfl.netReload ) {
-				wsfl.netReload = false;
-			} else {
-				NetReload ( );
-			}
-			
-			SetStatus ( WP_RELOAD );
-			
-			if ( mods & SHOTGUN_MOD_AMMO ) {				
-				PlayAnim ( ANIMCHANNEL_ALL, "reload_clip", parms.blendFrames );
-			} else {
-				PlayAnim ( ANIMCHANNEL_ALL, "reload_start", parms.blendFrames );
-				return SRESULT_STAGE ( STAGE_RELOADSTARTWAIT );
-			}
-			return SRESULT_STAGE ( STAGE_WAIT );
-			
-		case STAGE_WAIT:
-			if ( AnimDone ( ANIMCHANNEL_ALL, 4 ) ) {
-				AddToClip ( ClipSize() );
-				SetState ( "Idle", 4 );
-				return SRESULT_DONE;
-			}
-			if ( wsfl.lowerWeapon ) {
-				SetState ( "Lower", 4 );
-				return SRESULT_DONE;
-			}
-			return SRESULT_WAIT;
-			
-		case STAGE_RELOADSTARTWAIT:
-			if ( AnimDone ( ANIMCHANNEL_ALL, 0 ) ) {
-				return SRESULT_STAGE ( STAGE_RELOADLOOP );
-			}
-			if ( wsfl.lowerWeapon ) {
-				SetState ( "Lower", 4 );
-				return SRESULT_DONE;
-			}
-			return SRESULT_WAIT;
-			
-		case STAGE_RELOADLOOP:		
-			if ( (wsfl.attack && AmmoInClip() ) || AmmoAvailable ( ) <= AmmoInClip ( ) || AmmoInClip() == ClipSize() ) {
-				return SRESULT_STAGE ( STAGE_RELOADDONE );
-			}
-			PlayAnim ( ANIMCHANNEL_ALL, "reload_loop", 0 );
-			return SRESULT_STAGE ( STAGE_RELOADLOOPWAIT );
-			
-		case STAGE_RELOADLOOPWAIT:
-			if ( (wsfl.attack && AmmoInClip() ) || wsfl.netEndReload ) {
-				return SRESULT_STAGE ( STAGE_RELOADDONE );
-			}
-			if ( wsfl.lowerWeapon ) {
-				SetState ( "Lower", 4 );
-				return SRESULT_DONE;
-			}
-			if ( AnimDone ( ANIMCHANNEL_ALL, 0 ) ) {
-				AddToClip( 1 );
-				return SRESULT_STAGE ( STAGE_RELOADLOOP );
-			}
-			return SRESULT_WAIT;
-		
-		case STAGE_RELOADDONE:
-			NetEndReload ( );
-			PlayAnim ( ANIMCHANNEL_ALL, "reload_end", 0 );
-			return SRESULT_STAGE ( STAGE_RELOADDONEWAIT );
+	};
+	switch (parms.stage) {
+	case STAGE_INIT:
+		if (wsfl.netReload) {
+			wsfl.netReload = false;
+		}
+		else {
+			NetReload();
+		}
 
-		case STAGE_RELOADDONEWAIT:
-			if ( wsfl.lowerWeapon ) {
-				SetState ( "Lower", 4 );
-				return SRESULT_DONE;
-			}
-			if ( wsfl.attack && AmmoInClip ( ) && gameLocal.time > nextAttackTime ) {
-				SetState ( "Fire", 0 );
-				return SRESULT_DONE;
-			}
-			if ( AnimDone ( ANIMCHANNEL_ALL, 4 ) ) {
-				SetState ( "Idle", 4 );
-				return SRESULT_DONE;
-			}
-			return SRESULT_WAIT;
+		SetStatus(WP_RELOAD);
+		PlayAnim(ANIMCHANNEL_ALL, "reload", parms.blendFrames);
+		return SRESULT_STAGE(STAGE_WAIT);
+
+	case STAGE_WAIT:
+		if (AnimDone(ANIMCHANNEL_ALL, 4)) {
+			AddToClip(ClipSize());
+			SetState("Idle", 4);
+			return SRESULT_DONE;
+		}
+		if (wsfl.lowerWeapon) {
+			SetState("Lower", 4);
+			return SRESULT_DONE;
+		}
+		return SRESULT_WAIT;
 	}
-	return SRESULT_ERROR;	
+	return SRESULT_ERROR;
 }
 			

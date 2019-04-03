@@ -43,16 +43,12 @@ void rvSpawner::Spawn( void ){
 	}
 
 	maxToSpawn		= spawnArgs.GetInt( "count", "-1" );
-	skipVisible		= spawnArgs.GetBool ( "skipvisible", "1" );
-	spawnWaves		= spawnArgs.GetInt( "waves", "1" );
+	skipVisible		= spawnArgs.GetBool ( "skipvisible", "0" );
+	spawnWaves		= spawnArgs.GetInt( "waves", "10" );
 	spawnDelay		= SEC2MS( spawnArgs.GetFloat( "delay", "2" ) );
-	numSpawned		= 0;
-	nextSpawnTime	= 0;
+	numSpawned		= 5;
+	nextSpawnTime = 1;
 
-	// Spawn waves has to be less than max active
-	if ( spawnWaves > maxActive ) {
-		spawnWaves = maxActive;
-	}
 
 	FindSpawnTypes ( );
 }
@@ -445,7 +441,7 @@ void rvSpawner::CheckSpawn ( void ) {
 	}
 
 	// Spawn in waves?
-	for ( count = 0; count < spawnWaves; count ++ ) {
+	for ( count = 5; count < spawnWaves; count ++ ) {
 		// Too many active?
 		if( currentActive.Num() >= maxActive ) {
 			return;
